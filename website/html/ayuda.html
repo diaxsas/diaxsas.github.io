@@ -13,11 +13,10 @@
         body {
             background-color: white;
             color: black;
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
+            padding: 10px;
+            margin: 0px;
+            width: 100%;
+            height: 100%;
         }
 
         .columns {
@@ -48,6 +47,15 @@
         .clickable {
             transform-origin: left;
             cursor: pointer;
+            border: 1px solid black;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
         }
 
         .clickable:hover {
@@ -80,9 +88,31 @@
 </head>
 
 <body>
+    <div id="ayuda">
+        <h3>Titulo:</h3>
+        <input type="text" id="name" name="name" value="Peticion Prueba">
+        <h3>Descripcion:</h3>
+        <input type="text" id="description" name="description" value="Peticion Prueba Desc">
+        <h3>Prioridad:</h3>
+        <input type="text" id="priority" name="priority" value="1">
+        <h3>Empleado:</h3>
+        <select name="create_uid" id="create_uid">
+            <option value="test">Empleado</option>
+        </select>
+        <h3>Equipo:</h3>
+        <select name="equipment_id" id="equipment_id">
+            <option value="test">Equipo</option>
+        </select>
+        <div id="submit" class="clickable"><text>Submit</text></div>
+    </div>
 
     <script>
-        var _mantenimiento = {};
+        try {
+            var _mantenimiento = JSON.parse(localStorage.getItem('_mantenimiento'));
+        } catch (e) {
+            localStorage.setItem('_mantenimiento', "");
+            var _mantenimiento = {};
+        }
         async function getMaintenance() {
             try {
                 const response = await fetch("https://api.diax.com.co/getodoomaintenanceinfo", {
@@ -96,24 +126,51 @@
                     alert("Error: " + myJson);
                 } else {
                     _mantenimiento = myJson;
+                    localStorage.setItem('_mantenimiento', JSON.stringify(_mantenimiento));
                     enablePage();
                 }
             } catch (e) {
                 alert("Error: " + e);
             }
         }
-        getMaintenance();
+        if (_mantenimiento == null)
+            getMaintenance();
+        else
+            enablePage();
 
         function enablePage() {
-            alert(_mantenimiento);
-
+            _mantenimiento.employees.forEach(element => {
+                $('#create_uid').append($('<option>', {
+                    value: element.id,
+                    text: element.resource_id[1]
+                }));
+            });
+            _mantenimiento.equipment.forEach(element => {
+                $('#equipment_id').append($('<option>', {
+                    value: element.id,
+                    text: element.name
+                }));
+            });
         }
+
+
         $("#submit").click(function (e) {
             e.preventDefault(); //stop the browser from following
+            var team = 0;
+            _mantenimiento.equipment.forEach(element => {
+                if (element.id == $('#equipment_id').val()) {
+                    if (element.category_id[0] == "8") {
+                        team = 1;
+                    }
+                    return;
+                }
+            });
             try {
                 if (
                     $("#name").val() == "" ||
                     $("#name").val() == null ||
+                    $("#priority").val() == "" ||
+                    $("#priority").val() == null ||
                     $("#create_uid").val() == "" ||
                     $("#create_uid").val() == null ||
                     $("#equipment_id").val() == "" ||
@@ -123,35 +180,42 @@
                     return;
                 }
 
+                var d = new Date();
+                var datestring = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d
+                        .getDate()).slice(-2) +
+                    " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":00";
                 var _form = {
                     "name": $("#name").val(),
                     "description": $("#description").val(),
                     "priority": $("#priority").val(),
-                    "schedule_date": "",
-                    "maintenance_type": "",
-                    "create_uid": "",
+                    "schedule_date": datestring,
+                    "maintenance_type": "corrective",
+                    "create_uid": $("#create_uid").val(),
                     "equipment_id": $("#equipment_id").val(),
-                    "maintenance_team_id": ""
+                    "maintenance_team_id": team
                 };
-
                 async function subscribe(_res) {
-                    console.log(_res);
-                    const response = await fetch("https://api.noxiun.com/createodoomaintenancerequest", {
-                        method: "POST",
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                        },
-                        body: JSON.stringify(_res)
-                    });
+                    try {
+                        const response = await fetch(
+                            "https://api.noxiun.com/createodoomaintenancerequest", {
+                                method: "POST",
+                                headers: {
+                                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                                    'Access-Control-Allow-Origin': '*',
+                                    'Access-Control-Allow-Methods': 'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'
+                                },
+                                body: JSON.stringify(_res)
+                            });
 
-                    const myJson = await response.json(); //extract JSON from the http response
-                    // do something with myJson
-                    console.log(response.status, response.statusText);
-                    console.log(myJson);
-                    if (response.status != 200) {
-                        alert("Error: " + myJson);
-                    } else {
-                        alert("Tiquete creado exitosamente!");
+                        const myJson = await response.json(); //extract JSON from the http response
+                        // do something with myJson
+                        if (response.status != 200) {
+                            alert("Error: " + myJson);
+                        } else {
+                            alert("Tiquete creado exitosamente!");
+                        }
+                    } catch (e) {
+                        alert("Error: " + e);
                     }
                 }
                 subscribe(_form);
