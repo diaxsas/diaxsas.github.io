@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en,es">
+
+<head>
+    <link rel="icon" href="../media/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diax - Ayuda</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        html,
+        body {
+            background-color: white;
+            color: black;
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .columns {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .rows {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .noselect {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        .clickable {
+            transform-origin: left;
+            cursor: pointer;
+        }
+
+        .clickable:hover {
+            transform: scale(1.1);
+        }
+
+        .clickable:active {
+            transform: scale(0.9);
+        }
+
+        @keyframes appear {
+            0% {
+                stroke-dasharray: 0 50;
+                stroke-dashoffset: 50;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+                stroke-dasharray: 50 0;
+            }
+        }
+
+        @media (max-width: 1199px) and (min-width: 750px) {}
+
+        @media (max-width: 749px) and (min-width: 0px) {
+            /* min-width: 360px; */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var _mantenimiento = {};
+        async function getMaintenance() {
+            try {
+                const response = await fetch("https://api.diax.com.co/getodoomaintenanceinfo", {
+                    method: "GET",
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    }
+                });
+                const myJson = await response.json();
+                if (response.status != 200) {
+                    alert("Error: " + myJson);
+                } else {
+                    _mantenimiento = myJson;
+                    enablePage();
+                }
+            } catch (e) {
+                alert("Error: " + e);
+            }
+        }
+        getMaintenance();
+
+        function enablePage() {
+            alert(_mantenimiento);
+
+        }
+        $("#submit").click(function (e) {
+            e.preventDefault(); //stop the browser from following
+            try {
+                if (
+                    $("#name").val() == "" ||
+                    $("#name").val() == null ||
+                    $("#create_uid").val() == "" ||
+                    $("#create_uid").val() == null ||
+                    $("#equipment_id").val() == "" ||
+                    $("#equipment_id").val() == null
+                ) {
+                    alert("Faltan campos por llenar");
+                    return;
+                }
+
+                var _form = {
+                    "name": $("#name").val(),
+                    "description": $("#description").val(),
+                    "priority": $("#priority").val(),
+                    "schedule_date": "",
+                    "maintenance_type": "",
+                    "create_uid": "",
+                    "equipment_id": $("#equipment_id").val(),
+                    "maintenance_team_id": ""
+                };
+
+                async function subscribe(_res) {
+                    console.log(_res);
+                    const response = await fetch("https://api.noxiun.com/createodoomaintenancerequest", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                        },
+                        body: JSON.stringify(_res)
+                    });
+
+                    const myJson = await response.json(); //extract JSON from the http response
+                    // do something with myJson
+                    console.log(response.status, response.statusText);
+                    console.log(myJson);
+                    if (response.status != 200) {
+                        alert("Error: " + myJson);
+                    } else {
+                        alert("Tiquete creado exitosamente!");
+                    }
+                }
+                subscribe(_form);
+            } catch (e) {
+                alert("Error: " + e);
+            }
+        });
+    </script>
+</body>
+
+</html>
