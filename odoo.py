@@ -37,9 +37,9 @@ id = models.execute_kw(db, uid, password, 'maintenance.request', 'create', [
         'priority': '2',
         'schedule_date': '2022-04-15 18:00:00',
         'maintenance_type': 'corrective',
-        'create_uid': '414',
-        'equipment_id': '913',
-        'maintenance_team_id': '3',
+        'employee_id': 414,
+        'equipment_id': 913,
+        'maintenance_team_id': 3,
     }
 ])
 

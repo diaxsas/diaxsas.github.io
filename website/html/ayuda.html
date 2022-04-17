@@ -90,29 +90,24 @@
 <body>
     <div id="ayuda">
         <h3>Titulo:</h3>
-        <input type="text" id="name" name="name" value="Peticion Prueba">
+        <input type="text" id="name" name="name" value="Petición API">
         <h3>Descripcion:</h3>
-        <input type="text" id="description" name="description" value="Peticion Prueba Desc">
+        <input type="text" id="description" name="description" value="Petición de Ayuda">
         <h3>Prioridad:</h3>
         <input type="text" id="priority" name="priority" value="1">
         <h3>Empleado:</h3>
-        <select name="create_uid" id="create_uid">
-            <option value="test">Empleado</option>
+        <select name="employee_id" id="employee_id">
+            <option value="">Empleado</option>
         </select>
         <h3>Equipo:</h3>
         <select name="equipment_id" id="equipment_id">
-            <option value="test">Equipo</option>
+            <option value="">Equipo</option>
         </select>
         <div id="submit" class="clickable"><text>Submit</text></div>
+        <div id="refresh" class="clickable"><text>Refresh</text></div>
     </div>
 
     <script>
-        try {
-            var _mantenimiento = JSON.parse(localStorage.getItem('_mantenimiento'));
-        } catch (e) {
-            localStorage.setItem('_mantenimiento', "");
-            var _mantenimiento = {};
-        }
         async function getMaintenance() {
             try {
                 const response = await fetch("https://api.diax.com.co/getodoomaintenanceinfo", {
@@ -125,13 +120,20 @@
                 if (response.status != 200) {
                     alert("Error: " + myJson);
                 } else {
-                    _mantenimiento = myJson;
+                    _mantenimiento = JSON.parse(myJson.body);
                     localStorage.setItem('_mantenimiento', JSON.stringify(_mantenimiento));
                     enablePage();
                 }
             } catch (e) {
                 alert("Error: " + e);
             }
+        }
+
+        try {
+            var _mantenimiento = JSON.parse(localStorage.getItem('_mantenimiento'));
+        } catch (e) {
+            localStorage.setItem('_mantenimiento', "");
+            var _mantenimiento = {};
         }
         if (_mantenimiento == null)
             getMaintenance();
@@ -140,7 +142,7 @@
 
         function enablePage() {
             _mantenimiento.employees.forEach(element => {
-                $('#create_uid').append($('<option>', {
+                $('#employee_id').append($('<option>', {
                     value: element.id,
                     text: element.resource_id[1]
                 }));
@@ -153,14 +155,17 @@
             });
         }
 
+        $("#refresh").click(function (e) {
+            getMaintenance();
+        });
 
         $("#submit").click(function (e) {
             e.preventDefault(); //stop the browser from following
-            var team = 0;
+            var team = 2;
             _mantenimiento.equipment.forEach(element => {
                 if (element.id == $('#equipment_id').val()) {
                     if (element.category_id[0] == "8") {
-                        team = 1;
+                        team = 3;
                     }
                     return;
                 }
@@ -171,8 +176,8 @@
                     $("#name").val() == null ||
                     $("#priority").val() == "" ||
                     $("#priority").val() == null ||
-                    $("#create_uid").val() == "" ||
-                    $("#create_uid").val() == null ||
+                    $("#employee_id").val() == "" ||
+                    $("#employee_id").val() == null ||
                     $("#equipment_id").val() == "" ||
                     $("#equipment_id").val() == null
                 ) {
@@ -190,37 +195,35 @@
                     "priority": $("#priority").val(),
                     "schedule_date": datestring,
                     "maintenance_type": "corrective",
-                    "create_uid": $("#create_uid").val(),
-                    "equipment_id": $("#equipment_id").val(),
+                    "employee_id": parseInt($("#employee_id").val()),
+                    "equipment_id": parseInt($("#equipment_id").val()),
                     "maintenance_team_id": team
                 };
                 async function subscribe(_res) {
                     try {
                         const response = await fetch(
-                            "https://api.noxiun.com/createodoomaintenancerequest", {
+                            "https://api.diax.com.co/createodoomaintenancerequest", {
                                 method: "POST",
                                 headers: {
-                                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-                                    'Access-Control-Allow-Origin': '*',
-                                    'Access-Control-Allow-Methods': 'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'
                                 },
                                 body: JSON.stringify(_res)
                             });
 
                         const myJson = await response.json(); //extract JSON from the http response
                         // do something with myJson
-                        if (response.status != 200) {
-                            alert("Error: " + myJson);
+                        if (myJson.statusCode != 200 ) {
+                            alert("Error 2: " + myJson["body"]);
                         } else {
-                            alert("Tiquete creado exitosamente!");
+                            console.log(myJson["body"]);
+                            alert("Tiquete creado exitosamente: " + myJson["body"]);
                         }
                     } catch (e) {
-                        alert("Error: " + e);
+                        alert("Error 1: " + e);
                     }
                 }
                 subscribe(_form);
             } catch (e) {
-                alert("Error: " + e);
+                alert("Error 0: " + e);
             }
         });
     </script>
