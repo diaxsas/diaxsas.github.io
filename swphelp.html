@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background-color: white;
+            color: black;
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Karla', sans-serif;
+        }
+
+        .columns {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .rows {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .noselect {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        #ayuda {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+            margin: 0px;
+            padding: 10px;
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+        }
+
+        h2 {
+            color: #203461;
+            font-size: 18px;
+            width: fit-content;
+            height: fit-content;
+
+        }
+
+        #instrucciones>text {
+            color: #203461;
+            font-size: 18px;
+        }
+
+        #titulo_row {
+            background-image: url("./header.jpg");
+            background-repeat: no-repeat;
+            background-position: 50% calc(10% - 100px);
+            background-size: cover;
+            height: 100px;
+            width: 100%;
+            position: relative;
+
+        }
+
+        #opacidad_row {
+            opacity: 0.6;
+            background-color: #2857ce;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+
+        }
+
+        #contenedor_rows {
+            max-width: 350px;
+            min-width: 350px;
+        }
+
+        select {
+            width: 240px;
+            border-color: #203461;
+            color: #203461;
+        }
+
+        input[type=text] {
+            border-color: #203461;
+            color: #203461;
+            border-width: 1px;
+        }
+
+        textarea {
+
+            border-color: #203461;
+            color: #203461;
+            width: 250px;
+            height: 100px;
+        }
+
+        .refresh {
+            border: 1px solid #203461;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: auto;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #203461;
+            margin: 10px;
+            cursor: pointer;
+
+        }
+
+        .refresh:hover {
+            transform: scale(1.1);
+        }
+
+        .refresh:active {
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+
+<body class="noselect">
+    <div id="ayuda" class="rows">
+        <div id="logo_row">
+            <img src="./logo.png" alt="Logo Diax" id="logo" />
+        </div>
+        <div id="titulo_row" class="center">
+            <div id="opacidad_row"></div>
+            <h1>Centro de Ayuda</h1>
+        </div>
+        <div id="contenedor_rows">
+            <div id="instrucciones">
+                <text>Ingresa tu nombre junto con el equipo que deseas crear la peticion.</text>
+
+            </div>
+            <div id="empleado_row" class="rows">
+                <div>
+                    <h2>Empleado:</h2>
+                </div>
+                <div class="columns center">
+                    <select id="employee_id">
+                        <option value="">nombre</option>
+                    </select>
+                    <div class="refresh">
+                        <text>&#x21bb;</text>
+                    </div>
+                </div>
+            </div>
+            <div id="equipo_row" class="rows">
+                <div>
+                    <h2>Equipo:</h2>
+                </div>
+                <div class="columns center">
+                    <select id="equipment_id">
+                        <option value="">equipo</option>
+                    </select>
+                    <div class="refresh">
+                        <text>&#x21bb;</text>
+                    </div>
+                </div>
+            </div>
+            <div id="tema_row">
+                <div>
+                    <h2>Titulo:</h2>
+                </div>
+                <input type="text" id="name" value="Asunto">
+            </div>
+            <div id="prioridad_row" class="columns">
+                <div>
+                    <h2>Prioridad:</h2>
+                </div>
+                <input type="range" min="1" max="3" value="1" id="priority">
+            </div>
+            <div id="descripcion_row">
+                <div>
+                    <h2>Descripción:</h2>
+                </div>
+                <textarea id="description">escribe el problema...</textarea>
+            </div>
+            <div id="submit_row">
+                <div id="submit">
+                    <text>Enviar</text>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //document.querySelectorAll("div").forEach(el => el.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0) .toString(16));
+    </script>
+</body>
+
+</html>
