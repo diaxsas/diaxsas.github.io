@@ -23,7 +23,15 @@
             text-align: center;
         }
 
-        #ayuda {}
+        #ayuda {
+            display: none;
+        }
+
+        #error {
+            color: #0069FD;
+            margin: 30px;
+            width: 200px;
+        }
 
         #name {
             width: 300px;
@@ -157,9 +165,10 @@
     </style>
 </head>
 
-<body>
+<body class="rows noselect">
+    <img src="./logo.png" id="logo">
+    <div id="error">Error conectando a la API, refresca la página o contáctate con soporte.</div>
     <div id="ayuda" class="noselect">
-        <img src="./logo.png" id="logo">
         <h1>Centro de Ayuda:</h1>
         <h3>Titulo:</h3>
         <input type="text" id="name" name="name" value="Petición API">
@@ -197,13 +206,18 @@
                 });
                 const myJson = await response.json();
                 if (response.status != 200) {
-                    alert("Error0: " + myJson);
+
+                    $("#error").show();
+                    $("#ayuda").hide();
+                    alert("Error0 (Error de coneccion con la API): " + myJson);
                 } else {
                     _mantenimiento = JSON.parse(myJson.body);
                     localStorage.setItem('_mantenimiento', JSON.stringify(_mantenimiento));
                     enablePage();
                 }
             } catch (e) {
+                $("#error").show();
+                $("#ayuda").hide();
                 alert("Error1: " + e);
             }
         }
@@ -235,12 +249,17 @@
                         text: element.name
                     }));
                 });
+                $("#error").hide();
+                $("#ayuda").show();
             } catch (e) {
                 if (trys == 0) {
                     trys++;
                     getMaintenance();
-                } else
+                } else {
+                    $("#error").show();
+                    $("#ayuda").hide();
                     alert("Error2: " + e);
+                }
             }
         }
 
@@ -314,17 +333,23 @@
                         const myJson = await response.json(); //extract JSON from the http response
                         // do something with myJson
                         if (myJson.statusCode != 200) {
-                            alert("Error3: " + myJson["body"]);
+                            $("#error").show();
+                            $("#ayuda").hide();
+                            alert("Error3 (Error de coneccion con la API): " + myJson["body"]);
                         } else {
                             console.log(myJson["body"]);
                             alert("Tiquete creado exitosamente: " + myJson["body"]);
                         }
                     } catch (e) {
+                        $("#error").show();
+                        $("#ayuda").hide();
                         alert("Error4: " + e);
                     }
                 }
                 subscribe(_form);
             } catch (e) {
+                $("#error").show();
+                $("#ayuda").hide();
                 alert("Error5: " + e);
             }
         });
