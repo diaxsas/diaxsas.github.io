@@ -23,7 +23,15 @@
             text-align: center;
         }
 
-        #ayuda {}
+        #ayuda {
+            display: none;
+        }
+
+        #error {
+            color: #0069FD;
+            margin: 30px;
+            width: 200px;
+        }
 
         #name {
             width: 300px;
@@ -157,9 +165,10 @@
     </style>
 </head>
 
-<body>
+<body class="rows noselect">
+    <img src="./logo.png" id="logo">
+    <div id="error">Error conectando a la API, refresca la página o contáctate con soporte.</div>
     <div id="ayuda" class="noselect">
-        <img src="./logo.png" id="logo">
         <h1>Centro de Ayuda</h1>
         <h3>Titulo:</h3>
         <input type="text" id="name" name="name" value="Petición API">
@@ -197,14 +206,19 @@
                 });
                 const myJson = await response.json();
                 if (response.status != 200) {
-                    alert("Error: " + myJson);
+
+                    $("#error").show();
+                    $("#ayuda").hide();
+                    alert("Error0 (Error de coneccion con la API): " + myJson);
                 } else {
                     _mantenimiento = JSON.parse(myJson.body);
                     localStorage.setItem('_mantenimiento', JSON.stringify(_mantenimiento));
                     enablePage();
                 }
             } catch (e) {
-                alert("Error: " + e);
+                $("#error").show();
+                $("#ayuda").hide();
+                alert("Error1: " + e);
             }
         }
 
@@ -219,19 +233,34 @@
         else
             enablePage();
 
+        var trys = 0;
+
         function enablePage() {
-            _mantenimiento.employees.forEach(element => {
-                $('#employee_id').append($('<option>', {
-                    value: element.id,
-                    text: element.resource_id[1]
-                }));
-            });
-            _mantenimiento.equipment.forEach(element => {
-                $('#equipment_id').append($('<option>', {
-                    value: element.id,
-                    text: element.name
-                }));
-            });
+            try {
+                _mantenimiento.employees.forEach(element => {
+                    $('#employee_id').append($('<option>', {
+                        value: element.id,
+                        text: element.resource_id[1]
+                    }));
+                });
+                _mantenimiento.equipment.forEach(element => {
+                    $('#equipment_id').append($('<option>', {
+                        value: element.id,
+                        text: element.name
+                    }));
+                });
+                $("#error").hide();
+                $("#ayuda").show();
+            } catch (e) {
+                if (trys == 0) {
+                    trys++;
+                    getMaintenance();
+                } else {
+                    $("#error").show();
+                    $("#ayuda").hide();
+                    alert("Error2: " + e);
+                }
+            }
         }
 
         $("#refresh").click(function (e) {
@@ -254,6 +283,23 @@
 
         $("#submit").click(function (e) {
             e.preventDefault(); //stop the browser from following
+
+            $("#name").prop("disabled", true);
+            $("#description").prop("disabled", true);
+            $("#priority").prop("disabled", true);
+            $("#equipment_id").prop("disabled", true);
+            $("#employee_id").prop("disabled", true);
+            $("#submit").hide();
+
+            function reenable() {
+
+                $("#name").prop("disabled", false);
+                $("#description").prop("disabled", false);
+                $("#priority").prop("disabled", false);
+                $("#equipment_id").prop("disabled", false);
+                $("#employee_id").prop("disabled", false);
+                $("#submit").show();
+            }
             var team = 2;
             _mantenimiento.equipment.forEach(element => {
                 if (element.id == $('#equipment_id').val()) {
@@ -275,6 +321,7 @@
                     $("#equipment_id").val() == null
                 ) {
                     alert("Faltan campos por llenar");
+                    reenable();
                     return;
                 }
 
@@ -304,18 +351,29 @@
                         const myJson = await response.json(); //extract JSON from the http response
                         // do something with myJson
                         if (myJson.statusCode != 200) {
-                            alert("Error 2: " + myJson["body"]);
+                            $("#error").show();
+                            $("#ayuda").hide();
+                            alert("Error3 (Error de conexión con la API): " + myJson["body"]);
                         } else {
-                            console.log(myJson["body"]);
+                            $("#name").val("Petición API")
+                            $("#description").val("Petición de Ayuda")
+                            $("#priority").val("1")
+                            $("#employee_id").val("")
+                            $("#equipment_id").val("")
                             alert("Tiquete creado exitosamente: " + myJson["body"]);
+                            reenable();
                         }
                     } catch (e) {
-                        alert("Error 1: " + e);
+                        $("#error").show();
+                        $("#ayuda").hide();
+                        alert("Error4: " + e);
                     }
                 }
                 subscribe(_form);
             } catch (e) {
-                alert("Error 0: " + e);
+                $("#error").show();
+                $("#ayuda").hide();
+                alert("Error5: " + e);
             }
         });
     </script>
