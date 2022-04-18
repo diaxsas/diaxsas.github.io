@@ -160,7 +160,7 @@
 <body>
     <div id="ayuda" class="noselect">
         <img src="./logo.png" id="logo">
-        <h1>Centro de Ayuda</h1>
+        <h1>Centro de Ayuda:</h1>
         <h3>Titulo:</h3>
         <input type="text" id="name" name="name" value="Petición API">
         <h3>Prioridad:</h3>
@@ -219,19 +219,29 @@
         else
             enablePage();
 
+        var trys = 0;
+
         function enablePage() {
-            _mantenimiento.employees.forEach(element => {
-                $('#employee_id').append($('<option>', {
-                    value: element.id,
-                    text: element.resource_id[1]
-                }));
-            });
-            _mantenimiento.equipment.forEach(element => {
-                $('#equipment_id').append($('<option>', {
-                    value: element.id,
-                    text: element.name
-                }));
-            });
+            try {
+                _mantenimiento.employees.forEach(element => {
+                    $('#employee_id').append($('<option>', {
+                        value: element.id,
+                        text: element.resource_id[1]
+                    }));
+                });
+                _mantenimiento.equipment.forEach(element => {
+                    $('#equipment_id').append($('<option>', {
+                        value: element.id,
+                        text: element.name
+                    }));
+                });
+            } catch (e) {
+                if (trys == 0) {
+                    trys++;
+                    getMaintenance();
+                } else
+                    alert("Error: " + e);
+            }
         }
 
         $("#refresh").click(function (e) {
