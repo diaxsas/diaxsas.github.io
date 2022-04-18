@@ -197,14 +197,14 @@
                 });
                 const myJson = await response.json();
                 if (response.status != 200) {
-                    alert("Error: " + myJson);
+                    alert("Error0: " + myJson);
                 } else {
                     _mantenimiento = JSON.parse(myJson.body);
                     localStorage.setItem('_mantenimiento', JSON.stringify(_mantenimiento));
                     enablePage();
                 }
             } catch (e) {
-                alert("Error: " + e);
+                alert("Error1: " + e);
             }
         }
 
@@ -240,7 +240,7 @@
                     trys++;
                     getMaintenance();
                 } else
-                    alert("Error: " + e);
+                    alert("Error2: " + e);
             }
         }
 
@@ -314,18 +314,18 @@
                         const myJson = await response.json(); //extract JSON from the http response
                         // do something with myJson
                         if (myJson.statusCode != 200) {
-                            alert("Error 2: " + myJson["body"]);
+                            alert("Error3: " + myJson["body"]);
                         } else {
                             console.log(myJson["body"]);
                             alert("Tiquete creado exitosamente: " + myJson["body"]);
                         }
                     } catch (e) {
-                        alert("Error 1: " + e);
+                        alert("Error4: " + e);
                     }
                 }
                 subscribe(_form);
             } catch (e) {
-                alert("Error 0: " + e);
+                alert("Error5: " + e);
             }
         });
     </script>
