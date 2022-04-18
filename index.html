@@ -283,6 +283,23 @@
 
         $("#submit").click(function (e) {
             e.preventDefault(); //stop the browser from following
+
+            $("#name").prop("disabled", true);
+            $("#description").prop("disabled", true);
+            $("#priority").prop("disabled", true);
+            $("#equipment_id").prop("disabled", true);
+            $("#employee_id").prop("disabled", true);
+            $("#submit").hide();
+
+            function reenable() {
+
+                $("#name").prop("disabled", false);
+                $("#description").prop("disabled", false);
+                $("#priority").prop("disabled", false);
+                $("#equipment_id").prop("disabled", false);
+                $("#employee_id").prop("disabled", false);
+                $("#submit").show();
+            }
             var team = 2;
             _mantenimiento.equipment.forEach(element => {
                 if (element.id == $('#equipment_id').val()) {
@@ -304,6 +321,7 @@
                     $("#equipment_id").val() == null
                 ) {
                     alert("Faltan campos por llenar");
+                    reenable();
                     return;
                 }
 
@@ -335,10 +353,15 @@
                         if (myJson.statusCode != 200) {
                             $("#error").show();
                             $("#ayuda").hide();
-                            alert("Error3 (Error de coneccion con la API): " + myJson["body"]);
+                            alert("Error3 (Error de conexión con la API): " + myJson["body"]);
                         } else {
-                            console.log(myJson["body"]);
+                            $("#name").val("Petición API")
+                            $("#description").val("Petición de Ayuda")
+                            $("#priority").val("1")
+                            $("#employee_id").val("")
+                            $("#equipment_id").val("")
                             alert("Tiquete creado exitosamente: " + myJson["body"]);
+                            reenable();
                         }
                     } catch (e) {
                         $("#error").show();
