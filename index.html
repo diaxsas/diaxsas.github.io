@@ -144,7 +144,7 @@
         #error {}
 
         select {
-            width: 270px;
+            width: 100%;
             border-color: #203461;
             color: #203461;
             height: 30px;
@@ -156,7 +156,7 @@
             color: #203461;
             border-width: 1px;
             height: 23px;
-            width: 258px;
+            width: auto;
             font-family: 'Karla', sans-serif;
             padding: 3px;
             padding-left: 5px;
@@ -167,12 +167,17 @@
 
             border-color: #203461;
             color: #203461;
-            width: 256px;
+            width: 100%;
+            box-sizing: border-box;
+            margin:0px;
             height: 100px;
             resize: vertical;
             font-family: 'Karla', sans-serif;
             padding: 5px;
 
+        }
+        #descripcion_row {
+            width: 100%;
         }
 
         .refresh {
@@ -181,7 +186,9 @@
             width: 20px;
             height: 20px;
             color: #203461;
-            margin-left: 10px;
+            right:-10px;
+            transform: translate(100%);
+            position: absolute;
 
         }
 
@@ -208,7 +215,6 @@
             width: 120px;
             height: 30px;
             margin: 20px;
-            margin-right: 70px;
             background-color: #0066fe;
             color: white;
         }
@@ -219,6 +225,9 @@
 
         #logo {
             margin: 20px;
+        }
+        .relative {
+            position: relative;
         }
     </style>
 
@@ -245,7 +254,7 @@
                 <div>
                     <h2>Empleado:</h2>
                 </div>
-                <div class="columns center left">
+                <div class="columns center left relative">
                     <select id="employee_id">
                         <option value="">Nombre</option>
                     </select>
@@ -258,7 +267,7 @@
                 <div>
                     <h2>Equipo:</h2>
                 </div>
-                <div class="columns center left">
+                <div class="columns center left relative">
                     <select id="equipment_id">
                         <option value="">Equipo</option>
                     </select>
