@@ -16,7 +16,7 @@
             color: black;
             padding: 0px;
             margin: 0px;
-            width: 100%;
+            min-width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
@@ -40,6 +40,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .left {
             display: flex;
             justify-content: flex-start;
@@ -61,7 +62,7 @@
         }
 
         #ayuda {
-            width: 100%;
+            min-width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
@@ -69,8 +70,8 @@
 
         h1 {
             color: white;
-            margin: 0px;
-            padding: 10px;
+            margin: 10px;
+            padding: 0px;
             width: fit-content;
             height: fit-content;
             position: absolute;
@@ -78,10 +79,30 @@
 
         h2 {
             color: #203461;
-            font-size: 18px;
+            font-size: 14px;
+            margin: 0px;
+            padding: 0px;
             width: fit-content;
             height: fit-content;
+            margin-bottom: 5px;
+            margin-top: 20px;
+            padding: 0px;
 
+        }
+
+        #prioridad_row>div>h2 {
+            margin: auto;
+
+        }
+
+        #espacio_slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        #prioridad_row {
+            margin-top: 20px;
+            display: flex;
         }
 
         #instrucciones>text {
@@ -94,8 +115,8 @@
             background-repeat: no-repeat;
             background-position: 50% calc(10% - 100px);
             background-size: cover;
-            height: 100px;
-            width: 100%;
+            min-height: 100px;
+            min-width: 100%;
             position: relative;
 
         }
@@ -110,28 +131,40 @@
         }
 
         #contenedor_rows {
-            max-width: 350px;
-            min-width: 350px;
+            max-width: 300px;
+            min-width: 300px;
         }
 
         select {
-            width: 240px;
+            width: 270px;
             border-color: #203461;
             color: #203461;
+            height: 30px;
+            font-family: 'Karla', sans-serif;
         }
 
         input[type=text] {
             border-color: #203461;
             color: #203461;
             border-width: 1px;
+            height: 23px;
+            width: 258px;
+            font-family: 'Karla', sans-serif;
+            padding: 3px;
+            padding-left: 5px;
+
         }
 
         textarea {
 
             border-color: #203461;
             color: #203461;
-            width: 250px;
+            width: 256px;
             height: 100px;
+            resize: vertical;
+            font-family: 'Karla', sans-serif;
+            padding: 5px;
+
         }
 
         .refresh {
@@ -139,23 +172,50 @@
             border-radius: 50%;
             width: 20px;
             height: 20px;
+            color: #203461;
+            margin-left: 10px;
+
+        }
+
+        .button {
+            cursor: pointer;
             font-size: auto;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #203461;
-            margin: 10px;
-            cursor: pointer;
 
         }
 
-        .refresh:hover {
+        .button:hover {
             transform: scale(1.1);
         }
 
-        .refresh:active {
+        .button:active {
             transform: scale(0.9);
+        }
+
+        #submit {
+            border: 1px solid;
+            width: 120px;
+            height: 30px;
+            margin: 20px;
+            margin-right: 70px;
+            background-color: #0066fe;
+            color: white;
+        }
+
+        .row_space {
+            margin-top: 20px;
+        }
+
+        #logo {
+            margin: 20px;
+        }
+
+        #instrucciones {
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -171,18 +231,18 @@
         </div>
         <div id="contenedor_rows">
             <div id="instrucciones">
-                <text>Ingresa tu nombre junto con el equipo que deseas crear la peticion.</text>
+                <text>Ingresa tu nombre junto con el equipo que deseas crear la petición.</text>
 
             </div>
             <div id="empleado_row" class="rows">
                 <div>
                     <h2>Empleado:</h2>
                 </div>
-                <div class="columns center">
+                <div class="columns center left">
                     <select id="employee_id">
                         <option value="">nombre</option>
                     </select>
-                    <div class="refresh">
+                    <div class="refresh button">
                         <text>&#x21bb;</text>
                     </div>
                 </div>
@@ -191,35 +251,37 @@
                 <div>
                     <h2>Equipo:</h2>
                 </div>
-                <div class="columns center">
+                <div class="columns center left">
                     <select id="equipment_id">
                         <option value="">equipo</option>
                     </select>
-                    <div class="refresh">
+                    <div class="refresh button">
                         <text>&#x21bb;</text>
                     </div>
                 </div>
             </div>
-            <div id="tema_row">
-                <div>
-                    <h2>Titulo:</h2>
-                </div>
-                <input type="text" id="name" value="Asunto">
-            </div>
-            <div id="prioridad_row" class="columns">
+            <div id="prioridad_row" class="columns center left">
                 <div>
                     <h2>Prioridad:</h2>
                 </div>
-                <input type="range" min="1" max="3" value="1" id="priority">
+                <div id="espacio_slide">
+                    <input type="range" min="1" max="3" value="1" id="priority">
+                </div>
+            </div>
+            <div id="tema_row" class="rows left">
+                <div>
+                    <h2>Titulo:</h2>
+                </div>
+                <input type="text" id="name" placeholder="asunto">
             </div>
             <div id="descripcion_row">
                 <div>
                     <h2>Descripción:</h2>
                 </div>
-                <textarea id="description">escribe el problema...</textarea>
+                <textarea id="description" class="left" placeholder="escribe el problema..."></textarea>
             </div>
-            <div id="submit_row">
-                <div id="submit">
+            <div id="submit_row" class="center">
+                <div id="submit" class="button">
                     <text>Enviar</text>
                 </div>
             </div>
