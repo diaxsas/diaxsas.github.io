@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Roboto&display=swap" rel="stylesheet">
     <title>Diax - Ayuda</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
@@ -15,46 +18,13 @@
             color: black;
             padding: 0px;
             margin: 0px;
-            width: 100%;
+            min-width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-        }
-
-        #ayuda {
-            display: none;
-        }
-
-        #error {
-            color: #0069FD;
-            margin: 30px;
-            width: 200px;
-        }
-
-        #name {
-            width: 300px;
-        }
-
-        input {
-            height: 20px;
-            padding: 2px;
-            margin: 0px;
-            border: 1px solid #0069FD;
-        }
-
-        select {
-            height: 25px;
-            padding: 2px;
-            margin: 0px;
-            border: 1px solid #0069FD;
-        }
-
-        textarea {
-            width: 300px;
-            height: 150px;
-            border: 1px solid #0069FD;
+            font-family: 'Karla', sans-serif;
         }
 
         .columns {
@@ -73,6 +43,11 @@
             justify-content: center;
         }
 
+        .left {
+            display: flex;
+            justify-content: flex-start;
+        }
+
         .noselect {
             -webkit-touch-callout: none;
             /* iOS Safari */
@@ -88,111 +63,235 @@
             /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
         }
 
-        
-        h1,
-        h3 {
-            color: #0069FD;
-            padding: 0px;
-            margin: 10px;
+        #ayuda {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
         }
 
         h1 {
-            text-decoration: underline;
-            margin-bottom: 30px;
-        }
-
-        .clickable {
-            cursor: pointer;
-            border: 1px solid #0069FD;
             color: white;
-            background-color: #0069FD;
+            margin: 10px;
+            padding: 0px;
             width: fit-content;
             height: fit-content;
-            padding: 5px;
-            margin: 10px;
-            border-radius: 5px;
+            position: absolute;
         }
 
-        .clickable:hover {
-            transform: scale(1.1);
+        h2 {
+            color: #203461;
+            font-size: 14px;
+            margin: 0px;
+            padding: 0px;
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 5px;
+            margin-top: 20px;
+            padding: 0px;
+
         }
 
-        .clickable:active {
-            transform: scale(0.9);
+        #prioridad_row>div>h2 {
+            margin: auto;
+
         }
 
-        .clickable2 {
-            cursor: pointer;
-            border: 1px solid #0069FD;
-            width: 15px;
-            height: 15px;
+        #espacio_slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        #prioridad_row {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .descripciones {
+            color: #203461;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #titulo_row {
+            background-image: url("./header.jpg");
+            background-repeat: no-repeat;
+            background-position: 50% calc(10% - 100px);
+            background-size: cover;
+            min-height: 100px;
+            min-width: 100%;
+            position: relative;
+
+        }
+
+        #opacidad_row {
+            opacity: 0.6;
+            background-color: #2857ce;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+
+        }
+
+        #contenedor_rows {
+            max-width: 300px;
+            min-width: 300px;
+            height: fit-content;
+            display: none;
+        }
+
+        #error {}
+
+        select {
+            width: 270px;
+            border-color: #203461;
+            color: #203461;
+            height: 30px;
+            font-family: 'Karla', sans-serif;
+        }
+
+        input[type=text] {
+            border-color: #203461;
+            color: #203461;
+            border-width: 1px;
+            height: 23px;
+            width: 258px;
+            font-family: 'Karla', sans-serif;
             padding: 3px;
-            margin: 3px;
+            padding-left: 5px;
+
+        }
+
+        textarea {
+
+            border-color: #203461;
+            color: #203461;
+            width: 256px;
+            height: 100px;
+            resize: vertical;
+            font-family: 'Karla', sans-serif;
+            padding: 5px;
+
+        }
+
+        .refresh {
+            border: 1px solid #203461;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            color: #203461;
             margin-left: 10px;
+
+        }
+
+        .button {
+            cursor: pointer;
             font-size: auto;
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            font-family: Lucida Sans Unicode
+
         }
 
-        .clickable2:hover {
+        .button:hover {
             transform: scale(1.1);
         }
 
-        .clickable2:active {
+        .button:active {
             transform: scale(0.9);
         }
 
-        @keyframes appear {
-            0% {
-                stroke-dasharray: 0 50;
-                stroke-dashoffset: 50;
-            }
-
-            100% {
-                stroke-dashoffset: 0;
-                stroke-dasharray: 50 0;
-            }
+        #submit {
+            border: 1px solid;
+            width: 120px;
+            height: 30px;
+            margin: 20px;
+            margin-right: 70px;
+            background-color: #0066fe;
+            color: white;
         }
 
-        @media (max-width: 1199px) and (min-width: 750px) {}
+        .row_space {
+            margin-top: 20px;
+        }
 
-        @media (max-width: 749px) and (min-width: 0px) {
-            /* min-width: 360px; */
-
+        #logo {
+            margin: 20px;
         }
     </style>
+
 </head>
 
-<body class="rows noselect">
-    <img src="./logo.png" id="logo">
-    <div id="error">Error conectando a la API, refresca la página o contáctate con soporte.</div>
-    <div id="ayuda" class="noselect">
-        <h1>Centro de Ayuda</h1>
-        <h3>Titulo:</h3>
-        <input type="text" id="name" name="name" value="Petición API">
-        <h3>Prioridad:</h3>
-        <input type="range" min="1" max="3" value="1" id="priority">
-        <h3>Empleado:</h3>
-        <div class="columns center">
-            <select name="employee_id" id="employee_id">
-                <option value="">Empleado</option>
-            </select>
-            <div id="refresh" class="clickable2"><text>&#x21bb;</text></div>
+<body class="noselect">
+    <div id="ayuda" class="rows">
+        <div id="logo_row">
+            <img src="./logo.png" alt="Logo Diax" id="logo" />
         </div>
-        <h3>Equipo:</h3>
-        <div class="columns center">
-            <select name="equipment_id" id="equipment_id">
-                <option value="">Equipo</option>
-            </select>
-            <div id="refresh" class="clickable2"><text>&#x21bb;</text></div>
+        <div id="titulo_row" class="center">
+            <div id="opacidad_row"></div>
+            <h1>Centro de Ayuda</h1>
         </div>
-        <h3>Descripción:</h3>
-        <textarea type="text" id="description" name="description">Petición de Ayuda</textarea>
-        <div class="center">
-            <div id="submit" class="clickable"><text>Ayuda!</text></div>
+        <div id="error" class="descripciones">
+            <text>Error de conección a la API. Contáctate con soporte.</text>
+        </div>
+        <div id="contenedor_rows">
+            <div id="instrucciones" class="descripciones">
+                <text>Ingresa tu nombre junto con el equipo que deseas crear la petición.</text>
+
+            </div>
+            <div id="empleado_row" class="rows">
+                <div>
+                    <h2>Empleado:</h2>
+                </div>
+                <div class="columns center left">
+                    <select id="employee_id">
+                        <option value="">Nombre</option>
+                    </select>
+                    <div class="refresh button">
+                        <text>&#x21bb;</text>
+                    </div>
+                </div>
+            </div>
+            <div id="equipo_row" class="rows">
+                <div>
+                    <h2>Equipo:</h2>
+                </div>
+                <div class="columns center left">
+                    <select id="equipment_id">
+                        <option value="">Equipo</option>
+                    </select>
+                    <div class="refresh button">
+                        <text>&#x21bb;</text>
+                    </div>
+                </div>
+            </div>
+            <div id="prioridad_row" class="columns center left">
+                <div>
+                    <h2>Prioridad:</h2>
+                </div>
+                <div id="espacio_slide">
+                    <input type="range" min="1" max="3" value="1" id="priority">
+                </div>
+            </div>
+            <div id="tema_row" class="rows left">
+                <div>
+                    <h2>Titulo:</h2>
+                </div>
+                <input type="text" id="name" placeholder="Asunto">
+            </div>
+            <div id="descripcion_row">
+                <div>
+                    <h2>Descripción:</h2>
+                </div>
+                <textarea id="description" class="left" placeholder="Escribe el problema..."></textarea>
+            </div>
+            <div id="submit_row" class="center">
+                <div id="submit" class="button">
+                    <text>Enviar</text>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -209,7 +308,7 @@
                 if (response.status != 200) {
 
                     $("#error").show();
-                    $("#ayuda").hide();
+                    $("#contenedor_rows").hide();
                     alert("Error0 (Error de coneccion con la API): " + myJson);
                 } else {
                     _mantenimiento = JSON.parse(myJson.body);
@@ -218,7 +317,7 @@
                 }
             } catch (e) {
                 $("#error").show();
-                $("#ayuda").hide();
+                $("#contenedor_rows").hide();
                 alert("Error1: " + e);
             }
         }
@@ -251,14 +350,14 @@
                     }));
                 });
                 $("#error").hide();
-                $("#ayuda").show();
+                $("#contenedor_rows").show();
             } catch (e) {
                 if (trys == 0) {
                     trys++;
                     getMaintenance();
                 } else {
                     $("#error").show();
-                    $("#ayuda").hide();
+                    $("#contenedor_rows").hide();
                     alert("Error2: " + e);
                 }
             }
@@ -312,8 +411,6 @@
             });
             try {
                 if (
-                    $("#name").val() == "" ||
-                    $("#name").val() == null ||
                     $("#priority").val() == "" ||
                     $("#priority").val() == null ||
                     $("#employee_id").val() == "" ||
@@ -324,6 +421,12 @@
                     alert("Faltan campos por llenar");
                     reenable();
                     return;
+                }
+                var _name = $("#name").val()
+                if (
+                    _name == "" ||
+                    _name == null) {
+                        _name = "Petición API";
                 }
 
                 var d = new Date();
@@ -353,7 +456,7 @@
                         // do something with myJson
                         if (myJson.statusCode != 200) {
                             $("#error").show();
-                            $("#ayuda").hide();
+                            $("#contenedor_rows").hide();
                             alert("Error3 (Error de conexión con la API): " + myJson["body"]);
                         } else {
                             $("#name").val("Petición API")
@@ -366,14 +469,14 @@
                         }
                     } catch (e) {
                         $("#error").show();
-                        $("#ayuda").hide();
+                        $("#contenedor_rows").hide();
                         alert("Error4: " + e);
                     }
                 }
                 subscribe(_form);
             } catch (e) {
                 $("#error").show();
-                $("#ayuda").hide();
+                $("#contenedor_rows").hide();
                 alert("Error5: " + e);
             }
         });
