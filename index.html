@@ -89,13 +89,15 @@
             margin-bottom: 5px;
             margin-top: 20px;
             padding: 0px;
+            text-align: left;
 
         }
 
         #contenedor_busqueda h2 {
             margin-bottom: 0px;
             margin-top: 0px;
-            margin-right: 10px;
+            margin-right: 3px;
+            min-width: 100px;
         }
 
         #prioridad_row>div>h2 {
@@ -152,13 +154,14 @@
         }
 
         #contenedor_rows {
-            display: none;
         }
 
-        #contenedor_busqueda {}
+        #contenedor_busqueda {
+            display: none;}
 
         #error {
             display: none;
+            max-width: 300px;
         }
 
         select {
@@ -305,7 +308,7 @@
 
         }
 
-        #contenedor_info_tiquete>div, 
+        #contenedor_info_tiquete>div,
         #contenedor_basico_tiquete>div {
             margin-top: 6px;
 
@@ -325,8 +328,13 @@
         #submit_row {
             margin-top: 10px;
         }
+
         #contenedor_basico_tiquete {
             margin-bottom: 20px;
+            text-align: left;
+        }
+        #input_tiquete > h2 {
+            margin-bottom: 5px;
         }
     </style>
 
@@ -536,7 +544,7 @@
             </div>
             <div id="contenedor_info_tiquete">
                 <div id="name_2" class="rows">
-                    <h2>Numero de Tiquete:</h2>
+                    <h2>Tiquete:</h2>
                     <text>000000</text>
                 </div>
                 <div id="contenedor_basico_tiquete">
@@ -545,27 +553,27 @@
                     </div>
                     <div id="employee_id_2" class="columns">
                         <h2>Empleado:</h2>
-                        <text>Empleado</text>
+                        <text>Daniel Olarte Blasche Blanco</text>
 
                     </div>
                     <div id="equipment_id_2" class="columns">
                         <h2>Equipo:</h2>
-                        <text>Equipo</text>
+                        <text>Controlador de Aperturas Multiples r046</text>
 
                     </div>
                     <div id="encargado_id_2" class="columns">
                         <h2>Encargado:</h2>
-                        <text>Encargado</text>
+                        <text>Andres Garcia Marquez Quintero</text>
 
                     </div>
                 </div>
                 <div id="stage_id_2" class="columns">
                     <h2>Estado:</h2>
-                    <text>Estado</text>
+                    <text>En Proceso</text>
 
                 </div>
                 <div id="schedule_date_2" class="columns">
-                    <h2>Fecha Prevista:</h2>
+                    <h2>Previsto:</h2>
                     <text>00/00/0000 00:00:00</text>
 
                 </div>
