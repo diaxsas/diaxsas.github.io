@@ -781,10 +781,12 @@
                 $("#submit").show();
             }
             var team = 2;
+            var encargado = 6;
             _mantenimiento.equipment.forEach(element => {
                 if (element.id == $('#equipment_id').val()) {
                     if (element.category_id[0] == "8") {
                         team = 3;
+                        encargado = 7;
                     }
                     return;
                 }
@@ -821,7 +823,8 @@
                     "maintenance_type": "corrective",
                     "employee_id": parseInt($("#employee_id").val()),
                     "equipment_id": parseInt($("#equipment_id").val()),
-                    "maintenance_team_id": team
+                    "maintenance_team_id": team,
+                    "user_id": encargado
                 };
                 async function subscribe(_res) {
                     try {
