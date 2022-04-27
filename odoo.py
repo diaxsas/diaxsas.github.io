@@ -16,7 +16,7 @@ uid = common.authenticate(db, username, password, {})
 
 
 models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
-
+'''
 employees = models.execute_kw(db, uid, password, 'hr.employee', 'search_read', [], {'fields': ['resource_id']})
 
 equipos = models.execute_kw(db, uid, password, 'maintenance.team', 'search_read', [], {'fields': ['name']})
@@ -26,10 +26,11 @@ equipamento = models.execute_kw(db, uid, password, 'maintenance.equipment', 'sea
 
 requests = models.execute_kw(db, uid, password, 'maintenance.request', 'search_read', [], {'fields': ['name', 'create_uid', 'employee_id', 'description', 'equipment_id', 'maintenance_team_id', 'priority', 'schedule_date', 'maintenance_type']})
 
+'''
+requests = models.execute_kw(db, uid, password, 'maintenance.request', 'search_read', [[['id', '=', '6']]], {'fields': ['name', 'id', 'employee_id', 'equipment_id', 'user_id', 'schedule_date', 'stage_id']})
 
 
-
-
+'''
 id = models.execute_kw(db, uid, password, 'maintenance.request', 'create', [
     {
         'name': 'Test API',
@@ -42,5 +43,6 @@ id = models.execute_kw(db, uid, password, 'maintenance.request', 'create', [
         'maintenance_team_id': 3,
     }
 ])
+'''
 
-print(id)
+print(requests)
