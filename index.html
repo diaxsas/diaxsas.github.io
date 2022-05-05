@@ -340,6 +340,92 @@
             align-items: baseline;
             justify-content: space-between;
         }
+
+        .activo_name {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 100%;
+            white-space: nowrap;
+            font-size: 14px !important;
+            text-align: left;
+        }
+
+        .activo_id {
+            text-align: left;
+            font-size: 14px !important;
+            min-width: 15%;
+        }
+
+        #tabla_activos {
+            border: 1px solid #203461;
+            border-top: 0px;
+        }
+
+        .tiquete_activo {
+            border-top: 1px dotted #203461;
+        }
+
+        .tiquete_activo>* {
+            margin: 5px;
+        }
+
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border: 8px solid #fff;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #loader {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            z-index: 99999;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .noScroll {
+            overflow: hidden;
+        }
     </style>
 
 </head>
@@ -469,7 +555,7 @@
             <h1>Centro de Ayuda</h1>
         </div>
         <div id="error" class="descripciones">
-            <text id="cargar_activos">Error de conección a la API. Contáctate con soporte.</text>
+            <text>Error de conección a la API. Contáctate con soporte.</text>
         </div>
         <div id="contenedor_rows">
             <div class="descripciones instrucciones">
@@ -493,7 +579,7 @@
             <div id="equipo_row" class="rows">
                 <div id="equipo_subrow" class="columns">
                     <h2>Equipo:</h2>
-                    <text class="links">Ver activos</text>
+                    <text id="cargar_activos" class="links">Ver tiquetes</text>
                 </div>
                 <div class="columns center left relative">
                     <select id="equipment_id">
@@ -504,17 +590,19 @@
                     </div>
                 </div>
                 <div id="tabla_activos">
-                    <div class="tiquete_activo columns">
+                    <!-- 
+                    <div class="tiquete_activo center columns">
                         <text class="activo_id">
                             0000
                         </text>
                         <text class="activo_name">
                             Organizar molde para sacar muestras. Guía inclinada reventada.
                         </text>
-                        <div class="activo_link">
-                            
-                        </div>
+                        <a href="">
+                            <img src="./website/media/info.svg" class="links"></img>
+                        </a>
                     </div>
+                    -->
                 </div>
             </div>
             <div id="prioridad_row" class="columns center left">
@@ -598,17 +686,31 @@
             </div>
         </div>
     </div>
-
+    <div id="loader" class="center hidden">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <script>
         $('#link_tiquete').click(() => {
             $('#contenedor_busqueda').show();
             $('#contenedor_rows').hide();
             $('#contenedor_info_tiquete').hide();
+            $("#tabla_activos").empty();
         });
         $('#link_regresar').click(() => {
             $('#contenedor_busqueda').hide();
             $('#contenedor_rows').show();
         });
+
+
+        $("#equipment_id").change(function () {
+            $("#tabla_activos").empty();
+        });
+
 
         $('#boton_buscar').click(() => {
             var _id = $('#input_tiquete>input').val();
@@ -623,6 +725,8 @@
                 alert('Ingresa un numero de tiquete valido');
                 return;
             }
+            $('body').addClass('noScroll');
+            $('#loader').removeClass('hidden');
             $("#input_tiquete").prop("disabled", true);
             $("#boton_buscar").hide();
             async function checkInfo(_id) {
@@ -640,11 +744,17 @@
                     const myJson = await response.json(); //extract JSON from the http response
                     // do something with myJson
                     if (myJson.statusCode != 200) {
+                        $('body').removeClass('noScroll');
+                        $('#loader').addClass('hidden');
+
                         $("#error").show();
                         $('#contenedor_busqueda').hide();
                         alert("Error5 (Error de conexión con la API): " + myJson["body"]);
                     } else {
                         if (myJson["body"] == "[]") {
+                            $('body').removeClass('noScroll');
+                            $('#loader').addClass('hidden');
+
                             $("#input_tiquete").prop("disabled", false);
                             $("#boton_buscar").show();
                             alert('Ingresa un numero de tiquete valido');
@@ -670,12 +780,17 @@
                         document.querySelector("#schedule_date_2>text").textContent = (_tiquete
                             .schedule_date)
 
+                        $('body').removeClass('noScroll');
+                        $('#loader').addClass('hidden');
 
-                        $("#input_tiquete>input").val("")
+
                         $("#input_tiquete").prop("disabled", false);
                         $("#boton_buscar").show();
                     }
                 } catch (e) {
+                    $('body').removeClass('noScroll');
+                    $('#loader').addClass('hidden');
+
                     $("#input_tiquete").prop("disabled", false);
                     $("#boton_buscar").show();
                     alert("Error6: " + e);
@@ -685,6 +800,93 @@
 
         });
 
+
+
+        $('#cargar_activos').click(() => {
+            var _id = $('#equipment_id').val();
+            if (_id == "" || _id == null) {
+                alert('Ingresa un numero de equipo valido');
+                return;
+            }
+            _id = parseInt(_id);
+            $("#tabla_activos").empty();
+            $('body').addClass('noScroll');
+            $('#loader').removeClass('hidden');
+            $("#input_tiquete").prop("disabled", true);
+            async function checkInfo(_id) {
+                try {
+                    var _res = {
+                        "id": _id
+                    };
+                    const response = await fetch(
+                        "https://api.diax.com.co/checkodoorequests", {
+                            method: "POST",
+                            headers: {},
+                            body: JSON.stringify(_res)
+                        });
+
+                    const myJson = await response.json(); //extract JSON from the http response
+                    // do something with myJson
+                    if (myJson.statusCode != 200) {
+                        $('body').removeClass('noScroll');
+                        $('#loader').addClass('hidden');
+
+                        $("#error").show();
+                        $('#contenedor_busqueda').hide();
+                        alert("Error52 (Error de conexión con la API): " + myJson["body"]);
+                    } else {
+                        if (myJson["body"] == "[]") {
+                            $('body').removeClass('noScroll');
+                            $('#loader').addClass('hidden');
+
+                            $("#input_tiquete").prop("disabled", false);
+                            alert('No se encontraron alertas para este equipo.');
+                            return;
+
+                        }
+                        var _tiquete = JSON.parse(myJson["body"]);
+
+
+
+
+                        _tiquete.forEach(_tiq => {
+
+
+
+                            var _base = `
+                            <div class="tiquete_activo center columns">
+                                <text class="activo_id">
+                                    ${String(parseInt(_tiq.id)).padStart(5, '0')}
+                                </text>
+                                <text class="activo_name">
+                                    ${_tiq.name}
+                                </text>
+                                <a href="${window.location.href.split('?')[0] + "?id=" +_tiq.id}">
+                                    <img src="./website/media/info.svg" class="links"></img>
+                                </a>
+                            </div>
+                            `;
+
+                            $("#tabla_activos").append(_base);
+
+                        });
+
+
+                        $('body').removeClass('noScroll');
+                        $('#loader').addClass('hidden');
+                        $("#input_tiquete").prop("disabled", false);
+                    }
+                } catch (e) {
+                    $('body').removeClass('noScroll');
+                    $('#loader').addClass('hidden');
+
+                    $("#input_tiquete").prop("disabled", false);
+                    alert("Error62: " + e);
+                }
+            }
+            checkInfo(_id);
+
+        });
 
 
 
@@ -706,15 +908,25 @@
                 const myJson = await response.json();
                 if (response.status != 200) {
 
+                    $('body').removeClass('noScroll');
+                    $('#loader').addClass('hidden');
+
                     $("#error").show();
                     $("#contenedor_rows").hide();
                     alert("Error0 (Error de coneccion con la API): " + myJson);
                 } else {
                     _mantenimiento = JSON.parse(myJson.body);
                     localStorage.setItem('_mantenimiento', JSON.stringify(_mantenimiento));
+
+                    $('body').removeClass('noScroll');
+                    $('#loader').addClass('hidden');
+
                     enablePage();
                 }
             } catch (e) {
+                $('body').removeClass('noScroll');
+                $('#loader').addClass('hidden');
+
                 $("#error").show();
                 $("#contenedor_rows").hide();
                 alert("Error1: " + e);
@@ -750,6 +962,7 @@
                 });
                 $("#error").hide();
                 $("#contenedor_rows").show();
+                checkParameters();
             } catch (e) {
                 if (trys == 0) {
                     trys++;
@@ -762,7 +975,29 @@
             }
         }
 
-        $("#refresh").click(function (e) {
+
+        function checkParameters() {
+            var _len = window.location.href.split('?').length
+            if (_len > 1) {
+                const queryString = window.location.search;
+                var _params = new URLSearchParams(queryString);
+                if (_params.has('id')) {
+                    var _currID = _params.get('id');
+                    $('#contenedor_busqueda').show();
+                    $('#contenedor_rows').hide();
+                    $('#contenedor_info_tiquete').hide();
+                    $("#tabla_activos").empty();
+
+
+                    $('#input_tiquete > input').val(_currID);
+                    $('#boton_buscar').click();
+                }
+            }
+        }
+        $(".refresh").click(function (e) {
+            $('body').addClass('noScroll');
+            $('#loader').removeClass('hidden');
+            $("#tabla_activos").empty();
 
             $('#employee_id').empty();
             $('#equipment_id').empty();
@@ -782,6 +1017,9 @@
 
         $("#submit").click(function (e) {
             e.preventDefault(); //stop the browser from following
+            $('body').addClass('noScroll');
+            $('#loader').removeClass('hidden');
+            $("#tabla_activos").empty();
 
             $("#name").prop("disabled", true);
             $("#description").prop("disabled", true);
@@ -791,6 +1029,10 @@
             $("#submit").hide();
 
             function reenable() {
+
+
+                $('body').removeClass('noScroll');
+                $('#loader').addClass('hidden');
 
                 $("#name").prop("disabled", false);
                 $("#description").prop("disabled", false);
@@ -857,6 +1099,10 @@
                         const myJson = await response.json(); //extract JSON from the http response
                         // do something with myJson
                         if (myJson.statusCode != 200) {
+
+                            $('body').removeClass('noScroll');
+                            $('#loader').addClass('hidden');
+
                             $("#error").show();
                             $("#contenedor_rows").hide();
                             alert("Error3 (Error de conexión con la API): " + myJson["body"]);
@@ -870,6 +1116,10 @@
                             reenable();
                         }
                     } catch (e) {
+
+                        $('body').removeClass('noScroll');
+                        $('#loader').addClass('hidden');
+
                         $("#error").show();
                         $("#contenedor_rows").hide();
                         alert("Error4: " + e);
