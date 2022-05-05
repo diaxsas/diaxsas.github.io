@@ -426,6 +426,9 @@
         .noScroll {
             overflow: hidden;
         }
+        #schedule_date_2 > text {
+            text-align: left;
+        }
     </style>
 
 </head>
@@ -777,8 +780,22 @@
                             1])
                         document.querySelector("#encargado_id_2>text").textContent = (_tiquete.user_id[1])
                         document.querySelector("#stage_id_2>text").textContent = (_stage)
-                        document.querySelector("#schedule_date_2>text").textContent = (_tiquete
-                            .schedule_date)
+
+                        var event = new Date(_tiquete.schedule_date + "Z");
+                        var options = {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        };
+
+                        console.log(_tiquete.schedule_date)
+                        console.log(event)
+                        console.log(event.toLocaleDateString('es-ES', options));
+
+                        document.querySelector("#schedule_date_2>text").textContent = (event.toLocaleDateString('es-ES', options))
 
                         $('body').removeClass('noScroll');
                         $('#loader').addClass('hidden');
@@ -994,6 +1011,7 @@
                 }
             }
         }
+
         $(".refresh").click(function (e) {
             $('body').addClass('noScroll');
             $('#loader').removeClass('hidden');
