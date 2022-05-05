@@ -335,6 +335,11 @@
         #input_tiquete>h2 {
             margin-bottom: 5px;
         }
+
+        #equipo_subrow {
+            align-items: baseline;
+            justify-content: space-between;
+        }
     </style>
 
 </head>
@@ -464,7 +469,7 @@
             <h1>Centro de Ayuda</h1>
         </div>
         <div id="error" class="descripciones">
-            <text>Error de conección a la API. Contáctate con soporte.</text>
+            <text id="cargar_activos">Error de conección a la API. Contáctate con soporte.</text>
         </div>
         <div id="contenedor_rows">
             <div class="descripciones instrucciones">
@@ -486,8 +491,9 @@
                 </div>
             </div>
             <div id="equipo_row" class="rows">
-                <div>
+                <div id="equipo_subrow" class="columns">
                     <h2>Equipo:</h2>
+                    <text class="links">Ver activos</text>
                 </div>
                 <div class="columns center left relative">
                     <select id="equipment_id">
@@ -495,6 +501,19 @@
                     </select>
                     <div class="refresh">
                         <text>&#x21bb;</text>
+                    </div>
+                </div>
+                <div id="tabla_activos">
+                    <div class="tiquete_activo columns">
+                        <text class="activo_id">
+                            0000
+                        </text>
+                        <text class="activo_name">
+                            Organizar molde para sacar muestras. Guía inclinada reventada.
+                        </text>
+                        <div class="activo_link">
+                            
+                        </div>
                     </div>
                 </div>
             </div>

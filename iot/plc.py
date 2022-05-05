@@ -6,6 +6,22 @@ from pycomm3 import LogixDriver
 with LogixDriver('192.168.58.156') as plc:
     print(plc)
 '''
+'''
+
+import OpenOPC
+opc = OpenOPC.client()
+opc.servers()
+'''
+from opcua import Client
+client = Client("opc.tcp://192.168.58.156:20256")
+client.connect()
+print("Client Connected")
+ret = client.get_node("ns=2;i=1")
+retVal = ret.get_value()
+print(retVal)
+
+
+
 
 
 
@@ -20,12 +36,11 @@ from pylogix import PLC
 
 with PLC() as comm:
     comm.IPAddress = '192.168.58.156'
-    comm.ProcessorSlot = 7
-    ret = comm.Read('') # MI0 contador
+    ret = comm.Read('PLC7.MI0') # MI0 contador
      
     print(ret.TagName, ret.Status, ret.Value)
 '''
-
+'''
 import modbus_tk
 import modbus_tk.defines as cst
 import modbus_tk.modbus as modbus
@@ -40,3 +55,4 @@ actual_bits = master.execute(slave=1, function_code=cst.READ_COILS, starting_add
 print("actual_bits =", actual_bits)
 
 master.close
+'''
