@@ -1,19 +1,80 @@
 '''
 import pycomm3
 
-from pycomm3 import LogixDriver
+from pycomm3 import LogixDrivere
 
 with LogixDriver('192.168.58.156') as plc:
     print(plc)
 '''
+
+
 '''
 
-import OpenOPC
-opc = OpenOPC.client()
-opc.servers()
+import win32com.client
+
+# Instantiate the client object 
+client = win32com.client.Dispatch('OpcLabs.EasyOpc.DataAccess.EasyDAClient') 
+
+# Perform the operation
+value = client.ReadItemValue('', 'UniOPC.Server.1', 'PLC7.MI0(1)')
+
+# Display results
+print('value: ', value)
+
 '''
+
+
+
+
+
+import OpenOPC
+print("Start")
+
+opc = OpenOPC.client()
+print(opc.servers())
+opc.connect('UniOPC.Server.1')
+print("Client Connected")
+print(opc['PLC7.MI0'])
+opc.close()
+
+
+
+'''
+import OpenOPC
+def readopc():
+    opchost = 'localhost'
+    taglist = ['Random.Int1']
+    opc = OpenOPC.open_client(host=opchost)
+    opc.connect()
+    while True:
+        v = opc.read(taglist)
+        for i in range(len(v)):
+            (name, val, qual, time) = v[i]
+            print('% -15s % -15s % -15s % -15s' % (name, val, qual, time))
+if __name__ =='__main__':
+    readopc()
+
+'''
+
+'''
+import win32com.client
+
+# Instantiate the client object 
+client = win32com.client.Dispatch('OpcLabs.EasyOpc.DataAccess.EasyDAClient') 
+
+# Perform the operation
+value = client.ReadItemValue('', 'UniOPC.Server.1', 'PLC7.MI0(1)')
+
+# Display results
+print('value: ', value)
+
+'''
+
+
+'''
+
 from opcua import Client
-client = Client("opc.tcp://192.168.58.156:20256")
+client = Client("opc.tcp://127.0.0.1")
 client.connect()
 print("Client Connected")
 ret = client.get_node("ns=2;i=1")
@@ -22,13 +83,14 @@ print(retVal)
 
 
 
-
+'''
 
 
 # ip: 192.168.58.156
 # port: 20256
 # protocol: tcp
 # name: PLC7
+
 '''
 import pylogix
 
@@ -39,7 +101,10 @@ with PLC() as comm:
     ret = comm.Read('PLC7.MI0') # MI0 contador
      
     print(ret.TagName, ret.Status, ret.Value)
+
 '''
+
+
 '''
 import modbus_tk
 import modbus_tk.defines as cst
