@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript">
-    </script>
-    <!--<script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>-->
     <script src="./bundle.js"></script>
     <title>Document</title>
     <style>
@@ -19,19 +16,17 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
-        #var::before {
-            content: "Variable: ";
+        #var {
+            width: 350px;
+            padding: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div id="var">
-        0
-    </div>
+    <p id="var">Messages: </p>
     <script>
         const AWSMqttClient = sdk.AWSMqttClient;
         const AWS = sdk.AWS
@@ -44,10 +39,9 @@
         const client = new AWSMqttClient({
             region: AWS.config.region,
             credentials: AWS.config.credentials,
-            endpoint: 'a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com', // NOTE: See below on how to get the endpoint domain
-            expires: 600, // Sign url with expiration of 600 seconds
-            clientId: 'mqtt-client-' + (Math.floor((Math.random() * 100000) +
-                1)), // clientId to register with MQTT broker. Need to be unique per client
+            endpoint: 'a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com',
+            expires: 600,
+            clientId: 'mqtt-client-' + (Math.floor((Math.random() * 100000) + 1)),
             will: {
                 topic: 'WillMsg',
                 payload: 'Connection Closed abnormally..!',
@@ -58,13 +52,17 @@
 
         client.on('connect', () => {
             console.log('Connected to AWS IoT')
-            client.subscribe('diaxPublisher/Messages')
+            client.subscribe('diaxPublisher/Messages/#')
         })
         client.on('message', (topic, message) => {
             var uint8array = new TextEncoder().encode("¢");
             var string = new TextDecoder().decode(message);
-            document.getElementById("var").innerHTML = string;
-            console.log(topic, string)
+            var print = topic.replace('diaxPublisher/Messages/', '').replace('/', '.') + ": " + string;
+            console.log(print)
+
+            var p = document.createElement('p');
+            p.innerHTML = print;
+            document.getElementById('var').appendChild(p);
         })
         client.on('close', () => {
             console.log('Connection closed')
