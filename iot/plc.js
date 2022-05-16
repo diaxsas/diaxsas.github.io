@@ -1,7 +1,7 @@
-//import AWS from 'aws-sdk/global'
-//import AWSMqttClient from 'aws-mqtt'
-const AWSMqttClient = require('aws-mqtt/lib/NodeClient')
-const AWS = require('aws-sdk')
+import AWS from 'aws-sdk/global'
+import AWSMqttClient from 'aws-mqtt'
+//const AWSMqttClient = require('aws-mqtt/lib/NodeClient')
+//const AWS = require('aws-sdk')
 
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({

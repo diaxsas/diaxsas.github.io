@@ -11,17 +11,31 @@
     <script src="./bundle.js"></script>
     <title>Document</title>
     <style>
+        body,
+        html {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        #var::before {
+            content: "Variable: ";
+        }
     </style>
 </head>
 
 <body>
-    <div>
-
+    <div id="var">
+        0
     </div>
-    <script type="module">
-        import AWS from 'aws-sdk/global'
-        import AWSMqttClient from 'aws-mqtt'
+    <script>
+        const AWSMqttClient = sdk.AWSMqttClient;
+        const AWS = sdk.AWS
+
         AWS.config.region = 'us-east-1';
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
             IdentityPoolId: 'us-east-1:1e835899-922f-4a23-b61a-f3c5e43d94e7',
@@ -47,7 +61,10 @@
             client.subscribe('diaxPublisher/Messages')
         })
         client.on('message', (topic, message) => {
-            console.log(topic, message)
+            var uint8array = new TextEncoder().encode("¢");
+            var string = new TextDecoder().decode(message);
+            document.getElementById("var").innerHTML = string;
+            console.log(topic, string)
         })
         client.on('close', () => {
             console.log('Connection closed')
