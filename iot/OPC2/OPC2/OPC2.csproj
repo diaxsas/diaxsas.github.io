@@ -15,4 +15,13 @@
     <PackageReference Include="OpcLabs.QuickOpc" Version="5.63.183" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="certificates\AmazonRootCa1.crt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="certificates\certificate.cert.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

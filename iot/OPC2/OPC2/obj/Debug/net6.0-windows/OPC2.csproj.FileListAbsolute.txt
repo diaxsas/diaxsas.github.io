@@ -79,3 +79,5 @@ C:\Users\Daniel\Desktop\Repos\opc\OPC2\OPC2\obj\Debug\net6.0-windows\OPC2.genrun
 C:\Users\Daniel\Desktop\Repos\opc\OPC2\OPC2\obj\Debug\net6.0-windows\ref\OPC2.dll
 C:\Users\Daniel\Desktop\Repos\opc\OPC2\OPC2\bin\Debug\net6.0-windows\M2Mqtt.Net.dll
 C:\Users\Daniel\Desktop\Repos\opc\OPC2\OPC2\obj\Debug\net6.0-windows\OPC2.DiaxOPC.resources
+C:\Users\Daniel\Desktop\Repos\opc\OPC2\OPC2\bin\Debug\net6.0-windows\certificates\AmazonRootCa1.crt
+C:\Users\Daniel\Desktop\Repos\opc\OPC2\OPC2\bin\Debug\net6.0-windows\certificates\certificate.cert.pfx

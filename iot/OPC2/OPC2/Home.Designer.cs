@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.variable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quality = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timerUpload = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Connect_Button = new System.Windows.Forms.Button();
+            this.Disconnect_Button = new System.Windows.Forms.Button();
+            this.publish = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,57 +80,57 @@
             this.value.Name = "value";
             this.value.ReadOnly = true;
             // 
-            // timerUpload
+            // Connect_Button
             // 
-            this.timerUpload.Enabled = true;
-            this.timerUpload.Interval = 300000;
-            this.timerUpload.Tick += new System.EventHandler(this.timerUpload_Tick);
+            this.Connect_Button.Location = new System.Drawing.Point(12, 12);
+            this.Connect_Button.Name = "Connect_Button";
+            this.Connect_Button.Size = new System.Drawing.Size(79, 35);
+            this.Connect_Button.TabIndex = 3;
+            this.Connect_Button.Text = "Start";
+            this.Connect_Button.UseVisualStyleBackColor = true;
+            this.Connect_Button.Click += new System.EventHandler(this.Connect_Button_Click);
             // 
-            // button1
+            // Disconnect_Button
             // 
-            this.button1.Location = new System.Drawing.Point(284, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 20);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Disconnect_Button.Location = new System.Drawing.Point(97, 12);
+            this.Disconnect_Button.Name = "Disconnect_Button";
+            this.Disconnect_Button.Size = new System.Drawing.Size(79, 35);
+            this.Disconnect_Button.TabIndex = 4;
+            this.Disconnect_Button.Text = "Stop";
+            this.Disconnect_Button.UseVisualStyleBackColor = true;
+            this.Disconnect_Button.Click += new System.EventHandler(this.Disconnect_Button_Click);
             // 
-            // button2
+            // publish
             // 
-            this.button2.Location = new System.Drawing.Point(12, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Start";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(97, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 35);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Stop";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.publish.AutoSize = true;
+            this.publish.Location = new System.Drawing.Point(682, 21);
+            this.publish.Name = "publish";
+            this.publish.Size = new System.Drawing.Size(106, 19);
+            this.publish.TabIndex = 5;
+            this.publish.Text = "Publish to AWS";
+            this.publish.UseVisualStyleBackColor = true;
             // 
             // DiaxOPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.publish);
+            this.Controls.Add(this.Disconnect_Button);
+            this.Controls.Add(this.Connect_Button);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "DiaxOPC";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DIAX OPC UPLOAD";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -142,9 +140,8 @@
         private DataGridViewTextBoxColumn timestamp;
         private DataGridViewTextBoxColumn quality;
         private DataGridViewTextBoxColumn value;
-        private System.Windows.Forms.Timer timerUpload;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button Connect_Button;
+        private Button Disconnect_Button;
+        private CheckBox publish;
     }
 }
