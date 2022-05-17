@@ -21,7 +21,7 @@ namespace OPC2
         const string topic = "diaxPublisher/Messages/";
         string clientId = "diaxPublisher_" + Guid.NewGuid().ToString();
 
-        string[] variables = { "PLC7.MI0" };
+        string[] variables = { "PLC1.ML131", "PLC2.ML131", "PLC3.ML131", "PLC4.ML131", "PLC5.ML131", "PLC6.ML131", "PLC7.ML131", "PLC8.ML131", "PLC9.ML131" };
 
         public DiaxOPC()
         {
