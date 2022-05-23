@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoproingeApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+        --base-width: 300px;
+        --base-width-desktop: 1270px;
+        --color-azul: #0066fe;
+        --color-negro: #203461;
+        --color-gris: #D6D8DC;
+    }
+
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 16pt;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: var(--color-gris);
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: 800;
+        margin: 0px;
+        text-align: left;
+    }
+
+    text {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .rows {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .center_vert {
+        display: flex;
+        align-items: center;
+    }
+
+    .center_hor {
+        display: flex;
+        justify-content: center;
+    }
+
+    .top {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .left {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .right {
+        display: flex;
+        align-items: right;
+        justify-content: right;
+    }
+
+    .noselect {
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    }
+
+    .margin_gd {
+        margin: 20px;
+    }
+
+    .margin_pq {
+        margin: 10px;
+    }
+
+    .margin_box {
+        margin: 10px;
+    }
+
+
+    #menu {
+        background-color: var(--color-azul);
+        color: white;
+        height: 100vh;
+        width: 200px;
+    }
+
+    #linea {
+        border-bottom: 2px solid white;
+        width: 80%;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    #machine {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div id="dashboard" class="columns">
+        <div id="menu" class="rows">
+            <h2 class="margin_gd">Maquinas</h2>
+            <div id="linea"></div>
+            <h2 class="left margin_pq"> <text>Maquina 1</text></h2>
+        </div>
+        <div id="machine" class="rows">
+            <h1>
+                <h1 class="margin_gd">Maquina 1</h1>
+            </h1>
+            <div id="contenedor_info" class="columns">
+                <!--row 1-->
+                <div>
+                    <!--detalle de maquina-->
+                    <div>
+
+                    </div>
+                    <div class="columns">
+                        <!--tiempos de maquina-->
+                        <div>
+
+                        </div>
+                        <!--unidades-->
+                        <div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--row 2-->
+                <div>
+                    <!--montaje-->
+                    <div>
+                        <h2>Montaje</h2>
+                        <div class="columns">
+                            <div class="rows">
+                                <text>Orden de producción</text>
+                                <text>Codigo Cliente Color</text>
+                                <text>No Lote</text>
+                                <text>Operario</text>
+                                <text>Molde</text>
+                            </div>
+                            <div>
+                                <text>99</text>
+                                <text>99</text>
+                                <text>99</text>
+                                <text>99</text>
+                                <text>99</text>
+                            </div>
+                            <img src="" alt="inyectora">
+                        </div>
+                    </div>
+                    <!--defectos-->
+                    <div>
+                        <h2>Tiempo de maquina</h2>
+                        <div class="columns">
+                            <!--Puntos-->
+                            <div class="rows">
+
+                            </div>
+                            <!--Titulo-->
+                            <div>
+
+                            </div>
+                            <!--Numeros-->
+                            <div>
+
+                            </div>
+                            <!--bars-->
+                            <div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
