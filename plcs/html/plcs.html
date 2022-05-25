@@ -33,6 +33,8 @@
     h2 {
         font-size: 20px;
         font-weight: 400;
+        margin: 0px;
+        text-align: left;
     }
 
     h1 {
@@ -142,6 +144,45 @@
     #machine {
         width: 100%;
     }
+
+    .cube_container {
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #detalle_maquina {
+        width: 1100px;
+        height: 504px;
+    }
+
+    #contenedor_info {
+        padding: 10px;
+    }
+
+    #montaje {
+        width: 500px;
+        height: 230px;
+    }
+
+    #machine_timers {
+        width: 500px;
+        height: 441px;
+    }
+    #consumo{
+        width: 561px;
+        height: 384px;
+    }
+    #eficiencia{
+        width: 520px;
+        height: 384px;
+    }
+    #produccion{
+        width: 500px;
+        height: 195px;
+    }
 </style>
 
 <body>
@@ -156,10 +197,10 @@
                 <h1 class="margin_gd">Maquina 1</h1>
             </h1>
             <div id="contenedor_info" class="columns">
-                <!--row 1-->
+                <!--column 1-->
                 <div>
                     <!--detalle de maquina-->
-                    <div>
+                    <div id="detalle_maquina" class="cube_container">
 
                     </div>
                     <div class="columns">
@@ -173,32 +214,43 @@
                         </div>
 
                     </div>
+                    <!--consumo y eficiencia-->
+                    <div class="columns">
+                        <!--consumo-->
+                        <div id="consumo" class="cube_container">
+
+                        </div>
+                        <!--eficiencia-->
+                        <div id="eficiencia" class="cube_container">
+
+                        </div>
+                    </div>
                 </div>
-                <!--row 2-->
-                <div>
+                <!--column 2-->
+                <div class="rows">
                     <!--montaje-->
-                    <div>
-                        <h2>Montaje</h2>
+                    <div id="montaje" class="cube_container rows">
+                        <h2 class="">Montaje</h2>
                         <div class="columns">
-                            <div class="rows">
-                                <text>Orden de producción</text>
-                                <text>Codigo Cliente Color</text>
+                            <div class="rows left">
+                                <text>Orden de Prod.</text>
+                                <text>Cod. Cliente Color</text>
                                 <text>No Lote</text>
                                 <text>Operario</text>
                                 <text>Molde</text>
                             </div>
-                            <div>
+                            <div class="rows">
                                 <text>99</text>
                                 <text>99</text>
                                 <text>99</text>
                                 <text>99</text>
                                 <text>99</text>
                             </div>
-                            <img src="" alt="inyectora">
+                            <img src="../media/img_machine.png" alt="inyectora">
                         </div>
                     </div>
-                    <!--defectos-->
-                    <div>
+                    <!--Tiempos-->
+                    <div id="machine_timers" class="cube_container">
                         <h2>Tiempo de maquina</h2>
                         <div class="columns">
                             <!--Puntos-->
@@ -219,6 +271,10 @@
                             </div>
                         </div>
 
+
+                    </div>
+                    <!--produccion-->
+                    <div id="produccion" class="cube_container">
 
                     </div>
 
