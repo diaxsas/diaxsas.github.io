@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoproingeApp</title>
+    <title>DiaxApp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -291,6 +291,12 @@
     .time_text {
         line-height: 1.2;
     }
+    #cont_tiempos{
+        margin-top: 10px;
+    }
+    #center_timert{
+        box-shadow: var(--color-dash5);
+    }
 </style>
 
 <body>
@@ -410,7 +416,7 @@
     <!--Campo Tiempo-->
     <div class="cube_container">
         <h2>Tiempo de Máquina</h2>
-        <div class="columns">
+        <div id="cont_tiempos" class="columns center">
             <div>
                 <div id="time_dot1" class="time_dot"></div>
                 <div id="time_dot2" class="time_dot"></div>
@@ -443,6 +449,12 @@
                 <text>77</text>
                 <text>88</text>
                 <text>99</text>
+            </div>
+        </div>
+        <div>
+            <div id="center_timert">
+                <text>256</text>
+                <text>horas</text>
             </div>
         </div>
 
