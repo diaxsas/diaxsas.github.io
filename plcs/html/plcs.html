@@ -55,6 +55,10 @@
         font-weight: 400;
     }
 
+    p {
+        margin: 0px;
+    }
+
     .columns {
         display: flex;
         flex-direction: row;
@@ -119,6 +123,11 @@
         /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     }
 
+    .text_left {
+        display: flex;
+        text-align: left;
+    }
+
     .margin_gd {
         margin: 10px;
     }
@@ -126,6 +135,7 @@
     .margin_pq {
         margin: 5px;
     }
+
     .padding_gd {
         padding: 6px;
     }
@@ -175,6 +185,7 @@
         border-left: 2px solid white;
         height: 40px;
     }
+
     .dato_linea {
         border-left: 1px solid var(--color-negro);
         height: 24px;
@@ -187,6 +198,7 @@
         border-radius: 0 0 5px 5px;
         box-shadow: 2px 2px 1px var(--color-gris);
         width: 200px;
+        height: 14px;
         transform: translate(0px, -15px);
 
     }
@@ -204,11 +216,80 @@
 
     .dato_maquina {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
         border: var(--color-negro) solid 1px;
         border-radius: 4px;
+        margin: 15px;
+    }
+
+    #dato_tolva {
+        transform: translate(-80px);
+    }
+
+    #dato_motor {
+        transform: translate(30px);
+    }
+
+    #dato_atemperador {
+        transform: translate(-100px);
+    }
+
+    .circulo_semaforo {
+        box-sizing: border-box;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid var(--color-azul);
+        line-height: 0.8;
+        font-size: 16px !important;
+        margin: 0px;
+        background-color: white;
+        z-index: 10;
+    }
+
+    #semaforo_real {
+        border: 4px solid var(--color-verde);
+    }
+
+    .camp_minmax {
+        display: flex;
+        box-sizing: border-box;
+        width: 108px;
+        height: 18px;
+        border-radius: 8px;
+        background-color: var(--color-azul);
+        color: white;
+        justify-content: flex-end;
+        padding-right: 10px;
+        transform: translate(-35px, -12px);
+        margin: 2px;
+    }
+
+    #img_machine {
+        width: 69px;
+        height: 68px;
+
+    }
+
+    #info_montaje {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .time_dot {
+        box-sizing: border-box;
+        border-radius: 50%;
+        background-color: var(--color-dash1);
+        width: 10px;
+        height: 10px;
+        margin: 7px;
+        margin-right: 2px;
+    }
+
+    .time_text {
+        line-height: 1.2;
     }
 </style>
 
@@ -226,7 +307,8 @@
             <text class="margin_pq">Status:</text>
             <text>Mantenimeinto Maquina</text>
         </div>
-        <div class="columns">
+        <!--Maquina-->
+        <div class="columns center">
             <img id="foto_inyectora" class="left" src="../media/Inyector_foto.jpg" alt="foto_inyectora">
             <div>
                 <div id="dato_tolva" class="dato_maquina">
@@ -244,12 +326,77 @@
                     <div class="dato_linea"></div>
                     <text class="padding_pq">9 sec</text>
                 </div>
+                <div id="dato_atemperador" class="dato_maquina">
+                    <text class="padding_pq">Atemperador:</text>
+                    <div class="dato_linea"></div>
+                    <text class="padding_pq">78°</text>
+                </div>
             </div>
+        </div>
+
+        <!--Ciclo-->
+        <div>
+
+            <!--Timeline-->
+            <div>
+                <h2>Ciclos de Maquina</h2>
+                <!--Linea de tiempo-->
+
+            </div>
+
+            <!--Semaforo-->
+            <div class="columns center">
+                <div class="center_vert rows margin_pq">
+                    <div id="semaforo_real" class="circulo_semaforo center rows">
+                        <p>30</p>
+                        <p>sec</p>
+                    </div>
+                    <h2>Real</h2>
+                </div>
+                <div class="center_vert rows margin_pq">
+                    <div id="semaforo_teorico" class="circulo_semaforo center rows">
+                        <p>30</p>
+                        <p>sec</p>
+                    </div>
+                    <h2>Teorico</h2>
+                </div>
+                <div id="teorico_minmax" class="rows center">
+                    <div id="teorico_min" class="camp_minmax">
+                        <text>Max:</text>
+                        <text>34 sec</text>
+                    </div>
+                    <div id="teorico_max" class="camp_minmax">
+                        <text>Max:</text>
+                        <text>34 sec</text>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
     <!--Campo Montaje-->
     <div class="cube_container">
+        <h2>Montaje</h2>
+        <div id="info_montaje" class="columns">
+            <div class="rows text_left padding_pq">
+                <text>Orden de Producción</text>
+                <text>Código Cliente Color</text>
+                <text>No Lote</text>
+                <text>Operario</text>
+                <text>Molde</text>
+            </div>
+            <div class="rows text_left padding_pq">
+                <text>C0025</text>
+                <text>2266557</text>
+                <text>76555</text>
+                <text>8888</text>
+                <text>9999</text>
+            </div>
+            <img id="img_machine" src="../media/img_machine.png" alt="inyector_machine">
+
+        </div>
 
     </div>
     <!--Campo Eficiencia-->
@@ -262,6 +409,42 @@
     </div>
     <!--Campo Tiempo-->
     <div class="cube_container">
+        <h2>Tiempo de Máquina</h2>
+        <div class="columns">
+            <div>
+                <div id="time_dot1" class="time_dot"></div>
+                <div id="time_dot2" class="time_dot"></div>
+                <div id="time_dot3" class="time_dot"></div>
+                <div id="time_dot4" class="time_dot"></div>
+                <div id="time_dot5" class="time_dot"></div>
+                <div id="time_dot6" class="time_dot"></div>
+                <div id="time_dot7" class="time_dot"></div>
+                <div id="time_dot8" class="time_dot"></div>
+                <div id="time_dot9" class="time_dot"></div>
+            </div>
+            <div class="rows text_left padding_pq">
+                <text class="time_text">Mantenimeinto Máquina</text>
+                <text>Mantenimeinto Molde</text>
+                <text>Sin Operario</text>
+                <text>No Programada</text>
+                <text>Fin de Turno</text>
+                <text>Fin de Producción</text>
+                <text>Material</text>
+                <text>Calidad</text>
+                <text>Horómetro</text>
+            </div>
+            <div class="rows center padding_pq">
+                <text>8</text>
+                <text>5</text>
+                <text>12</text>
+                <text>55</text>
+                <text>22</text>
+                <text>66</text>
+                <text>77</text>
+                <text>88</text>
+                <text>99</text>
+            </div>
+        </div>
 
     </div>
     <!--Campo Produccion-->
