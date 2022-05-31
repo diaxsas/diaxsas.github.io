@@ -51,7 +51,7 @@
     }
 
     text {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
     }
 
@@ -120,11 +120,20 @@
     }
 
     .margin_gd {
-        margin: 20px;
+        margin: 10px;
     }
 
     .margin_pq {
-        margin: 10px;
+        margin: 5px;
+    }
+    .padding_gd {
+        padding: 6px;
+    }
+
+    .padding_pq {
+        padding: 3px;
+        padding-left: 6px;
+        padding-right: 6px;
     }
 
     .margin_box {
@@ -135,162 +144,129 @@
     #menu {
         background-color: var(--color-azul);
         color: white;
-        height: 100vh;
-        width: 200px;
-    }
-
-    #linea {
-        border-bottom: 2px solid white;
-        width: 80%;
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-bottom: 10px;
-    }
-
-    #machine {
+        height: 40px;
         width: 100%;
     }
 
     .cube_container {
         box-sizing: border-box;
         background-color: white;
-        border-radius: 20px;
+        border-radius: 5px;
         margin: 10px;
         padding: 15px;
     }
 
-    #detalle_maquina {
-        width: 1100px;
-        height: 504px;
+
+    .arrow {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: 20px;
     }
 
-    #contenedor_info {
-        padding: 10px;
+    .a_right {
+        display: flex;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
     }
 
-    #montaje {
-        width: 500px;
-        height: 230px;
+    .linea {
+        border-left: 2px solid white;
+        height: 40px;
+    }
+    .dato_linea {
+        border-left: 1px solid var(--color-negro);
+        height: 24px;
     }
 
-    #machine_timers {
-        width: 500px;
-        height: 441px;
+    #estado_maquina {
+        background-color: var(--color-azul);
+        color: white;
+        padding: 5px;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 2px 2px 1px var(--color-gris);
+        width: 200px;
+        transform: translate(0px, -15px);
+
     }
 
-    #consumo {
-        width: 561px;
-        height: 384px;
+    #estado_maquina text {
+        font-size: 12px;
     }
 
-    #eficiencia {
-        width: 520px;
-        height: 384px;
+    #foto_inyectora {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        width: 150px;
+        height: 81px;
     }
 
-    #produccion {
-        width: 500px;
-        height: 195px;
+    .dato_maquina {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: var(--color-negro) solid 1px;
+        border-radius: 4px;
     }
 </style>
 
 <body>
-    <div id="dashboard" class="columns">
-        <div id="menu" class="rows">
-            <h2 class="margin_gd">Maquinas</h2>
-            <div id="linea"></div>
-            <h2 class="left margin_pq"> <text>Maquina 1</text></h2>
+    <div id="dashboard">
+        <div id="menu" class="columns">
+            <i class="arrow a_right"></i>
+            <div class="linea"></div>
+            <h2 class="left margin_pq">Maquina 1</h2>
         </div>
-        <div id="machine" class="rows">
-            <h1>
-                <h1 class="margin_gd">Maquina 1</h1>
-            </h1>
-            <div id="contenedor_info" class="columns">
-                <!--column 1-->
-                <div>
-                    <!--detalle de maquina-->
-                    <div id="detalle_maquina" class="cube_container">
-
-                    </div>
-                    <div class="columns">
-                        <!--tiempos de maquina-->
-                        <div>
-
-                        </div>
-                        <!--unidades-->
-                        <div>
-
-                        </div>
-
-                    </div>
-                    <!--consumo y eficiencia-->
-                    <div class="columns">
-                        <!--consumo-->
-                        <div id="consumo" class="cube_container">
-
-                        </div>
-                        <!--eficiencia-->
-                        <div id="eficiencia" class="cube_container">
-
-                        </div>
-                    </div>
+    </div>
+    <!--Campo Maquina-->
+    <div class="cube_container">
+        <div id="estado_maquina" class="center">
+            <text class="margin_pq">Status:</text>
+            <text>Mantenimeinto Maquina</text>
+        </div>
+        <div class="columns">
+            <img id="foto_inyectora" class="left" src="../media/Inyector_foto.jpg" alt="foto_inyectora">
+            <div>
+                <div id="dato_tolva" class="dato_maquina">
+                    <text class="padding_pq">Tolva:</text>
+                    <div class="dato_linea"></div>
+                    <text class="padding_pq">78°</text>
                 </div>
-                <!--column 2-->
-                <div class="rows">
-                    <!--montaje-->
-                    <div id="montaje" class="cube_container rows">
-                        <h2 class="">Montaje</h2>
-                        <div class="columns">
-                            <div class="rows left">
-                                <text>Orden de Prod.</text>
-                                <text>Cod. Cliente Color</text>
-                                <text>No Lote</text>
-                                <text>Operario</text>
-                                <text>Molde</text>
-                            </div>
-                            <div class="rows">
-                                <text>99</text>
-                                <text>99</text>
-                                <text>99</text>
-                                <text>99</text>
-                                <text>99</text>
-                            </div>
-                            <img src="../media/img_machine.png" alt="inyectora">
-                        </div>
-                    </div>
-                    <!--Tiempos-->
-                    <div id="machine_timers" class="cube_container">
-                        <h2>Tiempo de maquina</h2>
-                        <div class="columns">
-                            <!--Puntos-->
-                            <div class="rows">
-
-                            </div>
-                            <!--Titulo-->
-                            <div>
-
-                            </div>
-                            <!--Numeros-->
-                            <div>
-
-                            </div>
-                            <!--bars-->
-                            <div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <!--produccion-->
-                    <div id="produccion" class="cube_container">
-
-                    </div>
-
+                <div id="dato_motor" class="dato_maquina">
+                    <text class="padding_pq">Motor:</text>
+                    <div class="dato_linea"></div>
+                    <text class="padding_pq">ON</text>
                 </div>
-
+                <div id="dato_puerta" class="dato_maquina">
+                    <text class="padding_pq">Puertas:</text>
+                    <div class="dato_linea"></div>
+                    <text class="padding_pq">9 sec</text>
+                </div>
             </div>
         </div>
+
+    </div>
+    <!--Campo Montaje-->
+    <div class="cube_container">
+
+    </div>
+    <!--Campo Eficiencia-->
+    <div class="cube_container">
+
+    </div>
+    <!--Campo Consumo-->
+    <div class="cube_container">
+
+    </div>
+    <!--Campo Tiempo-->
+    <div class="cube_container">
+
+    </div>
+    <!--Campo Produccion-->
+    <div class="cube_container">
+
     </div>
 </body>
 
