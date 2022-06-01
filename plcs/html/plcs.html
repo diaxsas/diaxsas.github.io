@@ -59,6 +59,7 @@
         margin: 0px;
     }
 
+
     .columns {
         display: flex;
         flex-direction: row;
@@ -294,8 +295,21 @@
     #cont_tiempos{
         margin-top: 10px;
     }
-    #center_timert{
-        box-shadow: var(--color-dash5);
+    .center_pie{
+        width: 126px;
+        height: 126px;
+        border-radius: 50%;
+        box-shadow: var(--color-gris) 0px 0px 10px;
+        font-size: 19px;
+
+    }
+    #cont_unit{
+        display: flex;
+        align-items: flex-start;
+    }
+    #tit_unit{
+        margin-top: 10px;
+        margin-left: 10px;
     }
 </style>
 
@@ -410,8 +424,31 @@
 
     </div>
     <!--Campo Consumo-->
-    <div class="cube_container">
+    <div class="cube_container rows">
+        <h2>Consumo</h2>
+        <div>
+            <text>Pesos de Cavidades</text>
+            <div class="columns">
+                <div class="rows">
+                    <text>Cavidad 1</text>
+                    <text>Cavidad 2</text>
+                    <text>Cavidad 3</text>
+                    <text>Cavidad 4</text>
+                    <text>Cavidad 5</text>
+                    <text>Cavidad 6</text>
+                </div>
+                <div class="rows">
+                    <text>25g</text>
+                    <text>25g</text>
+                    <text>25g</text>
+                    <text>25g</text>
+                    <text>25g</text>
+                    <text>25g</text>
+                </div>
 
+            </div>
+            <text>Total: <span>128g</span></text>
+        </div>
     </div>
     <!--Campo Tiempo-->
     <div class="cube_container">
@@ -429,7 +466,7 @@
                 <div id="time_dot9" class="time_dot"></div>
             </div>
             <div class="rows text_left padding_pq">
-                <text class="time_text">Mantenimeinto Máquina</text>
+                <text>Mantenimeinto Máquina</text>
                 <text>Mantenimeinto Molde</text>
                 <text>Sin Operario</text>
                 <text>No Programada</text>
@@ -451,16 +488,39 @@
                 <text>99</text>
             </div>
         </div>
-        <div>
-            <div id="center_timert">
-                <text>256</text>
-                <text>horas</text>
+        <div class="center">
+            <div id="center_timert" class="center rows center_pie">
+                <p>256</p>
+                <p>horas</p>
             </div>
         </div>
 
     </div>
     <!--Campo Produccion-->
     <div class="cube_container">
+        <h2>Tiempo de Máquina</h2>
+        <h2 id="tit_unit">Unidades</h2>
+        <div id="cont_unit" class="columns center">
+            <div>
+                <div id="unit_dot1" class="time_dot"></div>
+                <div id="unit_dot2" class="time_dot"></div>
+            </div>
+            <div class="rows text_left padding_pq">
+                <text>Aprobadas</text>
+                <text>Defectuosas</text>
+                <text>totales</text>
+            </div>
+            <div class="rows center padding_pq">
+                <text>8</text>
+                <text>5</text>
+            </div>
+        </div>
+        <div class="center">
+            <div id="center_timeru" class="center rows center_pie">
+                <p>256</p>
+                <p>Inyecciones</p>
+            </div>
+        </div>
 
     </div>
 </body>
