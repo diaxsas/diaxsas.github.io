@@ -9,6 +9,100 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours'],
+                ['Aprobadas', 11],
+                ['Defectuosas', 2],
+            ]);
+
+            var options = {
+                pieHole: 0.4,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load("current", {
+            packages: ["corechart"]
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours'],
+                ['Mant. Máquina', 11],
+                ['Mant. Molde', 2],
+                ['Sin Operario', 2],
+                ['No Programada', 2],
+                ['Fin Turno', 2],
+                ['Fin Producción', 2],
+                ['Material', 2],
+                ['Calidad', 2],
+                ['Horometro', 2],
+            ]);
+
+            var options = {
+                pieHole: 0.4,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['line']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'Day');
+            data.addColumn('number', 'Disponibilidad');
+            data.addColumn('number', 'Desempeño');
+            data.addColumn('number', 'Calidad');
+            data.addColumn('number', 'Eficiencia');
+
+            data.addRows([
+                [1, 37.8, 80.8, 41.8, 30],
+                [2, 30.9, 69.5, 32.4, 30],
+                [3, 25.4, 57, 25.7, 30],
+                [4, 11.7, 18.8, 10.5, 30],
+                [5, 11.9, 17.6, 10.4, 30],
+                [6, 8.8, 13.6, 7.7, 30],
+                [7, 7.6, 12.3, 9.6, 30],
+                [8, 12.3, 29.2, 10.6, 30],
+                [9, 16.9, 42.9, 14.8, 30],
+                [10, 12.8, 30.9, 11.6, 30],
+                [11, 5.3, 7.9, 4.7, 30],
+                [12, 6.6, 8.4, 5.2, 30],
+                [13, 4.8, 6.3, 3.6, 30],
+                [14, 4.2, 6.2, 3.4, 30]
+            ]);
+
+            var options = {
+                chart: {
+                    title: '',
+                    subtitle: ''
+                },
+            };
+
+            var chart = new google.charts.Line(document.getElementById('linechart1'));
+
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+    </script>
 </head>
 <style>
     :root {
@@ -35,8 +129,8 @@
         text-align: center;
         background-color: var(--color-gris);
     }
-    
-    h4{
+
+    h4 {
         font-size: 20px;
         margin: 0px;
         font-weight: 400;
@@ -72,7 +166,7 @@
         margin: 0px;
     }
 
-    .bold{
+    .bold {
         font-weight: 800;
     }
 
@@ -338,10 +432,25 @@
     }
 
     .underline_ind {
-        border-bottom: 4px solid var(--color-gris);
         width: 100%;
         margin-top: -5px;
         margin-bottom: 5px;
+    }
+
+    #underline_disp {
+        border-bottom: 4px solid rgb(66, 133, 244);
+    }
+
+    #underline_dese {
+        border-bottom: 4px solid rgb(219, 68, 55);
+    }
+
+    #underline_cali {
+        border-bottom: 4px solid rgb(244, 180, 0);
+    }
+
+    #underline_efic {
+        border-bottom: 4px solid rgb(15, 157, 88);
     }
 
     .campo_ind {
@@ -370,34 +479,46 @@
         width: 60%;
     }
 
-    #cavidad_value{
+    #cavidad_value {
         width: 40%;
     }
 
-    #cavidad_total{
+    #cavidad_total {
         font-weight: bold;
         padding: 6px;
     }
 
-    #cavidades_head{
+    #cavidades_head {
         padding: 6px;
         font-size: 20px;
 
     }
-    #electric_icon{
+
+    #electric_icon {
         width: 73px;
         height: 99px;
 
     }
-    #campo_electric{
+
+    #campo_electric {
         display: flex;
         justify-content: space-between;
         margin: 10px;
     }
 
-    #campo_electric > div{
+    #campo_electric>div {
         text-align: left;
 
+    }
+
+    .donutchart {
+        width: 100%;
+        height: 100%;
+    }
+
+    .linechart1 {
+        width: 100%;
+        height: 100%;
     }
 </style>
 
@@ -507,7 +628,7 @@
         </div>
 
     </div>
-    <!--Campo Eficiencia-->
+    <!--Campo Indicadores-->
     <div class="cube_container">
         <h2>Eficiencia</h2>
         <div class="columns">
@@ -515,14 +636,14 @@
             <div class="campo_ind rows">
                 <h3>Disponibilidad</h3>
                 <p class="indicador"><span>82</span>%</p>
-                <div class="underline_ind"></div>
+                <div id="underline_disp" class="underline_ind"></div>
                 <text>Disponibilidad para trabajar</text>
             </div>
             <!--Desempeño-->
             <div class="campo_ind rows">
                 <h3>Desempeño</h3>
                 <p class="indicador"><span>82</span>%</p>
-                <div class="underline_ind"></div>
+                <div id="underline_dese" class="underline_ind"></div>
                 <text>Desempeño real en contexto</text>
             </div>
         </div>
@@ -531,17 +652,19 @@
             <div class="campo_ind rows">
                 <h3>Calidad</h3>
                 <p class="indicador"><span>82</span>%</p>
-                <div class="underline_ind"></div>
+                <div id="underline_cali" class="underline_ind"></div>
                 <text>Calidad de unidades</text>
             </div>
             <!--Eficiencia-->
             <div class="campo_ind rows">
                 <h3>Eficiencia</h3>
                 <p class="indicador"><span>82</span>%</p>
-                <div class="underline_ind"></div>
+                <div id="underline_efic" class="underline_ind"></div>
                 <text>Eficiencia general del equipo</text>
             </div>
         </div>
+
+        <div id="linechart1" class="linechart"></div>
     </div>
     <!--Campo Consumo-->
     <div class="cube_container rows">
@@ -633,6 +756,8 @@
             </div>
         </div>
 
+        <div id="donutchart1" class="donutchart"></div>
+
     </div>
     <!--Campo Produccion-->
     <div class="cube_container">
@@ -654,7 +779,9 @@
                 <text>11125 <span>uni.</span></text>
             </div>
         </div>
+        <div id="donutchart2" class="donutchart"></div>
         <div class="center">
+
             <div id="center_timeru" class="center rows center_pie">
                 <p>256</p>
                 <p>Inyecciones</p>
@@ -662,6 +789,8 @@
         </div>
 
     </div>
+    <script>
+    </script>
 </body>
 
 </html>
