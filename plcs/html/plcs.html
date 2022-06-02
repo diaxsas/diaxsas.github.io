@@ -35,6 +35,19 @@
         text-align: center;
         background-color: var(--color-gris);
     }
+    
+    h4{
+        font-size: 20px;
+        margin: 0px;
+        font-weight: 400;
+
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0px;
+    }
 
     h2 {
         font-size: 20px;
@@ -57,6 +70,10 @@
 
     p {
         margin: 0px;
+    }
+
+    .bold{
+        font-weight: 800;
     }
 
 
@@ -230,7 +247,7 @@
     }
 
     #dato_motor {
-        transform: translate(30px);
+        transform: translate(20px);
     }
 
     #dato_atemperador {
@@ -292,10 +309,12 @@
     .time_text {
         line-height: 1.2;
     }
-    #cont_tiempos{
+
+    #cont_tiempos {
         margin-top: 10px;
     }
-    .center_pie{
+
+    .center_pie {
         width: 126px;
         height: 126px;
         border-radius: 50%;
@@ -303,13 +322,82 @@
         font-size: 19px;
 
     }
-    #cont_unit{
+
+    #cont_unit {
         display: flex;
         align-items: flex-start;
     }
-    #tit_unit{
+
+    #tit_unit {
         margin-top: 10px;
         margin-left: 10px;
+    }
+
+    .indicador {
+        font-size: 50px;
+    }
+
+    .underline_ind {
+        border-bottom: 4px solid var(--color-gris);
+        width: 100%;
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    .campo_ind {
+        display: flex;
+        text-align: right;
+        margin: 10px;
+        width: 113px;
+    }
+
+    #campo_pesos {
+        width: 200px;
+        border: 2px solid var(--color-negro);
+        border-radius: 5px;
+        margin-top: 3px;
+        align-self: center;
+    }
+
+    .underline_peso {
+        box-sizing: border-box;
+        border: 1px solid var(--color-negro);
+        width: 100%;
+        padding: 3px;
+    }
+
+    #cavidad_title {
+        width: 60%;
+    }
+
+    #cavidad_value{
+        width: 40%;
+    }
+
+    #cavidad_total{
+        font-weight: bold;
+        padding: 6px;
+    }
+
+    #cavidades_head{
+        padding: 6px;
+        font-size: 20px;
+
+    }
+    #electric_icon{
+        width: 73px;
+        height: 99px;
+
+    }
+    #campo_electric{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+
+    #campo_electric > div{
+        text-align: left;
+
     }
 </style>
 
@@ -421,33 +509,83 @@
     </div>
     <!--Campo Eficiencia-->
     <div class="cube_container">
-
+        <h2>Eficiencia</h2>
+        <div class="columns">
+            <!--Disponibilidad-->
+            <div class="campo_ind rows">
+                <h3>Disponibilidad</h3>
+                <p class="indicador"><span>82</span>%</p>
+                <div class="underline_ind"></div>
+                <text>Disponibilidad para trabajar</text>
+            </div>
+            <!--Desempeño-->
+            <div class="campo_ind rows">
+                <h3>Desempeño</h3>
+                <p class="indicador"><span>82</span>%</p>
+                <div class="underline_ind"></div>
+                <text>Desempeño real en contexto</text>
+            </div>
+        </div>
+        <div class="columns">
+            <!--Calidad-->
+            <div class="campo_ind rows">
+                <h3>Calidad</h3>
+                <p class="indicador"><span>82</span>%</p>
+                <div class="underline_ind"></div>
+                <text>Calidad de unidades</text>
+            </div>
+            <!--Eficiencia-->
+            <div class="campo_ind rows">
+                <h3>Eficiencia</h3>
+                <p class="indicador"><span>82</span>%</p>
+                <div class="underline_ind"></div>
+                <text>Eficiencia general del equipo</text>
+            </div>
+        </div>
     </div>
     <!--Campo Consumo-->
     <div class="cube_container rows">
         <h2>Consumo</h2>
-        <div>
-            <text>Pesos de Cavidades</text>
+        <!--Campo Pesos-->
+        <div id="campo_pesos">
+            <p id="cavidades_head">Pesos de Cavidades</p>
             <div class="columns">
-                <div class="rows">
-                    <text>Cavidad 1</text>
-                    <text>Cavidad 2</text>
-                    <text>Cavidad 3</text>
-                    <text>Cavidad 4</text>
-                    <text>Cavidad 5</text>
-                    <text>Cavidad 6</text>
+                <div id="cavidad_title" class="rows">
+                    <text class="underline_peso">Cavidad 1</text>
+                    <text class="underline_peso">Cavidad 2</text>
+                    <text class="underline_peso">Cavidad 3</text>
+                    <text class="underline_peso">Cavidad 4</text>
+                    <text class="underline_peso">Cavidad 5</text>
+                    <text class="underline_peso">Cavidad 6</text>
                 </div>
-                <div class="rows">
-                    <text>25g</text>
-                    <text>25g</text>
-                    <text>25g</text>
-                    <text>25g</text>
-                    <text>25g</text>
-                    <text>25g</text>
+                <div id="cavidad_value" class="rows">
+                    <text class="underline_peso">25g</text>
+                    <text class="underline_peso">25g</text>
+                    <text class="underline_peso">25g</text>
+                    <text class="underline_peso">25g</text>
+                    <text class="underline_peso">25g</text>
+                    <text class="underline_peso">25g</text>
                 </div>
 
             </div>
-            <text>Total: <span>128g</span></text>
+            <p id="cavidad_total">Total: <span>128g</span></p>
+        </div>
+        <!--Campo Electric-->
+        <div id="campo_electric" class="columns">
+            <img id="electric_icon" src="../media/img_electric.png" alt="electric icon">
+            <div id="electric_title" class="rows">
+                <p>Motor</p>
+                <p>Consumo</p>
+                <p>Tiempo</p>
+                <p class="bold">Total</p>
+            </div>
+            <div id="electric_value" class="rows">
+                <p>&zwnj;</p>
+                <p>28<span>Kw/h</span></p>
+                <p>2 <span>h</span></p>
+                <p class="bold">223 <span>Kw</span></p>
+            </div>
+
         </div>
     </div>
     <!--Campo Tiempo-->
@@ -498,7 +636,7 @@
     </div>
     <!--Campo Produccion-->
     <div class="cube_container">
-        <h2>Tiempo de Máquina</h2>
+        <h2>Producción</h2>
         <h2 id="tit_unit">Unidades</h2>
         <div id="cont_unit" class="columns center">
             <div>
@@ -511,8 +649,9 @@
                 <text>totales</text>
             </div>
             <div class="rows center padding_pq">
-                <text>8</text>
-                <text>5</text>
+                <text>8 <span>uni.</span></text>
+                <text>5554 <span>uni.</span></text>
+                <text>11125 <span>uni.</span></text>
             </div>
         </div>
         <div class="center">
