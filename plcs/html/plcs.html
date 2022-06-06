@@ -276,6 +276,7 @@
         color: white;
         height: 40px;
         width: 100%;
+        justify-content: space-between;
     }
 
     .cube_container {
@@ -290,15 +291,15 @@
     .arrow {
         border: solid white;
         border-width: 0 3px 3px 0;
-        display: inline-block;
         padding: 3px;
         margin: 20px;
     }
 
     .a_right {
         display: flex;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        
     }
 
     .linea {
@@ -533,9 +534,11 @@
 <body>
     <div id="dashboard">
         <div id="menu" class="columns">
-            <i class="arrow a_right"></i>
-            <div class="linea"></div>
-            <h2 class="left margin_pq">Maquina 1</h2>
+            <h2 class="left margin_gd">Maquina 1</h2>
+            <div class="columns center">
+                <div class="linea"></div>
+                <i class="arrow a_right"></i>
+            </div>
         </div>
     </div>
     <input type="text" id="example" />
