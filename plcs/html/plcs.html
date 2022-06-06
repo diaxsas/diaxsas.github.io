@@ -299,7 +299,7 @@
         display: flex;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
-        
+
     }
 
     .linea {
@@ -529,6 +529,47 @@
         width: 100%;
         height: 100%;
     }
+
+
+    @media (min-width: 1199px) {
+        #cont_maquina {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #master_column_gen {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #master_subcolumn1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #master_montaje {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #master_consumo {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #campo_electric {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #master_indicadores{
+            display: flex;
+            flex-direction: row;
+
+        }
+
+    }
 </style>
 
 <body>
@@ -542,261 +583,279 @@
         </div>
     </div>
     <input type="text" id="example" />
-    <!--Campo Maquina-->
-    <div class="cube_container">
-        <div id="estado_maquina" class="center">
-            <text class="margin_pq">Status:</text>
-            <text>Mantenimeinto Maquina</text>
-        </div>
-        <!--Maquina-->
-        <div class="columns center">
-            <img id="foto_inyectora" class="left" src="../media/Inyector_foto.jpg" alt="foto_inyectora">
-            <div>
-                <div id="dato_tolva" class="dato_maquina">
-                    <text class="padding_pq">Tolva:</text>
-                    <div class="dato_linea"></div>
-                    <text class="padding_pq">78°</text>
+    <div id="master_column_gen">
+        <div id="master_column1">
+            <!--Campo Maquina-->
+            <div class="cube_container">
+                <div id="estado_maquina" class="center">
+                    <text class="margin_pq">Status:</text>
+                    <text>Mantenimeinto Maquina</text>
                 </div>
-                <div id="dato_motor" class="dato_maquina">
-                    <text class="padding_pq">Motor:</text>
-                    <div class="dato_linea"></div>
-                    <text class="padding_pq">ON</text>
-                </div>
-                <div id="dato_puerta" class="dato_maquina">
-                    <text class="padding_pq">Puertas:</text>
-                    <div class="dato_linea"></div>
-                    <text class="padding_pq">9 sec</text>
-                </div>
-                <div id="dato_atemperador" class="dato_maquina">
-                    <text class="padding_pq">Atemperador:</text>
-                    <div class="dato_linea"></div>
-                    <text class="padding_pq">78°</text>
-                </div>
-            </div>
-        </div>
-
-        <!--Ciclo-->
-        <div>
-
-            <!--Timeline-->
-            <div>
-                <h2>Ciclos de Maquina</h2>
-                <!--Linea de tiempo-->
-
-            </div>
-
-            <!--Semaforo-->
-            <div class="columns center">
-                <div class="center_vert rows margin_pq">
-                    <div id="semaforo_real" class="circulo_semaforo center rows">
-                        <p>30</p>
-                        <p>sec</p>
+                <div id="cont_maquina">
+                    <!--Maquina-->
+                    <div class="columns center">
+                        <img id="foto_inyectora" class="left" src="../media/Inyector_foto.jpg" alt="foto_inyectora">
+                        <div>
+                            <div id="dato_tolva" class="dato_maquina">
+                                <text class="padding_pq">Tolva:</text>
+                                <div class="dato_linea"></div>
+                                <text class="padding_pq">78°</text>
+                            </div>
+                            <div id="dato_motor" class="dato_maquina">
+                                <text class="padding_pq">Motor:</text>
+                                <div class="dato_linea"></div>
+                                <text class="padding_pq">ON</text>
+                            </div>
+                            <div id="dato_puerta" class="dato_maquina">
+                                <text class="padding_pq">Puertas:</text>
+                                <div class="dato_linea"></div>
+                                <text class="padding_pq">9 sec</text>
+                            </div>
+                            <div id="dato_atemperador" class="dato_maquina">
+                                <text class="padding_pq">Atemperador:</text>
+                                <div class="dato_linea"></div>
+                                <text class="padding_pq">78°</text>
+                            </div>
+                        </div>
                     </div>
-                    <h2>Real</h2>
-                </div>
-                <div class="center_vert rows margin_pq">
-                    <div id="semaforo_teorico" class="circulo_semaforo center rows">
-                        <p>30</p>
-                        <p>sec</p>
+
+                    <!--Ciclo-->
+                    <div>
+
+                        <!--Timeline-->
+                        <div>
+                            <h2>Ciclos de Maquina</h2>
+                            <!--Linea de tiempo-->
+
+                        </div>
+
+                        <!--Semaforo-->
+                        <div class="columns center">
+                            <div class="center_vert rows margin_pq">
+                                <div id="semaforo_real" class="circulo_semaforo center rows">
+                                    <p>30</p>
+                                    <p>sec</p>
+                                </div>
+                                <h2>Real</h2>
+                            </div>
+                            <div class="center_vert rows margin_pq">
+                                <div id="semaforo_teorico" class="circulo_semaforo center rows">
+                                    <p>30</p>
+                                    <p>sec</p>
+                                </div>
+                                <h2>Teorico</h2>
+                            </div>
+                            <div id="teorico_minmax" class="rows center">
+                                <div id="teorico_min" class="camp_minmax">
+                                    <text>Max:</text>
+                                    <text>34 sec</text>
+                                </div>
+                                <div id="teorico_max" class="camp_minmax">
+                                    <text>Max:</text>
+                                    <text>34 sec</text>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <h2>Teorico</h2>
                 </div>
-                <div id="teorico_minmax" class="rows center">
-                    <div id="teorico_min" class="camp_minmax">
-                        <text>Max:</text>
-                        <text>34 sec</text>
+
+            </div>
+            <div id="master_subcolumn1">
+                <!--Campo Montaje-->
+                <div class="cube_container">
+                    <h2>Montaje</h2>
+                    <div id="master_montaje" class="columns center">
+                        <div id="info_montaje" class="columns">
+                            <div class="rows text_left padding_pq">
+                                <text>Orden de Producción</text>
+                                <text>Código Cliente Color</text>
+                                <text>No Lote</text>
+                                <text>Operario</text>
+                                <text>Molde</text>
+                            </div>
+                            <div class="rows text_left padding_pq">
+                                <text>C0025</text>
+                                <text>2266557</text>
+                                <text>76555</text>
+                                <text>8888</text>
+                                <text>9999</text>
+                            </div>
+                        </div>
+                        <img id="img_machine" src="../media/img_machine.png" alt="inyector_machine">
+
                     </div>
-                    <div id="teorico_max" class="camp_minmax">
-                        <text>Max:</text>
-                        <text>34 sec</text>
+
+                </div>
+                <!--Campo Indicadores-->
+                <div class="cube_container">
+                    <h2>Eficiencia</h2>
+                    <div id="master_indicadores">
+                        <div class="columns">
+                            <!--Disponibilidad-->
+                            <div class="campo_ind rows">
+                                <h3>Disponibilidad</h3>
+                                <p class="indicador"><span>82</span>%</p>
+                                <div id="underline_disp" class="underline_ind"></div>
+                                <text>Disponibilidad para trabajar</text>
+                            </div>
+                            <!--Desempeño-->
+                            <div class="campo_ind rows">
+                                <h3>Desempeño</h3>
+                                <p class="indicador"><span>82</span>%</p>
+                                <div id="underline_dese" class="underline_ind"></div>
+                                <text>Desempeño real en contexto</text>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <!--Calidad-->
+                            <div class="campo_ind rows">
+                                <h3>Calidad</h3>
+                                <p class="indicador"><span>82</span>%</p>
+                                <div id="underline_cali" class="underline_ind"></div>
+                                <text>Calidad de unidades</text>
+                            </div>
+                            <!--Eficiencia-->
+                            <div class="campo_ind rows">
+                                <h3>Eficiencia</h3>
+                                <p class="indicador"><span>82</span>%</p>
+                                <div id="underline_efic" class="underline_ind"></div>
+                                <text>Eficiencia general del equipo</text>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="linechart1" class="linechart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="master_column2">
+            <!--Campo Consumo-->
+            <div class="cube_container rows">
+                <h2>Consumo</h2>
+                <div id="master_consumo">
+                    <!--Campo Pesos-->
+                    <div id="campo_pesos">
+                        <p id="cavidades_head">Pesos de Cavidades</p>
+                        <div class="columns">
+                            <div id="cavidad_title" class="rows">
+                                <text class="underline_peso">Cavidad 1</text>
+                                <text class="underline_peso">Cavidad 2</text>
+                                <text class="underline_peso">Cavidad 3</text>
+                                <text class="underline_peso">Cavidad 4</text>
+                                <text class="underline_peso">Cavidad 5</text>
+                                <text class="underline_peso">Cavidad 6</text>
+                            </div>
+                            <div id="cavidad_value" class="rows">
+                                <text class="underline_peso">25g</text>
+                                <text class="underline_peso">25g</text>
+                                <text class="underline_peso">25g</text>
+                                <text class="underline_peso">25g</text>
+                                <text class="underline_peso">25g</text>
+                                <text class="underline_peso">25g</text>
+                            </div>
+
+                        </div>
+                        <p id="cavidad_total">Total: <span>128g</span></p>
+                    </div>
+                    <!--Campo Electric-->
+                    <div id="campo_electric" class="columns center">
+                        <img id="electric_icon" src="../media/img_electric.png" alt="electric icon">
+                        <div class="columns">
+                            <div id="electric_title" class="rows padding_pq">
+                                <p>Motor</p>
+                                <p>Consumo</p>
+                                <p>Tiempo</p>
+                                <p class="bold">Total</p>
+                            </div>
+                            <div id="electric_value" class="rows padding_pq">
+                                <p>&zwnj;</p>
+                                <p>28<span>Kw/h</span></p>
+                                <p>2 <span>h</span></p>
+                                <p class="bold">223 <span>Kw</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Campo Tiempo-->
+            <div class="cube_container">
+                <h2>Tiempo de Máquina</h2>
+                <div id="cont_tiempos" class="columns center">
+                    <div>
+                        <div id="time_dot1" class="time_dot"></div>
+                        <div id="time_dot2" class="time_dot"></div>
+                        <div id="time_dot3" class="time_dot"></div>
+                        <div id="time_dot4" class="time_dot"></div>
+                        <div id="time_dot5" class="time_dot"></div>
+                        <div id="time_dot6" class="time_dot"></div>
+                        <div id="time_dot7" class="time_dot"></div>
+                        <div id="time_dot8" class="time_dot"></div>
+                        <div id="time_dot9" class="time_dot"></div>
+                    </div>
+                    <div class="rows text_left padding_pq">
+                        <text>Mantenimeinto Máquina</text>
+                        <text>Mantenimeinto Molde</text>
+                        <text>Sin Operario</text>
+                        <text>No Programada</text>
+                        <text>Fin de Turno</text>
+                        <text>Fin de Producción</text>
+                        <text>Material</text>
+                        <text>Calidad</text>
+                        <text>Horómetro</text>
+                    </div>
+                    <div class="rows center padding_pq">
+                        <text>8</text>
+                        <text>5</text>
+                        <text>12</text>
+                        <text>55</text>
+                        <text>22</text>
+                        <text>66</text>
+                        <text>77</text>
+                        <text>88</text>
+                        <text>99</text>
+                    </div>
+                </div>
+                <div class="center">
+                    <div id="center_timert" class="center rows center_pie">
+                        <p>256</p>
+                        <p>horas</p>
                     </div>
                 </div>
 
-            </div>
+                <div id="donutchart1" class="donutchart"></div>
 
-        </div>
-
-    </div>
-    <!--Campo Montaje-->
-    <div class="cube_container">
-        <h2>Montaje</h2>
-        <div id="info_montaje" class="columns">
-            <div class="rows text_left padding_pq">
-                <text>Orden de Producción</text>
-                <text>Código Cliente Color</text>
-                <text>No Lote</text>
-                <text>Operario</text>
-                <text>Molde</text>
             </div>
-            <div class="rows text_left padding_pq">
-                <text>C0025</text>
-                <text>2266557</text>
-                <text>76555</text>
-                <text>8888</text>
-                <text>9999</text>
-            </div>
-            <img id="img_machine" src="../media/img_machine.png" alt="inyector_machine">
-
-        </div>
-
-    </div>
-    <!--Campo Indicadores-->
-    <div class="cube_container">
-        <h2>Eficiencia</h2>
-        <div class="columns">
-            <!--Disponibilidad-->
-            <div class="campo_ind rows">
-                <h3>Disponibilidad</h3>
-                <p class="indicador"><span>82</span>%</p>
-                <div id="underline_disp" class="underline_ind"></div>
-                <text>Disponibilidad para trabajar</text>
-            </div>
-            <!--Desempeño-->
-            <div class="campo_ind rows">
-                <h3>Desempeño</h3>
-                <p class="indicador"><span>82</span>%</p>
-                <div id="underline_dese" class="underline_ind"></div>
-                <text>Desempeño real en contexto</text>
-            </div>
-        </div>
-        <div class="columns">
-            <!--Calidad-->
-            <div class="campo_ind rows">
-                <h3>Calidad</h3>
-                <p class="indicador"><span>82</span>%</p>
-                <div id="underline_cali" class="underline_ind"></div>
-                <text>Calidad de unidades</text>
-            </div>
-            <!--Eficiencia-->
-            <div class="campo_ind rows">
-                <h3>Eficiencia</h3>
-                <p class="indicador"><span>82</span>%</p>
-                <div id="underline_efic" class="underline_ind"></div>
-                <text>Eficiencia general del equipo</text>
-            </div>
-        </div>
-
-        <div id="linechart1" class="linechart"></div>
-    </div>
-    <!--Campo Consumo-->
-    <div class="cube_container rows">
-        <h2>Consumo</h2>
-        <!--Campo Pesos-->
-        <div id="campo_pesos">
-            <p id="cavidades_head">Pesos de Cavidades</p>
-            <div class="columns">
-                <div id="cavidad_title" class="rows">
-                    <text class="underline_peso">Cavidad 1</text>
-                    <text class="underline_peso">Cavidad 2</text>
-                    <text class="underline_peso">Cavidad 3</text>
-                    <text class="underline_peso">Cavidad 4</text>
-                    <text class="underline_peso">Cavidad 5</text>
-                    <text class="underline_peso">Cavidad 6</text>
+            <!--Campo Produccion-->
+            <div class="cube_container">
+                <h2>Producción</h2>
+                <h2 id="tit_unit">Unidades</h2>
+                <div id="cont_unit" class="columns center">
+                    <div>
+                        <div id="unit_dot1" class="time_dot"></div>
+                        <div id="unit_dot2" class="time_dot"></div>
+                    </div>
+                    <div class="rows text_left padding_pq">
+                        <text>Aprobadas</text>
+                        <text>Defectuosas</text>
+                        <text>totales</text>
+                    </div>
+                    <div class="rows center padding_pq">
+                        <text>8 <span>uni.</span></text>
+                        <text>5554 <span>uni.</span></text>
+                        <text>11125 <span>uni.</span></text>
+                    </div>
                 </div>
-                <div id="cavidad_value" class="rows">
-                    <text class="underline_peso">25g</text>
-                    <text class="underline_peso">25g</text>
-                    <text class="underline_peso">25g</text>
-                    <text class="underline_peso">25g</text>
-                    <text class="underline_peso">25g</text>
-                    <text class="underline_peso">25g</text>
+                <div id="donutchart2" class="donutchart"></div>
+                <div class="center">
+
+                    <div id="center_timeru" class="center rows center_pie">
+                        <p>256</p>
+                        <p>Inyecciones</p>
+                    </div>
                 </div>
 
-            </div>
-            <p id="cavidad_total">Total: <span>128g</span></p>
-        </div>
-        <!--Campo Electric-->
-        <div id="campo_electric" class="columns">
-            <img id="electric_icon" src="../media/img_electric.png" alt="electric icon">
-            <div id="electric_title" class="rows">
-                <p>Motor</p>
-                <p>Consumo</p>
-                <p>Tiempo</p>
-                <p class="bold">Total</p>
-            </div>
-            <div id="electric_value" class="rows">
-                <p>&zwnj;</p>
-                <p>28<span>Kw/h</span></p>
-                <p>2 <span>h</span></p>
-                <p class="bold">223 <span>Kw</span></p>
-            </div>
-
-        </div>
-    </div>
-    <!--Campo Tiempo-->
-    <div class="cube_container">
-        <h2>Tiempo de Máquina</h2>
-        <div id="cont_tiempos" class="columns center">
-            <div>
-                <div id="time_dot1" class="time_dot"></div>
-                <div id="time_dot2" class="time_dot"></div>
-                <div id="time_dot3" class="time_dot"></div>
-                <div id="time_dot4" class="time_dot"></div>
-                <div id="time_dot5" class="time_dot"></div>
-                <div id="time_dot6" class="time_dot"></div>
-                <div id="time_dot7" class="time_dot"></div>
-                <div id="time_dot8" class="time_dot"></div>
-                <div id="time_dot9" class="time_dot"></div>
-            </div>
-            <div class="rows text_left padding_pq">
-                <text>Mantenimeinto Máquina</text>
-                <text>Mantenimeinto Molde</text>
-                <text>Sin Operario</text>
-                <text>No Programada</text>
-                <text>Fin de Turno</text>
-                <text>Fin de Producción</text>
-                <text>Material</text>
-                <text>Calidad</text>
-                <text>Horómetro</text>
-            </div>
-            <div class="rows center padding_pq">
-                <text>8</text>
-                <text>5</text>
-                <text>12</text>
-                <text>55</text>
-                <text>22</text>
-                <text>66</text>
-                <text>77</text>
-                <text>88</text>
-                <text>99</text>
-            </div>
-        </div>
-        <div class="center">
-            <div id="center_timert" class="center rows center_pie">
-                <p>256</p>
-                <p>horas</p>
-            </div>
-        </div>
-
-        <div id="donutchart1" class="donutchart"></div>
-
-    </div>
-    <!--Campo Produccion-->
-    <div class="cube_container">
-        <h2>Producción</h2>
-        <h2 id="tit_unit">Unidades</h2>
-        <div id="cont_unit" class="columns center">
-            <div>
-                <div id="unit_dot1" class="time_dot"></div>
-                <div id="unit_dot2" class="time_dot"></div>
-            </div>
-            <div class="rows text_left padding_pq">
-                <text>Aprobadas</text>
-                <text>Defectuosas</text>
-                <text>totales</text>
-            </div>
-            <div class="rows center padding_pq">
-                <text>8 <span>uni.</span></text>
-                <text>5554 <span>uni.</span></text>
-                <text>11125 <span>uni.</span></text>
-            </div>
-        </div>
-        <div id="donutchart2" class="donutchart"></div>
-        <div class="center">
-
-            <div id="center_timeru" class="center rows center_pie">
-                <p>256</p>
-                <p>Inyecciones</p>
             </div>
         </div>
 
