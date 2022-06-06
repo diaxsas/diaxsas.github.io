@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Sidebar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    :root {
+        --nav-icon-width: 50px;
+        --nav-border-width: 50px;
+    }
+
+    .page_container {
+        height: inherit;
+        display: flex;
+    }
+
+    .main {
+        height: inherit;
+        padding: 0;
+        padding-left: var(--nav-border-width);
+        overflow-y: auto;
+    }
+
+    .nav {
+        width: 200px;
+        height: inherit;
+        position: relative;
+        background-color: #0066fe;
+        transition: width 0.2s ease-in-out;
+        flex-shrink: 0;
+    }
+
+    .nav--collapsed {
+        width: var(--nav-icon-width);
+    }
+
+    .nav--collapsed .nav__label {
+        display: none;
+    }
+
+    .nav__link {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none
+    }
+
+    .nav__link:hover {
+        background-color: #203461;
+    }
+
+    .nav__icon-container {
+        width: var(--nav-icon-width);
+        height: var(--nav-icon-width);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+</style>
+
+<body>
+    <div class="page_container">
+        <nav class="nav">
+            <a href="#" class="nav__link">
+                <div class="nav__ico-container">
+                    <img src="../media/Group 84.svg" class=".nav__icon-container" alt="add">
+                    <img src="../media/Group 94.svg" class=".nav__icon-container" alt="comp">
+                </div>
+                <span class="nav__label">Maquina 1</span>
+            </a>
+
+        </nav>
+        <main class="main">
+
+
+        </main>
+
+    </div>
+
+</body>
+
+
+</html>
