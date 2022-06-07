@@ -52,7 +52,7 @@
 
         h2 {
             font-size: 20px;
-            font-weight: 400;
+            font-weight: bold;
             margin: 2px;
             text-align: left;
         }
@@ -212,7 +212,10 @@
 
         .dato_linea {
             border-left: 1px solid var(--color-negro);
-            height: 24px;
+        }
+
+        .relative {
+            position: relative;
         }
 
         #estado_maquina {
@@ -221,14 +224,18 @@
             padding: 5px;
             border-radius: 0 0 5px 5px;
             box-shadow: 2px 2px 1px var(--color-gris);
-            width: 200px;
-            height: 14px;
-            transform: translate(0px, -15px);
+            width: fit-content;
+            position: absolute;
+            top: 0px;
+            right: 15px;
 
         }
 
         #estado_maquina text {
             font-size: 12px;
+            padding: 5px;
+            padding-top: 0px;
+            padding-bottom: 0px;
         }
 
         #foto_inyectora {
@@ -249,15 +256,15 @@
         }
 
         #dato_tolva {
-            transform: translate(-80px);
+            transform: translateX(-80px);
         }
 
         #dato_motor {
-            transform: translate(20px);
+            transform: translateX(14px);
         }
 
         #dato_atemperador {
-            transform: translate(-100px);
+            transform: translateX(-100px);
         }
 
         .circulo_semaforo {
@@ -304,14 +311,21 @@
         }
 
         #img_machine {
-            width: 69px;
-            height: 68px;
+            min-width: 69px;
+            min-height: 68px;
+
+            width: 20vw;
+            height: 20vw;
+
+            max-width: 137px;
+            max-height: 136px;
 
         }
 
         #info_montaje {
             display: flex;
             justify-content: space-between;
+            width: 210px;
         }
 
         .time_dot {
@@ -348,6 +362,16 @@
 
         #tit_unit {
             margin: 10px;
+        }
+
+        .full_width {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        .full_height {
+            height: 100%;
+            min-height: 100%;
         }
 
         .indicador {
@@ -387,9 +411,16 @@
             width: 200px;
             border: 2px solid var(--color-negro);
             border-radius: 5px;
-            margin-top: 3px;
-            align-self: center;
         }
+
+        #campo_pesos>* {
+            border-bottom: 2px solid var(--color-negro);
+        }
+
+        #campo_pesos>*:last-child {
+            border-bottom: none;
+        }
+
 
         .underline_peso {
             box-sizing: border-box;
@@ -420,6 +451,7 @@
         #electric_icon {
             width: 73px;
             height: 99px;
+            margin: 10px;
 
         }
 
@@ -427,6 +459,7 @@
             display: flex;
             justify-content: space-between;
             margin: 10px;
+            width: fit-content;
         }
 
         #campo_electric>div {
@@ -436,12 +469,16 @@
 
         .donutchart {
             width: 100%;
-            height: 100%;
+            height: 500px;
         }
 
         .linechart1 {
             width: 100%;
             height: 100%;
+        }
+
+        .list::before {
+            content: '* ';
         }
 
         #master_indicadores {
@@ -455,10 +492,93 @@
             display: flex;
             justify-content: space-evenly;
             margin: 10px;
+            height: fit-content;
+        }
+
+        .space_between {
+            display: flex;
+            justify-content: space-between;
         }
 
         #master_consumo {
             margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contenedor_ciclos {
+            margin: 10px;
+        }
+
+        .montaje_row {
+            display: flex;
+            text-align: left;
+            width: 100%;
+            min-width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 3px;
+            margin-left: 0px;
+            margin-right: 0px;
+
+        }
+
+        .fila_cavidad {
+            width: 100%;
+            min-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fila_cavidad>* {
+            padding: 5px;
+            display: flex;
+            ;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fila_cavidad>*:last-child {
+            padding-left: 8px;
+            padding-right: 8px;
+            border-left: 1px solid var(--color-negro);
+            min-width: 20%;
+        }
+
+        #info_motor {
+            min-width: 190px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #info_motor>* {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #info_motor>*:last-child {
+            border-top: 1px solid var(--color-negro);
+            margin-top: 3px;
+            padding-top: 3px;
+        }
+
+
+
+        @media (min-width: 500px) {
+
+            #master_consumo {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            #campo_electric {
+                flex-direction: column;
+            }
+
         }
 
 
@@ -525,35 +645,32 @@
         <div id="master_column_gen">
             <div id="master_column1">
                 <!--Campo Maquina-->
-                <div class="cube_container">
-                    <div id="estado_maquina" class="center">
-                        <text class="margin_pq">Status:</text>
+                <div class="cube_container relative">
+                    <div id="estado_maquina" class="columns center_vert">
+                        <text class="">Status:</text>
                         <text>Mantenimeinto Maquina</text>
                     </div>
                     <div id="cont_maquina">
+                        <h2>General</h2>
                         <!--Maquina-->
-                        <div class="columns center">
+                        <div class="columns center margin_gd">
                             <img id="foto_inyectora" class="left" src="../media/Inyector_foto.jpg" alt="foto_inyectora">
                             <div>
                                 <div id="dato_tolva" class="dato_maquina">
-                                    <text class="padding_pq">Tolva:</text>
-                                    <div class="dato_linea"></div>
-                                    <text class="padding_pq">78°</text>
+                                    <text class="padding_pq">Tolva</text>
+                                    <text class="padding_pq dato_linea">78°</text>
                                 </div>
                                 <div id="dato_motor" class="dato_maquina">
-                                    <text class="padding_pq">Motor:</text>
-                                    <div class="dato_linea"></div>
-                                    <text class="padding_pq">ON</text>
+                                    <text class="padding_pq">Motor</text>
+                                    <text class="padding_pq dato_linea">ON</text>
                                 </div>
                                 <div id="dato_puerta" class="dato_maquina">
-                                    <text class="padding_pq">Puertas:</text>
-                                    <div class="dato_linea"></div>
-                                    <text class="padding_pq">9 sec</text>
+                                    <text class="padding_pq">Puertas</text>
+                                    <text class="padding_pq dato_linea">9 sec</text>
                                 </div>
                                 <div id="dato_atemperador" class="dato_maquina">
-                                    <text class="padding_pq">Atemperador:</text>
-                                    <div class="dato_linea"></div>
-                                    <text class="padding_pq">78°</text>
+                                    <text class="padding_pq">Atemperador</text>
+                                    <text class="padding_pq dato_linea">78°</text>
                                 </div>
                             </div>
                         </div>
@@ -563,19 +680,19 @@
 
                             <!--Timeline-->
                             <div>
-                                <h2>Ciclos de Maquina</h2>
+                                <h3>Ciclos de Maquina</h3>
                                 <!--Linea de tiempo-->
 
                             </div>
 
                             <!--Semaforo-->
-                            <div class="columns space_evenly">
+                            <div id="contenedor_ciclos" class="columns space_evenly">
                                 <div class="center_vert rows margin_pq">
                                     <div id="semaforo_real" class="circulo_semaforo center rows">
                                         <p>30</p>
                                         <p>sec</p>
                                     </div>
-                                    <h2>Real</h2>
+                                    <p>Real</p>
                                 </div>
                                 <div id="contenedor_ciclo_teorico" class="rows margin_pq">
                                     <g class="center rows">
@@ -583,7 +700,7 @@
                                             <p>30</p>
                                             <p>sec</p>
                                         </div>
-                                        <h2>Teorico</h2>
+                                        <p>Teorico</p>
                                     </g>
                                     <div id="teorico_minmax" class="rows center">
                                         <div id="teorico_min" class="camp_minmax">
@@ -607,30 +724,48 @@
                     <div class="cube_container">
                         <h2>Montaje</h2>
                         <div id="master_montaje" class="columns">
-                            <div id="info_montaje" class="columns">
-                                <div class="rows text_left padding_pq">
-                                    <text>Orden de Producción</text>
-                                    <text>Código Cliente Color</text>
-                                    <text>No Lote</text>
-                                    <text>Operario</text>
-                                    <text>Molde</text>
+                            <div id="info_montaje" class="rows">
+                                <div class="montaje_row">
+                                    <text class="padding_pq">Orden de Producción</text>
+                                    <div class="rows padding_pq">
+                                        <text>C0025</text>
+                                    </div>
                                 </div>
-                                <div class="rows text_left padding_pq">
-                                    <text>C0025</text>
-                                    <text>2266557</text>
-                                    <text>76555</text>
-                                    <text>8888</text>
-                                    <text>9999</text>
+                                <div class="montaje_row">
+                                    <text class="padding_pq">Código Cliente Color</text>
+                                    <div class="rows padding_pq">
+                                        <text>C0025</text>
+                                    </div>
+                                </div>
+                                <div class="montaje_row">
+                                    <text class="padding_pq">No Lote</text>
+                                    <div class="rows padding_pq">
+                                        <text>C0025</text>
+                                    </div>
+                                </div>
+                                <div class="montaje_row">
+                                    <text class="padding_pq">Operario</text>
+                                    <div class="rows padding_pq">
+                                        <text>C0025</text>
+                                    </div>
+                                </div>
+                                <div class="montaje_row">
+                                    <text class="padding_pq">Molde</text>
+                                    <div class="rows padding_pq">
+                                        <text>C0025</text>
+                                    </div>
                                 </div>
                             </div>
-                            <img id="img_machine" src="../media/img_machine.png" alt="inyector_machine">
+                            <div class="center_vert">
+                                <img id="img_machine" src="../media/img_machine.png" alt="Maquina Inyectora">
+                            </div>
 
                         </div>
 
                     </div>
                     <!--Campo Indicadores-->
                     <div class="cube_container">
-                        <h2>Eficiencia</h2>
+                        <h2>Indicadores</h2>
                         <div id="master_indicadores">
                             <div class="columns">
                                 <!--Disponibilidad-->
@@ -678,42 +813,50 @@
                         <!--Campo Pesos-->
                         <div id="campo_pesos">
                             <p id="cavidades_head">Pesos de Cavidades</p>
-                            <div class="columns">
-                                <div id="cavidad_title" class="rows">
-                                    <text class="underline_peso">Cavidad 1</text>
-                                    <text class="underline_peso">Cavidad 2</text>
-                                    <text class="underline_peso">Cavidad 3</text>
-                                    <text class="underline_peso">Cavidad 4</text>
-                                    <text class="underline_peso">Cavidad 5</text>
-                                    <text class="underline_peso">Cavidad 6</text>
-                                </div>
-                                <div id="cavidad_value" class="rows">
-                                    <text class="underline_peso">25g</text>
-                                    <text class="underline_peso">25g</text>
-                                    <text class="underline_peso">25g</text>
-                                    <text class="underline_peso">25g</text>
-                                    <text class="underline_peso">25g</text>
-                                    <text class="underline_peso">25g</text>
-                                </div>
-
+                            <div class="fila_cavidad">
+                                <text>Cavidad 1</text>
+                                <text>25g</text>
+                            </div>
+                            <div class="fila_cavidad">
+                                <text>Cavidad 2</text>
+                                <text>25g</text>
+                            </div>
+                            <div class="fila_cavidad">
+                                <text>Cavidad 3</text>
+                                <text>25g</text>
+                            </div>
+                            <div class="fila_cavidad">
+                                <text>Cavidad 4</text>
+                                <text>25g</text>
+                            </div>
+                            <div class="fila_cavidad">
+                                <text>Cavidad 5</text>
+                                <text>25g</text>
+                            </div>
+                            <div class="fila_cavidad">
+                                <text>Cavidad 6</text>
+                                <text>25g</text>
                             </div>
                             <p id="cavidad_total">Total: <span>128g</span></p>
                         </div>
                         <!--Campo Electric-->
                         <div id="campo_electric" class="columns center">
                             <img id="electric_icon" src="../media/img_electric.png" alt="electric icon">
-                            <div class="columns">
-                                <div id="electric_title" class="rows padding_pq">
-                                    <p>Motor</p>
-                                    <p>Consumo</p>
-                                    <p>Tiempo</p>
-                                    <p class="bold">Total</p>
+                            <div id="info_motor">
+                                <div>
+                                    <p>Motor:</p>
                                 </div>
-                                <div id="electric_value" class="rows padding_pq">
-                                    <p>&zwnj;</p>
-                                    <p>28<span>Kw/h</span></p>
-                                    <p>2 <span>h</span></p>
-                                    <p class="bold">223 <span>Kw</span></p>
+                                <div>
+                                    <p>Consumo</p>
+                                    <p>28 Kw/h</p>
+                                </div>
+                                <div>
+                                    <p>Tiempo</p>
+                                    <p>28 h</p>
+                                </div>
+                                <div>
+                                    <p class="bold">Total</p>
+                                    <p class="bold">223 Kw</p>
                                 </div>
                             </div>
                         </div>
@@ -721,48 +864,7 @@
                 </div>
                 <!--Campo Tiempo-->
                 <div class="cube_container">
-                    <h2>Tiempo de Máquina</h2>
-                    <div id="cont_tiempos" class="columns center">
-                        <div>
-                            <div id="time_dot1" class="time_dot"></div>
-                            <div id="time_dot2" class="time_dot"></div>
-                            <div id="time_dot3" class="time_dot"></div>
-                            <div id="time_dot4" class="time_dot"></div>
-                            <div id="time_dot5" class="time_dot"></div>
-                            <div id="time_dot6" class="time_dot"></div>
-                            <div id="time_dot7" class="time_dot"></div>
-                            <div id="time_dot8" class="time_dot"></div>
-                            <div id="time_dot9" class="time_dot"></div>
-                        </div>
-                        <div class="rows text_left padding_pq">
-                            <text>Mantenimeinto Máquina</text>
-                            <text>Mantenimeinto Molde</text>
-                            <text>Sin Operario</text>
-                            <text>No Programada</text>
-                            <text>Fin de Turno</text>
-                            <text>Fin de Producción</text>
-                            <text>Material</text>
-                            <text>Calidad</text>
-                            <text>Horómetro</text>
-                        </div>
-                        <div class="rows center padding_pq">
-                            <text>8</text>
-                            <text>5</text>
-                            <text>12</text>
-                            <text>55</text>
-                            <text>22</text>
-                            <text>66</text>
-                            <text>77</text>
-                            <text>88</text>
-                            <text>99</text>
-                        </div>
-                    </div>
-                    <div class="center">
-                        <div id="center_timert" class="center rows center_pie">
-                            <p>256</p>
-                            <p>horas</p>
-                        </div>
-                    </div>
+                    <h2>Tiempos</h2>
 
                     <div id="donutchart1" class="donutchart"></div>
 
@@ -770,7 +872,6 @@
                 <!--Campo Produccion-->
                 <div class="cube_container">
                     <h2>Producción</h2>
-                    <h2 id="tit_unit">Unidades</h2>
                     <div id="cont_unit" class="columns center">
                         <div>
                             <div id="unit_dot1" class="time_dot"></div>
@@ -811,24 +912,33 @@
         function drawChart() {
             var data1 = google.visualization.arrayToDataTable([
                 ['Task', 'Hours'],
-                ['Mant. Máquina', 11],
-                ['Mant. Molde', 2],
-                ['Sin Operario', 2],
-                ['No Programada', 2],
-                ['Fin Turno', 2],
-                ['Fin Producción', 2],
-                ['Material', 2],
-                ['Calidad', 2],
-                ['Horometro', 2],
+                ['Mant. Máquina: 11', 11],
+                ['Mant. Molde: 2', 2],
+                ['Sin Operario: 2', 2],
+                ['No Programada: 2', 2],
+                ['Fin Turno: 2', 2],
+                ['Fin Producción: 2', 2],
+                ['Material: 2', 2],
+                ['Calidad: 2', 2],
+                ['Horometro: 2', 2],
             ]);
 
             var options1 = {
                 pieHole: 0.4,
+                chartArea: {
+                    width: '70%'
+                },
+                pieSliceText: '',
+                legend: {
+                    position: '',
+                },
+                tooltip: {
+                    text: 'percentage'
+                }
             };
 
             var chart1 = new google.visualization.PieChart(document.getElementById('donutchart1'));
             chart1.draw(data1, options1);
-
 
 
 
@@ -852,34 +962,35 @@
 
 
             var data3 = new google.visualization.DataTable();
-            data3.addColumn('number', 'Day');
+            data3.addColumn('date', 'Day');
             data3.addColumn('number', 'Disponibilidad');
             data3.addColumn('number', 'Desempeño');
             data3.addColumn('number', 'Calidad');
             data3.addColumn('number', 'Eficiencia');
 
-            data3.addRows([
-                [1, 37.8, 80.8, 41.8, 30],
-                [2, 30.9, 69.5, 32.4, 30],
-                [3, 25.4, 57, 25.7, 30],
-                [4, 11.7, 18.8, 10.5, 30],
-                [5, 11.9, 17.6, 10.4, 30],
-                [6, 8.8, 13.6, 7.7, 30],
-                [7, 7.6, 12.3, 9.6, 30],
-                [8, 12.3, 29.2, 10.6, 30],
-                [9, 16.9, 42.9, 14.8, 30],
-                [10, 12.8, 30.9, 11.6, 30],
-                [11, 5.3, 7.9, 4.7, 30],
-                [12, 6.6, 8.4, 5.2, 30],
-                [13, 4.8, 6.3, 3.6, 30],
-                [14, 4.2, 6.2, 3.4, 30]
-            ]);
+
+            var currentdate = new Date();
+            currentdate.setHours(currentdate.getHours() + 23);
+
+            var rows = [];
+
+            for (var i = 0; i < 20; i++) {
+                currentdate = new Date(currentdate.getTime() + (23 * 60 * 60 * 1000));
+                rows.push([currentdate, Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(
+                    Math.random() * 100), Math.floor(Math.random() * 100)]);
+            }
+
+            data3.addRows(rows);
+
 
             var options3 = {
                 title: '',
                 subtitle: '',
                 legend: {
                     position: 'none'
+                },
+                hAxis: {
+                    title: '',
                 }
             };
 
