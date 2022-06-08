@@ -25,22 +25,21 @@ function getDataPlc(_fechaInicio, _fechaFin) {
 
 
 
+const matto_máquina = 0; //////////////////////////////////////
+const matto_molde = 0; //////////////////////////////////////
+const sin_operario = 0; //////////////////////////////////////
+const material = 0; //////////////////////////////////////
+const _calidad = 0; //////////////////////////////////////
+const montaje = 0; //////////////////////////////////////
+const horometro = 0; //////////////////////////////////////
 
-var matto_máquina = 0; //////////////////////////////////////
-var matto_molde = 0; //////////////////////////////////////
-var sin_operario = 0; //////////////////////////////////////
-var material = 0; //////////////////////////////////////
-var calidad = 0; //////////////////////////////////////
-var montaje = 0; //////////////////////////////////////
-var horometro = 0; //////////////////////////////////////
+const fin_producción = 0; // ignoradas por ahora
+const fin_turno = 0; // ignoradas por ahora
+const no_programada = 0; // ignoradas por ahora
 
-var fin_producción = 0; // ignoradas por ahora
-var fin_turno = 0; // ignoradas por ahora
-var no_programada = 0; // ignoradas por ahora
+var tiempoParadas = matto_máquina + matto_molde + sin_operario + material + _calidad + montaje + horometro; // Horas (La maquina estuvo corriendo por 16.1 horas en la fecha indicada)
 
-var tiempoParadas = matto_máquina + matto_molde + sin_operario + material + calidad + montaje + horometro; // Horas (La maquina estuvo corriendo por 16.1 horas en la fecha indicada)
-
-var sumaTiempoCiclos = 0; // Toca sumar todos los MF1
+const sumaTiempoCiclos = 0; // Toca sumar todos los MF1
 
 var tiempoProductivo = sumaTiempoCiclos; // Horas (La maquina estuvo disponible 22.5 horas en la fecha indicada)
 
@@ -51,9 +50,11 @@ var disponibilidad = tiempoProductivo / tiempoDisponible;
 
 
 
-var piezasMalas = 30; // Piezas (Se produgieron 30 piezas defectuosas en la fecha) suma de dos contadores de defectos o uno
 
-var produccionReal = 2000; // ML131 contador inyecciones
+
+const piezasMalas = 30; // Piezas (Se produgieron 30 piezas defectuosas en la fecha) suma de dos contadores de defectos o uno
+
+const produccionReal = 2000; // ML131 contador inyecciones
 
 var piezasBuenas = produccionReal - piezasMalas; /////////////////////////////////////
 var calidad = piezasBuenas / produccionReal;
@@ -66,20 +67,15 @@ var calidad = piezasBuenas / produccionReal;
 /*
 
 // DE CALIDAD:
-var produccionReal = 2000; // ML131 contador inyecciones
+const produccionReal = 2000; // ML131 contador inyecciones
 
 // DE DISPONIBILIDAD
-var sumaTiempoCiclos = 0; // Toca sumar todos los MF1
+const sumaTiempoCiclos = 0; // Toca sumar todos los MF1
 var tiempoProductivo = sumaTiempoCiclos; // Horas (La maquina estuvo disponible 22.5 horas en la fecha indicada)
 
 */
 
-
-var tiempoCicloIdeal = 30; // Segundos (Idealmente hacer 1 inyeccion toma 30 segundos) MF5 ciclo estandar
-
-
-
+const tiempoCicloIdeal = 30; // Segundos (Idealmente hacer 1 inyeccion toma 30 segundos) MF5 ciclo estandar
 
 var capacidadProductiva = tiempoProductivo / tiempoCicloIdeal; /////////////////////////////////////
 var rendimiento = produccionReal / capacidadProductiva;
-

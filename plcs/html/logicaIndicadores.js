@@ -1,54 +1,44 @@
-const matto_máquina = 0; //////////////////////////////////////
-const matto_molde = 0; //////////////////////////////////////
-const sin_operario = 0; //////////////////////////////////////
-const material = 0; //////////////////////////////////////
-const _calidad = 0; //////////////////////////////////////
-const montaje = 0; //////////////////////////////////////
-const horometro = 0; //////////////////////////////////////
+// Disponibilidad
 
-const fin_producción = 0; // ignoradas por ahora
-const fin_turno = 0; // ignoradas por ahora
-const no_programada = 0; // ignoradas por ahora
+const matto_máquina = 'MI121'; // 0.5 - 1.5 horas
+const matto_molde = 'MI122'; // 0.5 - 1 hora
+const sin_operario = 'MI124'; // 0.5 - 1 hora
+const material = 'MI127'; // 0.5 - 1 hora
+const _calidad = 'MI128'; // 0.25 - 0.5 hora
+const montaje = 'MI123'; // 0.5 - 1 hora
 
-var tiempoParadas = matto_máquina + matto_molde + sin_operario + material + _calidad + montaje + horometro; // Horas (La maquina estuvo corriendo por 16.1 horas en la fecha indicada)
+var tiempoParadas = matto_máquina + matto_molde + sin_operario + material + _calidad + montaje;
 
-const sumaTiempoCiclos = 0; // Toca sumar todos los MF1
+const tiempoProductivo = 'ML0'; // 10 - 12 horas 'Tiempo Motor'
 
-var tiempoProductivo = sumaTiempoCiclos; // Horas (La maquina estuvo disponible 22.5 horas en la fecha indicada)
-
-var tiempoDisponible = tiempoProductivo + tiempoParadas; //
+var tiempoDisponible = tiempoProductivo + tiempoParadas;
 
 var disponibilidad = tiempoProductivo / tiempoDisponible;
 
 
+// Calidad
 
+const defectosInicioTurno = 'MI101'; // 5 - 10 inyecciones
+const defectosLluvia = 'MI102'; // 15 - 20 inyecciones
 
+var piezasMalas = defectosInicioTurno + defectosLluvia;
 
+const produccionReal = 'ML131'; // 1000 - 1200 inyecciones 'Contador Inyecciones'
 
-const piezasMalas = 30; // Piezas (Se produgieron 30 piezas defectuosas en la fecha) suma de dos contadores de defectos o uno
-
-const produccionReal = 2000; // ML131 contador inyecciones
-
-var piezasBuenas = produccionReal - piezasMalas; /////////////////////////////////////
+var piezasBuenas = produccionReal - piezasMalas;
 var calidad = piezasBuenas / produccionReal;
 
-
-
-
-
+// Rendimiento
 
 /*
-
 // DE CALIDAD:
-const produccionReal = 2000; // ML131 contador inyecciones
+const produccionReal = 'ML131'; // 1000 - 1200 inyecciones 'Contador Inyecciones'
 
 // DE DISPONIBILIDAD
-const sumaTiempoCiclos = 0; // Toca sumar todos los MF1
-var tiempoProductivo = sumaTiempoCiclos; // Horas (La maquina estuvo disponible 22.5 horas en la fecha indicada)
-
+const tiempoProductivo = 'ML0'; // 10 - 12 horas 'Tiempo Motor'
 */
 
-const tiempoCicloIdeal = 30; // Segundos (Idealmente hacer 1 inyeccion toma 30 segundos) MF5 ciclo estandar
+const tiempoCicloIdeal = 'MF5'; // 30 Segundos/Inyeccion 'ciclo estandar'
 
-var capacidadProductiva = tiempoProductivo / tiempoCicloIdeal; /////////////////////////////////////
+var capacidadProductiva = tiempoProductivo / tiempoCicloIdeal; 
 var rendimiento = produccionReal / capacidadProductiva;
