@@ -4,78 +4,64 @@ const fechaFinReporte = new Date('6/1/22')
 
 const dataPlc = getDataPlc(fechaInicioReporte, fechaFinReporte)
 
+console.log(dataPlc)
+var fs = require('fs');
+fs.writeFile("dataset.txt", JSON.stringify(dataPlc), function(err) {
+    if (err) {
+        console.log(err);
+    }
+});
 
 function getDataPlc(_fechaInicio, _fechaFin) {
-    var _dataPlc = []
+    var _dataPlc = {}
+    _dataPlc.fechaInicioReporte = _fechaInicio
+    _dataPlc.fechaFinReporte = _fechaFin
+    _dataPlc.dias = []
     var _fechaActual = new Date(_fechaInicio);
     while (_fechaActual <= _fechaFin) {
         var _dataFechaActual = {}
         _dataFechaActual.fecha = _fechaActual
 
+        _dataFechaActual.matto_máquina = rand(h2m(0.5), h2m(1.5));
+        _dataFechaActual.matto_molde = rand(h2m(0.5), h2m(1));
+        _dataFechaActual.sin_operario = rand(h2m(0.5), h2m(1));
+        _dataFechaActual.material = rand(h2m(0.5), h2m(1));
+        _dataFechaActual._calidad = rand(h2m(0.25), h2m(0.5));
+        _dataFechaActual.montaje = rand(h2m(0.5), h2m(1));
+        _dataFechaActual.tiempoProductivo = rand(h2m(10), h2m(12));
+        _dataFechaActual.defectosInicioTurno = rand(5, 10, true);
+        _dataFechaActual.defectosLluvia = rand(15, 20, true);
+        _dataFechaActual.produccionReal = rand(1000, 1200, true);
+        _dataFechaActual.tiempoCicloIdeal = 30;
 
+        _dataFechaActual.tiempoParadas = _dataFechaActual.matto_máquina + _dataFechaActual.matto_molde + _dataFechaActual.sin_operario + _dataFechaActual.material + _dataFechaActual._calidad + _dataFechaActual.montaje;
+        _dataFechaActual.tiempoDisponible = _dataFechaActual.tiempoProductivo + _dataFechaActual.tiempoParadas;
+        _dataFechaActual.piezasMalas = _dataFechaActual.defectosInicioTurno + _dataFechaActual.defectosLluvia;
+        _dataFechaActual.piezasBuenas = _dataFechaActual.produccionReal - _dataFechaActual.piezasMalas;
+        _dataFechaActual.capacidadProductiva = _dataFechaActual.tiempoProductivo / _dataFechaActual.tiempoCicloIdeal;
 
+        _dataFechaActual.disponibilidad = _dataFechaActual.tiempoProductivo / _dataFechaActual.tiempoDisponible;
+        _dataFechaActual.rendimiento = _dataFechaActual.produccionReal / _dataFechaActual.capacidadProductiva;
+        _dataFechaActual.calidad = _dataFechaActual.piezasBuenas / _dataFechaActual.produccionReal;
+        _dataFechaActual.eficiencia = _dataFechaActual.disponibilidad * _dataFechaActual.rendimiento * _dataFechaActual.calidad;
 
-        _dataPlc.push(_dataFechaActual)
+        _dataPlc.dias.push(_dataFechaActual)
         var _fechaProxima = _fechaActual.setDate(_fechaActual.getDate() + 1);
         _fechaActual = new Date(_fechaProxima);
     }
+    return _dataPlc
 }
-// variables son calculadad y numeros vienen del plc, el contexto es en un dia especifico
 
+function rand(min, max, int = false) {
+    if (!int)
+        return Math.random() * (max - min) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+function h2m(h) {
+    return h * 60 * 60
+}
 
-
-const matto_máquina = 0; //////////////////////////////////////
-const matto_molde = 0; //////////////////////////////////////
-const sin_operario = 0; //////////////////////////////////////
-const material = 0; //////////////////////////////////////
-const _calidad = 0; //////////////////////////////////////
-const montaje = 0; //////////////////////////////////////
-const horometro = 0; //////////////////////////////////////
-
-const fin_producción = 0; // ignoradas por ahora
-const fin_turno = 0; // ignoradas por ahora
-const no_programada = 0; // ignoradas por ahora
-
-var tiempoParadas = matto_máquina + matto_molde + sin_operario + material + _calidad + montaje + horometro; // Horas (La maquina estuvo corriendo por 16.1 horas en la fecha indicada)
-
-const sumaTiempoCiclos = 0; // Toca sumar todos los MF1
-
-var tiempoProductivo = sumaTiempoCiclos; // Horas (La maquina estuvo disponible 22.5 horas en la fecha indicada)
-
-var tiempoDisponible = tiempoProductivo + tiempoParadas; //
-
-var disponibilidad = tiempoProductivo / tiempoDisponible;
-
-
-
-
-
-
-const piezasMalas = 30; // Piezas (Se produgieron 30 piezas defectuosas en la fecha) suma de dos contadores de defectos o uno
-
-const produccionReal = 2000; // ML131 contador inyecciones
-
-var piezasBuenas = produccionReal - piezasMalas; /////////////////////////////////////
-var calidad = piezasBuenas / produccionReal;
-
-
-
-
-
-
-/*
-
-// DE CALIDAD:
-const produccionReal = 2000; // ML131 contador inyecciones
-
-// DE DISPONIBILIDAD
-const sumaTiempoCiclos = 0; // Toca sumar todos los MF1
-var tiempoProductivo = sumaTiempoCiclos; // Horas (La maquina estuvo disponible 22.5 horas en la fecha indicada)
-
-*/
-
-const tiempoCicloIdeal = 30; // Segundos (Idealmente hacer 1 inyeccion toma 30 segundos) MF5 ciclo estandar
-
-var capacidadProductiva = tiempoProductivo / tiempoCicloIdeal; /////////////////////////////////////
-var rendimiento = produccionReal / capacidadProductiva;
+const ejemplo = {}
