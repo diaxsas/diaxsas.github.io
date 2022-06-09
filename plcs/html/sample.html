@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sampleRow {
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+        }
+
+        .sampleRow>* {
+            width: 33%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <select name="parametro" id="parametro">
+                <option value="volvo">Molde</option>
+                <option value="saab">Empleado</option>
+                <option value="mercedes">Equipo</option>
+            </select>
+            <select name="cars" id="cars">
+                <option value="t">Todos</option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+            </select>
+            <Button id="btn">Add</Button>
+        </div>
+        <div id="container">
+            <div class="sampleRow">
+                <div class="parametro">Molde</div>
+                <div class="parametro">c</div>
+                <input class="remove" type="checkbox" checked>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#btn').click(() => {
+            $(".sampleRow:last").clone().insertAfter(".sampleRow:last");
+        })
+        $('.remove').click((w) => {
+            w.preventDefault();
+            $('.remove').parent().remove();
+        })
+    </script>
+
+</body>
+
+</html>

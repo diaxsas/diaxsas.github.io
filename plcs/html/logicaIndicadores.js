@@ -1,17 +1,17 @@
 
 // Estados
-const status = '???'; // status
-const motor_on = 'I3'; // booleano
+//const status = '???'; // status
+//const motor_on = 'I3'; // booleano
 
 
 // Montaje
-const tolva = 'MI27'; // temperatura
-const atemperador = 'MI17'; // temperatura
+//const tolva = 'MI27'; // temperatura
+//const atemperador = 'MI17'; // temperatura
 const orden = 'ML1'; // #
-const color = 'ML3'; // codigo
+const color = 'ML3'; // codigo ????????????
 const lote = 'ML5'; // #
 const operario = 'MI18'; // #
-const molde = '???'; // codigo
+const molde = '???'; // codigo ????????????
 const tipoMaterial = 'MI19'// codigo
 
 
@@ -75,5 +75,5 @@ const tiempoProductivo = 'ML0'; // 10 - 12 horas 'Tiempo Motor'
 
 const tiempoCicloIdeal = 'MF5'; // 30 Segundos/Inyeccion 'ciclo estandar'
 
-var capacidadProductiva = tiempoProductivo / tiempoCicloIdeal; 
+var capacidadProductiva = tiempoProductivo / tiempoCicloIdeal;
 var rendimiento = produccionReal / capacidadProductiva;
