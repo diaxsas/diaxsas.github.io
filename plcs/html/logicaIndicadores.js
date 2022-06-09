@@ -8,10 +8,11 @@ const motor_on = 'I3'; // booleano
 const tolva = 'MI27'; // temperatura
 const atemperador = 'MI17'; // temperatura
 const orden = 'ML1'; // #
-const color = 'ML3'; // # ???????codigo
+const color = 'ML3'; // codigo
 const lote = 'ML5'; // #
 const operario = 'MI18'; // #
-const molde = '???'; // # ???????codigo
+const molde = '???'; // codigo
+const tipoMaterial = 'MI19'// codigo
 
 
 // Consumos
