@@ -1,5 +1,39 @@
-// Disponibilidad
 
+// Estados
+const status = '???'; // status
+const motor_on = 'I3'; // booleano
+
+
+// Montaje
+const tolva = 'MI27'; // temperatura
+const atemperador = 'MI17'; // temperatura
+const orden = 'ML1'; // #
+const color = 'ML3'; // # ???????codigo
+const lote = 'ML5'; // #
+const operario = 'MI18'; // #
+const molde = '???'; // # ???????codigo
+
+
+// Consumos
+const cavidades = 'MF12'; // peso
+const cavidad1 = 'MF13'; // peso
+const cavidad2 = 'MF14'; // peso
+const cavidad3 = 'MF15'; // peso
+const cavidad4 = 'MF16'; // peso
+const cavidad5 = 'MF17'; // peso
+const cavidad6 = 'MF18'; // peso
+
+const consumoMotor = 'MI100'; // energia
+const consumoMaquina = 'MI99'; // energia
+
+
+// Ciclos
+const puertas = 'MF8'; // segundos 
+const maq_movimiento = 'MF9'; // segundos 
+const ciclo_inyeccion = 'MF1'; // segundos 
+
+
+// Disponibilidad
 const matto_máquina = 'MI121'; // 0.5 - 1.5 horas
 const matto_molde = 'MI122'; // 0.5 - 1 hora
 const sin_operario = 'MI124'; // 0.5 - 1 hora
