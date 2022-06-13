@@ -1,4 +1,5 @@
 using OpcLabs.EasyOpc.DataAccess;
+using OpcLabs.BaseLib.OperationModel;
 using OpcLabs.EasyOpc.DataAccess.OperationModel;
 using System.Text;
 using System.Security.Cryptography.X509Certificates;
@@ -28,7 +29,7 @@ namespace OPC2
         string[] variables = {
             "MI0"
         };*/
-
+        
         string[] plcs = {
             "PLC1",
             "PLC2",
@@ -118,7 +119,7 @@ namespace OPC2
             {
                 for (int j = 0; j < variables.Length; j++)
                 {
-                    subscriptions[count] = new DAItemGroupArguments("", server, plcs[i]+'.'+ variables[j], 1000, null);
+                    subscriptions[count] = new DAItemGroupArguments("", server, plcs[i] + '.' + variables[j], 1000, null);
                     count++;
                 }
             }
@@ -181,7 +182,7 @@ namespace OPC2
                 DataPoint dataPoint = new DataPoint { 
                     plc = e.Arguments.ItemDescriptor.ItemId.ToString().Split('.')[0],
                     variable = e.Arguments.ItemDescriptor.ItemId.ToString().Split('.')[1],
-                    timeStamp = e.Vtq.Timestamp.ToString(),
+                    timeStamp = DateTime.Now.ToString(),
                     quality = e.Vtq.Quality.ToString(),
                     value = e.Vtq.Value.ToString()
                 };
@@ -192,6 +193,45 @@ namespace OPC2
 
         private void minTimer_Tick(object sender, EventArgs e)
         {
+
+            DAItemDescriptor[] items = new DAItemDescriptor[variables.Length * plcs.Length];
+            var count = 0;
+            for (int i = 0; i < plcs.Length; i++)
+            {
+                for (int j = 0; j < variables.Length; j++)
+                {
+                    items[count] = plcs[i] + '.' + variables[j];
+                    count++;
+                }
+            }
+
+            ValueResult[] valueResults = opc.ReadMultipleItemValues(server, items);
+
+
+            for (int k = 0; k < valueResults.Length; k++)
+            {
+                ValueResult valueResult = valueResults[k];
+                if (valueResult.Succeeded)
+                {
+
+                    DataPoint dataPoint = new DataPoint
+                    {
+                        plc = items[k].ItemId.ToString().Split('.')[0],
+                        variable = items[k].ItemId.ToString().Split('.')[1],
+                        timeStamp = DateTime.Now.ToString(),
+                        quality = "GoodNonspecific (192)",
+                        value = valueResult.Value.ToString()
+                    };
+                    minuteData.Add(dataPoint);
+                    var index = dgv.Rows.Add();
+                    dgv.Rows[index].Cells[0].Value = items[k].ItemId.ToString();
+                    dgv.Rows[index].Cells[1].Value = DateTime.Now.ToString();
+                    dgv.Rows[index].Cells[2].Value = "GoodNonspecific (192)";
+                    dgv.Rows[index].Cells[3].Value = valueResult.Value;
+                }
+            }
+
+
             if (publish.Checked)
             {
                 mqtt.Publish(topic, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(minuteData)));
