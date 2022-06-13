@@ -27,7 +27,8 @@ namespace OPC2
         };
 
         string[] variables = {
-            "MI0"
+            "MI0",
+            "SI30"
         };*/
         
         string[] plcs = {
@@ -69,7 +70,8 @@ namespace OPC2
             "MI101",
             "MI102",
             "ML131",
-            "MF5" };
+            "MF5"
+        };
 
         public DiaxOPC()
         {
@@ -91,7 +93,13 @@ namespace OPC2
         {
             Unsubscribe_Items();
             opc.ItemChanged -= eventHandler;
-            mqtt.Disconnect();
+            try
+            {
+                mqtt.Disconnect();
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void Connect_Button_Click(object sender, EventArgs e)
@@ -161,24 +169,10 @@ namespace OPC2
         }
 
         List<DataPoint> minuteData = new List<DataPoint>();
-        int dvRowCount = 0;
         void OPC_ItemChanged(object sender, EasyDAItemChangedEventArgs e)
         {
             if (e.Succeeded)
             {
-                if(dvRowCount > 100)
-                {
-                    dgv.Rows.Clear();
-                    dgv.Refresh();
-                    dvRowCount = 0;
-                }
-                var index = dgv.Rows.Add();
-                dgv.Rows[index].Cells[0].Value = e.Arguments.ItemDescriptor.ItemId;
-                dgv.Rows[index].Cells[1].Value = e.Vtq.Timestamp;
-                dgv.Rows[index].Cells[2].Value = e.Vtq.Quality;
-                dgv.Rows[index].Cells[3].Value = e.Vtq.Value;
-                dvRowCount++;
-
                 DataPoint dataPoint = new DataPoint { 
                     plc = e.Arguments.ItemDescriptor.ItemId.ToString().Split('.')[0],
                     variable = e.Arguments.ItemDescriptor.ItemId.ToString().Split('.')[1],
@@ -186,14 +180,25 @@ namespace OPC2
                     quality = e.Vtq.Quality.ToString(),
                     value = e.Vtq.Value.ToString()
                 };
+                printData(dataPoint);
                 minuteData.Add(dataPoint);
-
+                noResultsGlobal = false;
             }
         }
 
+        private void printData(DataPoint dataPoint)
+        {
+            dgv.Rows.Insert(0);
+            dgv.Rows[0].Cells[0].Value = dataPoint.plc + '.' + dataPoint.variable;
+            dgv.Rows[0].Cells[1].Value = dataPoint.timeStamp;
+            dgv.Rows[0].Cells[2].Value = dataPoint.quality;
+            dgv.Rows[0].Cells[3].Value = dataPoint.value;
+        }
+
+        bool noResultsGlobal = false;
+        int minsWoChange = 0;
         private void minTimer_Tick(object sender, EventArgs e)
         {
-
             DAItemDescriptor[] items = new DAItemDescriptor[variables.Length * plcs.Length];
             var count = 0;
             for (int i = 0; i < plcs.Length; i++)
@@ -206,14 +211,12 @@ namespace OPC2
             }
 
             ValueResult[] valueResults = opc.ReadMultipleItemValues(server, items);
-
-
+            var noResults = true;
             for (int k = 0; k < valueResults.Length; k++)
             {
                 ValueResult valueResult = valueResults[k];
                 if (valueResult.Succeeded)
                 {
-
                     DataPoint dataPoint = new DataPoint
                     {
                         plc = items[k].ItemId.ToString().Split('.')[0],
@@ -223,20 +226,29 @@ namespace OPC2
                         value = valueResult.Value.ToString()
                     };
                     minuteData.Add(dataPoint);
-                    var index = dgv.Rows.Add();
-                    dgv.Rows[index].Cells[0].Value = items[k].ItemId.ToString();
-                    dgv.Rows[index].Cells[1].Value = DateTime.Now.ToString();
-                    dgv.Rows[index].Cells[2].Value = "GoodNonspecific (192)";
-                    dgv.Rows[index].Cells[3].Value = valueResult.Value;
+                    printData(dataPoint);
+                    noResults = false;
                 }
             }
-
+            if(noResults & noResultsGlobal)
+            {
+                minsWoChange++;
+                if(minsWoChange > 3)
+                {
+                    Unsubscribe_Items();
+                    Subscribe_Items();
+                    minsWoChange = 0;
+                }
+            }
+            noResultsGlobal = true;
 
             if (publish.Checked)
             {
                 mqtt.Publish(topic, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(minuteData)));
             }
             minuteData.Clear();
+            dgv.Rows.Clear();
+            dgv.Refresh();
         }
     }
 }
