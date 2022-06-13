@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="M2Mqtt" Version="4.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="OpcLabs.QuickOpc" Version="5.63.183" />
   </ItemGroup>
 

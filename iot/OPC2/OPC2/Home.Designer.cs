@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiaxOPC));
             this.dgv = new System.Windows.Forms.DataGridView();
             this.variable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,6 +38,7 @@
             this.Connect_Button = new System.Windows.Forms.Button();
             this.Disconnect_Button = new System.Windows.Forms.Button();
             this.publish = new System.Windows.Forms.CheckBox();
+            this.minTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +95,7 @@
             // 
             // Disconnect_Button
             // 
+            this.Disconnect_Button.Enabled = false;
             this.Disconnect_Button.Location = new System.Drawing.Point(97, 12);
             this.Disconnect_Button.Name = "Disconnect_Button";
             this.Disconnect_Button.Size = new System.Drawing.Size(79, 35);
@@ -110,6 +114,11 @@
             this.publish.Text = "Publish to AWS";
             this.publish.UseVisualStyleBackColor = true;
             // 
+            // minTimer
+            // 
+            this.minTimer.Interval = 60000;
+            this.minTimer.Tick += new System.EventHandler(this.minTimer_Tick);
+            // 
             // DiaxOPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -120,12 +129,13 @@
             this.Controls.Add(this.Connect_Button);
             this.Controls.Add(this.dgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "DiaxOPC";
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DIAX OPC UPLOAD";
+            this.Text = "DIAX OPC";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
@@ -143,5 +153,6 @@
         private Button Connect_Button;
         private Button Disconnect_Button;
         private CheckBox publish;
+        private System.Windows.Forms.Timer minTimer;
     }
 }
