@@ -22,16 +22,16 @@ namespace OPC2
         const string iotEndpoint = "a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com";
         const string topic = "diaxPublisher/plcs/";
         string clientId = "diaxPublisher_" + Guid.NewGuid().ToString();
-        /*string[] plcs = {
+        string[] plcs = {
             "PLC7"
         };
 
         string[] variables = {
             "MI0",
             "SI30"
-        };*/
+        };
         
-        string[] plcs = {
+        /*string[] plcs = {
             "PLC1",
             "PLC2",
             "PLC3",
@@ -40,7 +40,8 @@ namespace OPC2
             "PLC6",
             "PLC7",
             "PLC8",
-            "PLC9" };
+            "PLC9"
+        };
 
         string[] variables = {
             "ML1",
@@ -71,7 +72,7 @@ namespace OPC2
             "MI102",
             "ML131",
             "MF5"
-        };
+        };*/
 
         public DiaxOPC()
         {
@@ -235,6 +236,9 @@ namespace OPC2
                 minsWoChange++;
                 if(minsWoChange > 3)
                 {
+                    opc = new EasyDAClient();
+                    eventHandler = new EasyDAItemChangedEventHandler(OPC_ItemChanged);
+                    opc.ItemChanged += eventHandler;
                     Unsubscribe_Items();
                     Subscribe_Items();
                     minsWoChange = 0;
@@ -252,3 +256,4 @@ namespace OPC2
         }
     }
 }
+//https://stackoverflow.com/questions/59209611/i-cant-connect-into-the-opc-server
