@@ -21,7 +21,14 @@ namespace OPC2
         const string iotEndpoint = "a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com";
         const string topic = "diaxPublisher/plcs/";
         string clientId = "diaxPublisher_" + Guid.NewGuid().ToString();
-        /*
+        /*string[] plcs = {
+            "PLC7"
+        };
+
+        string[] variables = {
+            "MI0"
+        };*/
+
         string[] plcs = {
             "PLC1",
             "PLC2",
@@ -31,15 +38,8 @@ namespace OPC2
             "PLC6",
             "PLC7",
             "PLC8",
-            "PLC9" };*/
-        string[] plcs = {
-            "PLC7"
-        };
+            "PLC9" };
 
-        string[] variables = {
-            "MI0"
-        };
-        /*
         string[] variables = {
             "ML1",
             "ML3",
@@ -68,7 +68,7 @@ namespace OPC2
             "MI101",
             "MI102",
             "ML131",
-            "MF5" };*/
+            "MF5" };
 
         public DiaxOPC()
         {
