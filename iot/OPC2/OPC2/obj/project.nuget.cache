@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nfON5921wI4RoHfS8gkNMeWV2RAMcKp1+VUsICOdWA3pEW1RG8LT6YqPn6T7VqcLUjgBWjL5bXw5jbwurqeLlQ==",
+  "dgSpecHash": "byJrky4tUh2F+mtZvjzP9eYv4nerJCXgX7jwgvkwCXw3JUEpgiHzh2XOnLKmwpAVj1HBSVchH0+xeQ43nk2jWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Repos\\opc\\OPC2\\OPC2\\OPC2.csproj",
+  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Repos\\diax\\iot\\OPC2\\OPC2\\OPC2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\m2mqtt\\4.3.0\\m2mqtt.4.3.0.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\2.2.0\\microsoft.aspnetcore.connections.abstractions.2.2.0.nupkg.sha512",
@@ -55,7 +55,7 @@
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\Daniel\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\opcfoundation.netstandard.opc.ua.client\\1.4.363.107\\opcfoundation.netstandard.opc.ua.client.1.4.363.107.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\opcfoundation.netstandard.opc.ua.configuration\\1.4.363.107\\opcfoundation.netstandard.opc.ua.configuration.1.4.363.107.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\opcfoundation.netstandard.opc.ua.core\\1.4.363.107\\opcfoundation.netstandard.opc.ua.core.1.4.363.107.nupkg.sha512",

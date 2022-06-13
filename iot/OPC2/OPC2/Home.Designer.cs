@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.variable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timestamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,6 +37,7 @@
             this.Connect_Button = new System.Windows.Forms.Button();
             this.Disconnect_Button = new System.Windows.Forms.Button();
             this.publish = new System.Windows.Forms.CheckBox();
+            this.minTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +112,11 @@
             this.publish.Text = "Publish to AWS";
             this.publish.UseVisualStyleBackColor = true;
             // 
+            // minTimer
+            // 
+            this.minTimer.Interval = 60000;
+            this.minTimer.Tick += new System.EventHandler(this.minTimer_Tick);
+            // 
             // DiaxOPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -143,5 +150,6 @@
         private Button Connect_Button;
         private Button Disconnect_Button;
         private CheckBox publish;
+        private System.Windows.Forms.Timer minTimer;
     }
 }
