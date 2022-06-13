@@ -94,6 +94,7 @@
             // 
             // Disconnect_Button
             // 
+            this.Disconnect_Button.Enabled = false;
             this.Disconnect_Button.Location = new System.Drawing.Point(97, 12);
             this.Disconnect_Button.Name = "Disconnect_Button";
             this.Disconnect_Button.Size = new System.Drawing.Size(79, 35);

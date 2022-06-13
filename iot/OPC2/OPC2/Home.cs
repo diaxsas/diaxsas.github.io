@@ -21,7 +21,7 @@ namespace OPC2
         const string iotEndpoint = "a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com";
         const string topic = "diaxPublisher/plcs/";
         string clientId = "diaxPublisher_" + Guid.NewGuid().ToString();
-
+        /*
         string[] plcs = {
             "PLC1",
             "PLC2",
@@ -31,8 +31,15 @@ namespace OPC2
             "PLC6",
             "PLC7",
             "PLC8",
-            "PLC9" };
+            "PLC9" };*/
+        string[] plcs = {
+            "PLC7"
+        };
 
+        string[] variables = {
+            "MI0"
+        };
+        /*
         string[] variables = {
             "ML1",
             "ML3",
@@ -61,7 +68,7 @@ namespace OPC2
             "MI101",
             "MI102",
             "ML131",
-            "MF5" };
+            "MF5" };*/
 
         public DiaxOPC()
         {
@@ -91,12 +98,16 @@ namespace OPC2
             Unsubscribe_Items();
             Subscribe_Items();
             minTimer.Start();
+            Connect_Button.Enabled = false;
+            Disconnect_Button.Enabled = true;
         }
 
         private void Disconnect_Button_Click(object sender, EventArgs e)
         {
             Unsubscribe_Items();
             minTimer.Stop();
+            Connect_Button.Enabled = true;
+            Disconnect_Button.Enabled = false;
         }
 
         private void Subscribe_Items()
@@ -107,7 +118,7 @@ namespace OPC2
             {
                 for (int j = 0; j < variables.Length; j++)
                 {
-                    subscriptions[count] = new DAItemGroupArguments("", server, plcs[i]+ variables[j], 60 * 1000, null);
+                    subscriptions[count] = new DAItemGroupArguments("", server, plcs[i]+'.'+ variables[j], 1000, null);
                     count++;
                 }
             }
