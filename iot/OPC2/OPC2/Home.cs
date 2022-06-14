@@ -91,7 +91,6 @@ namespace OPC2
             caCert = X509Certificate.CreateFromCertFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "certificates/AmazonRootCa1.crt"));
             clientCert = new X509Certificate2(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "certificates/certificate.cert.pfx"));
             mqtt = new MqttClient(iotEndpoint, brokerPort, true, caCert, clientCert, MqttSslProtocols.TLSv1_2);
-            mqtt.Connect(clientId);
             InitializeComponent();
         }
         private void Home_Load(object sender, EventArgs e)
@@ -102,13 +101,6 @@ namespace OPC2
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
         {
             Unsubscribe_Items();
-            try
-            {
-                mqtt.Disconnect();
-            }
-            catch (Exception)
-            {
-            }
         }
 
         private void Connect_Button_Click(object sender, EventArgs e)
@@ -273,7 +265,7 @@ namespace OPC2
                         plc = valueResult.Item.ItemId.ToString().Split('.')[0],
                         variable = valueResult.Item.ItemId.ToString().Split('.')[1],
                         timeStamp = DateTime.Now.ToString(),
-                        quality = "valueResult.Quality.ToString()",
+                        quality = valueResult.Quality.ToString(),
                         value = valueResult.Value.ToString()
                     };
                     minuteData.Add(dataPoint);
@@ -286,7 +278,11 @@ namespace OPC2
         {
             getDataSlice();
             if (publish.Checked)
+            {
+                if (!mqtt.IsConnected)
+                    mqtt.Connect(clientId);
                 mqtt.Publish(topic, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(minuteData)));
+            }
             minuteData.Clear();
             dgv.Invoke(new Action(() => { dgv.Rows.Insert(0); }));
             dgv.Rows.Clear();
