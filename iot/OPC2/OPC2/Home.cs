@@ -19,6 +19,8 @@ namespace OPC2
         const string iotEndpoint = "a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com";
         const string topic = "diaxPublisher/plcs/";
         string clientId = "diaxPublisher_" + Guid.NewGuid().ToString();
+
+
         /*string[] plcs = {
             "PLC7"
         };
@@ -155,15 +157,15 @@ namespace OPC2
             // Create a group with variables
             groupVariables = _opc.AddGroup("Variables");
             groupVariables.IsActive = true;
-            OpcDaItemDefinition[] definitionsVariables = new OpcDaItemDefinition[plcs.Length * variables.Length];
+            OpcDaItemDefinition[] definitionsVariables = new OpcDaItemDefinition[plcs.Length * states.Length];
             count = 0;
             for (int i = 0; i < plcs.Length; i++)
             {
-                for (int j = 0; j < variables.Length; j++)
+                for (int j = 0; j < states.Length; j++)
                 {
                     var definition = new OpcDaItemDefinition
                     {
-                        ItemId = plcs[i] + '.' + variables[j],
+                        ItemId = plcs[i] + '.' + states[j],
                         IsActive = true
                     };
                     definitionsVariables[count] = definition;
