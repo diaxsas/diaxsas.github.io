@@ -39,6 +39,7 @@
             this.Disconnect_Button = new System.Windows.Forms.Button();
             this.publish = new System.Windows.Forms.CheckBox();
             this.minTimer = new System.Windows.Forms.Timer(this.components);
+            this.clear = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +108,8 @@
             // publish
             // 
             this.publish.AutoSize = true;
+            this.publish.Checked = true;
+            this.publish.CheckState = System.Windows.Forms.CheckState.Checked;
             this.publish.Location = new System.Drawing.Point(682, 21);
             this.publish.Name = "publish";
             this.publish.Size = new System.Drawing.Size(106, 19);
@@ -119,11 +122,24 @@
             this.minTimer.Interval = 60000;
             this.minTimer.Tick += new System.EventHandler(this.minTimer_Tick);
             // 
+            // clear
+            // 
+            this.clear.AutoSize = true;
+            this.clear.Checked = true;
+            this.clear.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.clear.Location = new System.Drawing.Point(592, 21);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(84, 19);
+            this.clear.TabIndex = 6;
+            this.clear.Text = "Clear Rows";
+            this.clear.UseVisualStyleBackColor = true;
+            // 
             // DiaxOPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clear);
             this.Controls.Add(this.publish);
             this.Controls.Add(this.Disconnect_Button);
             this.Controls.Add(this.Connect_Button);
@@ -154,5 +170,6 @@
         private Button Disconnect_Button;
         private CheckBox publish;
         private System.Windows.Forms.Timer minTimer;
+        private CheckBox clear;
     }
 }

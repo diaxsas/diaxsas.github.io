@@ -10,10 +10,30 @@
         "dependencies": {
           "M2Mqtt": "4.3.0",
           "Newtonsoft.Json": "13.0.1",
-          "OpcLabs.QuickOpc": "5.63.183"
+          "OpcLabs.QuickOpc": "5.63.183",
+          "TitaniumAS.Opc.Client": "1.0.2"
         },
         "runtime": {
           "OPC2.dll": {}
+        }
+      },
+      "Common.Logging/3.3.0": {
+        "dependencies": {
+          "Common.Logging.Core": "3.3.0"
+        },
+        "runtime": {
+          "lib/net40/Common.Logging.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
+      "Common.Logging.Core/3.3.0": {
+        "runtime": {
+          "lib/net40/Common.Logging.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
         }
       },
       "M2Mqtt/4.3.0": {
@@ -1532,6 +1552,17 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
+      },
+      "TitaniumAS.Opc.Client/1.0.2": {
+        "dependencies": {
+          "Common.Logging": "3.3.0"
+        },
+        "runtime": {
+          "lib/net40/TitaniumAS.Opc.Client.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        }
       }
     }
   },
@@ -1540,6 +1571,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Common.Logging/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JaxwTTVib7MPIeoIKX6V1nsowkKuOMZ3WZ5ljnxJsnsKezAuCq5SKRQu602KoqDDT0msO3Z6DT4o7XCHrFocfw==",
+      "path": "common.logging/3.3.0",
+      "hashPath": "common.logging.3.3.0.nupkg.sha512"
+    },
+    "Common.Logging.Core/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MtrPJxAwsiCXslYiU0QA1tG/nS9uWSBPHHUnrqmAD3LhX4lc1l3UQfIMfRE5KFXtSagj1OuqAX8I7uEOCRv7rQ==",
+      "path": "common.logging.core/3.3.0",
+      "hashPath": "common.logging.core.3.3.0.nupkg.sha512"
     },
     "M2Mqtt/4.3.0": {
       "type": "package",
@@ -2625,6 +2670,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "TitaniumAS.Opc.Client/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LlbWxbOwJ/uyGLA+pEU0Wz0+2eDDbI7NGkbslTX6E7eQVnrBC9u5tC2PS/L8Rsl6Txrt3FTRLXO2EYRQnVsyTQ==",
+      "path": "titaniumas.opc.client/1.0.2",
+      "hashPath": "titaniumas.opc.client.1.0.2.nupkg.sha512"
     }
   }
 }

@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -55,6 +55,10 @@
             "OpcLabs.QuickOpc": {
               "target": "Package",
               "version": "[5.63.183, )"
+            },
+            "TitaniumAS.Opc.Client": {
+              "target": "Package",
+              "version": "[1.0.2, )"
             }
           },
           "imports": [
