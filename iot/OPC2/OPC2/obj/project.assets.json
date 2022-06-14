@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "Common.Logging/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Common.Logging.Core": "3.3.0"
+        },
+        "compile": {
+          "lib/net40/Common.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Common.Logging.dll": {}
+        }
+      },
+      "Common.Logging.Core/3.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Common.Logging.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Common.Logging.Core.dll": {}
+        }
+      },
       "M2Mqtt/4.3.0": {
         "type": "package",
         "compile": {
@@ -2344,10 +2365,59 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "TitaniumAS.Opc.Client/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Common.Logging": "3.3.0"
+        },
+        "compile": {
+          "lib/net40/TitaniumAS.Opc.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net40/TitaniumAS.Opc.Client.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Common.Logging/3.3.0": {
+      "sha512": "JaxwTTVib7MPIeoIKX6V1nsowkKuOMZ3WZ5ljnxJsnsKezAuCq5SKRQu602KoqDDT0msO3Z6DT4o7XCHrFocfw==",
+      "type": "package",
+      "path": "common.logging/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "common.logging.3.3.0.nupkg.sha512",
+        "common.logging.nuspec",
+        "lib/net35/Common.Logging.dll",
+        "lib/net35/Common.Logging.pdb",
+        "lib/net35/Common.Logging.xml",
+        "lib/net40/Common.Logging.dll",
+        "lib/net40/Common.Logging.pdb",
+        "lib/net40/Common.Logging.xml"
+      ]
+    },
+    "Common.Logging.Core/3.3.0": {
+      "sha512": "MtrPJxAwsiCXslYiU0QA1tG/nS9uWSBPHHUnrqmAD3LhX4lc1l3UQfIMfRE5KFXtSagj1OuqAX8I7uEOCRv7rQ==",
+      "type": "package",
+      "path": "common.logging.core/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "common.logging.core.3.3.0.nupkg.sha512",
+        "common.logging.core.nuspec",
+        "lib/net35/Common.Logging.Core.dll",
+        "lib/net35/Common.Logging.Core.pdb",
+        "lib/net35/Common.Logging.Core.xml",
+        "lib/net40/Common.Logging.Core.dll",
+        "lib/net40/Common.Logging.Core.pdb",
+        "lib/net40/Common.Logging.Core.xml",
+        "lib/portable-win+net40+sl40+wp7/Common.Logging.Core.XML",
+        "lib/portable-win+net40+sl40+wp7/Common.Logging.Core.dll",
+        "lib/portable-win+net40+sl40+wp7/Common.Logging.Core.pdb"
+      ]
+    },
     "M2Mqtt/4.3.0": {
       "sha512": "2A1uM20uxuovQKPA0dkZUqD9gUpIMaX7KxdLiVM7IEXdPRL709hGuudHnvlDxm2/6b2LcOjshrYGVG9vdpipag==",
       "type": "package",
@@ -7769,13 +7839,26 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "TitaniumAS.Opc.Client/1.0.2": {
+      "sha512": "LlbWxbOwJ/uyGLA+pEU0Wz0+2eDDbI7NGkbslTX6E7eQVnrBC9u5tC2PS/L8Rsl6Txrt3FTRLXO2EYRQnVsyTQ==",
+      "type": "package",
+      "path": "titaniumas.opc.client/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/TitaniumAS.Opc.Client.dll",
+        "titaniumas.opc.client.1.0.2.nupkg.sha512",
+        "titaniumas.opc.client.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "M2Mqtt >= 4.3.0",
       "Newtonsoft.Json >= 13.0.1",
-      "OpcLabs.QuickOpc >= 5.63.183"
+      "OpcLabs.QuickOpc >= 5.63.183",
+      "TitaniumAS.Opc.Client >= 1.0.2"
     ]
   },
   "packageFolders": {
@@ -7833,6 +7916,10 @@
           "OpcLabs.QuickOpc": {
             "target": "Package",
             "version": "[5.63.183, )"
+          },
+          "TitaniumAS.Opc.Client": {
+            "target": "Package",
+            "version": "[1.0.2, )"
           }
         },
         "imports": [
@@ -7862,8 +7949,38 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Package 'Common.Logging 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Common.Logging",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Common.Logging.Core 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Common.Logging.Core",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Package 'M2Mqtt 4.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "M2Mqtt",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'TitaniumAS.Opc.Client 1.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "TitaniumAS.Opc.Client",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]
