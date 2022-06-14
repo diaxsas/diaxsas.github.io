@@ -164,3 +164,6 @@ C:\Users\Daniel\Desktop\Repos\diax\iot\OPC2\OPC2\obj\Debug\net6.0-windows\refint
 C:\Users\Daniel\Desktop\Repos\diax\iot\OPC2\OPC2\obj\Debug\net6.0-windows\OPC2.pdb
 C:\Users\Daniel\Desktop\Repos\diax\iot\OPC2\OPC2\obj\Debug\net6.0-windows\OPC2.genruntimeconfig.cache
 C:\Users\Daniel\Desktop\Repos\diax\iot\OPC2\OPC2\obj\Debug\net6.0-windows\ref\OPC2.dll
+C:\Users\Daniel\Desktop\Repos\diax\iot\OPC2\OPC2\bin\Debug\net6.0-windows\Common.Logging.dll
+C:\Users\Daniel\Desktop\Repos\diax\iot\OPC2\OPC2\bin\Debug\net6.0-windows\Common.Logging.Core.dll
+C:\Users\Daniel\Desktop\Repos\diax\iot\OPC2\OPC2\bin\Debug\net6.0-windows\TitaniumAS.Opc.Client.dll

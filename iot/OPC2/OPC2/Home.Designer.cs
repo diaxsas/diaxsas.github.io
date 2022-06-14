@@ -107,6 +107,8 @@
             // publish
             // 
             this.publish.AutoSize = true;
+            this.publish.Checked = true;
+            this.publish.CheckState = System.Windows.Forms.CheckState.Checked;
             this.publish.Location = new System.Drawing.Point(682, 21);
             this.publish.Name = "publish";
             this.publish.Size = new System.Drawing.Size(106, 19);
