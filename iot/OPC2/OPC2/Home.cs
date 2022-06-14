@@ -21,7 +21,7 @@ namespace OPC2
         string clientId = "diaxPublisher_" + Guid.NewGuid().ToString();
 
 
-        /*string[] plcs = {
+        string[] plcs = {
             "PLC7"
         };
         string[] variables = {
@@ -30,9 +30,9 @@ namespace OPC2
         };
         string[] states = {
             "MI0"
-        };*/
+        };
 
-        string[] plcs = {
+        /*string[] plcs = {
             "PLC1",
             "PLC2",
             "PLC3",
@@ -81,7 +81,7 @@ namespace OPC2
             "ML5", // lote
             "MI18", // operario
             "MI19" // tipoMaterial
-        };
+        };*/
 
         public DiaxOPC()
         {
@@ -285,8 +285,11 @@ namespace OPC2
             }
             minuteData.Clear();
             dgv.Invoke(new Action(() => { dgv.Rows.Insert(0); }));
-            dgv.Rows.Clear();
-            dgv.Refresh();
+            if (clear.Checked)
+            {
+                dgv.Rows.Clear();
+                dgv.Refresh();
+            }
             getDataSlice();
         }
     }
