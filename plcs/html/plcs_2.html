@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
-    <link rel="stylesheet" href="./dist/vanilla-datetimerange-picker.css" />
-    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script src="./dist/vanilla-datetimerange-picker.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <style>
         :root {
             --base-width: 300px;
@@ -28,15 +29,32 @@
             --color-dash5: #AAAAAA;
         }
 
+        html,
         body {
             font-family: "Roboto", sans-serif;
-            font-size: 16pt;
             padding: 0px;
             margin: 0px;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             text-align: center;
             background-color: var(--color-gris);
+            color: var(--color-negro);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        html,
+        body,
+        text {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--color-negro);
+        }
+
+        #dashboard {
+            width: 100%;
         }
 
         h4 {
@@ -68,11 +86,6 @@
             text-align: left;
         }
 
-        text {
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--color-negro);
-        }
 
         label {
             font-size: 14px;
@@ -137,6 +150,11 @@
             text-align: left;
         }
 
+        .left_rows {
+            display: flex;
+            align-items: flex-start;
+        }
+
         .right {
             display: flex;
             align-items: right;
@@ -159,7 +177,6 @@
         }
 
         .text_left {
-            display: flex;
             text-align: left;
         }
 
@@ -182,11 +199,22 @@
         }
 
         .cube_container {
-            box-sizing: border-box;
             background-color: white;
             border-radius: 5px;
             margin: 10px;
             padding: 15px;
+            box-shadow: 3px 3px 4px #AAAAAA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cube_container>.title_container {
+            width: 100%;
+        }
+
+        .cube_container>*:not(.title_container) {
+            margin: 5px;
         }
 
         .relative {
@@ -313,7 +341,33 @@
             border: 2px solid var(--color-negro);
             border-radius: 5px;
             margin: 5px;
+            position: relative;
+            cursor: pointer;
+            transform-origin: center;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
         }
+
+        .button_main:hover {
+            transform: scale(1.1);
+        }
+
+        .button_main:active {
+            transform: scale(1.0);
+            background-color: var(--color-gris);
+        }
+
+
 
         .title_container {
             display: flex;
@@ -321,6 +375,42 @@
             align-items: center;
             border-bottom: 2px solid var(--color-negro);
         }
+
+        .menu_download .button_download {
+            margin-right: 6px;
+        }
+
+        .menu_download>* {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start !important;
+        }
+
+        .menu_download>*:hover {
+            background-color: var(--color-gris);
+        }
+
+        .menu_download {
+            transform-origin: center;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            z-index: 1;
+            background-color: white;
+            bottom: -43px;
+            right: 5px;
+            width: fit-content;
+            height: fit-content;
+            text-align: left;
+            border: 2px solid var(--color-negro);
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 3px 3px 4px #AAAAAA;
+            cursor: pointer;
+
+        }
+
 
         .button_download {
             box-sizing: border-box;
@@ -363,7 +453,7 @@
             bottom: 5px
         }
 
-        .button_minimize_down {
+        .button_minimize_down>div {
             box-sizing: border-box;
             position: relative;
             display: block;
@@ -376,8 +466,8 @@
             top: -1px;
         }
 
-        .button_minimize_down::after,
-        .button_minimize_down::before {
+        .button_minimize_down>div::after,
+        .button_minimize_down>div::before {
             content: "";
             display: block;
             box-sizing: border-box;
@@ -385,14 +475,14 @@
             border-bottom: 2px solid var(--color-negro)
         }
 
-        .button_minimize_down::before {
+        .button_minimize_down>div::before {
             bottom: 0;
             width: 14px;
             height: 2px;
             left: 2px
         }
 
-        .button_minimize_down::after {
+        .button_minimize_down>div::after {
             width: 10px;
             height: 10px;
             border-right: 2px solid var(--color-negro);
@@ -402,6 +492,18 @@
         }
 
         .button_search {
+            cursor: pointer;
+        }
+
+        .button_search:hover {
+            transform: scale(1.1);
+        }
+
+        .button_search:active {
+            transform: scale(1.0);
+        }
+
+        .button_search>div {
             box-sizing: border-box;
             position: relative;
             display: block;
@@ -414,7 +516,7 @@
             margin-right: 6px;
         }
 
-        .button_search::after {
+        .button_search>div::after {
             content: "";
             display: block;
             box-sizing: border-box;
@@ -429,21 +531,49 @@
         }
 
         .selected_form {
-            box-sizing: border-box;
             border: 2px solid var(--color-negro);
             border-radius: 4px;
-            padding: 0px;
-            margin: 6px;
+            width: 300px;
+            position: relative;
         }
 
         .selected_head {
             display: flex;
             justify-content: space-between;
-            padding-left: 6px;
+            height: 22px;
+        }
+
+        .selected_head>h3 {
+            margin-left: 6px;
+        }
+
+        .fit_content {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .fit_width {
+            width: fit-content;
+        }
+
+        .fit_height {
+            height: fit-content;
         }
 
 
         .button_arrow_down {
+            cursor: pointer;
+        }
+
+        .button_arrow_down:hover {
+            transform: scale(1.1);
+        }
+
+        .button_arrow_down:active {
+            transform: scale(1.0);
+        }
+
+        .button_arrow_down>div {
             box-sizing: border-box;
             position: relative;
             display: block;
@@ -455,8 +585,8 @@
             margin-right: 5px;
         }
 
-        .button_arrow_down::after,
-        .button_arrow_down::before {
+        .button_arrow_down>div::after,
+        .button_arrow_down>div::before {
             content: "";
             display: block;
             box-sizing: border-box;
@@ -465,7 +595,7 @@
         }
 
 
-        .button_arrow_down::after {
+        .button_arrow_down>div::after {
             width: 10px;
             height: 10px;
             border-right: 2px solid var(--color-negro);
@@ -474,20 +604,33 @@
             top: 2px
         }
 
-        .select_drop {
+        .select_section {
+            width: 100%;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 5px;
             border-top: 2px solid var(--color-negro);
-            display: none;
+            box-sizing: border-box;
         }
+
+        .select_section>* {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .select_section>*>*:first-child {
+            margin-right: 8px;
+        }
+
 
         .select_search {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-top: 2px solid var(--color-negro);
-            display: none;
         }
 
         #eficiencia_indicador {
@@ -496,138 +639,522 @@
         }
 
         #inicio_fin {
-            display: flex;
-            justify-content: space-evenly;
             margin: 6px;
-            margin-bottom: 0px;
+            margin-bottom: 2px;
+        }
+
+        #datetimes {
+            width: 200px;
+            text-align: center;
+            border: 2px solid var(--color-negro);
+            border-radius: 5px;
+            color: var(--color-negro);
+
+        }
+
+        .base_border1 {
+            border: 1px solid var(--color-negro);
+            border-radius: 5px;
+        }
+
+        .base_border2 {
+            border: 2px solid var(--color-negro);
+            border-radius: 5px;
+        }
+
+        input {
+            border-color: var(--color-negro) !important;
+            border-width: 1px;
+            border-radius: 5px;
+            color: var(--color-negro);
+        }
+
+        .search_section {
+            position: absolute;
+            background-color: white;
+            border: 2px solid var(--color-negro);
+            border-radius: 5px;
+            box-shadow: 3px 3px 4px #AAAAAA;
+            right: 0px;
+            top: 22px;
+            width: 200px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 5px;
+            border-top: 2px solid var(--color-negro);
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        .search_section>* {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+
+        }
+
+        .search_section>*>*:first-child {
+            margin-right: 8px;
+        }
+
+        .search_section>*:first-child {
+            margin-bottom: 8px;
+        }
+
+        .search_section>*:first-child>input:last-child {
+            width: 150px;
+        }
+
+        .search_section>*:nth-child(2) {
+            border: 1px solid var(--color-negro);
+            border-radius: 5px;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: 200px;
+            overflow-y: scroll;
+        }
+
+        .tab_container {
+            width: calc(100% + 30px);
+            position: relative;
+            top: -21px;
+            background-color: var(--color-gris);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tab_container>*:first-child>*,
+        .tab_container>*:not(:first-child) {
+            border: 1px solid white;
+            background-color: var(--color-negro) !important;
+            color: white;
+            width: 80px;
+            height: 22px;
+            background-color: white;
+            border-radius: 5px 5px 0px 0px;
+            padding: 2px 9px 0px 9px;
+        }
+
+        .tab_container>*:not(:first-child) {
+            width: fit-content;
+        }
+
+        .tab_container>*:first-child>*>*:first-child {
+            height: 21px;
+            text-align: left;
+            text-overflow: clip;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .tab_container>*:first-child>*:first-child {
+            background-color: white !important;
+            color: var(--color-negro);
         }
     </style>
 </head>
 
 <body>
     <div id="dashboard">
-        <div>
-            <!--Configuracion-->
-            <div class="cube_container">
-                <div class="title_container">
-                    <h2>Confirguración</h2>
-                    <div class="columns">
-                        <div class="button_main center">
+        <!--Configuracion-->
+        <div class="cube_container" id="config">
+            <div class="tab_container columns">
+                <div class="tab_subcontainer columns">
+                    <div class="columns center">
+                        <span>1 Reporte</span>
+                        <span>&nbsp;&nbsp;&#10006;</span>
+                    </div>
+                </div>
+                <div class="center">
+                    <spam>+</spam>
+                </div>
+            </div>
+            <div class="title_container">
+                <h2>Confirguración</h2>
+                <div class="columns">
+                    <div class="relative">
+                        <div id="button_download_id" class="button_main center">
                             <div class="button_download"></div>
                         </div>
-                        <div class="button_main center">
-                            <div class="button_minimize_down"></div>
+                        <div class="menu_download noselect">
+                            <div class="columns center">
+                                <div class="button_download"></div>PDF
+                            </div>
+                            <div class="columns center">
+                                <div class="button_download"></div>XLSX
+                            </div>
                         </div>
                     </div>
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
                 </div>
+            </div>
+            <div class="left_rows rows">
                 <div id="inicio_fin">
-                    <text>Inicio</text>
-                    <text>Fin</text>
+                    Rango
                 </div>
-                <input type="text" id="date_range" />
-                <div>
-                    <div class="selected_form">
-                        <div class="selected_head center">
-                            <h3>Maquina</h3>
-                            <div class="columns">
-                                <div class="button_search"></div>
-                                <div class="button_arrow_down"></div>
-                            </div>
-                        </div>
-                        <!--Despliegue de Select-->
-                        <div class="select_drop">
-                            <div class="">
-                                <input type="checkbox" id="maquina1" name="maquina1" value="mk1">
-                                <label for="maquina1"> I have a bike</label><br>
-                                <input type="checkbox" id="maquina2" name="maquina2" value="mk2">
-                                <label for="maquina2"> I have a car</label><br>
-                                <input type="checkbox" id="maquina3" name="maquina3" value="mk3">
-                                <label for="maquina3"> I have a boat</label><br>
-                            </div>
-                        </div>
-                        <!--Search de Select-->
-                        <div class="select_search">
-                            <div class="">
-                                <input type="checkbox" id="aquina1" name="maquina1" value="mk1">
-                                <label for="aquina1"> I have a bike</label><br>
-                                <input type="checkbox" id="aquina2" name="maquina2" value="mk2">
-                                <label for="aquina2"> I have a car</label><br>
-                                <input type="checkbox" id="aquina3" name="maquina3" value="mk3">
-                                <label for="aquina3"> I have a boat</label><br>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+                <input id="datetimes" type="text" name="datetimes" />
             </div>
-            <!--Campo Indicadores-->
-            <div class="cube_container">
-                <div class="title_container">
-                    <h2>Indicadores</h2>
+            <div class="selected_form">
+                <div class="selected_head center">
+                    <h3>Máquina</h3>
                     <div class="columns">
-                        <div class="button_main center">
-                            <div class="button_minimize_down"></div>
+                        <div class="button_search">
+                            <div></div>
+                        </div>
+                        <div class="button_arrow_down">
+                            <div></div>
                         </div>
                     </div>
                 </div>
-                <div id="master_indicadores">
-                    <div class="columns">
-                        <!--Disponibilidad-->
-                        <div class="campo_ind rows">
-                            <h3>Disponibilidad</h3>
-                            <p class="indicador"><span>82</span>%</p>
-                            <div id="underline_disp" class="underline_ind"></div>
-                            <text>Disponibilidad para trabajar</text>
-                        </div>
-                        <!--Rendimiento-->
-                        <div class="campo_ind rows">
-                            <h3>Rendimiento</h3>
-                            <p class="indicador"><span>82</span>%</p>
-                            <div id="underline_dese" class="underline_ind"></div>
-                            <text>Rendimiento real en contexto</text>
-                        </div>
+                <!--Despliegue de Select-->
+                <div class="select_section">
+                    <div>
+                        <input type="checkbox">
+                        <label>Sample</label>
                     </div>
-                    <div class="columns">
-                        <!--Calidad-->
-                        <div class="campo_ind rows">
-                            <h3>Calidad</h3>
-                            <p class="indicador"><span>82</span>%</p>
-                            <div id="underline_cali" class="underline_ind"></div>
-                            <text>Calidad de unidades</text>
-                        </div>
-                        <!--Eficiencia-->
-                        <div id="eficiencia_indicador" class="campo_ind rows">
-                            <h3>Eficiencia</h3>
-                            <p class="indicador"><span>82</span>%</p>
-                            <div id="underline_efic" class="underline_ind"></div>
-                            <text>Eficiencia general</text>
+                </div>
+                <!--Search de Select-->
+                <div class="search_section">
+                    <div>
+                        <input type="checkbox">
+                        <input type="text">
+                    </div>
+                    <div class="rows">
+                        <div>
+                            <input type="checkbox">
+                            <label>Sample</label>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!--Campo Disponibilidad-->
-            <div class="cube_container">
-                <div class="title_container">
-                    <h2>Disponibilidad</h2>
+            <div class="selected_form">
+                <div class="selected_head center">
+                    <h3>Molde</h3>
                     <div class="columns">
-                        <div class="button_main center">
-                            <div class="button_minimize_down"></div>
+                        <div class="button_search">
+                            <div></div>
+                        </div>
+                        <div class="button_arrow_down">
+                            <div></div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div id="myDiv">
-                        <!-- Plotly chart will be drawn inside this DIV -->
+                <!--Despliegue de Select-->
+                <div class="select_section">
+                    <div>
+                        <input type="checkbox">
+                        <label>Sample</label>
+                    </div>
+                </div>
+                <!--Search de Select-->
+                <div class="search_section">
+                    <div>
+                        <input type="checkbox">
+                        <input type="text">
+                    </div>
+                    <div class="rows">
+                        <div>
+                            <input type="checkbox">
+                            <label>Sample</label>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div class="selected_form">
+                <div class="selected_head center">
+                    <h3>Operario</h3>
+                    <div class="columns">
+                        <div class="button_search">
+                            <div></div>
+                        </div>
+                        <div class="button_arrow_down">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Despliegue de Select-->
+                <div class="select_section">
+                    <div>
+                        <input type="checkbox">
+                        <label>Sample</label>
+                    </div>
+                </div>
+                <!--Search de Select-->
+                <div class="search_section">
+                    <div>
+                        <input type="checkbox">
+                        <input type="text">
+                    </div>
+                    <div class="rows">
+                        <div>
+                            <input type="checkbox">
+                            <label>Sample</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selected_form">
+                <div class="selected_head center">
+                    <h3>Orden</h3>
+                    <div class="columns">
+                        <div class="button_search">
+                            <div></div>
+                        </div>
+                        <div class="button_arrow_down">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Despliegue de Select-->
+                <div class="select_section">
+                    <div>
+                        <input type="checkbox">
+                        <label>Sample</label>
+                    </div>
+                </div>
+                <!--Search de Select-->
+                <div class="search_section">
+                    <div>
+                        <input type="checkbox">
+                        <input type="text">
+                    </div>
+                    <div class="rows">
+                        <div>
+                            <input type="checkbox">
+                            <label>Sample</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selected_form">
+                <div class="selected_head center">
+                    <h3>Lote</h3>
+                    <div class="columns">
+                        <div class="button_search">
+                            <div></div>
+                        </div>
+                        <div class="button_arrow_down">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Despliegue de Select-->
+                <div class="select_section">
+                    <div>
+                        <input type="checkbox">
+                        <label>Sample</label>
+                    </div>
+                </div>
+                <!--Search de Select-->
+                <div class="search_section">
+                    <div>
+                        <input type="checkbox">
+                        <input type="text">
+                    </div>
+                    <div class="rows">
+                        <div>
+                            <input type="checkbox">
+                            <label>Sample</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selected_form">
+                <div class="selected_head center">
+                    <h3>Color</h3>
+                    <div class="columns">
+                        <div class="button_search">
+                            <div></div>
+                        </div>
+                        <div class="button_arrow_down">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Despliegue de Select-->
+                <div class="select_section">
+                    <div>
+                        <input type="checkbox">
+                        <label>Sample</label>
+                    </div>
+                </div>
+                <!--Search de Select-->
+                <div class="search_section">
+                    <div>
+                        <input type="checkbox">
+                        <input type="text">
+                    </div>
+                    <div class="rows">
+                        <div>
+                            <input type="checkbox">
+                            <label>Sample</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selected_form">
+                <div class="selected_head center">
+                    <h3>Material</h3>
+                    <div class="columns">
+                        <div class="button_search">
+                            <div></div>
+                        </div>
+                        <div class="button_arrow_down">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <!--Despliegue de Select-->
+                <div class="select_section">
+                    <div>
+                        <input type="checkbox">
+                        <label>Sample</label>
+                    </div>
+                </div>
+                <!--Search de Select-->
+                <div class="search_section">
+                    <div>
+                        <input type="checkbox">
+                        <input type="text">
+                    </div>
+                    <div class="rows">
+                        <div>
+                            <input type="checkbox">
+                            <label>Sample</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Campo Indicadores-->
+        <div class="cube_container">
+            <div class="title_container">
+                <h2>Indicadores</h2>
+                <div class="columns">
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="master_indicadores">
+                <div class="columns">
+                    <!--Disponibilidad-->
+                    <div class="campo_ind rows">
+                        <h3>Disponibilidad</h3>
+                        <p class="indicador"><span>82</span>%</p>
+                        <div id="underline_disp" class="underline_ind"></div>
+                        <text>Disponibilidad para trabajar</text>
+                    </div>
+                    <!--Rendimiento-->
+                    <div class="campo_ind rows">
+                        <h3>Rendimiento</h3>
+                        <p class="indicador"><span>82</span>%</p>
+                        <div id="underline_dese" class="underline_ind"></div>
+                        <text>Rendimiento real en contexto</text>
+                    </div>
+                </div>
+                <div class="columns">
+                    <!--Calidad-->
+                    <div class="campo_ind rows">
+                        <h3>Calidad</h3>
+                        <p class="indicador"><span>82</span>%</p>
+                        <div id="underline_cali" class="underline_ind"></div>
+                        <text>Calidad de unidades</text>
+                    </div>
+                    <!--Eficiencia-->
+                    <div id="eficiencia_indicador" class="campo_ind rows">
+                        <h3>Eficiencia</h3>
+                        <p class="indicador"><span>82</span>%</p>
+                        <div id="underline_efic" class="underline_ind"></div>
+                        <text>Eficiencia general</text>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Campo Disponibilidad-->
+        <div class="cube_container">
+            <div class="title_container">
+                <h2>Disponibilidad</h2>
+                <div class="columns">
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="myDiv">
+                    <!-- Plotly chart will be drawn inside this DIV -->
+                </div>
+            </div>
         </div>
     </div>
     <script>
+        $('#button_download_id').click(function () {
+            $('.menu_download').toggle();
+        });
+
+
+
+        $('.search_section').hide()
+        $('.button_search').click(function () {
+            var state = $(this).closest('.selected_form').find('.search_section').css('display');
+            $('.search_section').hide()
+            $(this).closest('.selected_form').find('.search_section').css('display', state);
+            $(this).closest('.selected_form').find('.search_section').toggle()
+
+        });
+
+
+
+        $('.select_section').hide()
+        $('.button_arrow_down').click(function () {
+            $('.search_section').hide()
+            var _height = $(this).closest('.selected_form').height()
+            $(this).closest('.selected_form').find('.select_section').toggle()
+            $(this).closest('.selected_form').height('fit-content')
+            var _height2 = $(this).closest('.selected_form').height()
+            $(this).closest('.selected_form').height(_height)
+            $(this).closest('.selected_form').animate({
+                height: _height2
+            }, 500);
+
+
+        });
+
+        $('.button_minimize_down').click(function () {
+            var _height = $(this).closest('.cube_container').height()
+            $(this).closest('.cube_container').find('>*:not(:first-child)').toggle();
+            //if config re toggle title_container
+            var isConfig = $(this).closest('.cube_container').attr('id') == 'config'
+            if (isConfig)
+                $(this).closest('.cube_container').find('.title_container').toggle()
+            if ($(this).closest('.cube_container').find('>.title_container').css('border-bottom') ==
+                '0px none rgb(0, 0, 0)')
+                $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
+                    '2px solid var(--color-negro)');
+            else
+                $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
+                    '0px none rgb(0, 0, 0)');
+            $(this).closest('.cube_container').height('fit-content')
+            var _height2 = $(this).closest('.cube_container').height()
+            $(this).closest('.cube_container').height(_height)
+            $(this).closest('.cube_container').animate({
+                height: _height2
+            }, 500, function () {
+                $(this).closest('.cube_container').height('fit-content')
+            });
+        });
+
+
+
+
         var data = [{
             "type": "sunburst",
             "labels": ["Disponible", "Productivo", "Paradas", "Mto. Maquina", "Mto. Molde", "Sin Operario",
@@ -646,7 +1173,6 @@
             },
             "branchvalues": 'total'
         }];
-
         var layout = {
             "margin": {
                 "l": 0,
@@ -658,33 +1184,23 @@
             height: 200
 
         };
-
-
         Plotly.newPlot('myDiv', data, layout, {
             showSendToCloud: true
         })
-
         myPlot = document.getElementById("myDiv");
 
-         window.addEventListener("load", function (event) {
-        new DateRangePicker('datetimerange-input1',
-            {
+
+
+        $(function () {
+            $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
-                opens: 'left',
-                ranges: {
-                    'Today': [moment().startOf('day'), moment().endOf('day')],
-                    'Yesterday': [moment().subtract(1, 'days').startOf('day'), moment().subtract(1, 'days').endOf('day')],
-                    'Last 7 Days': [moment().subtract(6, 'days').startOf('day'), moment().endOf('day')],
-                    'This Month': [moment().startOf('month').startOf('day'), moment().endOf('month').endOf('day')],
-                },
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(32, 'hour'),
                 locale: {
-                    format: "YYYY-MM-DD HH:mm:ss",
+                    format: 'M/DD hh:mm A'
                 }
-            },
-            function (start, end) {
-                alert(start.format() + " - " + end.format());
-            })
-    });
+            });
+        });
     </script>
 </body>
 
