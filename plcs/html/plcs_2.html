@@ -763,7 +763,7 @@
         .indicator {
             width: 13px;
             height: 13px;
-            background-color: #636efa;
+            background-color: #AAAAAA;
             margin-right: 3px;
             border-radius: 2px;
             cursor: pointer;
@@ -774,6 +774,18 @@
         .legend {
             text-align: left;
             margin: 20px !important;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
         }
 
         /* Remove default bullets */
@@ -803,15 +815,16 @@
         }
 
         /* Create the caret/arrow with a unicode, and style it */
-        .caret::before {
-            content: "\25B6";
+        .caret_symbol {
             color: var(--color-negro);
             display: inline-block;
             margin-right: 6px;
+            width: fit-content;
+            height: fit-content;
         }
 
         /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-        .caret-down::before {
+        .caret-down .caret_symbol {
             transform: rotate(90deg);
         }
 
@@ -825,13 +838,18 @@
             display: block;
         }
 
-        #pieCalidadContainer {
+        .pieContainer {
             min-width: 150px;
             width: 100%;
             max-width: 450px;
         }
 
-        #lineCalidadContainer {
+        #pieCiclosContainer,
+        #pieRendimientoContainer {
+            transform: scale(0.75);
+        }
+
+        .lineContainer {
             min-width: 300px;
             width: 100%;
             max-width: 800px;
@@ -850,13 +868,58 @@
         .modebar-btn--logo {
             display: none !important;
         }
+
+        #Ciclos > div:nth-child(2) {
+            flex-direction: column-reverse !important;
+        }
+
+        #ciclePlc {
+            width: 120px;
+            padding:3px;
+            
+        }
+        #ciclePlcCont {
+            margin: 5px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
     <div id="dashboard">
+        <!--Campo Ciclos-->
+        <div class="cube_container" id="Ciclos">
+            <div class="title_container">
+                <h2>Ciclos</h2>
+                <div class="columns">
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center full_width rows">
+                <div class="columns center full_width ">
+                    <div id="pieCiclosContainer" class="pieContainer">
+                        <div id="pieCiclos">
+                        </div>
+                    </div>
+                    <ul class="legend" id="legendCiclos">
+
+                    </ul>
+                </div>
+                <div id="lineCiclosContainer" class="lineContainer">
+                    <div id="lineCiclos">
+                    </div>
+                </div>
+                <div id="ciclePlcCont" class="rows center ">
+                    <text>Máquina</text>
+                    <select id="ciclePlc">
+                    </select>
+                </div>
+            </div>
+        </div>
         <!--Campo Calidad-->
-        <div class="cube_container">
+        <div class="cube_container" id="Calidad">
             <div class="title_container">
                 <h2>Calidad</h2>
                 <div class="columns">
@@ -867,36 +930,68 @@
             </div>
             <div class="center full_width rows">
                 <div class="columns center full_width ">
-                    <div id="pieCalidadContainer">
+                    <div id="pieCalidadContainer" class="pieContainer">
                         <div id="pieCalidad">
                         </div>
                     </div>
-                    <ul class="legend noselect">
-                        <li><span class="caret columns center_vert">
-                                <div class="indicator"></div>Producción
-                            </span>
-                            <ul class="nested">
-                                <li class="columns center_vert">
-                                    <div class="indicator"></div><span>Buenas</span>
-                                </li>
-                                <li><span class="caret columns center_vert">
-                                        <div class="indicator"></div><span>Malas</span>
-                                    </span>
-                                    <ul class="nested">
-                                        <li class="columns center_vert">
-                                            <div class="indicator"></div><span>Lluvia</span>
-                                        </li>
-                                        <li class="columns center_vert">
-                                            <div class="indicator"></div><span>Arranque</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+                    <ul class="legend" id="legendCalidad">
+
                     </ul>
                 </div>
-                <div id="lineCalidadContainer">
+                <div id="lineCalidadContainer" class="lineContainer">
                     <div id="lineCalidad">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Campo Disponibilidad-->
+        <div class="cube_container" id="Disponibilidad">
+            <div class="title_container">
+                <h2>Disponibilidad</h2>
+                <div class="columns">
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center full_width rows">
+                <div class="columns center full_width ">
+                    <div id="pieDisponibilidadContainer" class="pieContainer">
+                        <div id="pieDisponibilidad">
+                        </div>
+                    </div>
+                    <ul class="legend" id="legendDisponibilidad">
+
+                    </ul>
+                </div>
+                <div id="lineDisponibilidadContainer" class="lineContainer">
+                    <div id="lineDisponibilidad">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Campo Rendimiento-->
+        <div class="cube_container" id="Rendimiento">
+            <div class="title_container">
+                <h2>Rendimiento</h2>
+                <div class="columns">
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center full_width rows">
+                <div class="columns center full_width ">
+                    <div id="pieRendimientoContainer" class="pieContainer">
+                        <div id="pieRendimiento">
+                        </div>
+                    </div>
+                    <ul class="legend" id="legendRendimiento">
+
+                    </ul>
+                </div>
+                <div id="lineRendimientoContainer" class="lineContainer">
+                    <div id="lineRendimiento">
                     </div>
                 </div>
             </div>
@@ -1276,49 +1371,6 @@
             });
         });
 
-        // Pie/*
-        var data = [{
-            "type": "sunburst",
-            "labels": ["Producción", "Buenas", "Malas", "Inicio Turno", "Lluvia"],
-            "parents": ["", "Producción", "Producción", "Malas", "Malas"],
-            "values": [2000, 1900, 100, 20, 80],
-            "customdata": [100, 95, 5, 1, 4],
-            "textposition:": "inside",
-            "insidetextorientatuon": "radial",
-            "marker": {
-                "line": {
-                    "width": 2
-                }
-            },
-            "branchvalues": 'total',
-            textinfo: 'label+percent entry',
-            hovertemplate: "<extra></extra><br>%{value} ud.</br>(%{customdata}%)"
-        }];
-        var layout = {
-            "margin": {
-                "l": 0,
-                "r": 0,
-                "b": 0,
-                "t": 0
-            },
-            sunburstcolorway: ["#636efa", "#ef553b", "#00cc96", "#00ff96", "#00aa96"],
-            width: $("#pieCalidadContainer").width(),
-            height: $("#pieCalidadContainer").width(),
-
-        };
-        Plotly.newPlot('pieCalidad', data, layout, {
-            showSendToCloud: false,
-            displayModeBar: false,
-        })
-        myPlot = document.getElementById("pieCalidad");
-        $(window).resize(function () {
-            var update = {
-                width: $("#pieCalidadContainer").width(),
-                height: $("#pieCalidadContainer").width()
-            };
-            Plotly.relayout('pieCalidad', update);
-        });
-
         // Datetime
         $(function () {
             $('input[name="datetimes"]').daterangepicker({
@@ -1331,88 +1383,825 @@
             });
         });
 
-        // Legend
-        var toggler = document.getElementsByClassName("caret");
+
+
+
+
+        var _colors = ["#3366cc", "#109618", "#ff9900", "#dc3912", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395"];
+        var data = {
+            calidad: [{
+                    name: 'Producción',
+                    value: 400,
+                    color: _colors[0],
+                    date: '2013-10-04 22:23:00',
+                    children: [{
+                            name: 'Buenas',
+                            value: 390,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Malas',
+                            value: 10,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Arranque',
+                                    value: 4,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Lluvia',
+                                    value: 6,
+                                    color: _colors[4],
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'Producción',
+                    value: 900,
+                    color: _colors[0],
+                    date: '2013-10-05 22:23:00',
+                    children: [{
+                            name: 'Buenas',
+                            value: 888,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Malas',
+                            value: 12,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Arranque',
+                                    value: 5,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Lluvia',
+                                    value: 7,
+                                    color: _colors[4],
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'Producción',
+                    value: 1600,
+                    color: _colors[0],
+                    date: '2013-10-06 22:23:00',
+                    children: [{
+                            name: 'Buenas',
+                            value: 1422,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Malas',
+                            value: 178,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Arranque',
+                                    value: 10,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Lluvia',
+                                    value: 168,
+                                    color: _colors[4],
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'Producción',
+                    value: 2000,
+                    color: _colors[0],
+                    date: '2013-10-07 22:23:00',
+                    children: [{
+                            name: 'Buenas',
+                            value: 1799,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Malas',
+                            value: 201,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Arranque',
+                                    value: 20,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Lluvia',
+                                    value: 181,
+                                    color: _colors[4],
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            disponibilidad: [{
+                    name: 'Disponible',
+                    value: 350000,
+                    color: _colors[0],
+                    date: '2013-10-04 22:23:00',
+                    children: [{
+                            name: 'Productivo',
+                            value: 313250,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Paradas',
+                            value: 36750,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Maquina',
+                                    value: 125,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Molde',
+                                    value: 12225,
+                                    color: _colors[4],
+                                },
+                                {
+                                    name: 'Abandono',
+                                    value: 6025,
+                                    color: _colors[5],
+                                },
+                                {
+                                    name: 'Material',
+                                    value: 9200,
+                                    color: _colors[6],
+                                },
+                                {
+                                    name: 'Calidad',
+                                    value: 8100,
+                                    color: _colors[7],
+                                },
+                                {
+                                    name: 'Montaje',
+                                    value: 1075,
+                                    color: _colors[8],
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'Disponible',
+                    value: 350000,
+                    color: _colors[0],
+                    date: '2013-10-05 22:23:00',
+                    children: [{
+                            name: 'Productivo',
+                            value: 313250,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Paradas',
+                            value: 36750,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Maquina',
+                                    value: 125,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Molde',
+                                    value: 12225,
+                                    color: _colors[4],
+                                },
+                                {
+                                    name: 'Abandono',
+                                    value: 6025,
+                                    color: _colors[5],
+                                },
+                                {
+                                    name: 'Material',
+                                    value: 9200,
+                                    color: _colors[6],
+                                },
+                                {
+                                    name: 'Calidad',
+                                    value: 8100,
+                                    color: _colors[7],
+                                },
+                                {
+                                    name: 'Montaje',
+                                    value: 1075,
+                                    color: _colors[8],
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'Disponible',
+                    value: 350000,
+                    color: _colors[0],
+                    date: '2013-10-06 22:23:00',
+                    children: [{
+                            name: 'Productivo',
+                            value: 313250,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Paradas',
+                            value: 36750,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Maquina',
+                                    value: 125,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Molde',
+                                    value: 12225,
+                                    color: _colors[4],
+                                },
+                                {
+                                    name: 'Abandono',
+                                    value: 6025,
+                                    color: _colors[5],
+                                },
+                                {
+                                    name: 'Material',
+                                    value: 9200,
+                                    color: _colors[6],
+                                },
+                                {
+                                    name: 'Calidad',
+                                    value: 8100,
+                                    color: _colors[7],
+                                },
+                                {
+                                    name: 'Montaje',
+                                    value: 1075,
+                                    color: _colors[8],
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'Disponible',
+                    value: 350000,
+                    color: _colors[0],
+                    date: '2013-10-07 22:23:00',
+                    children: [{
+                            name: 'Productivo',
+                            value: 313250,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Paradas',
+                            value: 36750,
+                            color: _colors[2],
+                            children: [{
+                                    name: 'Maquina',
+                                    value: 125,
+                                    color: _colors[3],
+                                },
+                                {
+                                    name: 'Molde',
+                                    value: 12225,
+                                    color: _colors[4],
+                                },
+                                {
+                                    name: 'Abandono',
+                                    value: 6025,
+                                    color: _colors[5],
+                                },
+                                {
+                                    name: 'Material',
+                                    value: 9200,
+                                    color: _colors[6],
+                                },
+                                {
+                                    name: 'Calidad',
+                                    value: 8100,
+                                    color: _colors[7],
+                                },
+                                {
+                                    name: 'Montaje',
+                                    value: 1075,
+                                    color: _colors[8],
+                                }
+                            ]
+                        }
+                    ]
+                },
+            ],
+            rendimiento: [{
+                    name: 'Capacidad',
+                    value: 2500,
+                    color: _colors[0],
+                    date: '2013-10-04 22:23:00',
+                    children: [{
+                            name: 'Producido',
+                            value: 2000,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Ineficiencias',
+                            value: 500,
+                            color: _colors[2],
+                        }
+                    ]
+                },
+                {
+                    name: 'Capacidad',
+                    value: 2500,
+                    color: _colors[0],
+                    date: '2013-10-05 22:23:00',
+                    children: [{
+                            name: 'Producido',
+                            value: 2000,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Ineficiencias',
+                            value: 500,
+                            color: _colors[2],
+                        }
+                    ]
+                },
+                {
+                    name: 'Capacidad',
+                    value: 2500,
+                    color: _colors[0],
+                    date: '2013-10-06 22:23:00',
+                    children: [{
+                            name: 'Producido',
+                            value: 2000,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Ineficiencias',
+                            value: 500,
+                            color: _colors[2],
+                        }
+                    ]
+                },
+                {
+                    name: 'Capacidad',
+                    value: 2500,
+                    color: _colors[0],
+                    date: '2013-10-07 22:23:00',
+                    children: [{
+                            name: 'Producido',
+                            value: 2000,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Ineficiencias',
+                            value: 500,
+                            color: _colors[2],
+                        }
+                    ]
+                },
+            ],
+            ciclos: {
+                'plc1': [{
+                    name: 'Ciclo',
+                    value: 60,
+                    color: _colors[0],
+                    date: '2013-10-04 22:23:00',
+                    min: 55,
+                    max: 65,
+                    mean: 60,
+                    children: [{
+                            name: 'Maquina',
+                            value: 40,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 20,
+                            color: _colors[2],
+                        }
+                    ]
+                }, {
+                    name: 'Ciclo',
+                    value: 65,
+                    color: _colors[0],
+                    date: '2013-10-05 22:23:00',
+                    min: 55,
+                    max: 65,
+                    mean: 60,
+                    children: [{
+                            name: 'Maquina',
+                            value: 45,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 20,
+                            color: _colors[2],
+                        }
+                    ]
+                }, {
+                    name: 'Ciclo',
+                    value: 55,
+                    color: _colors[0],
+                    date: '2013-10-06 22:23:00',
+                    min: 55,
+                    max: 65,
+                    mean: 60,
+                    children: [{
+                            name: 'Maquina',
+                            value: 40,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 15,
+                            color: _colors[2],
+                        }
+                    ]
+                }, {
+                    name: 'Ciclo',
+                    value: 50,
+                    color: _colors[0],
+                    date: '2013-10-07 22:23:00',
+                    min: 55,
+                    max: 65,
+                    mean: 60,
+                    children: [{
+                            name: 'Maquina',
+                            value: 35,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 15,
+                            color: _colors[2],
+                        }
+                    ]
+                }, ],
+                'plc2': [{
+                    name: 'Ciclo',
+                    value: 50,
+                    color: _colors[0],
+                    date: '2013-10-04 22:23:00',
+                    min: 55,
+                    max: 65,
+                    mean: 60,
+                    children: [{
+                            name: 'Maquina',
+                            value: 35,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 5,
+                            color: _colors[2],
+                        }
+                    ]
+                }, {
+                    name: 'Ciclo',
+                    value: 40,
+                    color: _colors[0],
+                    date: '2013-10-05 22:23:00',
+                    min: 55,
+                    max: 65,
+                    mean: 60,
+                    children: [{
+                            name: 'Maquina',
+                            value: 35,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 5,
+                            color: _colors[2],
+                        }
+                    ]
+                }, {
+                    name: 'Ciclo',
+                    value: 65,
+                    color: _colors[0],
+                    date: '2013-10-06 22:23:00',
+                    min: 50,
+                    max: 60,
+                    mean: 55,
+                    children: [{
+                            name: 'Maquina',
+                            value: 10,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 55,
+                            color: _colors[2],
+                        }
+                    ]
+                }, {
+                    name: 'Ciclo',
+                    value: 52,
+                    color: _colors[0],
+                    date: '2013-10-07 22:23:00',
+                    min: 50,
+                    max: 60,
+                    mean: 55,
+                    children: [{
+                            name: 'Maquina',
+                            value: 12,
+                            color: _colors[1],
+                        },
+                        {
+                            name: 'Puerta',
+                            value: 40,
+                            color: _colors[2],
+                        }
+                    ]
+                }, ],
+            },
+        };
+        var _ciclosPlc = Object.keys(data['ciclos'])[0]
+
+        function dataChange() {
+            Object.keys(data).forEach(function (section) {
+                var currData = data[section];
+                if (section == "ciclos") {
+                    currData = data[section][_ciclosPlc]
+                    if ($('#ciclePlc>option').length == 0) {
+                        var _keys = Object.keys(data[section])
+                        _keys.forEach(function (key) {
+                            $('#ciclePlc').append($(`<option value="${key}">${key}</option>`))
+                        })
+                    }
+
+                }
+                var pieID = "pie" + proper(section);
+                var pieParent = "#pie" + proper(section) + "Container"
+
+                function proper(str) {
+                    return str.replace(
+                        /\w\S*/g,
+                        function (txt) {
+                            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                        }
+                    );
+                }
+
+                function getLabels(data) {
+                    var _labels = []
+                    _labels.push(data.name)
+                    if (data.children) {
+                        data.children.forEach(function (d) {
+                            _labels = _labels.concat(getLabels(d))
+                        })
+                    }
+                    return _labels
+                }
+                var labels = getLabels(currData[currData.length - 1])
+
+                function getValues(data) {
+                    var _values = []
+                    _values.push(data.value)
+                    if (data.children) {
+                        data.children.forEach(function (d) {
+                            _values = _values.concat(getValues(d))
+                        })
+                    }
+                    return _values
+                }
+                var values = getValues(currData[currData.length - 1])
+                var customdata = []
+                var _maxVal = values[0]
+                values.forEach(function (d) {
+                    customdata.push(d * 100 / _maxVal)
+                })
+
+                function getParent(data, parent) {
+                    var _parents = []
+                    _parents.push(parent)
+                    if (data.children) {
+                        data.children.forEach(function (d) {
+                            _parents = _parents.concat(getParent(d, data.name))
+                        })
+                    }
+                    return _parents
+                }
+                var parents = getParent(currData[currData.length - 1], "")
+                var _data = [{
+                    "type": "sunburst",
+                    "labels": labels,
+                    "parents": parents,
+                    "values": values,
+                    "customdata": customdata,
+                    "textposition:": "inside",
+                    "insidetextorientatuon": "radial",
+                    "marker": {
+                        "line": {
+                            "width": 2
+                        }
+                    },
+                    "branchvalues": 'total',
+                    textinfo: 'label+percent entry',
+                    hovertemplate: "<extra></extra><br>%{value} ud.</br>(%{customdata}%)"
+                }];
+                var layout = {
+                    "margin": {
+                        "l": 0,
+                        "r": 0,
+                        "b": 0,
+                        "t": 0
+                    },
+                    sunburstcolorway: [..._colors].splice(1, _colors.length - 1),
+                    width: $(pieParent).width(),
+                    height: $(pieParent).width(),
+
+                };
+                Plotly.newPlot(pieID, _data, layout, {
+                    showSendToCloud: false,
+                    displayModeBar: false,
+                })
+                myPlot = document.getElementById(pieID);
+                $(window).resize(function () {
+                    var update = {
+                        width: $(pieParent).width(),
+                        height: $(pieParent).width()
+                    };
+                    Plotly.relayout(pieID, update);
+                });
+                // Line
+                var lineID = 'line' + proper(section);
+                var lineContainer = '#line' + proper(section) + 'Container'
+                var traces = []
+                labels.forEach(function (label, i) {
+                    var x = []
+                    var y = []
+                    currData.forEach(function (d) {
+                        x.push(d.date)
+                        var sub_values = getValues(d)
+                        y.push(sub_values[i])
+                    })
+                    var trace = {
+                        y: y,
+                        x: x,
+                        type: 'scatter',
+                        name: label,
+                        hovertemplate: `<extra>${label}</extra>%{y} ud.`,
+                        line: {
+                            color: _colors[i],
+                        },
+                        fill: 'tozeroy',
+                    };
+                    if(section == "ciclos")
+                        trace.line.shape = 'vh'
+                    traces.push(trace)
+                })
+
+
+                function getVar(data, _var) {
+                    var _values = []
+                    _values.push(data[_var])
+                    if (data.children) {
+                        data.children.forEach(function (d) {
+                            _values = _values.concat(getVar(d, _var))
+                        })
+                    }
+                    return _values
+                }
+                if (section == "ciclos") {
+                    var extra = ['min', 'max', 'mean']
+                    var extra_col = ['green', 'red', 'orange']
+                    extra.forEach(function (e, i) {
+                        var x = []
+                        var y = []
+                        currData.forEach(function (d) {
+                            x.push(d.date)
+                            var sub_values = getVar(d, e)
+                            y.push(sub_values[0])
+                        })
+                        var trace = {
+                            y: y,
+                            x: x,
+                            type: 'scatter',
+                            mode: 'lines',
+                            name: e,
+                            hovertemplate: `<extra>` + e + `</extra>%{y} seg.`,
+                            line: {
+                                color: extra_col[i],
+                                dash: 'dash',
+                                width: 1,
+                                shape: 'vh',
+                            },
+                        };
+                        traces.push(trace)
+                    })
+
+
+                }
+
+
+
+                var layout = {
+                    showlegend: false,
+                    "margin": {
+                        "l": 30,
+                        "r": 10,
+                        "b": 30,
+                        "t": 10
+                    },
+                    xaxis: {},
+                    yaxis: {
+                        //type: 'log'
+                    },
+                };
+                Plotly.newPlot(lineID, traces, layout, {
+                    displayModeBar: false,
+                });
+                $(window).resize(function () {
+                    var update = {
+                        width: $(lineContainer).width(),
+                        height: $(lineContainer).width() / 1.9
+                    };
+                    Plotly.relayout(lineID, update);
+                });
+                // Legend
+                var legendID = "legend" + proper(section);
+                var index = 0;
+                var legend = "<li>"
+                legend += `<span class="caret columns center_vert leg_toggle" index="${index}">
+                            <div class="caret_symbol">&#9654;</div>
+                            <div class="indicator" style="background-color: ${currData[currData.length - 1].color}"></div>
+                            <div>${currData[currData.length - 1].name}</div>
+                        </span>`
+                index++;
+                legend += '<ul class="nested">'
+                currData[currData.length - 1].children.forEach(function (child) {
+                    if (child.children == null) {
+                        legend += `<li class="columns center_vert leg_toggle" index="${index}">
+                                    <div class="indicator" style="background-color: ${child.color}"></div><span>${child.name}</span>
+                                </li>`
+                        index++;
+                    } else {
+                        legend += "<li>"
+                        legend += `<span class="caret columns center_vert leg_toggle" index="${index}">
+                                    <div class="caret_symbol">&#9654;</div>
+                                    <div class="indicator" style="background-color: ${child.color}"></div><span>${child.name}</span>
+                                </span>`
+                        index++;
+                        legend += '<ul class="nested">'
+                        child.children.forEach(function (child2) {
+                            legend += `<li class="columns center_vert leg_toggle"  index="${index}">
+                                        <div class="indicator" style="background-color: ${child2.color}"></div><span>${child2.name}</span>
+                                    </li>`
+                            index++;
+                        })
+                        legend += '</ul>'
+                        legend += "</li>"
+                    }
+                })
+                legend += '</ul>'
+                legend += "</li>"
+                document.getElementById(legendID).innerHTML = legend
+                $(`#${legendID} .leg_toggle > *:not(.caret_symbol)`).click(function () {
+                    var _index = parseInt($(this).parent().attr('index'));
+                    var _at = document.getElementById(lineID).data[_index].visible;
+                    if (_at == 'legendonly') {
+                        document.getElementById(lineID).data[_index].visible = true;
+                        $(this).parent().css('opacity', '1.0');
+                    } else {
+                        document.getElementById(lineID).data[_index].visible = 'legendonly'
+                        $(this).parent().css('opacity', '0.5');
+                    }
+                    Plotly.redraw(lineID);
+                })
+                $(`#${legendID} .leg_toggle > .caret_symbol`).click(function () {
+                    this.parentElement.parentElement.querySelector(".nested").classList.toggle(
+                        "active_legend");
+                    this.parentElement.classList.toggle("caret-down");
+                })
+                $(`#${legendID} .leg_toggle > .caret_symbol`).click()
+            })
+        }
+        dataChange();
+        /*var toggler = document.getElementsByClassName("caret_symbol");
         var i;
         for (i = 0; i < toggler.length; i++) {
             toggler[i].addEventListener("click", function () {
-                this.parentElement.querySelector(".nested").classList.toggle("active_legend");
-                this.classList.toggle("caret-down");
+                this.parentElement.parentElement.querySelector(".nested").classList.toggle(
+                    "active_legend");
+                this.parentElement.classList.toggle("caret-down");
+                console.log('click')
             });
         }
         for (i = 0; i < toggler.length; i++) {
-            toggler[i].parentElement.querySelector(".nested").classList.toggle("active_legend");
-            toggler[i].classList.toggle("caret-down");
-        }
+            toggler[i].parentElement.parentElement.querySelector(".nested").classList.toggle(
+                "active_legend");
+            toggler[i].parentElement.classList.toggle("caret-down");
+        }*/
 
-        // Line
-
-        // "values": [2000, 1900, 100, 20, 80],
-        var trace1 = {
-            y: [400, 900, 1600, 2000],
-            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
-            type: 'scatter',
-            name: 'Producción',
-            hovertemplate: "<extra>Producción</extra>%{y} ud."
-        };
-
-        var trace2 = {
-            y: [390, 888, 1422, 1799],
-            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
-            type: 'scatter',
-            name: 'Buenos',
-            hovertemplate: "<extra>Buenos</extra>%{y} ud."
-        };
-
-        var trace3 = {
-            y: [10, 12, 178, 201],
-            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
-            type: 'scatter',
-            name: 'Malos',
-            hovertemplate: "<extra>Malos</extra>%{y} ud."
-        };
-        var trace4 = {
-            y: [3, 4, 12, 21],
-            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
-            type: 'scatter',
-            name: 'Arranque',
-            hovertemplate: "<extra>Arranque</extra>%{y} ud."
-        };
-        var trace5 = {
-            y: [7, 8, 166, 180],
-            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
-            type: 'scatter',
-            name: 'Lluvia',
-            hovertemplate: "<extra>Lluvia</extra>%{y} ud."
-        };
-
-        var data2 = [trace1, trace2, trace3, trace4, trace5];
-        var layout = {
-            showlegend: false,
-            "margin": {
-                "l": 30,
-                "r": 10,
-                "b": 30,
-                "t": 10
-            },
-            xaxis: {},
-            yaxis: {
-                //type: 'log'
-            },
-
-        };
-
-        Plotly.newPlot('lineCalidad', data2, layout, {
-            displayModeBar: false,
-        });
-
-
-        $(window).resize(function () {
-            var update = {
-                width: $("#lineCalidadContainer").width(),
-                height: $("#lineCalidadContainer").width() / 1.9
-            };
-            Plotly.relayout('lineCalidad', update);
+        $('#ciclePlc').on('change', function () {
+            _ciclosPlc = this.value
+            dataChange();
         });
 
 
