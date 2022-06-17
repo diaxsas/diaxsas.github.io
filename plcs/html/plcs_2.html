@@ -34,8 +34,8 @@
             font-family: "Roboto", sans-serif;
             padding: 0px;
             margin: 0px;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             text-align: center;
             background-color: var(--color-gris);
             color: var(--color-negro);
@@ -55,6 +55,7 @@
 
         #dashboard {
             width: 100%;
+            height: fit-content;
         }
 
         h4 {
@@ -756,11 +757,150 @@
             background-color: white !important;
             color: var(--color-negro);
         }
+
+
+        /*legends*/
+        .indicator {
+            width: 13px;
+            height: 13px;
+            background-color: #636efa;
+            margin-right: 3px;
+            border-radius: 2px;
+            cursor: pointer;
+            /*border: 1px solid var(--color-negro);*/
+            /*box-shadow: 1px 1px 2px #AAAAAA;*/
+        }
+
+        .legend {
+            text-align: left;
+            margin: 20px !important;
+        }
+
+        /* Remove default bullets */
+        ul,
+        .legend {
+            list-style-type: none;
+            padding-inline-start: 20px;
+        }
+
+        .legend span {
+            cursor: pointer;
+        }
+
+        /* Remove margins and padding from the parent ul */
+        .legend {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the caret/arrow */
+        .caret {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            left: -17px;
+            /* Prevent text selection */
+        }
+
+        /* Create the caret/arrow with a unicode, and style it */
+        .caret::before {
+            content: "\25B6";
+            color: var(--color-negro);
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+        .caret-down::before {
+            transform: rotate(90deg);
+        }
+
+        /* Hide the nested list */
+        .nested {
+            display: none;
+        }
+
+        /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+        .active_legend {
+            display: block;
+        }
+
+        #pieCalidadContainer {
+            min-width: 150px;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        #lineCalidadContainer {
+            min-width: 300px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .justify_start {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .align_start {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .modebar-btn--logo {
+            display: none !important;
+        }
     </style>
 </head>
 
 <body>
     <div id="dashboard">
+        <!--Campo Calidad-->
+        <div class="cube_container">
+            <div class="title_container">
+                <h2>Calidad</h2>
+                <div class="columns">
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center full_width rows">
+                <div class="columns center full_width ">
+                    <div id="pieCalidadContainer">
+                        <div id="pieCalidad">
+                        </div>
+                    </div>
+                    <ul class="legend noselect">
+                        <li><span class="caret columns center_vert">
+                                <div class="indicator"></div>Producción
+                            </span>
+                            <ul class="nested">
+                                <li class="columns center_vert">
+                                    <div class="indicator"></div><span>Buenas</span>
+                                </li>
+                                <li><span class="caret columns center_vert">
+                                        <div class="indicator"></div><span>Malas</span>
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="columns center_vert">
+                                            <div class="indicator"></div><span>Lluvia</span>
+                                        </li>
+                                        <li class="columns center_vert">
+                                            <div class="indicator"></div><span>Arranque</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="lineCalidadContainer">
+                    <div id="lineCalidad">
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--Configuracion-->
         <div class="cube_container" id="config">
             <div class="tab_container columns">
@@ -1078,30 +1218,14 @@
                 </div>
             </div>
         </div>
-        <!--Campo Disponibilidad-->
-        <div class="cube_container">
-            <div class="title_container">
-                <h2>Disponibilidad</h2>
-                <div class="columns">
-                    <div class="button_minimize_down button_main center">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div id="myDiv">
-                    <!-- Plotly chart will be drawn inside this DIV -->
-                </div>
-            </div>
-        </div>
     </div>
     <script>
+        // Download
         $('#button_download_id').click(function () {
             $('.menu_download').toggle();
         });
 
-
-
+        // Search
         $('.search_section').hide()
         $('.button_search').click(function () {
             var state = $(this).closest('.selected_form').find('.search_section').css('display');
@@ -1111,8 +1235,7 @@
 
         });
 
-
-
+        // Select
         $('.select_section').hide()
         $('.button_arrow_down').click(function () {
             $('.search_section').hide()
@@ -1128,6 +1251,7 @@
 
         });
 
+        // Minimize
         $('.button_minimize_down').click(function () {
             var _height = $(this).closest('.cube_container').height()
             $(this).closest('.cube_container').find('>*:not(:first-child)').toggle();
@@ -1152,18 +1276,13 @@
             });
         });
 
-
-
-
+        // Pie/*
         var data = [{
             "type": "sunburst",
-            "labels": ["Disponible", "Productivo", "Paradas", "Mto. Maquina", "Mto. Molde", "Sin Operario",
-                "Material", "Calidad", "Montaje"
-            ],
-            "parents": ["", "Disponible", "Disponible", "Paradas", "Paradas", "Paradas", "Paradas", "Paradas",
-                "Paradas"
-            ],
-            "values": [12, 6, 6, 1, 1, 1, 1, 1, 1],
+            "labels": ["Producción", "Buenas", "Malas", "Inicio Turno", "Lluvia"],
+            "parents": ["", "Producción", "Producción", "Malas", "Malas"],
+            "values": [2000, 1900, 100, 20, 80],
+            "customdata": [100, 95, 5, 1, 4],
             "textposition:": "inside",
             "insidetextorientatuon": "radial",
             "marker": {
@@ -1171,7 +1290,9 @@
                     "width": 2
                 }
             },
-            "branchvalues": 'total'
+            "branchvalues": 'total',
+            textinfo: 'label+percent entry',
+            hovertemplate: "<extra></extra><br>%{value} ud.</br>(%{customdata}%)"
         }];
         var layout = {
             "margin": {
@@ -1180,17 +1301,25 @@
                 "b": 0,
                 "t": 0
             },
-            width: 200,
-            height: 200
+            sunburstcolorway: ["#636efa", "#ef553b", "#00cc96", "#00ff96", "#00aa96"],
+            width: $("#pieCalidadContainer").width(),
+            height: $("#pieCalidadContainer").width(),
 
         };
-        Plotly.newPlot('myDiv', data, layout, {
-            showSendToCloud: true
+        Plotly.newPlot('pieCalidad', data, layout, {
+            showSendToCloud: false,
+            displayModeBar: false,
         })
-        myPlot = document.getElementById("myDiv");
+        myPlot = document.getElementById("pieCalidad");
+        $(window).resize(function () {
+            var update = {
+                width: $("#pieCalidadContainer").width(),
+                height: $("#pieCalidadContainer").width()
+            };
+            Plotly.relayout('pieCalidad', update);
+        });
 
-
-
+        // Datetime
         $(function () {
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
@@ -1201,6 +1330,95 @@
                 }
             });
         });
+
+        // Legend
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                this.parentElement.querySelector(".nested").classList.toggle("active_legend");
+                this.classList.toggle("caret-down");
+            });
+        }
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].parentElement.querySelector(".nested").classList.toggle("active_legend");
+            toggler[i].classList.toggle("caret-down");
+        }
+
+        // Line
+
+        // "values": [2000, 1900, 100, 20, 80],
+        var trace1 = {
+            y: [400, 900, 1600, 2000],
+            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
+            type: 'scatter',
+            name: 'Producción',
+            hovertemplate: "<extra>Producción</extra>%{y} ud."
+        };
+
+        var trace2 = {
+            y: [390, 888, 1422, 1799],
+            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
+            type: 'scatter',
+            name: 'Buenos',
+            hovertemplate: "<extra>Buenos</extra>%{y} ud."
+        };
+
+        var trace3 = {
+            y: [10, 12, 178, 201],
+            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
+            type: 'scatter',
+            name: 'Malos',
+            hovertemplate: "<extra>Malos</extra>%{y} ud."
+        };
+        var trace4 = {
+            y: [3, 4, 12, 21],
+            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
+            type: 'scatter',
+            name: 'Arranque',
+            hovertemplate: "<extra>Arranque</extra>%{y} ud."
+        };
+        var trace5 = {
+            y: [7, 8, 166, 180],
+            x: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00', '2013-10-07 22:23:00'],
+            type: 'scatter',
+            name: 'Lluvia',
+            hovertemplate: "<extra>Lluvia</extra>%{y} ud."
+        };
+
+        var data2 = [trace1, trace2, trace3, trace4, trace5];
+        var layout = {
+            showlegend: false,
+            "margin": {
+                "l": 30,
+                "r": 10,
+                "b": 30,
+                "t": 10
+            },
+            xaxis: {},
+            yaxis: {
+                //type: 'log'
+            },
+
+        };
+
+        Plotly.newPlot('lineCalidad', data2, layout, {
+            displayModeBar: false,
+        });
+
+
+        $(window).resize(function () {
+            var update = {
+                width: $("#lineCalidadContainer").width(),
+                height: $("#lineCalidadContainer").width() / 1.9
+            };
+            Plotly.relayout('lineCalidad', update);
+        });
+
+
+
+
+        $(window).resize();
     </script>
 </body>
 
