@@ -199,6 +199,17 @@
             padding-right: 6px;
         }
 
+        #sub_config {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        #sub_config>*:not(.title_container) {
+            margin: 5px;
+        }
+
         .cube_container {
             background-color: white;
             border-radius: 5px;
@@ -255,19 +266,19 @@
             margin-bottom: 5px;
         }
 
-        #underline_disp {
+        #underlineDisponibilidad {
             border-bottom: 4px solid rgb(66, 133, 244);
         }
 
-        #underline_dese {
+        #underlineRendimiento {
             border-bottom: 4px solid rgb(219, 68, 55);
         }
 
-        #underline_cali {
+        #underlineCalidad {
             border-bottom: 4px solid rgb(244, 180, 0);
         }
 
-        #underline_efic {
+        #underlineEficiencia {
             border-bottom: 4px solid rgb(15, 157, 88);
         }
 
@@ -869,15 +880,16 @@
             display: none !important;
         }
 
-        #Ciclos > div:nth-child(2) {
+        #Ciclos>div:nth-child(2) {
             flex-direction: column-reverse !important;
         }
 
         #ciclePlc {
             width: 120px;
-            padding:3px;
-            
+            padding: 3px;
+
         }
+
         #ciclePlcCont {
             margin: 5px;
             margin-top: 10px;
@@ -1030,246 +1042,248 @@
                     </div>
                 </div>
             </div>
-            <div class="left_rows rows">
-                <div id="inicio_fin">
-                    Rango
+            <div id="sub_config">
+                <div class="left_rows rows">
+                    <div id="inicio_fin">
+                        Rango
+                    </div>
+                    <input id="datetimes" type="text" name="datetimes" />
                 </div>
-                <input id="datetimes" type="text" name="datetimes" />
-            </div>
-            <div class="selected_form">
-                <div class="selected_head center">
-                    <h3>Máquina</h3>
-                    <div class="columns">
-                        <div class="button_search">
-                            <div></div>
+                <div class="selected_form" id="maquinas_config">
+                    <div class="selected_head center">
+                        <h3>Máquina</h3>
+                        <div class="columns">
+                            <div class="button_search">
+                                <div></div>
+                            </div>
+                            <div class="button_arrow_down">
+                                <div></div>
+                            </div>
                         </div>
-                        <div class="button_arrow_down">
-                            <div></div>
-                        </div>
                     </div>
-                </div>
-                <!--Despliegue de Select-->
-                <div class="select_section">
-                    <div>
-                        <input type="checkbox">
-                        <label>Sample</label>
-                    </div>
-                </div>
-                <!--Search de Select-->
-                <div class="search_section">
-                    <div>
-                        <input type="checkbox">
-                        <input type="text">
-                    </div>
-                    <div class="rows">
+                    <!--Despliegue de Select-->
+                    <div class="select_section">
                         <div>
                             <input type="checkbox">
                             <label>Sample</label>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="selected_form">
-                <div class="selected_head center">
-                    <h3>Molde</h3>
-                    <div class="columns">
-                        <div class="button_search">
-                            <div></div>
+                    <!--Search de Select-->
+                    <div class="search_section">
+                        <div>
+                            <input type="checkbox" class="toggle_all">
+                            <input type="text">
                         </div>
-                        <div class="button_arrow_down">
-                            <div></div>
+                        <div class="rows">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--Despliegue de Select-->
-                <div class="select_section">
-                    <div>
-                        <input type="checkbox">
-                        <label>Sample</label>
+                <div class="selected_form" id="moldes_config">
+                    <div class="selected_head center">
+                        <h3>Molde</h3>
+                        <div class="columns">
+                            <div class="button_search">
+                                <div></div>
+                            </div>
+                            <div class="button_arrow_down">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Search de Select-->
-                <div class="search_section">
-                    <div>
-                        <input type="checkbox">
-                        <input type="text">
-                    </div>
-                    <div class="rows">
+                    <!--Despliegue de Select-->
+                    <div class="select_section">
                         <div>
                             <input type="checkbox">
                             <label>Sample</label>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="selected_form">
-                <div class="selected_head center">
-                    <h3>Operario</h3>
-                    <div class="columns">
-                        <div class="button_search">
-                            <div></div>
+                    <!--Search de Select-->
+                    <div class="search_section">
+                        <div>
+                            <input type="checkbox" class="toggle_all">
+                            <input type="text">
                         </div>
-                        <div class="button_arrow_down">
-                            <div></div>
+                        <div class="rows">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--Despliegue de Select-->
-                <div class="select_section">
-                    <div>
-                        <input type="checkbox">
-                        <label>Sample</label>
+                <div class="selected_form" id="operarios_config">
+                    <div class="selected_head center">
+                        <h3>Operario</h3>
+                        <div class="columns">
+                            <div class="button_search">
+                                <div></div>
+                            </div>
+                            <div class="button_arrow_down">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Search de Select-->
-                <div class="search_section">
-                    <div>
-                        <input type="checkbox">
-                        <input type="text">
-                    </div>
-                    <div class="rows">
+                    <!--Despliegue de Select-->
+                    <div class="select_section">
                         <div>
                             <input type="checkbox">
                             <label>Sample</label>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="selected_form">
-                <div class="selected_head center">
-                    <h3>Orden</h3>
-                    <div class="columns">
-                        <div class="button_search">
-                            <div></div>
+                    <!--Search de Select-->
+                    <div class="search_section">
+                        <div>
+                            <input type="checkbox" class="toggle_all">
+                            <input type="text">
                         </div>
-                        <div class="button_arrow_down">
-                            <div></div>
+                        <div class="rows">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--Despliegue de Select-->
-                <div class="select_section">
-                    <div>
-                        <input type="checkbox">
-                        <label>Sample</label>
+                <div class="selected_form" id="ordenes_config">
+                    <div class="selected_head center">
+                        <h3>Orden</h3>
+                        <div class="columns">
+                            <div class="button_search">
+                                <div></div>
+                            </div>
+                            <div class="button_arrow_down">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Search de Select-->
-                <div class="search_section">
-                    <div>
-                        <input type="checkbox">
-                        <input type="text">
-                    </div>
-                    <div class="rows">
+                    <!--Despliegue de Select-->
+                    <div class="select_section">
                         <div>
                             <input type="checkbox">
                             <label>Sample</label>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="selected_form">
-                <div class="selected_head center">
-                    <h3>Lote</h3>
-                    <div class="columns">
-                        <div class="button_search">
-                            <div></div>
+                    <!--Search de Select-->
+                    <div class="search_section">
+                        <div>
+                            <input type="checkbox" class="toggle_all">
+                            <input type="text">
                         </div>
-                        <div class="button_arrow_down">
-                            <div></div>
+                        <div class="rows">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--Despliegue de Select-->
-                <div class="select_section">
-                    <div>
-                        <input type="checkbox">
-                        <label>Sample</label>
+                <div class="selected_form" id="lotes_config">
+                    <div class="selected_head center">
+                        <h3>Lote</h3>
+                        <div class="columns">
+                            <div class="button_search">
+                                <div></div>
+                            </div>
+                            <div class="button_arrow_down">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Search de Select-->
-                <div class="search_section">
-                    <div>
-                        <input type="checkbox">
-                        <input type="text">
-                    </div>
-                    <div class="rows">
+                    <!--Despliegue de Select-->
+                    <div class="select_section">
                         <div>
                             <input type="checkbox">
                             <label>Sample</label>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="selected_form">
-                <div class="selected_head center">
-                    <h3>Color</h3>
-                    <div class="columns">
-                        <div class="button_search">
-                            <div></div>
+                    <!--Search de Select-->
+                    <div class="search_section">
+                        <div>
+                            <input type="checkbox" class="toggle_all">
+                            <input type="text">
                         </div>
-                        <div class="button_arrow_down">
-                            <div></div>
+                        <div class="rows">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--Despliegue de Select-->
-                <div class="select_section">
-                    <div>
-                        <input type="checkbox">
-                        <label>Sample</label>
+                <div class="selected_form" id="colores_config">
+                    <div class="selected_head center">
+                        <h3>Color</h3>
+                        <div class="columns">
+                            <div class="button_search">
+                                <div></div>
+                            </div>
+                            <div class="button_arrow_down">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Search de Select-->
-                <div class="search_section">
-                    <div>
-                        <input type="checkbox">
-                        <input type="text">
-                    </div>
-                    <div class="rows">
+                    <!--Despliegue de Select-->
+                    <div class="select_section">
                         <div>
                             <input type="checkbox">
                             <label>Sample</label>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="selected_form">
-                <div class="selected_head center">
-                    <h3>Material</h3>
-                    <div class="columns">
-                        <div class="button_search">
-                            <div></div>
+                    <!--Search de Select-->
+                    <div class="search_section">
+                        <div>
+                            <input type="checkbox" class="toggle_all">
+                            <input type="text">
                         </div>
-                        <div class="button_arrow_down">
-                            <div></div>
+                        <div class="rows">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--Despliegue de Select-->
-                <div class="select_section">
-                    <div>
-                        <input type="checkbox">
-                        <label>Sample</label>
+                <div class="selected_form" id="materiales_config">
+                    <div class="selected_head center">
+                        <h3>Material</h3>
+                        <div class="columns">
+                            <div class="button_search">
+                                <div></div>
+                            </div>
+                            <div class="button_arrow_down">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Search de Select-->
-                <div class="search_section">
-                    <div>
-                        <input type="checkbox">
-                        <input type="text">
-                    </div>
-                    <div class="rows">
+                    <!--Despliegue de Select-->
+                    <div class="select_section">
                         <div>
                             <input type="checkbox">
                             <label>Sample</label>
+                        </div>
+                    </div>
+                    <!--Search de Select-->
+                    <div class="search_section">
+                        <div>
+                            <input type="checkbox">
+                            <input type="text">
+                        </div>
+                        <div class="rows">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--Campo Indicadores-->
-        <div class="cube_container">
+        <div class="cube_container" id="Indicadores">
             <div class="title_container">
                 <h2>Indicadores</h2>
                 <div class="columns">
@@ -1278,37 +1292,49 @@
                     </div>
                 </div>
             </div>
-            <div id="master_indicadores">
-                <div class="columns">
-                    <!--Disponibilidad-->
-                    <div class="campo_ind rows">
-                        <h3>Disponibilidad</h3>
-                        <p class="indicador"><span>82</span>%</p>
-                        <div id="underline_disp" class="underline_ind"></div>
-                        <text>Disponibilidad para trabajar</text>
+            <div class="center full_width rows">
+                <div id="master_indicadores">
+                    <div class="columns">
+                        <!--Disponibilidad-->
+                        <div class="campo_ind rows">
+                            <h3>Disponibilidad</h3>
+                            <p class="indicador"><span id="indicadorDisponibilidad">82</span>%</p>
+                            <div id="underlineDisponibilidad" class="underline_ind"></div>
+                            <text>Disponibilidad para trabajar</text>
+                        </div>
+                        <!--Rendimiento-->
+                        <div class="campo_ind rows">
+                            <h3>Rendimiento</h3>
+                            <p class="indicador"><span id="indicadorRendimiento">82</span>%</p>
+                            <div id="underlineRendimiento" class="underline_ind"></div>
+                            <text>Rendimiento real en contexto</text>
+                        </div>
                     </div>
-                    <!--Rendimiento-->
-                    <div class="campo_ind rows">
-                        <h3>Rendimiento</h3>
-                        <p class="indicador"><span>82</span>%</p>
-                        <div id="underline_dese" class="underline_ind"></div>
-                        <text>Rendimiento real en contexto</text>
+                    <div class="columns">
+                        <!--Calidad-->
+                        <div class="campo_ind rows">
+                            <h3>Calidad</h3>
+                            <p class="indicador"><span id="indicadorCalidad">82</span>%</p>
+                            <div id="underlineCalidad" class="underline_ind"></div>
+                            <text>Calidad de unidades</text>
+                        </div>
+                        <!--Eficiencia-->
+                        <div id="eficiencia_indicador" class="campo_ind rows">
+                            <h3>Eficiencia</h3>
+                            <p class="indicador"><span id="indicadorEficiencia">82</span>%</p>
+                            <div id="underlineEficiencia" class="underline_ind"></div>
+                            <text>Eficiencia general</text>
+                        </div>
                     </div>
                 </div>
-                <div class="columns">
-                    <!--Calidad-->
-                    <div class="campo_ind rows">
-                        <h3>Calidad</h3>
-                        <p class="indicador"><span>82</span>%</p>
-                        <div id="underline_cali" class="underline_ind"></div>
-                        <text>Calidad de unidades</text>
+                <div class="columns center full_width ">
+                    <div id="pieIndicadoresContainer" class="pieContainer">
+                        <div id="pieIndicadores">
+                        </div>
                     </div>
-                    <!--Eficiencia-->
-                    <div id="eficiencia_indicador" class="campo_ind rows">
-                        <h3>Eficiencia</h3>
-                        <p class="indicador"><span>82</span>%</p>
-                        <div id="underline_efic" class="underline_ind"></div>
-                        <text>Eficiencia general</text>
+                </div>
+                <div id="lineIndicadoresContainer" class="lineContainer">
+                    <div id="lineIndicadores">
                     </div>
                 </div>
             </div>
@@ -1332,7 +1358,7 @@
 
         // Select
         $('.select_section').hide()
-        $('.button_arrow_down').click(function () {
+        $('.button_arrow_down, .selected_head h3').click(function () {
             $('.search_section').hide()
             var _height = $(this).closest('.selected_form').height()
             $(this).closest('.selected_form').find('.select_section').toggle()
@@ -1342,8 +1368,6 @@
             $(this).closest('.selected_form').animate({
                 height: _height2
             }, 500);
-
-
         });
 
         // Minimize
@@ -1387,7 +1411,9 @@
 
 
 
-        var _colors = ["#3366cc", "#109618", "#ff9900", "#dc3912", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395"];
+        var _colors = ["#3366cc", "#109618", "#ff9900", "#dc3912", "#990099", "#0099c6", "#dd4477", "#66aa00",
+            "#b82e2e", "#316395"
+        ];
         var data = {
             calidad: [{
                     name: 'Producción',
@@ -1920,11 +1946,154 @@
                     ]
                 }, ],
             },
+            configuracion: {
+                maquinas: ['1', '2', '3', '4', '5'],
+                moldes: ['1', '2', '3', '4', '5'],
+                operarios: ['1', '2', '3', '4', '5'],
+                ordenes: ['1', '2', '3', '4', '5'],
+                lotes: ['1', '2', '3', '4', '5'],
+                colores: ['1', '2', '3', '4', '5'],
+                materiales: ['1', '2', '3', '4', '5']
+            },
+            indicadores: {
+                disponibilidad: {
+                    name: 'Disponibilidad',
+                    values: [81, 82, 83, 84],
+                    color: _colors[0],
+                    dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
+                        '2013-10-07 22:23:00'
+                    ],
+                },
+                rendimiento: {
+                    name: 'Rendimiento',
+                    values: [71, 72, 73, 74],
+                    color: _colors[1],
+                    dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
+                        '2013-10-07 22:23:00'
+                    ],
+                },
+                calidad: {
+                    name: 'Calidad',
+                    values: [91, 92, 93, 94],
+                    color: _colors[2],
+                    dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
+                        '2013-10-07 22:23:00'
+                    ],
+                },
+                eficiencia: {
+                    name: 'Eficiencia',
+                    values: [84, 83, 82, 81],
+                    color: _colors[3],
+                    dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
+                        '2013-10-07 22:23:00'
+                    ],
+                },
+
+            },
         };
         var _ciclosPlc = Object.keys(data['ciclos'])[0]
 
         function dataChange() {
             Object.keys(data).forEach(function (section) {
+                if (section == "configuracion")
+                    return
+                if (section == "indicadores") {
+
+                    // Line
+                    var lineID = 'line' + proper(section);
+                    var lineContainer = '#line' + proper(section) + 'Container'
+                    var traces = []
+                    var maxVals = []
+                    var maxLabels = []
+                    labels = Object.keys(data[section])
+                    labels.forEach(function (label, i) {
+                        var x = data[section][label].dates
+                        var y = data[section][label].values
+                        maxVals.push(y[y.length - 1])
+                        maxLabels.push(proper(label).substring(0, 3) + '.')
+                        $('#indicador' + proper(label)).text(y[y.length - 1])
+                        $('#underline' + proper(label)).css('border-color', data[section][label].color)
+                        var trace = {
+                            y: y,
+                            x: x,
+                            type: 'scatter',
+                            name: data[section][label].name,
+                            line: {
+                                color: data[section][label].color,
+                            },
+                        };
+                        traces.push(trace)
+                    })
+                    var layout = {
+                        showlegend: false,
+                        "margin": {
+                            "l": 30,
+                            "r": 10,
+                            "b": 30,
+                            "t": 10
+                        },
+                        xaxis: {},
+                        yaxis: {
+                            //type: 'log'
+                        },
+                    };
+                    Plotly.newPlot(lineID, traces, layout, {
+                        displayModeBar: false,
+                    });
+                    $(window).resize(function () {
+                        var update = {
+                            width: $(lineContainer).width(),
+                            height: $(lineContainer).width() / 1.9
+                        };
+                        Plotly.relayout(lineID, update);
+                    });
+                    var pieID = "pie" + proper(section);
+                    var pieParent = "#pie" + proper(section) + "Container"
+
+                    var _data = [{
+                        type: 'scatterpolar',
+                        r: maxVals,
+                        theta: maxLabels,
+                        fill: 'toself',
+                        name: 'Eficiencia'
+                    }];
+                    var layout = {
+                        "margin": {
+                            "l": 30,
+                            "r": 30,
+                            "b": 20,
+                            "t": 20
+                        },
+                        width: $(pieParent).width(),
+                        height: $(pieParent).width(),
+                        polar: {
+                            radialaxis: {
+                                visible: true,
+                                range: [0, 100]
+                            }
+                        },
+                        showlegend: false
+
+                    };
+                    Plotly.newPlot(pieID, _data, layout, {
+                        showSendToCloud: false,
+                        displayModeBar: false,
+                    })
+                    myPlot = document.getElementById(pieID);
+                    $(window).resize(function () {
+                        var update = {
+                            width: $(pieParent).width(),
+                            height: $(pieParent).width()
+                        };
+                        Plotly.relayout(pieID, update);
+                    });
+
+
+
+
+
+                    return
+                }
                 var currData = data[section];
                 if (section == "ciclos") {
                     currData = data[section][_ciclosPlc]
@@ -2052,7 +2221,7 @@
                         },
                         fill: 'tozeroy',
                     };
-                    if(section == "ciclos")
+                    if (section == "ciclos")
                         trace.line.shape = 'vh'
                     traces.push(trace)
                 })
@@ -2183,26 +2352,51 @@
             })
         }
         dataChange();
-        /*var toggler = document.getElementsByClassName("caret_symbol");
-        var i;
-        for (i = 0; i < toggler.length; i++) {
-            toggler[i].addEventListener("click", function () {
-                this.parentElement.parentElement.querySelector(".nested").classList.toggle(
-                    "active_legend");
-                this.parentElement.classList.toggle("caret-down");
-                console.log('click')
-            });
-        }
-        for (i = 0; i < toggler.length; i++) {
-            toggler[i].parentElement.parentElement.querySelector(".nested").classList.toggle(
-                "active_legend");
-            toggler[i].parentElement.classList.toggle("caret-down");
-        }*/
-
         $('#ciclePlc').on('change', function () {
             _ciclosPlc = this.value
             dataChange();
         });
+
+
+        //configuracion
+        Object.keys(data['configuracion']).forEach((key) => {
+            var opciones = data['configuracion'][key]
+            var select_container = $('#' + key + '_config .select_section');
+            var search_container = $('#' + key + '_config .search_section .rows');
+            select_container.empty()
+            search_container.empty()
+            opciones.forEach(function (opcion) {
+                var new_section = `
+                    <div>
+                        <input type="checkbox" name="${opcion}" value="${opcion}" checked>
+                        <label for="${opcion}">${opcion}</label>
+                    </div>`
+                select_container.append(new_section)
+                search_container.append(new_section)
+            })
+        })
+        var config_template = $('#sub_config').html();
+        // $('#sub_config').html('');
+        //$('#sub_config').html(config_template);
+        $('.selected_form .select_section input').on('change', function () {
+            $(this).closest('.selected_form').find(`.search_section input[name=${$(this).prop('name')}]`).prop(
+                'checked', $(this).prop('checked'));
+            $(this).parent().hide();
+            $(this).closest('.selected_form').height('fit-content')
+        })
+        $('.selected_form .search_section .rows input').on('change', function () {
+            $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`).prop(
+                'checked', $(this).prop('checked'));
+            $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`)
+                .parent().toggle($(this).prop('checked'));
+            $(this).closest('.selected_form').height('fit-content')
+
+        })
+        $('.selected_form .search_section .toggle_all').on('change', function () {
+            $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
+            $(this).closest('.selected_form').find('.select_section > div').toggle($(this).prop('checked'));
+            $(this).closest('.selected_form').height('fit-content')
+        })
 
 
 
