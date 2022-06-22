@@ -880,8 +880,20 @@
             display: none !important;
         }
 
+        #Material>div:nth-child(2), 
         #Ciclos>div:nth-child(2) {
             flex-direction: column-reverse !important;
+        }
+
+        #MaterialPlc {
+            width: 120px;
+            padding: 3px;
+
+        }
+
+        #MaterialPlcCont {
+            margin: 5px;
+            margin-top: 10px;
         }
 
         #ciclePlc {
@@ -1363,6 +1375,37 @@
                 <ul class="legend" id="legendEnergia">
 
                 </ul>
+            </div>
+        </div>
+        <!--Campo Material-->
+        <div class="cube_container" id="Material">
+            <div class="title_container">
+                <h2>Material</h2>
+                <div class="columns">
+                    <div class="button_minimize_down button_main center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center full_width rows">
+                <div class="columns center full_width ">
+                    <div id="pieMaterialContainer" class="pieContainer">
+                        <div id="pieMaterial">
+                        </div>
+                    </div>
+                    <ul class="legend" id="legendMaterial">
+
+                    </ul>
+                </div>
+                <div id="lineMaterialContainer" class="lineContainer">
+                    <div id="lineMaterial">
+                    </div>
+                </div>
+                <div id="MaterialPlcCont" class="rows center ">
+                    <text>Agrupación</text>
+                    <select id="MaterialPlc">
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -2208,9 +2251,275 @@
                         }, ]
                     },
                 ]
-            }, ]
+            }, ],
+            material: {
+                maquina: [
+                    {
+                        name: 'Total',
+                        value: 275,
+                        color: _colors[0],
+                        date: '2013-10-04 22:23:00',
+                        children: [{
+                            name: 'Inyectora 1',
+                            value: 135,
+                            color: _colors[1],
+                            children: [{
+                                name: '1.Molde 1',
+                                value: 85,
+                                color: _colors[2]
+                            }, {
+                                name: '1.Molde 2',
+                                value: 50,
+                                color: _colors[3]
+                            }, ]
+                        }, {
+                            name: 'Inyectora 2',
+                            value: 140,
+                            color: _colors[4],
+                            children: [{
+                                name: '2.Molde 1',
+                                value: 30,
+                                color: _colors[5]
+                            }, {
+                                name: '2.Molde 2',
+                                value: 110,
+                                color: _colors[6]
+                            }, ]
+                        }, ],
+                    },
+                    {
+                        name: 'Total',
+                        value: 275,
+                        color: _colors[0],
+                        date: '2013-10-05 22:23:00',
+                        children: [{
+                            name: 'Inyectora 1',
+                            value: 135,
+                            color: _colors[1],
+                            children: [{
+                                name: '1.Molde 1',
+                                value: 85,
+                                color: _colors[2]
+                            }, {
+                                name: '1.Molde 2',
+                                value: 50,
+                                color: _colors[3]
+                            }, ]
+                        }, {
+                            name: 'Inyectora 2',
+                            value: 140,
+                            color: _colors[4],
+                            children: [{
+                                name: '2.Molde 1',
+                                value: 30,
+                                color: _colors[5]
+                            }, {
+                                name: '2.Molde 2',
+                                value: 110,
+                                color: _colors[6]
+                            }, ]
+                        }, ],
+                    },
+                    {
+                        name: 'Total',
+                        value: 275,
+                        color: _colors[0],
+                        date: '2013-10-06 22:23:00',
+                        children: [{
+                            name: 'Inyectora 1',
+                            value: 135,
+                            color: _colors[1],
+                            children: [{
+                                name: '1.Molde 1',
+                                value: 30,
+                                color: _colors[5]
+                            }, {
+                                name: '1.Molde 2',
+                                value: 105,
+                                color: _colors[6]
+                            }, ]
+                        }, {
+                            name: 'Inyectora 2',
+                            value: 140,
+                            color: _colors[4],
+                            children: [{
+                                name: '2.Molde 1',
+                                value: 30,
+                                color: _colors[5]
+                            }, {
+                                name: '2.Molde 2',
+                                value: 110,
+                                color: _colors[6]
+                            }, ]
+                        }, ],
+                    },
+                    {
+                        name: 'Total',
+                        value: 275,
+                        color: _colors[0],
+                        date: '2013-10-07 22:23:00',
+                        children: [{
+                            name: 'Inyectora 1',
+                            value: 135,
+                            color: _colors[1],
+                            children: [{
+                                name: '1.Molde 1',
+                                value: 85,
+                                color: _colors[2]
+                            }, {
+                                name: '1.Molde 2',
+                                value: 50,
+                                color: _colors[3]
+                            }, ]
+                        }, {
+                            name: 'Inyectora 2',
+                            value: 140,
+                            color: _colors[4],
+                            children: [{
+                                name: '2.Molde 1',
+                                value: 30,
+                                color: _colors[5]
+                            }, {
+                                name: '2.Molde 2',
+                                value: 110,
+                                color: _colors[6]
+                            }, ]
+                        }, ],
+                    },
+                ],
+                molde: [{
+                    name: 'Total',
+                    value: 275,
+                    color: _colors[0],
+                    date: '2013-10-04 22:23:00',
+                    children: [{
+                        name: 'Molde 1',
+                        value: 135,
+                        color: _colors[1],
+                        children: [{
+                            name: '1.Inyectora 1',
+                            value: 85,
+                            color: _colors[2],
+                        }, {
+                            name: '1.Inyectora 2',
+                            value: 50,
+                            color: _colors[3],
+                        }, ]
+                    }, {
+                        name: 'Molde 2',
+                        value: 140,
+                        color: _colors[4],
+                        children: [{
+                            name: '2.Inyectora 1',
+                            value: 30,
+                            color: _colors[5],
+                        }, {
+                            name: '2.Inyectora 2',
+                            value: 110,
+                            color: _colors[6],
+                        }, ]
+                    }, ],
+                },{
+                    name: 'Total',
+                    value: 275,
+                    color: _colors[0],
+                    date: '2013-10-05 22:23:00',
+                    children: [{
+                        name: 'Molde 1',
+                        value: 135,
+                        color: _colors[1],
+                        children: [{
+                            name: '1.Inyectora 1',
+                            value: 85,
+                            color: _colors[2], 
+                        }, {
+                            name: '1.Inyectora 2',
+                            value: 50,
+                            color: _colors[3],
+                        }, ]
+                    }, {
+                        name: 'Molde 2',
+                        value: 140,
+                        color: _colors[4],
+                        children: [{
+                            name: '2.Inyectora 1',
+                            value: 30,
+                            color: _colors[5],
+                        }, {
+                            name: '2.Inyectora 2',
+                            value: 110,
+                            color: _colors[6],
+                        }, ]
+                    }, ],
+                },{
+                    name: 'Total',
+                    value: 275,
+                    color: _colors[0],
+                    date: '2013-10-06 22:23:00',
+                    children: [{
+                        name: 'Molde 1',
+                        value: 135,
+                        color: _colors[1],
+                        children: [{
+                            name: '1.Inyectora 1',
+                            value: 85,
+                            color: _colors[2],
+                        }, {
+                            name: '1.Inyectora 2',
+                            value: 50,
+                            color: _colors[3],
+                        }, ]
+                    }, {
+                        name: 'Molde 2',
+                        value: 140,
+                        color: _colors[4],
+                        children: [{
+                            name: '2.Inyectora 1',
+                            value: 30,
+                            color: _colors[5],
+                        }, {
+                            name: '2.Inyectora 2',
+                            value: 110,
+                            color: _colors[6],
+                        }, ]
+                    }, ],
+                },{
+                    name: 'Total',
+                    value: 275,
+                    color: _colors[0],
+                    date: '2013-10-07 22:23:00',
+                    children: [{
+                        name: 'Molde 1',
+                        value: 135,
+                        color: _colors[1],
+                        children: [{
+                            name: '1.Inyectora 1',
+                            value: 85,
+                            color: _colors[2],
+                        }, {
+                            name: '1.Inyectora 2',
+                            value: 50,
+                            color: _colors[3],
+                        }, ]
+                    }, {
+                        name: 'Molde 2',
+                        value: 140,
+                        color: _colors[4],
+                        children: [{
+                            name: '2.Inyectora 1',
+                            value: 30,
+                            color: _colors[5],
+                        }, {
+                            name: '2.Inyectora 2',
+                            value: 110,
+                            color: _colors[6],
+                        }, ]
+                    }, ],
+                }, ]
+            },
         };
         var _ciclosPlc = Object.keys(data['ciclos'])[0]
+        var _materialPlc = Object.keys(data['material'])[0]
 
         function dataChange() {
             Object.keys(data).forEach(function (section) {
@@ -2328,6 +2637,16 @@
                     }
 
                 }
+                if (section == "material") {
+                    currData = data[section][_materialPlc]
+                    if ($('#MaterialPlc>option').length == 0) {
+                        var _keys = Object.keys(data[section])
+                        _keys.forEach(function (key) {
+                            $('#MaterialPlc').append($(`<option value="${key}">${key}</option>`))
+                        })
+                    }
+
+                }
                 var pieID = "pie" + proper(section);
                 var pieParent = "#pie" + proper(section) + "Container"
 
@@ -2350,6 +2669,7 @@
                     }
                     return _labels
                 }
+
                 var labels = getLabels(currData[currData.length - 1])
 
                 function getValues(data) {
@@ -2435,7 +2755,7 @@
                             name: SubLabel,
                             type: 'bar',
                             marker: {
-                                color: _colors[4+i] ///carefull the 4 comes hardcoded form data
+                                color: _colors[4 + i] ///carefull the 4 comes hardcoded form data
                             }
                         };
                         _data.push(trace)
@@ -2455,6 +2775,7 @@
                         displayModeBar: false,
                     })
                 }
+                
                 Plotly.newPlot(pieID, _data, layout, {
                     showSendToCloud: false,
                     displayModeBar: false,
@@ -2633,6 +2954,10 @@
         dataChange();
         $('#ciclePlc').on('change', function () {
             _ciclosPlc = this.value
+            dataChange();
+        });
+        $('#MaterialPlc').on('change', function () {
+            _materialPlc = this.value
             dataChange();
         });
 
