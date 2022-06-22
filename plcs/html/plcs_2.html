@@ -647,7 +647,7 @@
 
         #eficiencia_indicador {
             border-radius: 10px;
-            background-color: var(--color-gris);
+            box-shadow: var(--color-gris) 0px 3px 8px;
         }
 
         #inicio_fin {
@@ -880,7 +880,7 @@
             display: none !important;
         }
 
-        #Material>div:nth-child(2), 
+        #Material>div:nth-child(2),
         #Ciclos>div:nth-child(2) {
             flex-direction: column-reverse !important;
         }
@@ -1487,26 +1487,21 @@
             calidad: [{
                     name: 'Producción',
                     value: 400,
-                    color: _colors[0],
                     date: '2013-10-04 22:23:00',
                     children: [{
                             name: 'Buenas',
                             value: 390,
-                            color: _colors[1],
                         },
                         {
                             name: 'Malas',
                             value: 10,
-                            color: _colors[2],
                             children: [{
                                     name: 'Arranque',
                                     value: 4,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Lluvia',
                                     value: 6,
-                                    color: _colors[4],
                                 }
                             ]
                         }
@@ -1515,26 +1510,21 @@
                 {
                     name: 'Producción',
                     value: 900,
-                    color: _colors[0],
                     date: '2013-10-05 22:23:00',
                     children: [{
                             name: 'Buenas',
                             value: 888,
-                            color: _colors[1],
                         },
                         {
                             name: 'Malas',
                             value: 12,
-                            color: _colors[2],
                             children: [{
                                     name: 'Arranque',
                                     value: 5,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Lluvia',
                                     value: 7,
-                                    color: _colors[4],
                                 }
                             ]
                         }
@@ -1543,26 +1533,21 @@
                 {
                     name: 'Producción',
                     value: 1600,
-                    color: _colors[0],
                     date: '2013-10-06 22:23:00',
                     children: [{
                             name: 'Buenas',
                             value: 1422,
-                            color: _colors[1],
                         },
                         {
                             name: 'Malas',
                             value: 178,
-                            color: _colors[2],
                             children: [{
                                     name: 'Arranque',
                                     value: 10,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Lluvia',
                                     value: 168,
-                                    color: _colors[4],
                                 }
                             ]
                         }
@@ -1571,26 +1556,21 @@
                 {
                     name: 'Producción',
                     value: 2000,
-                    color: _colors[0],
                     date: '2013-10-07 22:23:00',
                     children: [{
                             name: 'Buenas',
                             value: 1799,
-                            color: _colors[1],
                         },
                         {
                             name: 'Malas',
                             value: 201,
-                            color: _colors[2],
                             children: [{
                                     name: 'Arranque',
                                     value: 20,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Lluvia',
                                     value: 181,
-                                    color: _colors[4],
                                 }
                             ]
                         }
@@ -1600,46 +1580,37 @@
             disponibilidad: [{
                     name: 'Disponible',
                     value: 350000,
-                    color: _colors[0],
                     date: '2013-10-04 22:23:00',
                     children: [{
                             name: 'Productivo',
                             value: 313250,
-                            color: _colors[1],
                         },
                         {
                             name: 'Paradas',
                             value: 36750,
-                            color: _colors[2],
                             children: [{
                                     name: 'Maquina',
                                     value: 125,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Molde',
                                     value: 12225,
-                                    color: _colors[4],
                                 },
                                 {
                                     name: 'Abandono',
                                     value: 6025,
-                                    color: _colors[5],
                                 },
                                 {
                                     name: 'Material',
                                     value: 9200,
-                                    color: _colors[6],
                                 },
                                 {
                                     name: 'Calidad',
                                     value: 8100,
-                                    color: _colors[7],
                                 },
                                 {
                                     name: 'Montaje',
                                     value: 1075,
-                                    color: _colors[8],
                                 }
                             ]
                         }
@@ -1648,46 +1619,37 @@
                 {
                     name: 'Disponible',
                     value: 350000,
-                    color: _colors[0],
                     date: '2013-10-05 22:23:00',
                     children: [{
                             name: 'Productivo',
                             value: 313250,
-                            color: _colors[1],
                         },
                         {
                             name: 'Paradas',
                             value: 36750,
-                            color: _colors[2],
                             children: [{
                                     name: 'Maquina',
                                     value: 125,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Molde',
                                     value: 12225,
-                                    color: _colors[4],
                                 },
                                 {
                                     name: 'Abandono',
                                     value: 6025,
-                                    color: _colors[5],
                                 },
                                 {
                                     name: 'Material',
                                     value: 9200,
-                                    color: _colors[6],
                                 },
                                 {
                                     name: 'Calidad',
                                     value: 8100,
-                                    color: _colors[7],
                                 },
                                 {
                                     name: 'Montaje',
                                     value: 1075,
-                                    color: _colors[8],
                                 }
                             ]
                         }
@@ -1696,46 +1658,37 @@
                 {
                     name: 'Disponible',
                     value: 350000,
-                    color: _colors[0],
                     date: '2013-10-06 22:23:00',
                     children: [{
                             name: 'Productivo',
                             value: 313250,
-                            color: _colors[1],
                         },
                         {
                             name: 'Paradas',
                             value: 36750,
-                            color: _colors[2],
                             children: [{
                                     name: 'Maquina',
                                     value: 125,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Molde',
                                     value: 12225,
-                                    color: _colors[4],
                                 },
                                 {
                                     name: 'Abandono',
                                     value: 6025,
-                                    color: _colors[5],
                                 },
                                 {
                                     name: 'Material',
                                     value: 9200,
-                                    color: _colors[6],
                                 },
                                 {
                                     name: 'Calidad',
                                     value: 8100,
-                                    color: _colors[7],
                                 },
                                 {
                                     name: 'Montaje',
                                     value: 1075,
-                                    color: _colors[8],
                                 }
                             ]
                         }
@@ -1744,46 +1697,37 @@
                 {
                     name: 'Disponible',
                     value: 350000,
-                    color: _colors[0],
                     date: '2013-10-07 22:23:00',
                     children: [{
                             name: 'Productivo',
                             value: 313250,
-                            color: _colors[1],
                         },
                         {
                             name: 'Paradas',
                             value: 36750,
-                            color: _colors[2],
                             children: [{
                                     name: 'Maquina',
                                     value: 125,
-                                    color: _colors[3],
                                 },
                                 {
                                     name: 'Molde',
                                     value: 12225,
-                                    color: _colors[4],
                                 },
                                 {
                                     name: 'Abandono',
                                     value: 6025,
-                                    color: _colors[5],
                                 },
                                 {
                                     name: 'Material',
                                     value: 9200,
-                                    color: _colors[6],
                                 },
                                 {
                                     name: 'Calidad',
                                     value: 8100,
-                                    color: _colors[7],
                                 },
                                 {
                                     name: 'Montaje',
                                     value: 1075,
-                                    color: _colors[8],
                                 }
                             ]
                         }
@@ -1793,68 +1737,56 @@
             rendimiento: [{
                     name: 'Capacidad',
                     value: 2500,
-                    color: _colors[0],
                     date: '2013-10-04 22:23:00',
                     children: [{
                             name: 'Producido',
                             value: 2000,
-                            color: _colors[1],
                         },
                         {
                             name: 'Ineficiencias',
                             value: 500,
-                            color: _colors[2],
                         }
                     ]
                 },
                 {
                     name: 'Capacidad',
                     value: 2500,
-                    color: _colors[0],
                     date: '2013-10-05 22:23:00',
                     children: [{
                             name: 'Producido',
                             value: 2000,
-                            color: _colors[1],
                         },
                         {
                             name: 'Ineficiencias',
                             value: 500,
-                            color: _colors[2],
                         }
                     ]
                 },
                 {
                     name: 'Capacidad',
                     value: 2500,
-                    color: _colors[0],
                     date: '2013-10-06 22:23:00',
                     children: [{
                             name: 'Producido',
                             value: 2000,
-                            color: _colors[1],
                         },
                         {
                             name: 'Ineficiencias',
                             value: 500,
-                            color: _colors[2],
                         }
                     ]
                 },
                 {
                     name: 'Capacidad',
                     value: 2500,
-                    color: _colors[0],
                     date: '2013-10-07 22:23:00',
                     children: [{
                             name: 'Producido',
                             value: 2000,
-                            color: _colors[1],
                         },
                         {
                             name: 'Ineficiencias',
                             value: 500,
-                            color: _colors[2],
                         }
                     ]
                 },
@@ -1863,7 +1795,6 @@
                 'plc1': [{
                     name: 'Ciclo',
                     value: 60,
-                    color: _colors[0],
                     date: '2013-10-04 22:23:00',
                     min: 55,
                     max: 65,
@@ -1871,18 +1802,15 @@
                     children: [{
                             name: 'Maquina',
                             value: 40,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 20,
-                            color: _colors[2],
                         }
                     ]
                 }, {
                     name: 'Ciclo',
                     value: 65,
-                    color: _colors[0],
                     date: '2013-10-05 22:23:00',
                     min: 55,
                     max: 65,
@@ -1890,18 +1818,15 @@
                     children: [{
                             name: 'Maquina',
                             value: 45,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 20,
-                            color: _colors[2],
                         }
                     ]
                 }, {
                     name: 'Ciclo',
                     value: 55,
-                    color: _colors[0],
                     date: '2013-10-06 22:23:00',
                     min: 55,
                     max: 65,
@@ -1909,18 +1834,15 @@
                     children: [{
                             name: 'Maquina',
                             value: 40,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 15,
-                            color: _colors[2],
                         }
                     ]
                 }, {
                     name: 'Ciclo',
                     value: 50,
-                    color: _colors[0],
                     date: '2013-10-07 22:23:00',
                     min: 55,
                     max: 65,
@@ -1928,19 +1850,16 @@
                     children: [{
                             name: 'Maquina',
                             value: 35,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 15,
-                            color: _colors[2],
                         }
                     ]
                 }, ],
                 'plc2': [{
                     name: 'Ciclo',
                     value: 50,
-                    color: _colors[0],
                     date: '2013-10-04 22:23:00',
                     min: 55,
                     max: 65,
@@ -1948,18 +1867,15 @@
                     children: [{
                             name: 'Maquina',
                             value: 35,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 5,
-                            color: _colors[2],
                         }
                     ]
                 }, {
                     name: 'Ciclo',
                     value: 40,
-                    color: _colors[0],
                     date: '2013-10-05 22:23:00',
                     min: 55,
                     max: 65,
@@ -1967,18 +1883,15 @@
                     children: [{
                             name: 'Maquina',
                             value: 35,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 5,
-                            color: _colors[2],
                         }
                     ]
                 }, {
                     name: 'Ciclo',
                     value: 65,
-                    color: _colors[0],
                     date: '2013-10-06 22:23:00',
                     min: 50,
                     max: 60,
@@ -1986,18 +1899,15 @@
                     children: [{
                             name: 'Maquina',
                             value: 10,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 55,
-                            color: _colors[2],
                         }
                     ]
                 }, {
                     name: 'Ciclo',
                     value: 52,
-                    color: _colors[0],
                     date: '2013-10-07 22:23:00',
                     min: 50,
                     max: 60,
@@ -2005,12 +1915,10 @@
                     children: [{
                             name: 'Maquina',
                             value: 12,
-                            color: _colors[1],
                         },
                         {
                             name: 'Puerta',
                             value: 40,
-                            color: _colors[2],
                         }
                     ]
                 }, ],
@@ -2028,7 +1936,6 @@
                 disponibilidad: {
                     name: 'Disponibilidad',
                     values: [81, 82, 83, 84],
-                    color: _colors[0],
                     dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
                         '2013-10-07 22:23:00'
                     ],
@@ -2036,7 +1943,6 @@
                 rendimiento: {
                     name: 'Rendimiento',
                     values: [71, 72, 73, 74],
-                    color: _colors[1],
                     dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
                         '2013-10-07 22:23:00'
                     ],
@@ -2044,7 +1950,6 @@
                 calidad: {
                     name: 'Calidad',
                     values: [91, 92, 93, 94],
-                    color: _colors[2],
                     dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
                         '2013-10-07 22:23:00'
                     ],
@@ -2052,7 +1957,6 @@
                 eficiencia: {
                     name: 'Eficiencia',
                     values: [84, 83, 82, 81],
-                    color: _colors[3],
                     dates: ['2013-10-04 22:23:00', '2013-10-05 22:23:00', '2013-10-06 22:23:00',
                         '2013-10-07 22:23:00'
                     ],
@@ -2062,327 +1966,258 @@
             energia: [{
                 name: 'Total',
                 value: 3000,
-                color: _colors[0],
                 date: '2013-10-04 22:23:00',
                 children: [{
                         name: 'Iny. 1',
                         value: 500,
-                        color: _colors[1],
                         children: [{
                             name: 'PartA',
                             value: 200,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 300,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 2',
                         value: 1500,
-                        color: _colors[4],
                         children: [{
                             name: 'PartA',
                             value: 600,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 900,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 3',
                         value: 1000,
-                        color: _colors[7],
                         children: [{
                             name: 'PartA',
                             value: 300,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 700,
-                            color: _colors[3],
                         }, ]
                     },
                 ]
             }, {
                 name: 'Total',
                 value: 5000,
-                color: _colors[0],
                 date: '2013-10-05 22:23:00',
                 children: [{
                         name: 'Iny. 1',
                         value: 1000,
-                        color: _colors[1],
                         children: [{
                             name: 'PartA',
                             value: 400,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 600,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 2',
                         value: 1700,
-                        color: _colors[4],
                         children: [{
                             name: 'PartA',
                             value: 450,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 1250,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 3',
                         value: 2300,
-                        color: _colors[7],
                         children: [{
                             name: 'PartA',
                             value: 1000,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 1300,
-                            color: _colors[3],
                         }, ]
                     },
                 ]
             }, {
                 name: 'Total',
                 value: 6000,
-                color: _colors[0],
                 date: '2013-10-06 22:23:00',
                 children: [{
                         name: 'Iny. 1',
                         value: 1200,
-                        color: _colors[1],
                         children: [{
                             name: 'PartA',
                             value: 100,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 1100,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 2',
                         value: 1900,
-                        color: _colors[4],
                         children: [{
                             name: 'PartA',
                             value: 360,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 1540,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 3',
                         value: 2900,
-                        color: _colors[7],
                         children: [{
                             name: 'PartA',
                             value: 1500,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 1400,
-                            color: _colors[3],
                         }, ]
                     },
                 ]
             }, {
                 name: 'Total',
                 value: 9000,
-                color: _colors[0],
                 date: '2013-10-07 22:23:00',
                 children: [{
                         name: 'Iny. 1',
                         value: 1600,
-                        color: _colors[1],
                         children: [{
                             name: 'PartA',
                             value: 400,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 1200,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 2',
                         value: 2100,
-                        color: _colors[4],
                         children: [{
                             name: 'PartA',
                             value: 700,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 1400,
-                            color: _colors[3],
                         }, ]
                     },
                     {
                         name: 'Iny. 3',
                         value: 5300,
-                        color: _colors[7],
                         children: [{
                             name: 'PartA',
                             value: 3000,
-                            color: _colors[2],
                         }, {
                             name: 'Partb',
                             value: 2300,
-                            color: _colors[3],
                         }, ]
                     },
                 ]
             }, ],
             material: {
-                maquina: [
-                    {
+                maquina: [{
                         name: 'Total',
                         value: 275,
-                        color: _colors[0],
                         date: '2013-10-04 22:23:00',
                         children: [{
                             name: 'Inyectora 1',
                             value: 135,
-                            color: _colors[1],
                             children: [{
                                 name: '1.Molde 1',
                                 value: 85,
-                                color: _colors[2]
                             }, {
                                 name: '1.Molde 2',
                                 value: 50,
-                                color: _colors[3]
                             }, ]
                         }, {
                             name: 'Inyectora 2',
                             value: 140,
-                            color: _colors[4],
                             children: [{
                                 name: '2.Molde 1',
                                 value: 30,
-                                color: _colors[5]
                             }, {
                                 name: '2.Molde 2',
                                 value: 110,
-                                color: _colors[6]
                             }, ]
                         }, ],
                     },
                     {
                         name: 'Total',
                         value: 275,
-                        color: _colors[0],
                         date: '2013-10-05 22:23:00',
                         children: [{
                             name: 'Inyectora 1',
                             value: 135,
-                            color: _colors[1],
                             children: [{
                                 name: '1.Molde 1',
                                 value: 85,
-                                color: _colors[2]
                             }, {
                                 name: '1.Molde 2',
                                 value: 50,
-                                color: _colors[3]
                             }, ]
                         }, {
                             name: 'Inyectora 2',
                             value: 140,
-                            color: _colors[4],
                             children: [{
                                 name: '2.Molde 1',
                                 value: 30,
-                                color: _colors[5]
                             }, {
                                 name: '2.Molde 2',
                                 value: 110,
-                                color: _colors[6]
                             }, ]
                         }, ],
                     },
                     {
                         name: 'Total',
                         value: 275,
-                        color: _colors[0],
                         date: '2013-10-06 22:23:00',
                         children: [{
                             name: 'Inyectora 1',
                             value: 135,
-                            color: _colors[1],
                             children: [{
                                 name: '1.Molde 1',
                                 value: 30,
-                                color: _colors[5]
                             }, {
                                 name: '1.Molde 2',
                                 value: 105,
-                                color: _colors[6]
                             }, ]
                         }, {
                             name: 'Inyectora 2',
                             value: 140,
-                            color: _colors[4],
                             children: [{
                                 name: '2.Molde 1',
                                 value: 30,
-                                color: _colors[5]
                             }, {
                                 name: '2.Molde 2',
                                 value: 110,
-                                color: _colors[6]
                             }, ]
                         }, ],
                     },
                     {
                         name: 'Total',
                         value: 275,
-                        color: _colors[0],
                         date: '2013-10-07 22:23:00',
                         children: [{
                             name: 'Inyectora 1',
                             value: 135,
-                            color: _colors[1],
                             children: [{
                                 name: '1.Molde 1',
                                 value: 85,
-                                color: _colors[2]
                             }, {
                                 name: '1.Molde 2',
                                 value: 50,
-                                color: _colors[3]
                             }, ]
                         }, {
                             name: 'Inyectora 2',
                             value: 140,
-                            color: _colors[4],
                             children: [{
                                 name: '2.Molde 1',
                                 value: 30,
-                                color: _colors[5]
                             }, {
                                 name: '2.Molde 2',
                                 value: 110,
-                                color: _colors[6]
                             }, ]
                         }, ],
                     },
@@ -2390,134 +2225,151 @@
                 molde: [{
                     name: 'Total',
                     value: 275,
-                    color: _colors[0],
                     date: '2013-10-04 22:23:00',
                     children: [{
                         name: 'Molde 1',
                         value: 135,
-                        color: _colors[1],
                         children: [{
                             name: '1.Inyectora 1',
                             value: 85,
-                            color: _colors[2],
                         }, {
                             name: '1.Inyectora 2',
                             value: 50,
-                            color: _colors[3],
                         }, ]
                     }, {
                         name: 'Molde 2',
                         value: 140,
-                        color: _colors[4],
                         children: [{
                             name: '2.Inyectora 1',
                             value: 30,
-                            color: _colors[5],
                         }, {
                             name: '2.Inyectora 2',
                             value: 110,
-                            color: _colors[6],
                         }, ]
                     }, ],
-                },{
+                }, {
                     name: 'Total',
                     value: 275,
-                    color: _colors[0],
                     date: '2013-10-05 22:23:00',
                     children: [{
                         name: 'Molde 1',
                         value: 135,
-                        color: _colors[1],
                         children: [{
                             name: '1.Inyectora 1',
                             value: 85,
-                            color: _colors[2], 
                         }, {
                             name: '1.Inyectora 2',
                             value: 50,
-                            color: _colors[3],
                         }, ]
                     }, {
                         name: 'Molde 2',
                         value: 140,
-                        color: _colors[4],
                         children: [{
                             name: '2.Inyectora 1',
                             value: 30,
-                            color: _colors[5],
                         }, {
                             name: '2.Inyectora 2',
                             value: 110,
-                            color: _colors[6],
                         }, ]
                     }, ],
-                },{
+                }, {
                     name: 'Total',
                     value: 275,
-                    color: _colors[0],
                     date: '2013-10-06 22:23:00',
                     children: [{
                         name: 'Molde 1',
                         value: 135,
-                        color: _colors[1],
                         children: [{
                             name: '1.Inyectora 1',
                             value: 85,
-                            color: _colors[2],
                         }, {
                             name: '1.Inyectora 2',
                             value: 50,
-                            color: _colors[3],
                         }, ]
                     }, {
                         name: 'Molde 2',
                         value: 140,
-                        color: _colors[4],
                         children: [{
                             name: '2.Inyectora 1',
                             value: 30,
-                            color: _colors[5],
                         }, {
                             name: '2.Inyectora 2',
                             value: 110,
-                            color: _colors[6],
                         }, ]
                     }, ],
-                },{
+                }, {
                     name: 'Total',
                     value: 275,
-                    color: _colors[0],
                     date: '2013-10-07 22:23:00',
                     children: [{
                         name: 'Molde 1',
                         value: 135,
-                        color: _colors[1],
                         children: [{
                             name: '1.Inyectora 1',
                             value: 85,
-                            color: _colors[2],
                         }, {
                             name: '1.Inyectora 2',
                             value: 50,
-                            color: _colors[3],
                         }, ]
                     }, {
                         name: 'Molde 2',
                         value: 140,
-                        color: _colors[4],
                         children: [{
                             name: '2.Inyectora 1',
                             value: 30,
-                            color: _colors[5],
                         }, {
                             name: '2.Inyectora 2',
                             value: 110,
-                            color: _colors[6],
                         }, ]
                     }, ],
                 }, ]
             },
         };
+
+        function setColors(data) {
+            var i = 0
+            data.color = _colors[i]
+            i++
+            if (data.children) {
+                data.children.forEach(function (d) {
+                    d.color = _colors[i]
+                    i++
+                })
+                data.children.forEach(function (d) {
+                    if (d.children)
+                        d.children.forEach(function (e) {
+                            e.color = _colors[i]
+                            i++
+                        })
+                })
+
+            }
+        }
+        Object.keys(data).forEach(function (section) {
+            if (section == 'configuracion')
+                return
+            if (section == 'ciclos' || section == 'material') {
+                Object.keys(data[section]).forEach(function (_section) {
+                    data[section][_section].forEach(function (step) {
+                        setColors(step)
+                    })
+                })
+                return
+            }
+            if (section == 'indicadores') {
+                var i = 0;
+                Object.keys(data[section]).forEach(function (_section) {
+                    data[section][_section].color = _colors[i]
+                    i++
+                })
+                return
+            }
+            data[section].forEach(function (_section) {
+                setColors(_section)
+            })
+        })
+
+
         var _ciclosPlc = Object.keys(data['ciclos'])[0]
         var _materialPlc = Object.keys(data['material'])[0]
 
@@ -2527,7 +2379,6 @@
                     return
                 if (section == "indicadores") {
 
-                    // Line
                     var lineID = 'line' + proper(section);
                     var lineContainer = '#line' + proper(section) + 'Container'
                     var traces = []
@@ -2601,7 +2452,7 @@
                         polar: {
                             radialaxis: {
                                 visible: true,
-                                range: [0, 100]
+                                range: [50, 100]
                             }
                         },
                         showlegend: false
@@ -2619,11 +2470,6 @@
                         };
                         Plotly.relayout(pieID, update);
                     });
-
-
-
-
-
                     return
                 }
                 var currData = data[section];
@@ -2670,7 +2516,30 @@
                     return _labels
                 }
 
+                function getColors(data) {
+                    var _labels = []
+                    _labels.push(data.color)
+                    if (data.children) {
+                        data.children.forEach(function (d) {
+                            _labels = _labels.concat(getColors(d))
+                        })
+                    }
+                    return _labels
+                }
+
+                function getSunColors(data) {
+                    var _labels = []
+                    data.children.forEach(function (d) {
+                        _labels.push(d.color)
+                    })
+                    return _labels
+                }
+
+                var sunColors = getSunColors(currData[currData.length - 1])
+
                 var labels = getLabels(currData[currData.length - 1])
+
+                var thisColors = getColors(currData[currData.length - 1])
 
                 function getValues(data) {
                     var _values = []
@@ -2724,7 +2593,7 @@
                         "b": 0,
                         "t": 0
                     },
-                    sunburstcolorway: [..._colors].splice(1, _colors.length - 1),
+                    sunburstcolorway: sunColors,
                     width: $(pieParent).width(),
                     height: $(pieParent).width(),
 
@@ -2755,7 +2624,7 @@
                             name: SubLabel,
                             type: 'bar',
                             marker: {
-                                color: _colors[2 + i] ///carefull the # + comes hardcoded form data
+                                color: currData[0].children[0].children[i].color
                             }
                         };
                         _data.push(trace)
@@ -2775,7 +2644,7 @@
                         displayModeBar: false,
                     })
                 }
-                
+
                 Plotly.newPlot(pieID, _data, layout, {
                     showSendToCloud: false,
                     displayModeBar: false,
@@ -2807,7 +2676,7 @@
                         name: label,
                         hovertemplate: `<extra>${label}</extra>%{y} ud.`,
                         line: {
-                            color: _colors[i],
+                            color: thisColors[i],
                         },
                         fill: 'tozeroy',
                     };
