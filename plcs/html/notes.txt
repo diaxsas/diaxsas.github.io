@@ -1,0 +1,4 @@
+todo:
+tab numbers in legend
+
+check lables for different graphs (units)

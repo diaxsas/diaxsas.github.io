@@ -2392,6 +2392,22 @@
 
         function dataChange() {
             Object.keys(data).forEach(function (section) {
+                var units = 'ud'
+                switch(section)
+                {
+                    case 'disponibilidad':
+                        units = 'hr'
+                        break
+                    case 'ciclos':
+                        units = 'seg'
+                        break
+                    case 'energia':
+                        units = 'kw'
+                        break
+                    case 'material':
+                        units = 'g'
+                        break
+                }
                 if (section == "configuracion")
                     return
                 if (section == "indicadores") {
@@ -2495,7 +2511,7 @@
                     if ($('#ciclePlc>option').length == 0) {
                         var _keys = Object.keys(data[section])
                         _keys.forEach(function (key) {
-                            $('#ciclePlc').append($(`<option value="${key}">${key}</option>`))
+                            $('#ciclePlc').append($(`<option value="${key}">${proper(key)}</option>`))
                         })
                     }
 
@@ -2505,7 +2521,7 @@
                     if ($('#MaterialPlc>option').length == 0) {
                         var _keys = Object.keys(data[section])
                         _keys.forEach(function (key) {
-                            $('#MaterialPlc').append($(`<option value="${key}">${key}</option>`))
+                            $('#MaterialPlc').append($(`<option value="${key}">${proper(key)}</option>`))
                         })
                     }
 
@@ -2601,7 +2617,7 @@
                     },
                     "branchvalues": 'total',
                     textinfo: 'label+percent entry',
-                    hovertemplate: "<extra></extra><br>%{value} ud.</br>(%{customdata}%)"
+                    hovertemplate: "<extra></extra><br>%{value} "+ units+".</br>(%{customdata}%)"
                 }];
                 var layout = {
                     "margin": {
@@ -2691,12 +2707,14 @@
                         x: x,
                         type: 'scatter',
                         name: label,
-                        hovertemplate: `<extra>${label}</extra>%{y} ud.`,
+                        hovertemplate: `<extra>${label}</extra>%{y} ${units}.`,
                         line: {
                             color: thisColors[i],
                         },
                         fill: 'tozeroy',
                     };
+                    if(i==0)
+                        trace.line.dash = 'dash'
                     if (section == "ciclos")
                         trace.line.shape = 'vh'
                     traces.push(trace)
