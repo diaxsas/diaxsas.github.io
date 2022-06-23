@@ -736,7 +736,7 @@
             position: relative;
             top: -21px;
             background-color: var(--color-gris);
-            display: flex;
+            display: none;
             justify-content: space-between;
         }
 
@@ -906,6 +906,10 @@
             margin: 5px;
             margin-top: 10px;
         }
+
+        .button_download_parent {
+            display: none;
+        }
     </style>
 </head>
 
@@ -927,7 +931,7 @@
             <div class="title_container">
                 <h2>Confirguración</h2>
                 <div class="columns">
-                    <div class="relative">
+                    <div class="relative button_download_parent">
                         <div id="button_download_id" class="button_main center">
                             <div class="button_download"></div>
                         </div>
@@ -1480,27 +1484,22 @@
 
 
 
-        var _colors = ["#D6E4FF", 
-
-        "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9", 
-        "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", "#F9E84B", "#FF44CD", 
-        "#71A3F7", "#F0B0F3", "#F9C25C", "#76F1CC", "#7DEF84", "#FC9885", "#FCF08B", "#FC7BDA",
-        "#A0C2FA", "#F4CFF6", "#FBDA9D", "#A8F6DF", "#ACF8B0", "#FCBBAF", "#FCF8D7", "#FFAAE8",
-        "#D0E0FC", "#F9F1F9", "#FCECCE", "#D9F6EE", "#CEFED1", "#FCE0DB", "#FFFCE5", "#FCD7F2",
-
-
-
-
-        "#3366D6", "#4285F4", "#71A3F7", "#A0C2FA", "#D0E0FC", 
-        "#BE53C4", "#E585EB", "#F0B0F3", "#F4CFF6", "#F9F1F9", 
-        "#FFA600", "#F9B432", "#F9C25C", "#FBDA9D", "#FCECCE", 
-        "#FB4826", "#F9674D", "#FC9885", "#FCBBAF", "#FCE0DB", 
-        "#1EC828", "#4BE354", "#7DEF84", "#ACF8B0", "#CEFED1", 
-        "#23C897", "#41E6B5", "#76F1CC", "#A8F6DF", "#D9F6EE", 
-        "#F9E215", "#F9E84B", "#FCF08B", "#FCF8D7", "#FFFCE5", 
-        "#EC2EB9", "#FF44CD", "#FC7BDA", "#FFAAE8", "#FCD7F2"
+        var _colors = ["#D6E4FF",
+            "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9",
+            "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", "#F9E84B", "#FF44CD",
+            "#71A3F7", "#F0B0F3", "#F9C25C", "#76F1CC", "#7DEF84", "#FC9885", "#FCF08B", "#FC7BDA",
+            "#A0C2FA", "#F4CFF6", "#FBDA9D", "#A8F6DF", "#ACF8B0", "#FCBBAF", "#FCF8D7", "#FFAAE8",
+            "#D0E0FC", "#F9F1F9", "#FCECCE", "#D9F6EE", "#CEFED1", "#FCE0DB", "#FFFCE5", "#FCD7F2",
+            "#3366D6", "#4285F4", "#71A3F7", "#A0C2FA", "#D0E0FC",
+            "#BE53C4", "#E585EB", "#F0B0F3", "#F4CFF6", "#F9F1F9",
+            "#FFA600", "#F9B432", "#F9C25C", "#FBDA9D", "#FCECCE",
+            "#FB4826", "#F9674D", "#FC9885", "#FCBBAF", "#FCE0DB",
+            "#1EC828", "#4BE354", "#7DEF84", "#ACF8B0", "#CEFED1",
+            "#23C897", "#41E6B5", "#76F1CC", "#A8F6DF", "#D9F6EE",
+            "#F9E215", "#F9E84B", "#FCF08B", "#FCF8D7", "#FFFCE5",
+            "#EC2EB9", "#FF44CD", "#FC7BDA", "#FFAAE8", "#FCD7F2"
         ];
-        var data = {
+        var dataFull = {
             calidad: [{
                     name: 'Producción',
                     value: 400,
@@ -2342,6 +2341,7 @@
                 }, ]
             },
         };
+        var data = JSON.parse(JSON.stringify(dataFull));
 
         function setColors(data) {
             var i = 0
@@ -2393,8 +2393,7 @@
         function dataChange() {
             Object.keys(data).forEach(function (section) {
                 var units = 'ud'
-                switch(section)
-                {
+                switch (section) {
                     case 'disponibilidad':
                         units = 'hr'
                         break
@@ -2521,7 +2520,8 @@
                     if ($('#MaterialPlc>option').length == 0) {
                         var _keys = Object.keys(data[section])
                         _keys.forEach(function (key) {
-                            $('#MaterialPlc').append($(`<option value="${key}">${proper(key)}</option>`))
+                            $('#MaterialPlc').append($(
+                                `<option value="${key}">${proper(key)}</option>`))
                         })
                     }
 
@@ -2617,7 +2617,7 @@
                     },
                     "branchvalues": 'total',
                     textinfo: 'label+percent entry',
-                    hovertemplate: "<extra></extra><br>%{value} "+ units+".</br>(%{customdata}%)"
+                    hovertemplate: "<extra></extra><br>%{value} " + units + ".</br>(%{customdata}%)"
                 }];
                 var layout = {
                     "margin": {
@@ -2713,7 +2713,7 @@
                         },
                         fill: 'tozeroy',
                     };
-                    if(i==0)
+                    if (i == 0)
                         trace.line.dash = 'dash'
                     if (section == "ciclos")
                         trace.line.shape = 'vh'

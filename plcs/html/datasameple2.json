@@ -1,0 +1,3530 @@
+[
+    {
+      "plc": "PLC1",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "15239"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2857604"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3629"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.52"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.27"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.35"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.35"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.35"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "70"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "19"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "19"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "438"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "1301"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "32"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "12"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3430"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "15248"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "8201001"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3635"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "613"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "10"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "21.57"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "8.17"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "11.15"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.3"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "13.4"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "19.7"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "37"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "54"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "5"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "120"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "21"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "14891"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "7856701"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3470"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "35"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "35.59"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.86"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.99"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "7.05"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.88"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "5"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "6"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "19"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "25"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "191"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "283"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "14"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "197"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3932"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "69"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "71"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "7120"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "36"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "15243"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "1861102"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3633"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "185"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "10"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "28.61"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.37"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.51"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.53"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.41"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "153"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "4.5"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "54.4"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "58.9"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "72"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "1656"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "14"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "6"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2539"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "38"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "15231"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2857007"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3625"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "46.17"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.6"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.42"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.58"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.43"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "5"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "1.6"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "55.8"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "57.4"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "204"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2151"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "32"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "12"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3348"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "40"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "10"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.3"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.81"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "160.76"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "-142.96"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "17.8"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "106"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "38"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "123"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "35"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "15232"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2857103"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "3625"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "53.44"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.01"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.1"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.09"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "11.89"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "2"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "52.7"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "52.7"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "20"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "52"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "14"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "912"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "41"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "22"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "1265"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:05:57",
+      "quality": "Good+Good+NotLimited",
+      "value": "45"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC1",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "15239"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2857604"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3629"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.52"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.27"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.35"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.35"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2.35"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "70"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "19"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "19"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "438"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "1301"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "32"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "12"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3430"
+    },
+    {
+      "plc": "PLC2",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "15248"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "8201001"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3635"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "613"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "10"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "21.57"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "8.17"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "11.15"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.3"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "13.4"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "19.7"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "37"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "54"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "5"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "123"
+    },
+    {
+      "plc": "PLC3",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "21"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "14891"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "7856701"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3470"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "35"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "35.59"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.86"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.99"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "7.05"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.88"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "5"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "6"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "19"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "25"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "191"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "283"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "14"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "197"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3932"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "69"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "71"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "7120"
+    },
+    {
+      "plc": "PLC4",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "36"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "15243"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "1861102"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3633"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "185"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "10"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "28.61"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.37"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.51"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.53"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "5.41"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "153"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "4.9"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "36.5"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "41.4"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "72"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "1657"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "14"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "6"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2541"
+    },
+    {
+      "plc": "PLC5",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "38"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "15231"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2857007"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3625"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "46.17"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.6"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.42"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.58"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.43"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "5"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "1.6"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "55.8"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "57.4"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "204"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2151"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "32"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "12"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3348"
+    },
+    {
+      "plc": "PLC6",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "40"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC7",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Uncertain+Uncertain+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "10"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "9.3"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "6.81"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "160.76"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "-142.96"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "17.8"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "106"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "38"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "123"
+    },
+    {
+      "plc": "PLC8",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "35"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "15232"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML3",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2857103"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "3625"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI19",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "30"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF12",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "53.44"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF13",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.01"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF14",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.1"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF15",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "12.09"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF16",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "11.89"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF17",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF18",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI100",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "2"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI99",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF8",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF9",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "52.7"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF1",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "52.7"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI121",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI122",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "20"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI124",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "52"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI127",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI128",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "14"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI123",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "0"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML0",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "912"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI101",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "41"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MI102",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "22"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "ML131",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "1265"
+    },
+    {
+      "plc": "PLC9",
+      "variable": "MF5",
+      "timeStamp": "23/06/2022 14:06:54",
+      "quality": "Good+Good+NotLimited",
+      "value": "45"
+    }
+  ]

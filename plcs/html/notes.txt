@@ -1,7 +1,6 @@
 todo:
-tab numbers in legend
-
-1. que los filtros sirvan
-2. exportar
-3. los tabs
-4. que hale data de verdad
+*tab numbers in legend
+*exportar
+*los tabs de config
+*que hale data de verdad
+*que los filtros sirvan

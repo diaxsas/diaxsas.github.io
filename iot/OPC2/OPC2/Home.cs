@@ -29,7 +29,7 @@ namespace OPC2
             "SI30"
         };
         string[] states = {
-            "MI0"
+            //"MI0"
         };
 
         /*string[] plcs = {
@@ -175,7 +175,7 @@ namespace OPC2
             groupVariables.UpdateRate = TimeSpan.FromMilliseconds(1000);
 
             minuteData.Clear();
-            getDataSlice();
+            //getDataSlice();
         }
 
         private void Unsubscribe_Items()
@@ -216,6 +216,27 @@ namespace OPC2
                 set;
             }
             public string value
+            {
+                get;
+                set;
+            }
+        }
+        class DataSlice
+        {
+            public string timeStamp
+            {
+                get;
+                set;
+            }
+            public Dictionary<string, PLC> plcs
+            {
+                get;
+                set;
+            }
+        }
+        class PLC
+        {
+            public Dictionary<string, string> variables
             {
                 get;
                 set;
@@ -290,7 +311,7 @@ namespace OPC2
                 dgv.Rows.Clear();
                 dgv.Refresh();
             }
-            getDataSlice();
+            //getDataSlice();
         }
     }
 }
