@@ -1499,7 +1499,7 @@
             "#F9E215", "#F9E84B", "#FCF08B", "#FCF8D7", "#FFFCE5",
             "#EC2EB9", "#FF44CD", "#FC7BDA", "#FFAAE8", "#FCD7F2"
         ];
-        var dataFull = {
+        var fullData = {
             calidad: [{
                     name: 'Producción',
                     value: 400,
@@ -2341,7 +2341,7 @@
                 }, ]
             },
         };
-        var data = JSON.parse(JSON.stringify(dataFull));
+        var filteredData = JSON.parse(JSON.stringify(fullData));
 
         function setColors(data) {
             var i = 0
@@ -2362,12 +2362,12 @@
 
             }
         }
-        Object.keys(data).forEach(function (section) {
+        Object.keys(filteredData).forEach(function (section) {
             if (section == 'configuracion')
                 return
             if (section == 'ciclos' || section == 'material') {
-                Object.keys(data[section]).forEach(function (_section) {
-                    data[section][_section].forEach(function (step) {
+                Object.keys(filteredData[section]).forEach(function (_section) {
+                    filteredData[section][_section].forEach(function (step) {
                         setColors(step)
                     })
                 })
@@ -2375,23 +2375,23 @@
             }
             if (section == 'indicadores') {
                 var i = 0;
-                Object.keys(data[section]).forEach(function (_section) {
-                    data[section][_section].color = _colors[i]
+                Object.keys(filteredData[section]).forEach(function (_section) {
+                    filteredData[section][_section].color = _colors[i]
                     i++
                 })
                 return
             }
-            data[section].forEach(function (_section) {
+            filteredData[section].forEach(function (_section) {
                 setColors(_section)
             })
         })
 
 
-        var _ciclosPlc = Object.keys(data['ciclos'])[0]
-        var _materialPlc = Object.keys(data['material'])[0]
+        var _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
+        var _materialPlc = Object.keys(filteredData['material'])[0]
 
         function dataChange() {
-            Object.keys(data).forEach(function (section) {
+            Object.keys(filteredData).forEach(function (section) {
                 var units = 'ud'
                 switch (section) {
                     case 'disponibilidad':
@@ -2416,23 +2416,23 @@
                     var traces = []
                     var maxVals = []
                     var maxLabels = []
-                    labels = Object.keys(data[section])
+                    labels = Object.keys(filteredData[section])
                     labels.forEach(function (label, i) {
-                        var x = data[section][label].dates
-                        var y = data[section][label].values
+                        var x = filteredData[section][label].dates
+                        var y = filteredData[section][label].values
                         if (label != 'rendimiento') {
                             maxVals.push(y[y.length - 1])
                             maxLabels.push(proper(label).substring(0, 3) + '.')
                         }
                         $('#indicador' + proper(label)).text(y[y.length - 1])
-                        $('#underline' + proper(label)).css('border-color', data[section][label].color)
+                        $('#underline' + proper(label)).css('border-color', filteredData[section][label].color)
                         var trace = {
                             y: y,
                             x: x,
                             type: 'scatter',
-                            name: data[section][label].name,
+                            name: filteredData[section][label].name,
                             line: {
-                                color: data[section][label].color,
+                                color: filteredData[section][label].color,
                             },
                         };
                         traces.push(trace)
@@ -2504,11 +2504,11 @@
                     });
                     return
                 }
-                var currData = data[section];
+                var currData = filteredData[section];
                 if (section == "ciclos") {
-                    currData = data[section][_ciclosPlc]
+                    currData = filteredData[section][_ciclosPlc]
                     if ($('#ciclePlc>option').length == 0) {
-                        var _keys = Object.keys(data[section])
+                        var _keys = Object.keys(filteredData[section])
                         _keys.forEach(function (key) {
                             $('#ciclePlc').append($(`<option value="${key}">${proper(key)}</option>`))
                         })
@@ -2516,9 +2516,9 @@
 
                 }
                 if (section == "material") {
-                    currData = data[section][_materialPlc]
+                    currData = filteredData[section][_materialPlc]
                     if ($('#MaterialPlc>option').length == 0) {
-                        var _keys = Object.keys(data[section])
+                        var _keys = Object.keys(filteredData[section])
                         _keys.forEach(function (key) {
                             $('#MaterialPlc').append($(
                                 `<option value="${key}">${proper(key)}</option>`))
@@ -2867,8 +2867,8 @@
 
 
         //configuracion
-        Object.keys(data['configuracion']).forEach((key) => {
-            var opciones = data['configuracion'][key]
+        Object.keys(filteredData['configuracion']).forEach((key) => {
+            var opciones = filteredData['configuracion'][key]
             var select_container = $('#' + key + '_config .select_section');
             var search_container = $('#' + key + '_config .search_section .rows');
             select_container.empty()
@@ -2883,7 +2883,7 @@
                 search_container.append(new_section)
             })
         })
-        var config_template = $('#sub_config').html();
+        // var config_template = $('#sub_config').html();
         // $('#sub_config').html('');
         //$('#sub_config').html(config_template);
         $('.selected_form .select_section input').on('change', function () {
