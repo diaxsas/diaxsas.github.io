@@ -21,7 +21,7 @@ namespace OPC2
         string clientId = "diaxPublisher_" + Guid.NewGuid().ToString();
 
 
-        string[] plcs = {
+       /* string[] plcs = {
             "PLC7"
         };
         string[] variables = {
@@ -30,9 +30,9 @@ namespace OPC2
         };
         string[] states = {
             //"MI0"
-        };
+        };*/
 
-        /*string[] plcs = {
+        string[] plcs = {
             "PLC1",
             "PLC2",
             "PLC3",
@@ -76,12 +76,12 @@ namespace OPC2
         };
         
         string[] states = {
-            "ML1", // orden
-            "ML3", // color
-            "ML5", // lote
-            "MI18", // operario
-            "MI19" // tipoMaterial
-        };*/
+            //"ML1", // orden
+            //"ML3", // color
+            //"ML5", // lote
+            //"MI18", // operario
+            //"MI19" // tipoMaterial
+        };
 
         public DiaxOPC()
         {
@@ -292,6 +292,7 @@ namespace OPC2
             OpcDaItemValue[] valueResults = group.Read(group.Items, OpcDaDataSource.Device);
             dataSlice = new DataSlice();
             dataSlice.timeStamp = DateTime.Now.ToString();
+            dataSlice.plcs = new Dictionary<string, PLC>();
             for (int k = 0; k < valueResults.Length; k++)
             {
                 OpcDaItemValue valueResult = valueResults[k];
@@ -300,7 +301,11 @@ namespace OPC2
 
                     string _plc = valueResult.Item.ItemId.ToString().Split('.')[0];
                     if (!dataSlice.plcs.ContainsKey(_plc))
-                        dataSlice.plcs.Add(_plc, new PLC());
+                    {
+                        PLC _plcTemp = new PLC();
+                        _plcTemp.variables = new Dictionary<string, PLCVariable>();
+                        dataSlice.plcs.Add(_plc, _plcTemp);
+                    }
                     PLCVariable _var = new PLCVariable();
                     _var.value = valueResult.Value.ToString();
                     _var.quality = valueResult.Quality.ToString();
@@ -322,6 +327,11 @@ namespace OPC2
 
         private void minTimer_Tick(object sender, EventArgs e)
         {
+            if (clear.Checked)
+            {
+                dgv.Rows.Clear();
+                dgv.Refresh();
+            }
             getDataSlice();
             if (publish.Checked)
             {
@@ -331,11 +341,6 @@ namespace OPC2
             }
             minuteData.Clear();
             dgv.Invoke(new Action(() => { dgv.Rows.Insert(0); }));
-            if (clear.Checked)
-            {
-                dgv.Rows.Clear();
-                dgv.Refresh();
-            }
             //getDataSlice();
         }
     }
