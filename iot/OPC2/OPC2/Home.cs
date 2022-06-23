@@ -236,14 +236,27 @@ namespace OPC2
         }
         class PLC
         {
-            public Dictionary<string, string> variables
+            public Dictionary<string, PLCVariable> variables
+            {
+                get;
+                set;
+            }
+        }
+        class PLCVariable
+        {
+            public string quality
+            {
+                get;
+                set;
+            }
+            public string value
             {
                 get;
                 set;
             }
         }
 
-        List<DataPoint> minuteData = new List<DataPoint>();
+        List<DataSlice> minuteData = new List<DataSlice>();
         void OPC_ItemChanged(object sender, OpcDaItemValuesChangedEventArgs args)
         {
             foreach (OpcDaItemValue value in args.Values)
@@ -262,7 +275,7 @@ namespace OPC2
                             value = value.Value.ToString()
                         };
                         printData(dataPoint);
-                        minuteData.Add(dataPoint);
+                        //minuteData.Add(dataPoint);
                     }
                 }
             }
@@ -273,14 +286,25 @@ namespace OPC2
             dgv.Invoke(new Action(() => { dgv.Rows.Insert(0, dataPoint.plc + '.' + dataPoint.variable, dataPoint.timeStamp, dataPoint.quality, dataPoint.value); }));
         }
 
+        DataSlice dataSlice = new DataSlice();
         private void getDataSlice()
         {
             OpcDaItemValue[] valueResults = group.Read(group.Items, OpcDaDataSource.Device);
+            dataSlice = new DataSlice();
+            dataSlice.timeStamp = DateTime.Now.ToString();
             for (int k = 0; k < valueResults.Length; k++)
             {
                 OpcDaItemValue valueResult = valueResults[k];
                 if (valueResult.Error.Succeeded)
                 {
+
+                    string _plc = valueResult.Item.ItemId.ToString().Split('.')[0];
+                    if (!dataSlice.plcs.ContainsKey(_plc))
+                        dataSlice.plcs.Add(_plc, new PLC());
+                    PLCVariable _var = new PLCVariable();
+                    _var.value = valueResult.Value.ToString();
+                    _var.quality = valueResult.Quality.ToString();
+                    string _varName = valueResult.Item.ItemId.ToString().Split('.')[1];
                     DataPoint dataPoint = new DataPoint
                     {
                         plc = valueResult.Item.ItemId.ToString().Split('.')[0],
@@ -289,10 +313,11 @@ namespace OPC2
                         quality = valueResult.Quality.ToString(),
                         value = valueResult.Value.ToString()
                     };
-                    minuteData.Add(dataPoint);
+                    dataSlice.plcs[_plc].variables.Add(_varName, _var);
                     printData(dataPoint);
                 }
             }
+            minuteData.Add(dataSlice);
         }
 
         private void minTimer_Tick(object sender, EventArgs e)
