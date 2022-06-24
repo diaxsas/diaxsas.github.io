@@ -1,1610 +1,4197 @@
-{
-    "calidad": [{
-        "name": "Producción",
-        "value": 18311,
-        "date": "23/06/2022 15:22:07",
-        "children": [{
-            "name": "Buenas",
-            "value": 17995
-        }, {
-            "name": "Malas",
-            "value": 316,
-            "children": [{
-                "name": "Arranque",
-                "value": 193
-            }, {
-                "name": "Lluvia",
-                "value": 123
-            }]
-        }]
-    }, {
-        "name": "Producción",
-        "value": 18317,
-        "date": "23/06/2022 15:23:07",
-        "children": [{
-            "name": "Buenas",
-            "value": 18001
-        }, {
-            "name": "Malas",
-            "value": 316,
-            "children": [{
-                "name": "Arranque",
-                "value": 193
-            }, {
-                "name": "Lluvia",
-                "value": 123
-            }]
-        }]
-    }, {
-        "name": "Producción",
-        "value": 18322,
-        "date": "23/06/2022 15:24:07",
-        "children": [{
-            "name": "Buenas",
-            "value": 18006
-        }, {
-            "name": "Malas",
-            "value": 316,
-            "children": [{
-                "name": "Arranque",
-                "value": 193
-            }, {
-                "name": "Lluvia",
-                "value": 123
-            }]
-        }]
-    }, {
-        "name": "Producción",
-        "value": 18326,
-        "date": "23/06/2022 15:25:07",
-        "children": [{
-            "name": "Buenas",
-            "value": 18010
-        }, {
-            "name": "Malas",
-            "value": 316,
-            "children": [{
-                "name": "Arranque",
-                "value": 193
-            }, {
-                "name": "Lluvia",
-                "value": 123
-            }]
-        }]
-    }],
-    "disponibilidad": [{
-        "name": "Disponible",
-        "value": 11824,
-        "date": "23/06/2022 15:22:07",
-        "children": [{
-            "name": "Productivo",
-            "value": 10196
-        }, {
-            "name": "Paradas",
-            "value": 1628,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Molde",
-                "value": 211
-            }, {
-                "name": "Abandono",
-                "value": 1049
-            }, {
-                "name": "Material",
-                "value": 14
-            }, {
-                "name": "Calidad",
-                "value": 14
-            }, {
-                "name": "Montaje",
-                "value": 340
-            }]
-        }]
-    }, {
-        "name": "Disponible",
-        "value": 11826,
-        "date": "23/06/2022 15:23:07",
-        "children": [{
-            "name": "Productivo",
-            "value": 10198
-        }, {
-            "name": "Paradas",
-            "value": 1628,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Molde",
-                "value": 211
-            }, {
-                "name": "Abandono",
-                "value": 1049
-            }, {
-                "name": "Material",
-                "value": 14
-            }, {
-                "name": "Calidad",
-                "value": 14
-            }, {
-                "name": "Montaje",
-                "value": 340
-            }]
-        }]
-    }, {
-        "name": "Disponible",
-        "value": 11828,
-        "date": "23/06/2022 15:24:07",
-        "children": [{
-            "name": "Productivo",
-            "value": 10200
-        }, {
-            "name": "Paradas",
-            "value": 1628,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Molde",
-                "value": 211
-            }, {
-                "name": "Abandono",
-                "value": 1049
-            }, {
-                "name": "Material",
-                "value": 14
-            }, {
-                "name": "Calidad",
-                "value": 14
-            }, {
-                "name": "Montaje",
-                "value": 340
-            }]
-        }]
-    }, {
-        "name": "Disponible",
-        "value": 11830,
-        "date": "23/06/2022 15:25:07",
-        "children": [{
-            "name": "Productivo",
-            "value": 10202
-        }, {
-            "name": "Paradas",
-            "value": 1628,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Molde",
-                "value": 211
-            }, {
-                "name": "Abandono",
-                "value": 1049
-            }, {
-                "name": "Material",
-                "value": 14
-            }, {
-                "name": "Calidad",
-                "value": 14
-            }, {
-                "name": "Montaje",
-                "value": 340
-            }]
-        }]
-    }],
-    "rendimiento": [{
-        "name": "Capacidad",
-        "value": 22472.816326530614,
-        "date": "23/06/2022 15:22:07",
-        "children": [{
-            "name": "Producido",
-            "value": 18311
-        }, {
-            "name": "Ineficiencias",
-            "value": 4161.816326530614
-        }]
-    }, {
-        "name": "Capacidad",
-        "value": 22477.22448979592,
-        "date": "23/06/2022 15:23:07",
-        "children": [{
-            "name": "Producido",
-            "value": 18317
-        }, {
-            "name": "Ineficiencias",
-            "value": 4160.224489795921
-        }]
-    }, {
-        "name": "Capacidad",
-        "value": 22481.632653061224,
-        "date": "23/06/2022 15:24:07",
-        "children": [{
-            "name": "Producido",
-            "value": 18322
-        }, {
-            "name": "Ineficiencias",
-            "value": 4159.632653061224
-        }]
-    }, {
-        "name": "Capacidad",
-        "value": 22486.04081632653,
-        "date": "23/06/2022 15:25:07",
-        "children": [{
-            "name": "Producido",
-            "value": 18326
-        }, {
-            "name": "Ineficiencias",
-            "value": 4160.040816326531
-        }]
-    }],
-    "ciclos": {
-        "PLC1": [{
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }],
-        "PLC2": [{
-            "name": "Ciclo",
-            "value": 19,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 19,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 19,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 19,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }],
-        "PLC3": [{
-            "name": "Ciclo",
-            "value": 17.6,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 13.2
-            }, {
-                "name": "Puerta",
-                "value": 4.4
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 17.6,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 13.2
-            }, {
-                "name": "Puerta",
-                "value": 4.4
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 17.6,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 13.2
-            }, {
-                "name": "Puerta",
-                "value": 4.4
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 17.6,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 13.2
-            }, {
-                "name": "Puerta",
-                "value": 4.4
-            }]
-        }],
-        "PLC4": [{
-            "name": "Ciclo",
-            "value": 25,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 6
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 25,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 6
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 25,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 6
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 25,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 19
-            }, {
-                "name": "Puerta",
-                "value": 6
-            }]
-        }],
-        "PLC5": [{
-            "name": "Ciclo",
-            "value": 35.9,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 30.8
-            }, {
-                "name": "Puerta",
-                "value": 5.1
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 36,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 31.5
-            }, {
-                "name": "Puerta",
-                "value": 4.5
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 32.5,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 27.9
-            }, {
-                "name": "Puerta",
-                "value": 4.6
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 46,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 40.4
-            }, {
-                "name": "Puerta",
-                "value": 5.6
-            }]
-        }],
-        "PLC6": [{
-            "name": "Ciclo",
-            "value": 57.4,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 55.8
-            }, {
-                "name": "Puerta",
-                "value": 1.6
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 57.4,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 55.8
-            }, {
-                "name": "Puerta",
-                "value": 1.6
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 57.4,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 55.8
-            }, {
-                "name": "Puerta",
-                "value": 1.6
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 57.4,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 55.8
-            }, {
-                "name": "Puerta",
-                "value": 1.6
-            }]
-        }],
-        "PLC7": [{
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 0,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 0
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }],
-        "PLC8": [{
-            "name": "Ciclo",
-            "value": 17.8,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": -142.96
-            }, {
-                "name": "Puerta",
-                "value": 160.76
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 17.8,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": -142.96
-            }, {
-                "name": "Puerta",
-                "value": 160.76
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 17.8,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": -142.96
-            }, {
-                "name": "Puerta",
-                "value": 160.76
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 17.8,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": -142.96
-            }, {
-                "name": "Puerta",
-                "value": 160.76
-            }]
-        }],
-        "PLC9": [{
-            "name": "Ciclo",
-            "value": 52.7,
-            "date": "23/06/2022 15:22:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 52.7
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 52.7,
-            "date": "23/06/2022 15:23:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 52.7
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 52.7,
-            "date": "23/06/2022 15:24:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 52.7
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }, {
-            "name": "Ciclo",
-            "value": 52.7,
-            "date": "23/06/2022 15:25:07",
-            "min": 55,
-            "max": 65,
-            "mean": 60,
-            "children": [{
-                "name": "Maquina",
-                "value": 52.7
-            }, {
-                "name": "Puerta",
-                "value": 0
-            }]
-        }]
-    },
-    "configuracion": {
-        "maquinas": ["PLC1", "PLC2", "PLC3", "PLC4", "PLC5", "PLC6", "PLC7", "PLC8", "PLC9"],
-        "operarios": ["0", "613", "185"],
-        "ordenes": ["0", "15239", "15248", "14891", "15243", "15231", "15232"],
-        "lotes": ["0", "3629", "3635", "3470", "3633", "3625"],
-        "colores": ["0", "2857604", "8201001", "7856701", "1861102", "2857007", "2857103"],
-        "materiales": ["0", "30", "10", "35"]
-    },
-    "indicadores": {
-        "disponibilidad": {
-            "name": "Disponibilidad",
-            "values": [86.2, 86.2, 86.2, 86.2],
-            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+[{
+    "timeStamp": "23/06/2022 15:22:07",
+    "plcs": {
+        "PLC1": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
         },
-        "rendimiento": {
-            "name": "Rendimiento",
-            "values": [81.5, 81.5, 81.5, 81.5],
-            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+        "PLC2": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15239"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857604"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3629"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.52"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.27"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "70"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "438"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1301"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3430"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                }
+            }
         },
-        "calidad": {
-            "name": "Calidad",
-            "values": [98.3, 98.3, 98.3, 98.3],
-            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+        "PLC3": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15248"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8201001"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3635"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "613"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8.17"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.15"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "4.4"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "13.2"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.6"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "37"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "130"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "362"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21"
+                }
+            }
         },
-        "eficiencia": {
-            "name": "Eficiencia",
-            "values": [69.1, 69.1, 69.1, 69.1],
-            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+        "PLC4": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14891"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7856701"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3470"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35.59"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.86"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.99"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7.05"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.88"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "25"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "191"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "283"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "197"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3932"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "69"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "71"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7120"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "36"
+                }
+            }
+        },
+        "PLC5": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15243"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1861102"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3633"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "185"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "28.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.35"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.51"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.5"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.41"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "160"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.1"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30.8"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35.9"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "72"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1732"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2663"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                }
+            }
+        },
+        "PLC6": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15231"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857007"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "46.17"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.6"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.42"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.58"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.43"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1.6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "55.8"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "57.4"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "204"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2151"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3348"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "40"
+                }
+            }
+        },
+        "PLC7": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
+        },
+        "PLC8": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.3"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.81"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "160.76"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "-142.96"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.8"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "106"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "123"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                }
+            }
+        },
+        "PLC9": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15232"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857103"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "53.44"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.01"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.1"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.09"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.89"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "20"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "912"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "41"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "22"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1265"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "45"
+                }
+            }
         }
-    },
-    "energia": [{
-        "name": "Total",
-        "value": 242,
-        "date": "23/06/2022 15:22:07",
-        "children": [{
-            "name": "PLC1",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC2",
-            "value": 70,
-            "children": [{
-                "name": "Motor",
-                "value": 70
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC3",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC4",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC5",
-            "value": 160,
-            "children": [{
-                "name": "Motor",
-                "value": 160
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC6",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC7",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC8",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC9",
-            "value": 2,
-            "children": [{
-                "name": "Motor",
-                "value": 2
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }]
-    }, {
-        "name": "Total",
-        "value": 242,
-        "date": "23/06/2022 15:23:07",
-        "children": [{
-            "name": "PLC1",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC2",
-            "value": 70,
-            "children": [{
-                "name": "Motor",
-                "value": 70
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC3",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC4",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC5",
-            "value": 160,
-            "children": [{
-                "name": "Motor",
-                "value": 160
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC6",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC7",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC8",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC9",
-            "value": 2,
-            "children": [{
-                "name": "Motor",
-                "value": 2
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }]
-    }, {
-        "name": "Total",
-        "value": 243,
-        "date": "23/06/2022 15:24:07",
-        "children": [{
-            "name": "PLC1",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC2",
-            "value": 70,
-            "children": [{
-                "name": "Motor",
-                "value": 70
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC3",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC4",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC5",
-            "value": 161,
-            "children": [{
-                "name": "Motor",
-                "value": 161
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC6",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC7",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC8",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC9",
-            "value": 2,
-            "children": [{
-                "name": "Motor",
-                "value": 2
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }]
-    }, {
-        "name": "Total",
-        "value": 243,
-        "date": "23/06/2022 15:25:07",
-        "children": [{
-            "name": "PLC1",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC2",
-            "value": 70,
-            "children": [{
-                "name": "Motor",
-                "value": 70
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC3",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC4",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC5",
-            "value": 161,
-            "children": [{
-                "name": "Motor",
-                "value": 161
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC6",
-            "value": 5,
-            "children": [{
-                "name": "Motor",
-                "value": 5
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC7",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC8",
-            "value": 0,
-            "children": [{
-                "name": "Motor",
-                "value": 0
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }, {
-            "name": "PLC9",
-            "value": 2,
-            "children": [{
-                "name": "Motor",
-                "value": 2
-            }, {
-                "name": "Maquina",
-                "value": 0
-            }]
-        }]
-    }],
-    "material": {
-        "maquina": [{
-            "name": "Total",
-            "value": 207.16000000000003,
-            "date": "23/06/2022 15:22:07",
-            "children": [{
-                "name": "PLC1",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC2",
-                "value": 12.52,
-                "children": [{
-                    "name": "PLC2.Cavidad 1",
-                    "value": 2.27
-                }, {
-                    "name": "PLC2.Cavidad 2",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 3",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 4",
-                    "value": 2.35
-                }]
-            }, {
-                "name": "PLC3",
-                "value": 21.57,
-                "children": [{
-                    "name": "PLC3.Cavidad 1",
-                    "value": 8.17
-                }, {
-                    "name": "PLC3.Cavidad 2",
-                    "value": 11.15
-                }]
-            }, {
-                "name": "PLC4",
-                "value": 35.59,
-                "children": [{
-                    "name": "PLC4.Cavidad 1",
-                    "value": 6.86
-                }, {
-                    "name": "PLC4.Cavidad 2",
-                    "value": 6.99
-                }, {
-                    "name": "PLC4.Cavidad 3",
-                    "value": 7.05
-                }, {
-                    "name": "PLC4.Cavidad 4",
-                    "value": 6.88
-                }]
-            }, {
-                "name": "PLC5",
-                "value": 28.57,
-                "children": [{
-                    "name": "PLC5.Cavidad 1",
-                    "value": 5.35
-                }, {
-                    "name": "PLC5.Cavidad 2",
-                    "value": 5.51
-                }, {
-                    "name": "PLC5.Cavidad 3",
-                    "value": 5.5
-                }, {
-                    "name": "PLC5.Cavidad 4",
-                    "value": 5.41
-                }]
-            }, {
-                "name": "PLC6",
-                "value": 46.17,
-                "children": [{
-                    "name": "PLC6.Cavidad 1",
-                    "value": 9.6
-                }, {
-                    "name": "PLC6.Cavidad 2",
-                    "value": 9.42
-                }, {
-                    "name": "PLC6.Cavidad 3",
-                    "value": 9.58
-                }, {
-                    "name": "PLC6.Cavidad 4",
-                    "value": 9.43
-                }]
-            }, {
-                "name": "PLC7",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC8",
-                "value": 9.3,
-                "children": [{
-                    "name": "PLC8.Cavidad 1",
-                    "value": 6.81
-                }]
-            }, {
-                "name": "PLC9",
-                "value": 53.44,
-                "children": [{
-                    "name": "PLC9.Cavidad 1",
-                    "value": 12.01
-                }, {
-                    "name": "PLC9.Cavidad 2",
-                    "value": 12.1
-                }, {
-                    "name": "PLC9.Cavidad 3",
-                    "value": 12.09
-                }, {
-                    "name": "PLC9.Cavidad 4",
-                    "value": 11.89
-                }]
-            }]
-        }, {
-            "name": "Total",
-            "value": 207.16000000000003,
-            "date": "23/06/2022 15:23:07",
-            "children": [{
-                "name": "PLC1",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC2",
-                "value": 12.52,
-                "children": [{
-                    "name": "PLC2.Cavidad 1",
-                    "value": 2.27
-                }, {
-                    "name": "PLC2.Cavidad 2",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 3",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 4",
-                    "value": 2.35
-                }]
-            }, {
-                "name": "PLC3",
-                "value": 21.57,
-                "children": [{
-                    "name": "PLC3.Cavidad 1",
-                    "value": 8.17
-                }, {
-                    "name": "PLC3.Cavidad 2",
-                    "value": 11.15
-                }]
-            }, {
-                "name": "PLC4",
-                "value": 35.59,
-                "children": [{
-                    "name": "PLC4.Cavidad 1",
-                    "value": 6.86
-                }, {
-                    "name": "PLC4.Cavidad 2",
-                    "value": 6.99
-                }, {
-                    "name": "PLC4.Cavidad 3",
-                    "value": 7.05
-                }, {
-                    "name": "PLC4.Cavidad 4",
-                    "value": 6.88
-                }]
-            }, {
-                "name": "PLC5",
-                "value": 28.57,
-                "children": [{
-                    "name": "PLC5.Cavidad 1",
-                    "value": 5.35
-                }, {
-                    "name": "PLC5.Cavidad 2",
-                    "value": 5.51
-                }, {
-                    "name": "PLC5.Cavidad 3",
-                    "value": 5.5
-                }, {
-                    "name": "PLC5.Cavidad 4",
-                    "value": 5.41
-                }]
-            }, {
-                "name": "PLC6",
-                "value": 46.17,
-                "children": [{
-                    "name": "PLC6.Cavidad 1",
-                    "value": 9.6
-                }, {
-                    "name": "PLC6.Cavidad 2",
-                    "value": 9.42
-                }, {
-                    "name": "PLC6.Cavidad 3",
-                    "value": 9.58
-                }, {
-                    "name": "PLC6.Cavidad 4",
-                    "value": 9.43
-                }]
-            }, {
-                "name": "PLC7",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC8",
-                "value": 9.3,
-                "children": [{
-                    "name": "PLC8.Cavidad 1",
-                    "value": 6.81
-                }]
-            }, {
-                "name": "PLC9",
-                "value": 53.44,
-                "children": [{
-                    "name": "PLC9.Cavidad 1",
-                    "value": 12.01
-                }, {
-                    "name": "PLC9.Cavidad 2",
-                    "value": 12.1
-                }, {
-                    "name": "PLC9.Cavidad 3",
-                    "value": 12.09
-                }, {
-                    "name": "PLC9.Cavidad 4",
-                    "value": 11.89
-                }]
-            }]
-        }, {
-            "name": "Total",
-            "value": 207.16000000000003,
-            "date": "23/06/2022 15:24:07",
-            "children": [{
-                "name": "PLC1",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC2",
-                "value": 12.52,
-                "children": [{
-                    "name": "PLC2.Cavidad 1",
-                    "value": 2.27
-                }, {
-                    "name": "PLC2.Cavidad 2",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 3",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 4",
-                    "value": 2.35
-                }]
-            }, {
-                "name": "PLC3",
-                "value": 21.57,
-                "children": [{
-                    "name": "PLC3.Cavidad 1",
-                    "value": 8.17
-                }, {
-                    "name": "PLC3.Cavidad 2",
-                    "value": 11.15
-                }]
-            }, {
-                "name": "PLC4",
-                "value": 35.59,
-                "children": [{
-                    "name": "PLC4.Cavidad 1",
-                    "value": 6.86
-                }, {
-                    "name": "PLC4.Cavidad 2",
-                    "value": 6.99
-                }, {
-                    "name": "PLC4.Cavidad 3",
-                    "value": 7.05
-                }, {
-                    "name": "PLC4.Cavidad 4",
-                    "value": 6.88
-                }]
-            }, {
-                "name": "PLC5",
-                "value": 28.57,
-                "children": [{
-                    "name": "PLC5.Cavidad 1",
-                    "value": 5.35
-                }, {
-                    "name": "PLC5.Cavidad 2",
-                    "value": 5.51
-                }, {
-                    "name": "PLC5.Cavidad 3",
-                    "value": 5.5
-                }, {
-                    "name": "PLC5.Cavidad 4",
-                    "value": 5.41
-                }]
-            }, {
-                "name": "PLC6",
-                "value": 46.17,
-                "children": [{
-                    "name": "PLC6.Cavidad 1",
-                    "value": 9.6
-                }, {
-                    "name": "PLC6.Cavidad 2",
-                    "value": 9.42
-                }, {
-                    "name": "PLC6.Cavidad 3",
-                    "value": 9.58
-                }, {
-                    "name": "PLC6.Cavidad 4",
-                    "value": 9.43
-                }]
-            }, {
-                "name": "PLC7",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC8",
-                "value": 9.3,
-                "children": [{
-                    "name": "PLC8.Cavidad 1",
-                    "value": 6.81
-                }]
-            }, {
-                "name": "PLC9",
-                "value": 53.44,
-                "children": [{
-                    "name": "PLC9.Cavidad 1",
-                    "value": 12.01
-                }, {
-                    "name": "PLC9.Cavidad 2",
-                    "value": 12.1
-                }, {
-                    "name": "PLC9.Cavidad 3",
-                    "value": 12.09
-                }, {
-                    "name": "PLC9.Cavidad 4",
-                    "value": 11.89
-                }]
-            }]
-        }, {
-            "name": "Total",
-            "value": 207.16000000000003,
-            "date": "23/06/2022 15:25:07",
-            "children": [{
-                "name": "PLC1",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC2",
-                "value": 12.52,
-                "children": [{
-                    "name": "PLC2.Cavidad 1",
-                    "value": 2.27
-                }, {
-                    "name": "PLC2.Cavidad 2",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 3",
-                    "value": 2.35
-                }, {
-                    "name": "PLC2.Cavidad 4",
-                    "value": 2.35
-                }]
-            }, {
-                "name": "PLC3",
-                "value": 21.57,
-                "children": [{
-                    "name": "PLC3.Cavidad 1",
-                    "value": 8.17
-                }, {
-                    "name": "PLC3.Cavidad 2",
-                    "value": 11.15
-                }]
-            }, {
-                "name": "PLC4",
-                "value": 35.59,
-                "children": [{
-                    "name": "PLC4.Cavidad 1",
-                    "value": 6.86
-                }, {
-                    "name": "PLC4.Cavidad 2",
-                    "value": 6.99
-                }, {
-                    "name": "PLC4.Cavidad 3",
-                    "value": 7.05
-                }, {
-                    "name": "PLC4.Cavidad 4",
-                    "value": 6.88
-                }]
-            }, {
-                "name": "PLC5",
-                "value": 28.57,
-                "children": [{
-                    "name": "PLC5.Cavidad 1",
-                    "value": 5.35
-                }, {
-                    "name": "PLC5.Cavidad 2",
-                    "value": 5.51
-                }, {
-                    "name": "PLC5.Cavidad 3",
-                    "value": 5.5
-                }, {
-                    "name": "PLC5.Cavidad 4",
-                    "value": 5.41
-                }]
-            }, {
-                "name": "PLC6",
-                "value": 46.17,
-                "children": [{
-                    "name": "PLC6.Cavidad 1",
-                    "value": 9.6
-                }, {
-                    "name": "PLC6.Cavidad 2",
-                    "value": 9.42
-                }, {
-                    "name": "PLC6.Cavidad 3",
-                    "value": 9.58
-                }, {
-                    "name": "PLC6.Cavidad 4",
-                    "value": 9.43
-                }]
-            }, {
-                "name": "PLC7",
-                "value": 0,
-                "children": []
-            }, {
-                "name": "PLC8",
-                "value": 9.3,
-                "children": [{
-                    "name": "PLC8.Cavidad 1",
-                    "value": 6.81
-                }]
-            }, {
-                "name": "PLC9",
-                "value": 53.44,
-                "children": [{
-                    "name": "PLC9.Cavidad 1",
-                    "value": 12.01
-                }, {
-                    "name": "PLC9.Cavidad 2",
-                    "value": 12.1
-                }, {
-                    "name": "PLC9.Cavidad 3",
-                    "value": 12.09
-                }, {
-                    "name": "PLC9.Cavidad 4",
-                    "value": 11.89
-                }]
-            }]
-        }]
+    }
+},
+{
+    "timeStamp": "23/06/2022 15:23:07",
+    "plcs": {
+        "PLC1": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
+        },
+        "PLC2": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15239"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857604"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3629"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.52"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.27"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "70"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "438"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1301"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3430"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                }
+            }
+        },
+        "PLC3": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15248"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8201001"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3635"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "613"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8.17"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.15"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "4.4"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "13.2"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.6"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "37"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "131"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "366"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21"
+                }
+            }
+        },
+        "PLC4": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14891"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7856701"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3470"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35.59"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.86"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.99"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7.05"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.88"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "25"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "191"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "283"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "197"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3932"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "69"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "71"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7120"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "36"
+                }
+            }
+        },
+        "PLC5": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15243"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1861102"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3633"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "185"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "28.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.35"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.51"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.5"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.41"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "160"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "4.5"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "31.5"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "36"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "72"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1733"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2665"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                }
+            }
+        },
+        "PLC6": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15231"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857007"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "46.17"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.6"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.42"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.58"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.43"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1.6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "55.8"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "57.4"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "204"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2151"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3348"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "40"
+                }
+            }
+        },
+        "PLC7": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
+        },
+        "PLC8": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.3"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.81"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "160.76"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "-142.96"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.8"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "106"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "123"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                }
+            }
+        },
+        "PLC9": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15232"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857103"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "53.44"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.01"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.1"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.09"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.89"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "20"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "912"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "41"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "22"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1265"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "45"
+                }
+            }
+        }
+    }
+},
+{
+    "timeStamp": "23/06/2022 15:24:07",
+    "plcs": {
+        "PLC1": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
+        },
+        "PLC2": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15239"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857604"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3629"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.52"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.27"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "70"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "438"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1301"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3430"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                }
+            }
+        },
+        "PLC3": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15248"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8201001"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3635"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "613"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8.17"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.15"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "4.4"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "13.2"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.6"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "37"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "132"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "369"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21"
+                }
+            }
+        },
+        "PLC4": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14891"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7856701"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3470"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35.59"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.86"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.99"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7.05"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.88"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "25"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "191"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "283"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "197"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3932"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "69"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "71"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7120"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "36"
+                }
+            }
+        },
+        "PLC5": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15243"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1861102"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3633"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "185"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "28.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.35"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.51"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.5"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.41"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "161"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "4.6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "27.9"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32.5"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "72"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1734"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2667"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                }
+            }
+        },
+        "PLC6": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15231"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857007"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "46.17"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.6"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.42"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.58"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.43"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1.6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "55.8"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "57.4"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "204"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2151"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3348"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "40"
+                }
+            }
+        },
+        "PLC7": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
+        },
+        "PLC8": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.3"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.81"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "160.76"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "-142.96"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.8"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "106"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "123"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                }
+            }
+        },
+        "PLC9": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15232"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857103"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "53.44"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.01"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.1"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.09"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.89"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "20"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "912"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "41"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "22"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1265"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "45"
+                }
+            }
+        }
+    }
+},
+{
+    "timeStamp": "23/06/2022 15:25:07",
+    "plcs": {
+        "PLC1": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
+        },
+        "PLC2": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15239"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857604"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3629"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.52"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.27"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2.35"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "70"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "438"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1301"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3430"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                }
+            }
+        },
+        "PLC3": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15248"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8201001"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3635"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "613"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "8.17"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.15"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "4.4"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "13.2"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.6"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "37"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "133"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "372"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "21"
+                }
+            }
+        },
+        "PLC4": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14891"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7856701"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3470"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35.59"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.86"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.99"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7.05"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.88"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "19"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "25"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "191"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "283"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "197"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3932"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "69"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "71"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "7120"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "36"
+                }
+            }
+        },
+        "PLC5": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15243"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1861102"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3633"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "185"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "28.57"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.35"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.51"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.5"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.41"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "161"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5.6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "40.4"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "46"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "72"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1735"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2668"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                }
+            }
+        },
+        "PLC6": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15231"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857007"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "46.17"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.6"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.42"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.58"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.43"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "5"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1.6"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "55.8"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "57.4"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "204"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2151"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "32"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3348"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "40"
+                }
+            }
+        },
+        "PLC7": {
+            "variables": {
+                "ML1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF12": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF13": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF14": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF1": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI121": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI101": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                },
+                "MF5": {
+                    "quality": "Uncertain+Uncertain+NotLimited",
+                    "value": "0"
+                }
+            }
+        },
+        "PLC8": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "10"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "9.3"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "6.81"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "160.76"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "-142.96"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "17.8"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "106"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "38"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "123"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "35"
+                }
+            }
+        },
+        "PLC9": {
+            "variables": {
+                "ML1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "15232"
+                },
+                "ML3": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2857103"
+                },
+                "ML5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "3625"
+                },
+                "MI18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI19": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "30"
+                },
+                "MF12": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "53.44"
+                },
+                "MF13": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.01"
+                },
+                "MF14": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.1"
+                },
+                "MF15": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "12.09"
+                },
+                "MF16": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "11.89"
+                },
+                "MF17": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF18": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI100": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "2"
+                },
+                "MI99": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF8": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MF9": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MF1": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52.7"
+                },
+                "MI121": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI122": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "20"
+                },
+                "MI124": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "52"
+                },
+                "MI127": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "MI128": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "14"
+                },
+                "MI123": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "0"
+                },
+                "ML0": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "912"
+                },
+                "MI101": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "41"
+                },
+                "MI102": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "22"
+                },
+                "ML131": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "1265"
+                },
+                "MF5": {
+                    "quality": "Good+Good+NotLimited",
+                    "value": "45"
+                }
+            }
+        }
     }
 }
+]

@@ -4543,9 +4543,9 @@ inputs.forEach((input, i) => {
             name: 'Ciclo',
             value: Number(plc[t['Tiempo Inyección']].value),
             date: input.timeStamp,
-            min: 55, // currently hard coded // value: Number(plc[t['Ciclo Estándar -']].value),
-            max: 65, // currently hard coded // value: Number(plc[t['Ciclo Estándar +']].value),
-            mean: 60, // currently hard coded // value: Number(plc[t['Ciclo Estándar']].value),
+            min: Number(plc[t['Ciclo Estándar -']].value),
+            max: Number(plc[t['Ciclo Estándar +']].value),
+            mean: Number(plc[t['Ciclo Estándar']].value),
             children: [{
                     name: 'Maquina',
                     value: Number(plc[t['Tiempo Máquina']].value),
