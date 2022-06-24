@@ -1,0 +1,1610 @@
+{
+    "calidad": [{
+        "name": "Producción",
+        "value": 18311,
+        "date": "23/06/2022 15:22:07",
+        "children": [{
+            "name": "Buenas",
+            "value": 17995
+        }, {
+            "name": "Malas",
+            "value": 316,
+            "children": [{
+                "name": "Arranque",
+                "value": 193
+            }, {
+                "name": "Lluvia",
+                "value": 123
+            }]
+        }]
+    }, {
+        "name": "Producción",
+        "value": 18317,
+        "date": "23/06/2022 15:23:07",
+        "children": [{
+            "name": "Buenas",
+            "value": 18001
+        }, {
+            "name": "Malas",
+            "value": 316,
+            "children": [{
+                "name": "Arranque",
+                "value": 193
+            }, {
+                "name": "Lluvia",
+                "value": 123
+            }]
+        }]
+    }, {
+        "name": "Producción",
+        "value": 18322,
+        "date": "23/06/2022 15:24:07",
+        "children": [{
+            "name": "Buenas",
+            "value": 18006
+        }, {
+            "name": "Malas",
+            "value": 316,
+            "children": [{
+                "name": "Arranque",
+                "value": 193
+            }, {
+                "name": "Lluvia",
+                "value": 123
+            }]
+        }]
+    }, {
+        "name": "Producción",
+        "value": 18326,
+        "date": "23/06/2022 15:25:07",
+        "children": [{
+            "name": "Buenas",
+            "value": 18010
+        }, {
+            "name": "Malas",
+            "value": 316,
+            "children": [{
+                "name": "Arranque",
+                "value": 193
+            }, {
+                "name": "Lluvia",
+                "value": 123
+            }]
+        }]
+    }],
+    "disponibilidad": [{
+        "name": "Disponible",
+        "value": 11824,
+        "date": "23/06/2022 15:22:07",
+        "children": [{
+            "name": "Productivo",
+            "value": 10196
+        }, {
+            "name": "Paradas",
+            "value": 1628,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Molde",
+                "value": 211
+            }, {
+                "name": "Abandono",
+                "value": 1049
+            }, {
+                "name": "Material",
+                "value": 14
+            }, {
+                "name": "Calidad",
+                "value": 14
+            }, {
+                "name": "Montaje",
+                "value": 340
+            }]
+        }]
+    }, {
+        "name": "Disponible",
+        "value": 11826,
+        "date": "23/06/2022 15:23:07",
+        "children": [{
+            "name": "Productivo",
+            "value": 10198
+        }, {
+            "name": "Paradas",
+            "value": 1628,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Molde",
+                "value": 211
+            }, {
+                "name": "Abandono",
+                "value": 1049
+            }, {
+                "name": "Material",
+                "value": 14
+            }, {
+                "name": "Calidad",
+                "value": 14
+            }, {
+                "name": "Montaje",
+                "value": 340
+            }]
+        }]
+    }, {
+        "name": "Disponible",
+        "value": 11828,
+        "date": "23/06/2022 15:24:07",
+        "children": [{
+            "name": "Productivo",
+            "value": 10200
+        }, {
+            "name": "Paradas",
+            "value": 1628,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Molde",
+                "value": 211
+            }, {
+                "name": "Abandono",
+                "value": 1049
+            }, {
+                "name": "Material",
+                "value": 14
+            }, {
+                "name": "Calidad",
+                "value": 14
+            }, {
+                "name": "Montaje",
+                "value": 340
+            }]
+        }]
+    }, {
+        "name": "Disponible",
+        "value": 11830,
+        "date": "23/06/2022 15:25:07",
+        "children": [{
+            "name": "Productivo",
+            "value": 10202
+        }, {
+            "name": "Paradas",
+            "value": 1628,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Molde",
+                "value": 211
+            }, {
+                "name": "Abandono",
+                "value": 1049
+            }, {
+                "name": "Material",
+                "value": 14
+            }, {
+                "name": "Calidad",
+                "value": 14
+            }, {
+                "name": "Montaje",
+                "value": 340
+            }]
+        }]
+    }],
+    "rendimiento": [{
+        "name": "Capacidad",
+        "value": 22472.816326530614,
+        "date": "23/06/2022 15:22:07",
+        "children": [{
+            "name": "Producido",
+            "value": 18311
+        }, {
+            "name": "Ineficiencias",
+            "value": 4161.816326530614
+        }]
+    }, {
+        "name": "Capacidad",
+        "value": 22477.22448979592,
+        "date": "23/06/2022 15:23:07",
+        "children": [{
+            "name": "Producido",
+            "value": 18317
+        }, {
+            "name": "Ineficiencias",
+            "value": 4160.224489795921
+        }]
+    }, {
+        "name": "Capacidad",
+        "value": 22481.632653061224,
+        "date": "23/06/2022 15:24:07",
+        "children": [{
+            "name": "Producido",
+            "value": 18322
+        }, {
+            "name": "Ineficiencias",
+            "value": 4159.632653061224
+        }]
+    }, {
+        "name": "Capacidad",
+        "value": 22486.04081632653,
+        "date": "23/06/2022 15:25:07",
+        "children": [{
+            "name": "Producido",
+            "value": 18326
+        }, {
+            "name": "Ineficiencias",
+            "value": 4160.040816326531
+        }]
+    }],
+    "ciclos": {
+        "PLC1": [{
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }],
+        "PLC2": [{
+            "name": "Ciclo",
+            "value": 19,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 19,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 19,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 19,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }],
+        "PLC3": [{
+            "name": "Ciclo",
+            "value": 17.6,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 13.2
+            }, {
+                "name": "Puerta",
+                "value": 4.4
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 17.6,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 13.2
+            }, {
+                "name": "Puerta",
+                "value": 4.4
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 17.6,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 13.2
+            }, {
+                "name": "Puerta",
+                "value": 4.4
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 17.6,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 13.2
+            }, {
+                "name": "Puerta",
+                "value": 4.4
+            }]
+        }],
+        "PLC4": [{
+            "name": "Ciclo",
+            "value": 25,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 6
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 25,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 6
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 25,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 6
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 25,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 19
+            }, {
+                "name": "Puerta",
+                "value": 6
+            }]
+        }],
+        "PLC5": [{
+            "name": "Ciclo",
+            "value": 35.9,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 30.8
+            }, {
+                "name": "Puerta",
+                "value": 5.1
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 36,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 31.5
+            }, {
+                "name": "Puerta",
+                "value": 4.5
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 32.5,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 27.9
+            }, {
+                "name": "Puerta",
+                "value": 4.6
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 46,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 40.4
+            }, {
+                "name": "Puerta",
+                "value": 5.6
+            }]
+        }],
+        "PLC6": [{
+            "name": "Ciclo",
+            "value": 57.4,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 55.8
+            }, {
+                "name": "Puerta",
+                "value": 1.6
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 57.4,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 55.8
+            }, {
+                "name": "Puerta",
+                "value": 1.6
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 57.4,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 55.8
+            }, {
+                "name": "Puerta",
+                "value": 1.6
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 57.4,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 55.8
+            }, {
+                "name": "Puerta",
+                "value": 1.6
+            }]
+        }],
+        "PLC7": [{
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 0,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 0
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }],
+        "PLC8": [{
+            "name": "Ciclo",
+            "value": 17.8,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": -142.96
+            }, {
+                "name": "Puerta",
+                "value": 160.76
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 17.8,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": -142.96
+            }, {
+                "name": "Puerta",
+                "value": 160.76
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 17.8,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": -142.96
+            }, {
+                "name": "Puerta",
+                "value": 160.76
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 17.8,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": -142.96
+            }, {
+                "name": "Puerta",
+                "value": 160.76
+            }]
+        }],
+        "PLC9": [{
+            "name": "Ciclo",
+            "value": 52.7,
+            "date": "23/06/2022 15:22:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 52.7
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 52.7,
+            "date": "23/06/2022 15:23:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 52.7
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 52.7,
+            "date": "23/06/2022 15:24:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 52.7
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }, {
+            "name": "Ciclo",
+            "value": 52.7,
+            "date": "23/06/2022 15:25:07",
+            "min": 55,
+            "max": 65,
+            "mean": 60,
+            "children": [{
+                "name": "Maquina",
+                "value": 52.7
+            }, {
+                "name": "Puerta",
+                "value": 0
+            }]
+        }]
+    },
+    "configuracion": {
+        "maquinas": ["PLC1", "PLC2", "PLC3", "PLC4", "PLC5", "PLC6", "PLC7", "PLC8", "PLC9"],
+        "operarios": ["0", "613", "185"],
+        "ordenes": ["0", "15239", "15248", "14891", "15243", "15231", "15232"],
+        "lotes": ["0", "3629", "3635", "3470", "3633", "3625"],
+        "colores": ["0", "2857604", "8201001", "7856701", "1861102", "2857007", "2857103"],
+        "materiales": ["0", "30", "10", "35"]
+    },
+    "indicadores": {
+        "disponibilidad": {
+            "name": "Disponibilidad",
+            "values": [86.2, 86.2, 86.2, 86.2],
+            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+        },
+        "rendimiento": {
+            "name": "Rendimiento",
+            "values": [81.5, 81.5, 81.5, 81.5],
+            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+        },
+        "calidad": {
+            "name": "Calidad",
+            "values": [98.3, 98.3, 98.3, 98.3],
+            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+        },
+        "eficiencia": {
+            "name": "Eficiencia",
+            "values": [69.1, 69.1, 69.1, 69.1],
+            "dates": ["23/06/2022 15:22:07", "23/06/2022 15:23:07", "23/06/2022 15:24:07", "23/06/2022 15:25:07"]
+        }
+    },
+    "energia": [{
+        "name": "Total",
+        "value": 242,
+        "date": "23/06/2022 15:22:07",
+        "children": [{
+            "name": "PLC1",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC2",
+            "value": 70,
+            "children": [{
+                "name": "Motor",
+                "value": 70
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC3",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC4",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC5",
+            "value": 160,
+            "children": [{
+                "name": "Motor",
+                "value": 160
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC6",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC7",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC8",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC9",
+            "value": 2,
+            "children": [{
+                "name": "Motor",
+                "value": 2
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }]
+    }, {
+        "name": "Total",
+        "value": 242,
+        "date": "23/06/2022 15:23:07",
+        "children": [{
+            "name": "PLC1",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC2",
+            "value": 70,
+            "children": [{
+                "name": "Motor",
+                "value": 70
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC3",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC4",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC5",
+            "value": 160,
+            "children": [{
+                "name": "Motor",
+                "value": 160
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC6",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC7",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC8",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC9",
+            "value": 2,
+            "children": [{
+                "name": "Motor",
+                "value": 2
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }]
+    }, {
+        "name": "Total",
+        "value": 243,
+        "date": "23/06/2022 15:24:07",
+        "children": [{
+            "name": "PLC1",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC2",
+            "value": 70,
+            "children": [{
+                "name": "Motor",
+                "value": 70
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC3",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC4",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC5",
+            "value": 161,
+            "children": [{
+                "name": "Motor",
+                "value": 161
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC6",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC7",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC8",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC9",
+            "value": 2,
+            "children": [{
+                "name": "Motor",
+                "value": 2
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }]
+    }, {
+        "name": "Total",
+        "value": 243,
+        "date": "23/06/2022 15:25:07",
+        "children": [{
+            "name": "PLC1",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC2",
+            "value": 70,
+            "children": [{
+                "name": "Motor",
+                "value": 70
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC3",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC4",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC5",
+            "value": 161,
+            "children": [{
+                "name": "Motor",
+                "value": 161
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC6",
+            "value": 5,
+            "children": [{
+                "name": "Motor",
+                "value": 5
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC7",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC8",
+            "value": 0,
+            "children": [{
+                "name": "Motor",
+                "value": 0
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }, {
+            "name": "PLC9",
+            "value": 2,
+            "children": [{
+                "name": "Motor",
+                "value": 2
+            }, {
+                "name": "Maquina",
+                "value": 0
+            }]
+        }]
+    }],
+    "material": {
+        "maquina": [{
+            "name": "Total",
+            "value": 207.16000000000003,
+            "date": "23/06/2022 15:22:07",
+            "children": [{
+                "name": "PLC1",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC2",
+                "value": 12.52,
+                "children": [{
+                    "name": "PLC2.Cavidad 1",
+                    "value": 2.27
+                }, {
+                    "name": "PLC2.Cavidad 2",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 3",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 4",
+                    "value": 2.35
+                }]
+            }, {
+                "name": "PLC3",
+                "value": 21.57,
+                "children": [{
+                    "name": "PLC3.Cavidad 1",
+                    "value": 8.17
+                }, {
+                    "name": "PLC3.Cavidad 2",
+                    "value": 11.15
+                }]
+            }, {
+                "name": "PLC4",
+                "value": 35.59,
+                "children": [{
+                    "name": "PLC4.Cavidad 1",
+                    "value": 6.86
+                }, {
+                    "name": "PLC4.Cavidad 2",
+                    "value": 6.99
+                }, {
+                    "name": "PLC4.Cavidad 3",
+                    "value": 7.05
+                }, {
+                    "name": "PLC4.Cavidad 4",
+                    "value": 6.88
+                }]
+            }, {
+                "name": "PLC5",
+                "value": 28.57,
+                "children": [{
+                    "name": "PLC5.Cavidad 1",
+                    "value": 5.35
+                }, {
+                    "name": "PLC5.Cavidad 2",
+                    "value": 5.51
+                }, {
+                    "name": "PLC5.Cavidad 3",
+                    "value": 5.5
+                }, {
+                    "name": "PLC5.Cavidad 4",
+                    "value": 5.41
+                }]
+            }, {
+                "name": "PLC6",
+                "value": 46.17,
+                "children": [{
+                    "name": "PLC6.Cavidad 1",
+                    "value": 9.6
+                }, {
+                    "name": "PLC6.Cavidad 2",
+                    "value": 9.42
+                }, {
+                    "name": "PLC6.Cavidad 3",
+                    "value": 9.58
+                }, {
+                    "name": "PLC6.Cavidad 4",
+                    "value": 9.43
+                }]
+            }, {
+                "name": "PLC7",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC8",
+                "value": 9.3,
+                "children": [{
+                    "name": "PLC8.Cavidad 1",
+                    "value": 6.81
+                }]
+            }, {
+                "name": "PLC9",
+                "value": 53.44,
+                "children": [{
+                    "name": "PLC9.Cavidad 1",
+                    "value": 12.01
+                }, {
+                    "name": "PLC9.Cavidad 2",
+                    "value": 12.1
+                }, {
+                    "name": "PLC9.Cavidad 3",
+                    "value": 12.09
+                }, {
+                    "name": "PLC9.Cavidad 4",
+                    "value": 11.89
+                }]
+            }]
+        }, {
+            "name": "Total",
+            "value": 207.16000000000003,
+            "date": "23/06/2022 15:23:07",
+            "children": [{
+                "name": "PLC1",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC2",
+                "value": 12.52,
+                "children": [{
+                    "name": "PLC2.Cavidad 1",
+                    "value": 2.27
+                }, {
+                    "name": "PLC2.Cavidad 2",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 3",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 4",
+                    "value": 2.35
+                }]
+            }, {
+                "name": "PLC3",
+                "value": 21.57,
+                "children": [{
+                    "name": "PLC3.Cavidad 1",
+                    "value": 8.17
+                }, {
+                    "name": "PLC3.Cavidad 2",
+                    "value": 11.15
+                }]
+            }, {
+                "name": "PLC4",
+                "value": 35.59,
+                "children": [{
+                    "name": "PLC4.Cavidad 1",
+                    "value": 6.86
+                }, {
+                    "name": "PLC4.Cavidad 2",
+                    "value": 6.99
+                }, {
+                    "name": "PLC4.Cavidad 3",
+                    "value": 7.05
+                }, {
+                    "name": "PLC4.Cavidad 4",
+                    "value": 6.88
+                }]
+            }, {
+                "name": "PLC5",
+                "value": 28.57,
+                "children": [{
+                    "name": "PLC5.Cavidad 1",
+                    "value": 5.35
+                }, {
+                    "name": "PLC5.Cavidad 2",
+                    "value": 5.51
+                }, {
+                    "name": "PLC5.Cavidad 3",
+                    "value": 5.5
+                }, {
+                    "name": "PLC5.Cavidad 4",
+                    "value": 5.41
+                }]
+            }, {
+                "name": "PLC6",
+                "value": 46.17,
+                "children": [{
+                    "name": "PLC6.Cavidad 1",
+                    "value": 9.6
+                }, {
+                    "name": "PLC6.Cavidad 2",
+                    "value": 9.42
+                }, {
+                    "name": "PLC6.Cavidad 3",
+                    "value": 9.58
+                }, {
+                    "name": "PLC6.Cavidad 4",
+                    "value": 9.43
+                }]
+            }, {
+                "name": "PLC7",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC8",
+                "value": 9.3,
+                "children": [{
+                    "name": "PLC8.Cavidad 1",
+                    "value": 6.81
+                }]
+            }, {
+                "name": "PLC9",
+                "value": 53.44,
+                "children": [{
+                    "name": "PLC9.Cavidad 1",
+                    "value": 12.01
+                }, {
+                    "name": "PLC9.Cavidad 2",
+                    "value": 12.1
+                }, {
+                    "name": "PLC9.Cavidad 3",
+                    "value": 12.09
+                }, {
+                    "name": "PLC9.Cavidad 4",
+                    "value": 11.89
+                }]
+            }]
+        }, {
+            "name": "Total",
+            "value": 207.16000000000003,
+            "date": "23/06/2022 15:24:07",
+            "children": [{
+                "name": "PLC1",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC2",
+                "value": 12.52,
+                "children": [{
+                    "name": "PLC2.Cavidad 1",
+                    "value": 2.27
+                }, {
+                    "name": "PLC2.Cavidad 2",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 3",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 4",
+                    "value": 2.35
+                }]
+            }, {
+                "name": "PLC3",
+                "value": 21.57,
+                "children": [{
+                    "name": "PLC3.Cavidad 1",
+                    "value": 8.17
+                }, {
+                    "name": "PLC3.Cavidad 2",
+                    "value": 11.15
+                }]
+            }, {
+                "name": "PLC4",
+                "value": 35.59,
+                "children": [{
+                    "name": "PLC4.Cavidad 1",
+                    "value": 6.86
+                }, {
+                    "name": "PLC4.Cavidad 2",
+                    "value": 6.99
+                }, {
+                    "name": "PLC4.Cavidad 3",
+                    "value": 7.05
+                }, {
+                    "name": "PLC4.Cavidad 4",
+                    "value": 6.88
+                }]
+            }, {
+                "name": "PLC5",
+                "value": 28.57,
+                "children": [{
+                    "name": "PLC5.Cavidad 1",
+                    "value": 5.35
+                }, {
+                    "name": "PLC5.Cavidad 2",
+                    "value": 5.51
+                }, {
+                    "name": "PLC5.Cavidad 3",
+                    "value": 5.5
+                }, {
+                    "name": "PLC5.Cavidad 4",
+                    "value": 5.41
+                }]
+            }, {
+                "name": "PLC6",
+                "value": 46.17,
+                "children": [{
+                    "name": "PLC6.Cavidad 1",
+                    "value": 9.6
+                }, {
+                    "name": "PLC6.Cavidad 2",
+                    "value": 9.42
+                }, {
+                    "name": "PLC6.Cavidad 3",
+                    "value": 9.58
+                }, {
+                    "name": "PLC6.Cavidad 4",
+                    "value": 9.43
+                }]
+            }, {
+                "name": "PLC7",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC8",
+                "value": 9.3,
+                "children": [{
+                    "name": "PLC8.Cavidad 1",
+                    "value": 6.81
+                }]
+            }, {
+                "name": "PLC9",
+                "value": 53.44,
+                "children": [{
+                    "name": "PLC9.Cavidad 1",
+                    "value": 12.01
+                }, {
+                    "name": "PLC9.Cavidad 2",
+                    "value": 12.1
+                }, {
+                    "name": "PLC9.Cavidad 3",
+                    "value": 12.09
+                }, {
+                    "name": "PLC9.Cavidad 4",
+                    "value": 11.89
+                }]
+            }]
+        }, {
+            "name": "Total",
+            "value": 207.16000000000003,
+            "date": "23/06/2022 15:25:07",
+            "children": [{
+                "name": "PLC1",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC2",
+                "value": 12.52,
+                "children": [{
+                    "name": "PLC2.Cavidad 1",
+                    "value": 2.27
+                }, {
+                    "name": "PLC2.Cavidad 2",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 3",
+                    "value": 2.35
+                }, {
+                    "name": "PLC2.Cavidad 4",
+                    "value": 2.35
+                }]
+            }, {
+                "name": "PLC3",
+                "value": 21.57,
+                "children": [{
+                    "name": "PLC3.Cavidad 1",
+                    "value": 8.17
+                }, {
+                    "name": "PLC3.Cavidad 2",
+                    "value": 11.15
+                }]
+            }, {
+                "name": "PLC4",
+                "value": 35.59,
+                "children": [{
+                    "name": "PLC4.Cavidad 1",
+                    "value": 6.86
+                }, {
+                    "name": "PLC4.Cavidad 2",
+                    "value": 6.99
+                }, {
+                    "name": "PLC4.Cavidad 3",
+                    "value": 7.05
+                }, {
+                    "name": "PLC4.Cavidad 4",
+                    "value": 6.88
+                }]
+            }, {
+                "name": "PLC5",
+                "value": 28.57,
+                "children": [{
+                    "name": "PLC5.Cavidad 1",
+                    "value": 5.35
+                }, {
+                    "name": "PLC5.Cavidad 2",
+                    "value": 5.51
+                }, {
+                    "name": "PLC5.Cavidad 3",
+                    "value": 5.5
+                }, {
+                    "name": "PLC5.Cavidad 4",
+                    "value": 5.41
+                }]
+            }, {
+                "name": "PLC6",
+                "value": 46.17,
+                "children": [{
+                    "name": "PLC6.Cavidad 1",
+                    "value": 9.6
+                }, {
+                    "name": "PLC6.Cavidad 2",
+                    "value": 9.42
+                }, {
+                    "name": "PLC6.Cavidad 3",
+                    "value": 9.58
+                }, {
+                    "name": "PLC6.Cavidad 4",
+                    "value": 9.43
+                }]
+            }, {
+                "name": "PLC7",
+                "value": 0,
+                "children": []
+            }, {
+                "name": "PLC8",
+                "value": 9.3,
+                "children": [{
+                    "name": "PLC8.Cavidad 1",
+                    "value": 6.81
+                }]
+            }, {
+                "name": "PLC9",
+                "value": 53.44,
+                "children": [{
+                    "name": "PLC9.Cavidad 1",
+                    "value": 12.01
+                }, {
+                    "name": "PLC9.Cavidad 2",
+                    "value": 12.1
+                }, {
+                    "name": "PLC9.Cavidad 3",
+                    "value": 12.09
+                }, {
+                    "name": "PLC9.Cavidad 4",
+                    "value": 11.89
+                }]
+            }]
+        }]
+    }
+}

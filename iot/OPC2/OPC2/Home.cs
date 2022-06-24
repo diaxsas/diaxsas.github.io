@@ -45,34 +45,36 @@ namespace OPC2
         };
 
         string[] variables = {
-            "ML1",
-            "ML3",
-            "ML5",
-            "MI18",
-            "MI19",
-            "MF12",
-            "MF13",
-            "MF14",
-            "MF15",
-            "MF16",
-            "MF17",
-            "MF18",
-            "MI100",
-            "MI99",
-            "MF8",
-            "MF9",
-            "MF1",
-            "MI121",
-            "MI122",
-            "MI124",
-            "MI127",
-            "MI128",
-            "MI123",
-            "ML0",
-            "MI101",
-            "MI102",
-            "ML131",
-            "MF5"
+            "ML1", // orden
+            "ML3", // color
+            "ML5", // lote
+            "MI18", // operario
+            "MI19", // tipoMaterial
+            "MF12", // Peso Inyección
+            "MF13", // Peso Cavidad 1
+            "MF14", // Peso Cavidad 2
+            "MF15", // Peso Cavidad 3
+            "MF16", // Peso Cavidad 4
+            "MF17", // Peso cavidad 5
+            "MF18", // Peso cavidad 6
+            "MI100", // Consumo energía motor kw
+            "MI99", // consumo total máquina kw
+            "MF8", // Tiempo puerta
+            "MF9", // Tiempo máquina
+            "MF1", // Tiempo Inyección
+            "MI121", // Contador por matto máquina
+            "MI122", // Contador por matto molde
+            "MI124", // Contador por sin operario
+            "MI127", // Contador por material
+            "MI128", // Contador por calidad
+            "MI123", // Contador por montaje
+            "ML0", // Tiempo motor
+            "MI101", // Defecto inicio turno
+            "MI102", // Defecto lluvia
+            "ML131", // Contador inyecciones
+            "MF5", // Ciclo estándar
+            "MF6", // Ciclo estándar +
+            "MF7" // Ciclo estándar -
         };
         
         string[] states = {

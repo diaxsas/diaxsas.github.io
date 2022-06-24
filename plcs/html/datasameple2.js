@@ -1,5 +1,4 @@
-[
-    {
+var inputs = [{
         "timeStamp": "23/06/2022 15:22:07",
         "plcs": {
             "PLC1": {
@@ -4196,3 +4195,536 @@
         }
     }
 ]
+
+var outputSample = {
+    material: {
+        maquina: [{
+                name: 'Total',
+                value: 275,
+                date: '2013-10-04 22:23:00',
+                children: [{
+                    name: 'Inyectora 1',
+                    value: 135,
+                    children: [{
+                        name: '1.Molde 1',
+                        value: 85,
+                    }, {
+                        name: '1.Molde 2',
+                        value: 50,
+                    }, ]
+                }, {
+                    name: 'Inyectora 2',
+                    value: 140,
+                    children: [{
+                        name: '2.Molde 1',
+                        value: 30,
+                    }, {
+                        name: '2.Molde 2',
+                        value: 110,
+                    }, ]
+                }, ],
+            },
+            {
+                name: 'Total',
+                value: 275,
+                date: '2013-10-05 22:23:00',
+                children: [{
+                    name: 'Inyectora 1',
+                    value: 135,
+                    children: [{
+                        name: '1.Molde 1',
+                        value: 85,
+                    }, {
+                        name: '1.Molde 2',
+                        value: 50,
+                    }, ]
+                }, {
+                    name: 'Inyectora 2',
+                    value: 140,
+                    children: [{
+                        name: '2.Molde 1',
+                        value: 30,
+                    }, {
+                        name: '2.Molde 2',
+                        value: 110,
+                    }, ]
+                }, ],
+            },
+            {
+                name: 'Total',
+                value: 275,
+                date: '2013-10-06 22:23:00',
+                children: [{
+                    name: 'Inyectora 1',
+                    value: 135,
+                    children: [{
+                        name: '1.Molde 1',
+                        value: 30,
+                    }, {
+                        name: '1.Molde 2',
+                        value: 105,
+                    }, ]
+                }, {
+                    name: 'Inyectora 2',
+                    value: 140,
+                    children: [{
+                        name: '2.Molde 1',
+                        value: 30,
+                    }, {
+                        name: '2.Molde 2',
+                        value: 110,
+                    }, ]
+                }, ],
+            },
+            {
+                name: 'Total',
+                value: 275,
+                date: '2013-10-07 22:23:00',
+                children: [{
+                    name: 'Inyectora 1',
+                    value: 135,
+                    children: [{
+                        name: '1.Molde 1',
+                        value: 85,
+                    }, {
+                        name: '1.Molde 2',
+                        value: 50,
+                    }, ]
+                }, {
+                    name: 'Inyectora 2',
+                    value: 140,
+                    children: [{
+                        name: '2.Molde 1',
+                        value: 30,
+                    }, {
+                        name: '2.Molde 2',
+                        value: 110,
+                    }, ]
+                }, ],
+            },
+        ],
+        molde: [{
+            name: 'Total',
+            value: 275,
+            date: '2013-10-04 22:23:00',
+            children: [{
+                name: 'Molde 1',
+                value: 135,
+                children: [{
+                    name: '1.Inyectora 1',
+                    value: 85,
+                }, {
+                    name: '1.Inyectora 2',
+                    value: 50,
+                }, ]
+            }, {
+                name: 'Molde 2',
+                value: 140,
+                children: [{
+                    name: '2.Inyectora 1',
+                    value: 30,
+                }, {
+                    name: '2.Inyectora 2',
+                    value: 110,
+                }, ]
+            }, ],
+        }, {
+            name: 'Total',
+            value: 275,
+            date: '2013-10-05 22:23:00',
+            children: [{
+                name: 'Molde 1',
+                value: 135,
+                children: [{
+                    name: '1.Inyectora 1',
+                    value: 85,
+                }, {
+                    name: '1.Inyectora 2',
+                    value: 50,
+                }, ]
+            }, {
+                name: 'Molde 2',
+                value: 140,
+                children: [{
+                    name: '2.Inyectora 1',
+                    value: 30,
+                }, {
+                    name: '2.Inyectora 2',
+                    value: 110,
+                }, ]
+            }, ],
+        }, {
+            name: 'Total',
+            value: 275,
+            date: '2013-10-06 22:23:00',
+            children: [{
+                name: 'Molde 1',
+                value: 135,
+                children: [{
+                    name: '1.Inyectora 1',
+                    value: 85,
+                }, {
+                    name: '1.Inyectora 2',
+                    value: 50,
+                }, ]
+            }, {
+                name: 'Molde 2',
+                value: 140,
+                children: [{
+                    name: '2.Inyectora 1',
+                    value: 30,
+                }, {
+                    name: '2.Inyectora 2',
+                    value: 110,
+                }, ]
+            }, ],
+        }, {
+            name: 'Total',
+            value: 275,
+            date: '2013-10-07 22:23:00',
+            children: [{
+                name: 'Molde 1',
+                value: 135,
+                children: [{
+                    name: '1.Inyectora 1',
+                    value: 85,
+                }, {
+                    name: '1.Inyectora 2',
+                    value: 50,
+                }, ]
+            }, {
+                name: 'Molde 2',
+                value: 140,
+                children: [{
+                    name: '2.Inyectora 1',
+                    value: 30,
+                }, {
+                    name: '2.Inyectora 2',
+                    value: 110,
+                }, ]
+            }, ],
+        }, ]
+    },
+};
+
+
+const t = {
+    "Orden": "ML1",
+    "Color": "ML3", //falta molde
+    "Lote": "ML5",
+    "Operario": "MI18",
+    "Material": "MI19",
+    "Peso Inyección": "MF12",
+    "Peso Cavidad 1": "MF13",
+    "Peso Cavidad 2": "MF14",
+    "Peso Cavidad 3": "MF15",
+    "Peso Cavidad 4": "MF16",
+    "Peso Cavidad 5": "MF17",
+    "Peso Cavidad 6": "MF18",
+    "Energía Motor": "MI100",
+    "Energía Maquina": "MI99",
+    "Tiempo Puerta": "MF8",
+    "Tiempo Máquina": "MF9",
+    "Tiempo Inyección": "MF1",
+    "Contador Máquina": "MI121",
+    "Contador Molde": "MI122",
+    "Contador Abandono": "MI124",
+    "Contador Material": "MI127",
+    "Contador Calidad": "MI128",
+    "Contador Montaje": "MI123",
+    "Tiempo Motor": "ML0",
+    "Defecto Arranque": "MI101",
+    "Defecto Lluvia": "MI102",
+    "Inyecciones": "ML131",
+    "Ciclo Estándar": "MF5",
+    "Ciclo Estándar +": "MF6",
+    "Ciclo Estándar -": "MF7"
+};
+
+
+var output = {
+    calidad: [],
+    disponibilidad: [],
+    rendimiento: [],
+    ciclos: {},
+    configuracion: {
+        maquinas: [],
+        operarios: [],
+        ordenes: [],
+        lotes: [],
+        colores: [],
+        materiales: []
+    },
+    indicadores: {
+        disponibilidad: {
+            name: 'Disponibilidad',
+            values: [],
+            dates: [],
+        },
+        rendimiento: {
+            name: 'Rendimiento',
+            values: [],
+            dates: [],
+        },
+        calidad: {
+            name: 'Calidad',
+            values: [],
+            dates: [],
+        },
+        eficiencia: {
+            name: 'Eficiencia',
+            values: [],
+            dates: [],
+        },
+
+    },
+    energia: [],
+    material: {
+        maquina: []
+    }
+};
+
+inputs.forEach((input, i) => {
+    // calidad
+    var _buenas = 0;
+    var _arranque = 0;
+    var _lluvia = 0;
+    // disponibilidad
+    var _montaje = 0;
+    var _calidad = 0;
+    var _material = 0;
+    var _abandono = 0;
+    var _molde = 0;
+    var _maquina = 0;
+    var _productivo = 0;
+    // rendimiento
+    var _tiempoCiclo = 0;
+    var _contTiempoCiclo = 0;
+    // indicadores
+    output.indicadores.disponibilidad.dates.push(input.timeStamp)
+    output.indicadores.rendimiento.dates.push(input.timeStamp)
+    output.indicadores.calidad.dates.push(input.timeStamp)
+    output.indicadores.eficiencia.dates.push(input.timeStamp)
+    // energia
+    var energia = {
+        name: 'Total',
+        value: 0,
+        date: input.timeStamp,
+        children: []
+    }
+    // material
+    var material = {
+        name: 'Total',
+        value: 0,
+        date: input.timeStamp,
+        children: [],
+    }
+    Object.keys(input.plcs).forEach(plcId => {
+        var plc = input.plcs[plcId].variables;
+        // calidad
+        _arranque += Number(plc[t['Defecto Arranque']].value)
+        _lluvia += Number(plc[t['Defecto Lluvia']].value)
+        _buenas += (Number(plc[t['Inyecciones']].value) - Number(plc[t['Defecto Arranque']].value) - Number(plc[t['Defecto Lluvia']].value))
+        // disponibilidad
+        _montaje += Number(plc[t['Contador Montaje']].value)
+        _calidad += Number(plc[t['Contador Calidad']].value)
+        _material += Number(plc[t['Contador Material']].value)
+        _abandono += Number(plc[t['Contador Abandono']].value)
+        _molde += Number(plc[t['Contador Molde']].value)
+        _maquina += Number(plc[t['Contador Máquina']].value)
+        _productivo += Number(plc[t['Tiempo Motor']].value)
+        // rendimiento
+        _tiempoCiclo += Number(plc[t['Ciclo Estándar']].value)
+        _contTiempoCiclo++;
+        // ciclos
+        if (!(plcId in output.ciclos))
+            output.ciclos[plcId] = []
+        var ciclos = {
+            name: 'Ciclo',
+            value: Number(plc[t['Tiempo Inyección']].value),
+            date: input.timeStamp,
+            min: 55, // currently hard coded // value: Number(plc[t['Ciclo Estándar -']].value),
+            max: 65, // currently hard coded // value: Number(plc[t['Ciclo Estándar +']].value),
+            mean: 60, // currently hard coded // value: Number(plc[t['Ciclo Estándar']].value),
+            children: [{
+                    name: 'Maquina',
+                    value: Number(plc[t['Tiempo Máquina']].value),
+                },
+                {
+                    name: 'Puerta',
+                    value: Number(plc[t['Tiempo Puerta']].value),
+                }
+            ]
+        }
+        output.ciclos[plcId].push(ciclos)
+        // energia
+        var energiaPlc = {
+            name: plcId,
+            value: Number(plc[t['Energía Maquina']].value) + Number(plc[t['Energía Motor']].value),
+            children: [{
+                name: 'Motor',
+                value: Number(plc[t['Energía Motor']].value),
+            }, {
+                name: 'Maquina',
+                value: Number(plc[t['Energía Maquina']].value),
+            }, ]
+        }
+        energia.children.push(energiaPlc)
+        // configuracion
+        output.configuracion.maquinas.push(plcId)
+        output.configuracion.operarios.push(plc[t['Operario']].value)
+        output.configuracion.ordenes.push(plc[t['Orden']].value)
+        output.configuracion.lotes.push(plc[t['Lote']].value)
+        output.configuracion.colores.push(plc[t['Color']].value)
+        output.configuracion.materiales.push(plc[t['Material']].value)
+        // material
+        var materialPlc = {
+            name: plcId,
+            value: Number(plc[t['Peso Inyección']].value),
+            children: []
+        }
+        if (Number(plc[t['Peso Cavidad 1']].value) != 0)
+            materialPlc.children.push({
+                name: plcId + '.Cavidad 1',
+                value: Number(plc[t['Peso Cavidad 1']].value),
+            })
+        if (Number(plc[t['Peso Cavidad 2']].value) != 0)
+            materialPlc.children.push({
+                name: plcId + '.Cavidad 2',
+                value: Number(plc[t['Peso Cavidad 2']].value),
+            })
+        if (Number(plc[t['Peso Cavidad 3']].value) != 0)
+            materialPlc.children.push({
+                name: plcId + '.Cavidad 3',
+                value: Number(plc[t['Peso Cavidad 3']].value),
+            })
+        if (Number(plc[t['Peso Cavidad 4']].value) != 0)
+            materialPlc.children.push({
+                name: plcId + '.Cavidad 4',
+                value: Number(plc[t['Peso Cavidad 4']].value),
+            })
+        if (Number(plc[t['Peso Cavidad 5']].value) != 0)
+            materialPlc.children.push({
+                name: plcId + '.Cavidad 5',
+                value: Number(plc[t['Peso Cavidad 5']].value),
+            })
+        if (Number(plc[t['Peso Cavidad 6']].value) != 0)
+            materialPlc.children.push({
+                name: plcId + '.Cavidad 6',
+                value: Number(plc[t['Peso Cavidad 6']].value),
+            })
+        material.children.push(materialPlc)
+    })
+    var calidad = {
+        name: 'Producción',
+        value: _buenas + _arranque + _lluvia,
+        date: input.timeStamp,
+        children: [{
+                name: 'Buenas',
+                value: _buenas,
+            },
+            {
+                name: 'Malas',
+                value: _arranque + _lluvia,
+                children: [{
+                        name: 'Arranque',
+                        value: _arranque,
+                    },
+                    {
+                        name: 'Lluvia',
+                        value: _lluvia,
+                    }
+                ]
+            }
+        ]
+    }
+    output.calidad.push(calidad)
+
+    var disponibilidad = {
+        name: 'Disponible',
+        value: _maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo,
+        date: input.timeStamp,
+        children: [{
+                name: 'Productivo',
+                value: _productivo,
+            },
+            {
+                name: 'Paradas',
+                value: _maquina + _molde + _abandono + _material + _calidad + _montaje,
+                children: [{
+                        name: 'Maquina',
+                        value: _maquina,
+                    },
+                    {
+                        name: 'Molde',
+                        value: _molde,
+                    },
+                    {
+                        name: 'Abandono',
+                        value: _abandono,
+                    },
+                    {
+                        name: 'Material',
+                        value: _material,
+                    },
+                    {
+                        name: 'Calidad',
+                        value: _calidad,
+                    },
+                    {
+                        name: 'Montaje',
+                        value: _montaje,
+                    }
+                ]
+            }
+        ]
+    }
+    output.disponibilidad.push(disponibilidad)
+    
+    var rendimiento = {
+        name: 'Capacidad',
+        value: (_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo),
+        date: input.timeStamp,
+        children: [{
+                name: 'Producido',
+                value: _arranque + _lluvia + _buenas,
+            },
+            {
+                name: 'Ineficiencias',
+                value: ((_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo)) - (_arranque + _lluvia + _buenas),
+            }
+        ]
+    }
+    output.rendimiento.push(rendimiento)
+
+    energia.children.forEach(child => {
+        energia.value += child.value
+    })
+    output.energia.push(energia)
+
+    
+    material.children.forEach(child => {
+        material.value += child.value
+    })
+    output.material.maquina.push(material)
+
+
+    var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo);
+    disp = Math.round(disp * 100 * 10) / 10;
+    var rend = (_arranque + _lluvia + _buenas) / ((_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo));
+    rend = Math.round(rend * 100 * 10) / 10;
+    var cal = _buenas / (_buenas + _arranque + _lluvia);
+    cal = Math.round(cal * 100 * 10) / 10;
+    var ef = (disp/100 * rend/100 * cal/100);
+    ef = Math.round(ef * 100 * 10) / 10;
+    output.indicadores.disponibilidad.values.push(disp)
+    output.indicadores.rendimiento.values.push(rend)
+    output.indicadores.calidad.values.push(cal)
+    output.indicadores.eficiencia.values.push(ef)
+});
+Object.keys(output.configuracion).forEach(configId => {
+    var config = output.configuracion[configId]
+    output.configuracion[configId] = [...new Set(config)]
+})
+
+console.log(JSON.stringify(output))
