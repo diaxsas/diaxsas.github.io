@@ -4485,7 +4485,7 @@ var _inputs = [{
 ]
 
 var filters = {
-    maquinas: ["PLC1"],
+    maquinas: [],
     operarios: [],
     ordenes: [],
     lotes: [],
