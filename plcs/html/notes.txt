@@ -1,6 +1,3 @@
 todo:
-*tab numbers in legend
-*exportar
-*los tabs de config
 *que hale data de verdad
 *que los filtros sirvan
