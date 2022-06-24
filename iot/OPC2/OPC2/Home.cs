@@ -272,7 +272,7 @@ namespace OPC2
                         {
                             plc = value.Item.ItemId.ToString().Split('.')[0],
                             variable = value.Item.ItemId.ToString().Split('.')[1],
-                            timeStamp = DateTime.Now.ToString(),
+                            timeStamp = DateTime.Now.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'"),
                             quality = value.Quality.ToString(),
                             value = value.Value.ToString()
                         };
@@ -293,7 +293,7 @@ namespace OPC2
         {
             OpcDaItemValue[] valueResults = group.Read(group.Items, OpcDaDataSource.Device);
             dataSlice = new DataSlice();
-            dataSlice.timeStamp = DateTime.Now.ToString();
+            dataSlice.timeStamp = DateTime.Now.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'");
             dataSlice.plcs = new Dictionary<string, PLC>();
             for (int k = 0; k < valueResults.Length; k++)
             {
@@ -316,7 +316,7 @@ namespace OPC2
                     {
                         plc = valueResult.Item.ItemId.ToString().Split('.')[0],
                         variable = valueResult.Item.ItemId.ToString().Split('.')[1],
-                        timeStamp = DateTime.Now.ToString(),
+                        timeStamp = dataSlice.timeStamp,
                         quality = valueResult.Quality.ToString(),
                         value = valueResult.Value.ToString()
                     };
