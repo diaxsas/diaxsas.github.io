@@ -1436,18 +1436,6 @@
             });
         });
 
-        // Datetime
-        $(function () {
-            $('input[name="datetimes"]').daterangepicker({
-                timePicker: true,
-                startDate: moment().startOf('hour'),
-                endDate: moment().startOf('hour').add(32, 'hour'),
-                locale: {
-                    format: 'M/DD hh:mm A'
-                }
-            });
-        });
-
         // formatting functions
         var filters = {
             maquinas: [],
@@ -1489,6 +1477,7 @@
             "Ciclo Estándar +": "MF6",
             "Ciclo Estándar -": "MF7"
         };
+
         function filterData(inputs, filters) {
             var inputsCopy = JSON.parse(JSON.stringify(inputs))
             inputsCopy.forEach(input => {
@@ -1525,6 +1514,7 @@
             })
             return inputsCopy
         }
+
         function formatData(inputs) {
             var output = {
                 calidad: [],
@@ -6305,71 +6295,120 @@
         var originalData = formatData(_pulledData);
         var filteredData = formatData(filterData(_pulledData, filters));
 
-        // dynamic coloring
-        var _colors = ["#D6E4FF",
-            "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9",
-            "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", "#F9E84B", "#FF44CD",
-            "#71A3F7", "#F0B0F3", "#F9C25C", "#76F1CC", "#7DEF84", "#FC9885", "#FCF08B", "#FC7BDA",
-            "#A0C2FA", "#F4CFF6", "#FBDA9D", "#A8F6DF", "#ACF8B0", "#FCBBAF", "#FCF8D7", "#FFAAE8",
-            "#D0E0FC", "#F9F1F9", "#FCECCE", "#D9F6EE", "#CEFED1", "#FCE0DB", "#FFFCE5", "#FCD7F2",
-            "#3366D6", "#4285F4", "#71A3F7", "#A0C2FA", "#D0E0FC",
-            "#BE53C4", "#E585EB", "#F0B0F3", "#F4CFF6", "#F9F1F9",
-            "#FFA600", "#F9B432", "#F9C25C", "#FBDA9D", "#FCECCE",
-            "#FB4826", "#F9674D", "#FC9885", "#FCBBAF", "#FCE0DB",
-            "#1EC828", "#4BE354", "#7DEF84", "#ACF8B0", "#CEFED1",
-            "#23C897", "#41E6B5", "#76F1CC", "#A8F6DF", "#D9F6EE",
-            "#F9E215", "#F9E84B", "#FCF08B", "#FCF8D7", "#FFFCE5",
-            "#EC2EB9", "#FF44CD", "#FC7BDA", "#FFAAE8", "#FCD7F2"
-        ];
-        function setColors(data) 
-        {
-            var i = 0
-            data.color = _colors[i]
-            i++
-            if (data.children) {
-                data.children.forEach(function (d) {
-                    d.color = _colors[i]
-                    i++
-                })
-                data.children.forEach(function (d) {
-                    if (d.children)
-                        d.children.forEach(function (e) {
-                            e.color = _colors[i]
-                            i++
-                        })
-                })
-
-            }
-        }
-        Object.keys(filteredData).forEach(function (section) {
-            if (section == 'configuracion')
-                return
-            if (section == 'ciclos' || section == 'material') {
-                Object.keys(filteredData[section]).forEach(function (_section) {
-                    filteredData[section][_section].forEach(function (step) {
-                        setColors(step)
-                    })
-                })
-                return
-            }
-            if (section == 'indicadores') {
-                var i = 1;
-                Object.keys(filteredData[section]).forEach(function (_section) {
-                    filteredData[section][_section].color = _colors[i]
-                    i++
-                })
-                return
-            }
-            filteredData[section].forEach(function (_section) {
-                setColors(_section)
-            })
+        var timestamps = []
+        _pulledData.forEach(dataPoint => {
+            timestamps.push(dataPoint.timeStamp)
         })
+        timestamps = [...new Set(timestamps)]
+        timestamps = timestamps.sort(function (a, b) {
+            return new Date(a) - new Date(b);
+        });
+        // Datetime
+        $('input[name="datetimes"]').daterangepicker({
+            timePicker: true,
+            startDate: new Date(timestamps[0]),
+            endDate: new Date(timestamps[timestamps.length - 1]),
+            locale: {
+                format: 'M/DD hh:mm A'
+            }
+        });
 
 
         var _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
         var _materialPlc = Object.keys(filteredData['material'])[0]
 
-        function dataChange() {
+        function dataChange(filtered = false) {
+            if (filtered) {
+                Object.keys(filteredData['configuracion']).forEach((key) => {
+                    var opciones = filteredData['configuracion'][key]
+                    var select_container = $('#' + key + '_config .select_section');
+                    select_container.empty()
+                    opciones.forEach(function (opcion) {
+                        var new_section = `
+                            <div>
+                                <input type="checkbox" name="${opcion}" value="${opcion}" checked>
+                                <label for="${opcion}">${opcion}</label>
+                            </div>`
+                        select_container.append(new_section)
+                    })
+
+                    $('.selected_form').height('fit-content')
+                })
+
+                $('.selected_form .select_section input').on('change', function () {
+                    $(this).closest('.selected_form').find(
+                        `.search_section input[name=${$(this).prop('name')}]`).prop(
+                        'checked', $(this).prop('checked'));
+                    $(this).parent().hide();
+                    $(this).closest('.selected_form').height('fit-content')
+                    filteredData = formatData(filterData(_pulledData, getFilters()));
+                    dataChange(true);
+
+                })
+            }
+
+
+
+            // dynamic coloring
+            var _colors = ["#D6E4FF",
+                "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9",
+                "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", "#F9E84B", "#FF44CD",
+                "#71A3F7", "#F0B0F3", "#F9C25C", "#76F1CC", "#7DEF84", "#FC9885", "#FCF08B", "#FC7BDA",
+                "#A0C2FA", "#F4CFF6", "#FBDA9D", "#A8F6DF", "#ACF8B0", "#FCBBAF", "#FCF8D7", "#FFAAE8",
+                "#D0E0FC", "#F9F1F9", "#FCECCE", "#D9F6EE", "#CEFED1", "#FCE0DB", "#FFFCE5", "#FCD7F2",
+                "#3366D6", "#4285F4", "#71A3F7", "#A0C2FA", "#D0E0FC",
+                "#BE53C4", "#E585EB", "#F0B0F3", "#F4CFF6", "#F9F1F9",
+                "#FFA600", "#F9B432", "#F9C25C", "#FBDA9D", "#FCECCE",
+                "#FB4826", "#F9674D", "#FC9885", "#FCBBAF", "#FCE0DB",
+                "#1EC828", "#4BE354", "#7DEF84", "#ACF8B0", "#CEFED1",
+                "#23C897", "#41E6B5", "#76F1CC", "#A8F6DF", "#D9F6EE",
+                "#F9E215", "#F9E84B", "#FCF08B", "#FCF8D7", "#FFFCE5",
+                "#EC2EB9", "#FF44CD", "#FC7BDA", "#FFAAE8", "#FCD7F2"
+            ];
+
+            function setColors(data) {
+                var i = 0
+                data.color = _colors[i]
+                i++
+                if (data.children) {
+                    data.children.forEach(function (d) {
+                        d.color = _colors[i]
+                        i++
+                    })
+                    data.children.forEach(function (d) {
+                        if (d.children)
+                            d.children.forEach(function (e) {
+                                e.color = _colors[i]
+                                i++
+                            })
+                    })
+
+                }
+            }
+            Object.keys(filteredData).forEach(function (section) {
+                if (section == 'configuracion')
+                    return
+                if (section == 'ciclos' || section == 'material') {
+                    Object.keys(filteredData[section]).forEach(function (_section) {
+                        filteredData[section][_section].forEach(function (step) {
+                            setColors(step)
+                        })
+                    })
+                    return
+                }
+                if (section == 'indicadores') {
+                    var i = 1;
+                    Object.keys(filteredData[section]).forEach(function (_section) {
+                        filteredData[section][_section].color = _colors[i]
+                        i++
+                    })
+                    return
+                }
+                filteredData[section].forEach(function (_section) {
+                    setColors(_section)
+                })
+            })
+
             Object.keys(filteredData).forEach(function (section) {
                 var units = 'ud'
                 switch (section) {
@@ -6486,8 +6525,12 @@
                 }
                 var currData = filteredData[section];
                 if (section == "ciclos") {
+                    if (!(_ciclosPlc in filteredData[section])) {
+                        _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
+                    }
                     currData = filteredData[section][_ciclosPlc]
-                    if ($('#ciclePlc>option').length == 0) {
+                    if ($('#ciclePlc>option').length == 0 || filtered) {
+                        $('#ciclePlc').empty()
                         var _keys = Object.keys(filteredData[section])
                         _keys.forEach(function (key) {
                             $('#ciclePlc').append($(`<option value="${key}">${proper(key)}</option>`))
@@ -6870,21 +6913,34 @@
         // var config_template = $('#sub_config').html();
         // $('#sub_config').html('');
         //$('#sub_config').html(config_template);
-        $('.selected_form .select_section input').on('change', function () {
-            $(this).closest('.selected_form').find(`.search_section input[name=${$(this).prop('name')}]`).prop(
-                'checked', $(this).prop('checked'));
-            $(this).parent().hide();
-            $(this).closest('.selected_form').height('fit-content')
-            var filters = {
-                maquinas: ["PLC1"],
+        function getFilters() {
+            var _filters = {
+                maquinas: [],
                 operarios: [],
                 ordenes: [],
                 lotes: [],
                 colores: [],
                 materiales: []
             };
-            filteredData = formatData(filterData(_pulledData, filters));
-            dataChange();
+            Object.keys(_filters).forEach(filterId => {
+                var search_containers = $('#' + filterId + '_config .search_section .rows > div');
+
+                for (let i = 0; i < search_containers.length; i++) {
+                    var checked = $(search_containers[i]).find('input').prop('checked')
+                    var _value = $(search_containers[i]).find('input').attr('value')
+                    if (!checked)
+                        _filters[filterId].push(_value)
+                }
+            })
+            return _filters
+        }
+        $('.selected_form .select_section input').on('change', function () {
+            $(this).closest('.selected_form').find(`.search_section input[name=${$(this).prop('name')}]`).prop(
+                'checked', $(this).prop('checked'));
+            $(this).parent().hide();
+            $(this).closest('.selected_form').height('fit-content')
+            filteredData = formatData(filterData(_pulledData, getFilters()));
+            dataChange(true);
 
         })
         $('.selected_form .search_section .rows input').on('change', function () {
@@ -6893,12 +6949,16 @@
             $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`)
                 .parent().toggle($(this).prop('checked'));
             $(this).closest('.selected_form').height('fit-content')
+            filteredData = formatData(filterData(_pulledData, getFilters()));
+            dataChange(true);
 
         })
         $('.selected_form .search_section .toggle_all').on('change', function () {
             $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
             $(this).closest('.selected_form').find('.select_section > div').toggle($(this).prop('checked'));
             $(this).closest('.selected_form').height('fit-content')
+            filteredData = formatData(filterData(_pulledData, getFilters()));
+            dataChange(true);
         })
 
 
