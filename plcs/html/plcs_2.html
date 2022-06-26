@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./bundle.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <style>
         :root {
@@ -910,6 +911,14 @@
         .button_download_parent {
             display: none;
         }
+
+        #liveContainer {
+            height: 100%;
+        }
+        #liveContainer input {
+            margin: auto;
+            margin-top: 5px;
+        }
     </style>
 </head>
 
@@ -950,11 +959,19 @@
                 </div>
             </div>
             <div id="sub_config">
-                <div class="left_rows rows">
-                    <div id="inicio_fin">
-                        Rango
+                <div class="columns center">
+                    <div class="left_rows rows">
+                        <div id="inicio_fin">
+                            Rango
+                        </div>
+                        <input id="datetimes" type="text" name="datetimes" />
                     </div>
-                    <input id="datetimes" type="text" name="datetimes" />
+                    <div id="liveContainer"  class="left_rows rows padding_pq">
+                        <label for="live">
+                            Live
+                        </label>
+                        <input id="live" name="live" type="checkbox" />
+                    </div>
                 </div>
                 <div class="selected_form" id="maquinas_config">
                     <div class="selected_head center">
@@ -1478,6 +1495,19 @@
             "Ciclo Estándar -": "MF7"
         };
 
+        const v = {
+            "PLC1": "Inyectora 1",
+            "PLC2": "Inyectora 2",
+            "PLC3": "Inyectora 3",
+            "PLC4": "Inyectora 4",
+            "PLC5": "Inyectora 5",
+            "PLC6": "Inyectora 6",
+            "PLC7": "Inyectora 7",
+            "PLC8": "Inyectora 8",
+            "PLC9": "Inyectora 9",
+        }
+
+
         function filterData(inputs, filters) {
             var inputsCopy = JSON.parse(JSON.stringify(inputs))
             inputsCopy.forEach(input => {
@@ -1807,6 +1837,23 @@
             })
             return output;
         }
+
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+        }
+
+        function replaceAll(str, find, replace) {
+            return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+        }
+
+        function rename(toRename) {
+            var _sdata = JSON.stringify(toRename)
+            Object.keys(v).forEach(name => {
+                _sdata =  replaceAll(_sdata, name, v[name])
+            })
+            return JSON.parse(_sdata)
+        }
+
         var _pulledData = [{
                 "timeStamp": "2022-06-24T19:24:08.002Z",
                 "plcs": {
@@ -6292,6 +6339,7 @@
                 }
             }
         ]
+        _pulledData = rename(_pulledData)
         var originalData = formatData(_pulledData);
         var filteredData = formatData(filterData(_pulledData, filters));
 
@@ -6317,7 +6365,7 @@
         var _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
         var _materialPlc = Object.keys(filteredData['material'])[0]
 
-        function dataChange(filtered = false) {
+        function dataChange(filtered = false, pulled= false) {
             if (filtered) {
                 Object.keys(filteredData['configuracion']).forEach((key) => {
                     var opciones = filteredData['configuracion'][key]
@@ -6345,6 +6393,52 @@
                     dataChange(true);
 
                 })
+            }
+            if(pulled)
+            {
+                Object.keys(originalData['configuracion']).forEach((key) => {
+                    var opciones = originalData['configuracion'][key]
+                    var select_container = $('#' + key + '_config .select_section');
+                    var search_container = $('#' + key + '_config .search_section .rows');
+                    select_container.empty()
+                    search_container.empty()
+                    opciones.forEach(function (opcion) {
+                        var new_section = `
+                            <div>
+                                <input type="checkbox" name="${opcion}" value="${opcion}" checked>
+                                <label for="${opcion}">${opcion}</label>
+                            </div>`
+                        select_container.append(new_section)
+                        search_container.append(new_section)
+                    })
+                })
+                $('.selected_form .select_section input').on('change', function () {
+                    $(this).closest('.selected_form').find(`.search_section input[name=${$(this).prop('name')}]`).prop(
+                        'checked', $(this).prop('checked'));
+                    $(this).parent().hide();
+                    $(this).closest('.selected_form').height('fit-content')
+                    filteredData = formatData(filterData(_pulledData, getFilters()));
+                    dataChange(true);
+
+                })
+                $('.selected_form .search_section .rows input').on('change', function () {
+                    $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`).prop(
+                        'checked', $(this).prop('checked'));
+                    $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`)
+                        .parent().toggle($(this).prop('checked'));
+                    $(this).closest('.selected_form').height('fit-content')
+                    filteredData = formatData(filterData(_pulledData, getFilters()));
+                    dataChange(true);
+
+                })
+                $('.selected_form .search_section .toggle_all').on('change', function () {
+                    $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
+                    $(this).closest('.selected_form').find('.select_section > div').toggle($(this).prop('checked'));
+                    $(this).closest('.selected_form').height('fit-content')
+                    filteredData = formatData(filterData(_pulledData, getFilters()));
+                    dataChange(true);
+                })
+
             }
 
 
@@ -6882,14 +6976,14 @@
 
             })
         }
-        dataChange();
+        dataChange(false);
         $('#ciclePlc').on('change', function () {
             _ciclosPlc = this.value
-            dataChange();
+            dataChange(false);
         });
         $('#MaterialPlc').on('change', function () {
             _materialPlc = this.value
-            dataChange();
+            dataChange(false);
         });
 
 
@@ -6961,9 +7055,68 @@
             dataChange(true);
         })
 
-
-
-
+        //LIVE
+        $('#live').on('change', function () {
+            $('#datetimes').prop( "disabled", $(this).prop('checked') );
+            var copyData = JSON.parse(JSON.stringify(_pulledData))
+            _pulledData = []
+            //_pulledData = rename(_pulledData)
+            //originalData = formatData(_pulledData);
+            //filteredData = formatData(filterData(_pulledData, filters));
+            //dataChange(false, true);
+            if($(this).prop('checked'))
+                client.subscribe('diaxPublisher/plcs/#')
+            else
+                client.unsubscribe('diaxPublisher/plcs/#')
+                    
+            $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: new Date(),
+                endDate: new Date(),
+                locale: {
+                    format: 'M/DD hh:mm A'
+                }
+            });
+        })
+        var AWSMqttClient = sdk.AWSMqttClient;
+        var AWS = sdk.AWS
+        AWS.config.region = 'us-east-1';
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'us-east-1:1e835899-922f-4a23-b61a-f3c5e43d94e7',
+        });
+        var mqttSettings = {
+            region: AWS.config.region,
+            credentials: AWS.config.credentials,
+            endpoint: 'a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com',
+            expires: 0,
+            clientId: 'mqtt-client-' + (Math.floor((Math.random() * 100000) + 1)),
+            will: {
+                topic: 'WillMsg',
+                payload: 'Connection Closed abnormally..!',
+                qos: 0,
+                retain: false
+            }
+        }
+        const client = new AWSMqttClient(mqttSettings)
+        client.on('connect', () => {
+            console.log('Connected to AWS IoT')
+        })
+        client.on('message', (topic, message) => {
+            var uint8array = new TextEncoder().encode("¢");
+            var string = new TextDecoder().decode(message);
+            //console.log(JSON.parse(string))
+            _pulledData = _pulledData.concat(JSON.parse(string));
+            _pulledData = rename(_pulledData)
+            originalData = formatData(_pulledData);
+            filteredData = formatData(filterData(_pulledData, filters));
+            dataChange(false, true);
+        })
+        client.on('close', () => {
+            console.log('Connection closed')
+        })
+        client.on('offline', () => {
+            console.log('Connection offline')
+        })
         $(window).resize();
     </script>
 </body>

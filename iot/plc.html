@@ -30,12 +30,10 @@
     <script>
         const AWSMqttClient = sdk.AWSMqttClient;
         const AWS = sdk.AWS
-
         AWS.config.region = 'us-east-1';
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
             IdentityPoolId: 'us-east-1:1e835899-922f-4a23-b61a-f3c5e43d94e7',
         });
-
         const client = new AWSMqttClient({
             region: AWS.config.region,
             credentials: AWS.config.credentials,
@@ -52,16 +50,15 @@
 
         client.on('connect', () => {
             console.log('Connected to AWS IoT')
-            client.subscribe('diaxPublisher/Messages/#')
+            client.subscribe('diaxPublisher/plcs/#')
         })
         client.on('message', (topic, message) => {
             var uint8array = new TextEncoder().encode("¢");
             var string = new TextDecoder().decode(message);
-            var print = topic.replace('diaxPublisher/Messages/', '').replace('/', '.') + ": " + string;
-            console.log(print)
+            console.log(JSON.parse(string))
 
             var p = document.createElement('p');
-            p.innerHTML = print;
+            p.innerHTML = string;
             document.getElementById('var').appendChild(p);
         })
         client.on('close', () => {
