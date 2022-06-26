@@ -919,6 +919,29 @@
             margin: auto;
             margin-top: 5px;
         }
+        #liveContainer > div > div:before {            
+            position : absolute;
+            content : 'Conectarse en vivo a la red de la fabrica. Aproximadamente cada minuto llegara data nueva.';
+            background-color: white;
+            z-index: 2;
+            max-width: 150px;
+            display : none;
+            border: gray solid 1px;
+            box-shadow: 1px 1px gray;
+            padding: 2px;
+            transform: translateX(-100%);
+            text-align: left;
+        }
+        #liveContainer > div > div:hover:before { 
+            display : block;
+        }
+        #liveContainer > div > div {
+            border-radius: 50%;
+            border: black solid 1px;
+            width: 15px;
+            height: 15px;
+            margin-left: 5px;
+        }
     </style>
 </head>
 
@@ -967,9 +990,9 @@
                         <input id="datetimes" type="text" name="datetimes" />
                     </div>
                     <div id="liveContainer"  class="left_rows rows padding_pq">
-                        <label for="live">
-                            Live
-                        </label>
+                        <div class="columns noselect">
+                            <label for="live">Live</label><div>?</div>
+                        </div>
                         <input id="live" name="live" type="checkbox" />
                     </div>
                 </div>
@@ -1496,15 +1519,15 @@
         };
 
         const v = {
-            "PLC1": "Inyectora 1",
-            "PLC2": "Inyectora 2",
-            "PLC3": "Inyectora 3",
-            "PLC4": "Inyectora 4",
-            "PLC5": "Inyectora 5",
-            "PLC6": "Inyectora 6",
-            "PLC7": "Inyectora 7",
-            "PLC8": "Inyectora 8",
-            "PLC9": "Inyectora 9",
+            "PLC1": "Iny.1",
+            "PLC2": "Iny.2",
+            "PLC3": "Iny.3",
+            "PLC4": "Iny.4",
+            "PLC5": "Iny.5",
+            "PLC6": "Iny.6",
+            "PLC7": "Iny.7",
+            "PLC8": "Iny.8",
+            "PLC9": "Iny.9",
         }
 
 
@@ -6385,7 +6408,7 @@
 
                 $('.selected_form .select_section input').on('change', function () {
                     $(this).closest('.selected_form').find(
-                        `.search_section input[name=${$(this).prop('name')}]`).prop(
+                        `.search_section input[name='${$(this).prop('name')}']`).prop(
                         'checked', $(this).prop('checked'));
                     $(this).parent().hide();
                     $(this).closest('.selected_form').height('fit-content')
@@ -6396,24 +6419,30 @@
             }
             if(pulled)
             {
+                var oldFilters = getFilters()
                 Object.keys(originalData['configuracion']).forEach((key) => {
                     var opciones = originalData['configuracion'][key]
                     var select_container = $('#' + key + '_config .select_section');
                     var search_container = $('#' + key + '_config .search_section .rows');
+                    //modified to keep current config
                     select_container.empty()
                     search_container.empty()
                     opciones.forEach(function (opcion) {
+                        var _chk = ''
+                        if(!oldFilters[key].includes(opcion))
+                            _chk = 'checked'
                         var new_section = `
                             <div>
-                                <input type="checkbox" name="${opcion}" value="${opcion}" checked>
+                                <input type="checkbox" name="${opcion}" value="${opcion}" ${_chk}>
                                 <label for="${opcion}">${opcion}</label>
                             </div>`
-                        select_container.append(new_section)
+                        if(!oldFilters[key].includes(opcion))
+                            select_container.append(new_section)
                         search_container.append(new_section)
                     })
                 })
                 $('.selected_form .select_section input').on('change', function () {
-                    $(this).closest('.selected_form').find(`.search_section input[name=${$(this).prop('name')}]`).prop(
+                    $(this).closest('.selected_form').find(`.search_section input[name='${$(this).prop('name')}']`).prop(
                         'checked', $(this).prop('checked'));
                     $(this).parent().hide();
                     $(this).closest('.selected_form').height('fit-content')
@@ -6422,9 +6451,9 @@
 
                 })
                 $('.selected_form .search_section .rows input').on('change', function () {
-                    $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`).prop(
+                    $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`).prop(
                         'checked', $(this).prop('checked'));
-                    $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`)
+                    $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`)
                         .parent().toggle($(this).prop('checked'));
                     $(this).closest('.selected_form').height('fit-content')
                     filteredData = formatData(filterData(_pulledData, getFilters()));
@@ -7029,7 +7058,7 @@
             return _filters
         }
         $('.selected_form .select_section input').on('change', function () {
-            $(this).closest('.selected_form').find(`.search_section input[name=${$(this).prop('name')}]`).prop(
+            $(this).closest('.selected_form').find(`.search_section input[name='${$(this).prop('name')}']`).prop(
                 'checked', $(this).prop('checked'));
             $(this).parent().hide();
             $(this).closest('.selected_form').height('fit-content')
@@ -7038,9 +7067,9 @@
 
         })
         $('.selected_form .search_section .rows input').on('change', function () {
-            $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`).prop(
+            $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`).prop(
                 'checked', $(this).prop('checked'));
-            $(this).closest('.selected_form').find(`.select_section input[name=${$(this).prop('name')}]`)
+            $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`)
                 .parent().toggle($(this).prop('checked'));
             $(this).closest('.selected_form').height('fit-content')
             filteredData = formatData(filterData(_pulledData, getFilters()));
@@ -7056,6 +7085,7 @@
         })
 
         //LIVE
+        var liveStart;
         $('#live').on('change', function () {
             $('#datetimes').prop( "disabled", $(this).prop('checked') );
             var copyData = JSON.parse(JSON.stringify(_pulledData))
@@ -7068,11 +7098,11 @@
                 client.subscribe('diaxPublisher/plcs/#')
             else
                 client.unsubscribe('diaxPublisher/plcs/#')
-                    
+            liveStart  = new Date();
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
-                startDate: new Date(),
-                endDate: new Date(),
+                startDate: liveStart,
+                endDate: liveStart,
                 locale: {
                     format: 'M/DD hh:mm A'
                 }
@@ -7106,10 +7136,23 @@
             var string = new TextDecoder().decode(message);
             //console.log(JSON.parse(string))
             _pulledData = _pulledData.concat(JSON.parse(string));
+            if(_pulledData.length > 100)
+            {
+                _pulledData.shift()
+                liveStart = new Date(_pulledData[0].timeStamp)
+            }
             _pulledData = rename(_pulledData)
             originalData = formatData(_pulledData);
-            filteredData = formatData(filterData(_pulledData, filters));
+            filteredData = formatData(filterData(_pulledData, getFilters()));
             dataChange(false, true);
+            $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: liveStart,
+                endDate: new Date(),
+                locale: {
+                    format: 'M/DD hh:mm A'
+                }
+            });
         })
         client.on('close', () => {
             console.log('Connection closed')
@@ -7117,6 +7160,7 @@
         client.on('offline', () => {
             console.log('Connection offline')
         })
+        
         $(window).resize();
     </script>
 </body>
