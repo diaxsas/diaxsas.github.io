@@ -914,6 +914,8 @@
 
         #liveContainer {
             height: 100%;
+            display: flex;
+            align-items: flex-end;
         }
         #liveContainer input {
             margin: auto;
@@ -921,7 +923,6 @@
         }
         #liveContainer > div > div:before {            
             position : absolute;
-            content : 'Conectarse en vivo a la red de la fabrica. Aproximadamente cada minuto llegara data nueva.';
             background-color: white;
             z-index: 2;
             max-width: 150px;
@@ -932,6 +933,12 @@
             transform: translateX(-100%);
             text-align: left;
         }
+        #liveContainer > div:nth-child(1) > div:before {
+            content : 'Ver data empresarial HASTA el momento. Aproximadamente cada minuto llegara data nueva.';
+        }
+        #liveContainer > div:nth-child(2) > div:before {
+            content : 'Ver data empresarial DESDE el momento. Aproximadamente cada minuto llegara data nueva.';
+        }
         #liveContainer > div > div:hover:before { 
             display : block;
         }
@@ -940,7 +947,10 @@
             border: black solid 1px;
             width: 15px;
             height: 15px;
-            margin-left: 5px;
+            margin: 5px;
+        }
+        #liveContainer > div > input {
+            margin: auto;
         }
     </style>
 </head>
@@ -989,11 +999,14 @@
                         </div>
                         <input id="datetimes" type="text" name="datetimes" />
                     </div>
-                    <div id="liveContainer"  class="left_rows rows padding_pq">
-                        <div class="columns noselect">
-                            <label for="live">Live</label><div>?</div>
+                    <div id="liveContainer"  class="rows padding_pq">
+                        <div class="columns noselect center">
+                            <label for="live">Live</label><div>?</div><input id="live" name="live" type="checkbox" />
                         </div>
-                        <input id="live" name="live" type="checkbox" />
+                        <div class="columns noselect center">
+                            <label for="offset">Offset</label><div>?</div><input id="offset" name="offset" type="checkbox" />
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="selected_form" id="maquinas_config">
@@ -7086,6 +7099,7 @@
 
         //LIVE
         var liveStart;
+        var liveReset = false;
         $('#live').on('change', function () {
             $('#datetimes').prop( "disabled", $(this).prop('checked') );
             var copyData = JSON.parse(JSON.stringify(_pulledData))
@@ -7107,6 +7121,14 @@
                     format: 'M/DD hh:mm A'
                 }
             });
+            liveReset = true;
+        })
+        var _offset = false;
+        $('#offset').on('change', function () {
+            $('#datetimes').prop( "disabled", false );
+            client.unsubscribe('diaxPublisher/plcs/#');
+            $('#live').prop('checked', false)
+            _offset =  $(this).prop('checked');
         })
         var AWSMqttClient = sdk.AWSMqttClient;
         var AWS = sdk.AWS
@@ -7131,11 +7153,43 @@
         client.on('connect', () => {
             console.log('Connected to AWS IoT')
         })
+
+        var offsets = {
+            "MI100":0,//"Energía Motor"
+            "MI99":0,//"Energía Maquina"
+            "MI121":0,//"Contador Máquina" 
+            "MI122":0,//"Contador Molde"
+            "MI124":0,//"Contador Abandono" 
+            "MI127":0,//"Contador Material" 
+            "MI128":0,//"Contador Calidad" 
+            "MI123":0,//"Contador Montaje"
+            "ML0":0,//"Tiempo Motor" 
+            "MI101":0,//"Defecto Arranque"
+            "MI102":0,//"Defecto Lluvia"
+            "ML131":0//"Inyecciones"
+        }
         client.on('message', (topic, message) => {
             var uint8array = new TextEncoder().encode("¢");
             var string = new TextDecoder().decode(message);
             //console.log(JSON.parse(string))
-            _pulledData = _pulledData.concat(JSON.parse(string));
+            var objString = JSON.parse(string)
+            // offseting
+            if(liveReset)
+            {
+                Object.keys(offsets).forEach(offsetId => {
+                    Object.keys(objString[0].plcs).forEach(_plcId=>{
+                        offsets[offsetId] = 0 - objString[0].plcs[_plcId].variables[offsetId].value
+                    })
+                });
+                liveReset = false
+            }
+            if(_offset)
+                Object.keys(offsets).forEach(offsetId => {
+                    Object.keys(objString[0].plcs).forEach(_plcId=>{
+                        objString[0].plcs[_plcId].variables[offsetId].value += offsets[offsetId]
+                    })
+                });
+            _pulledData = _pulledData.concat(objString);
             if(_pulledData.length > 100)
             {
                 _pulledData.shift()
