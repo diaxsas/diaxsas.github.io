@@ -1,3 +1,60 @@
 todo:
 *que hale data guardada
 *agrupar data (en el backend) por horas y dias, y aplicar fitlro de busqueda al halar
+
+
+
+david:
+poner formulario bonito y montar
+
+andres olarte:
+mandar cotizaciones
+
+Tony olarte:
+    1. Modelado 3d:
+        Averiguar modelado y costos
+    2. Amazon
+        mandar cotizacion y hablar de posibilidad de %
+
+Diax:
+    Arreglar offset
+    filtrar antes de 1er dataslice rompe config hasta q llegue
+
+
+ORDEN:
+    Arreglar offset
+    filtrar antes de 1er data slice rompe config hasta q llegue
+    Tony olarte Modelado 3d: Averiguar modelado y costos
+    poner formulario bonito y montar
+    planilla SS
+
+perro negro>
+    poner una foto nueva
+    cambiar las otras a las viejas
+    poner el perro negro un poco mas peque;o
+
+
+
+
+juan pablo:
+renta de vehiculos
+app
+boston
+sin localidad fisica
+ver detalles del carro
+hacer pagos
+ejemplos: hertz
+los carros estan en la residencia de JP
+3 carros -> potencial de agruparse con otra agencia de carros
+
+Funcionalidades:
+-perfiles x 2 vendedores y recolectores
+-terminos y condiciones
+-formulario entrega???
+-pagos
+-agendamiento
+-seguimiento de los carros?
+-15-25 millones
+
+
+
