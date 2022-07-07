@@ -1605,7 +1605,7 @@
                 _pulledData = rename(_pulledData)
                 originalData = formatData(_pulledData);
                 filteredData = formatData(filterData(_pulledData, getFilters())); //filter must check for order changes*************************
-                dataChange(true);
+                dataChange(true,true);
             }
         })
         function pullData(start, end)
@@ -7361,7 +7361,6 @@
             //dataChange(false, true);
             if ($(this).prop('checked'))
             {
-             _pulledData = []
                 client.subscribe('diaxPublisher/plcs/#')
                 liveStart = new Date();
                 $('input[name="datetimes"]').daterangepicker({
@@ -7429,6 +7428,7 @@
             var objString = JSON.parse(string)
             // offseting
             if (liveReset) {
+                _pulledData = []
                 Object.keys(offsets).forEach(offsetId => {
                     Object.keys(objString[0].plcs).forEach(_plcId => {
                         offsets[offsetId] = 0 - objString[0].plcs[_plcId].variables[offsetId]
@@ -7451,7 +7451,7 @@
             _pulledData = rename(_pulledData)
             originalData = formatData(_pulledData);
             filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange(true);
+            dataChange(true, true);
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
                 startDate: liveStart,
