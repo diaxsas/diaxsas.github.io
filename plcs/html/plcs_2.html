@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plcs_2</title>
+    <title>Diax PLC Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script src="./bundle.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="./bundle.js"></script>
     <style>
         :root {
             --base-width: 300px;
@@ -49,15 +49,11 @@
         html,
         body,
         text {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 400;
             color: var(--color-negro);
         }
 
-        #dashboard {
-            width: 100%;
-            height: fit-content;
-        }
 
         h4 {
             font-size: 20px;
@@ -204,11 +200,38 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            width: 100%;
 
         }
 
-        #sub_config>*:not(.title_container) {
+        #subSubConfig {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        #subSubConfig>* {
             margin: 5px;
+        }
+
+        #dashboard {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1200px;
+        }
+
+        #subdashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        .grid-item {
+            /*float: left;*/
         }
 
         .cube_container {
@@ -220,6 +243,87 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-width: 350px;
+            width: 350px;
+            max-width: 350px;
+            height: fit-content;
+            box-sizing: border-box;
+        }
+
+        #Disponibilidad,
+        #Calidad,
+        #Rendimiento {
+            min-height: 450px;
+        }
+
+        @media (min-width: 740px) and (max-width: 1100px) {
+
+
+            #indicadoresSubCont {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+            #Indicadores {
+                min-width: 725px;
+                width: 725px;
+                max-width: 725px;
+            }
+
+            #config {
+                min-width: 725px;
+                width: 725px;
+                max-width: 725px;
+            }
+
+            #Indicadores .pieContainer {
+                max-width: 250px;
+            }
+
+            #pieContCont {
+                max-width: 250px !important;
+                width: 250px !important;
+                display: block;
+                box-sizing: border-box;
+            }
+
+        }
+
+        @media (min-width: 1100px) {
+
+            #indicadoresSubCont {
+                display: flex;
+                width: 80%;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+            #Indicadores {
+                min-width: 1080px;
+                width: 1080px;
+                max-width: 1080px;
+            }
+
+            #config {
+                min-width: 1080px;
+                width: 1080px;
+                max-width: 1080px;
+            }
+
+            #Indicadores .pieContainer {
+                max-width: 250px;
+            }
+
+            #pieContCont {
+                max-width: 250px !important;
+                width: 250px !important;
+                display: block;
+                box-sizing: border-box;
+            }
+
+
         }
 
         .cube_container>.title_container {
@@ -548,6 +652,7 @@
             border-radius: 4px;
             width: 300px;
             position: relative;
+            height: fit-content;
         }
 
         .selected_head {
@@ -785,7 +890,10 @@
 
         .legend {
             text-align: left;
-            margin: 20px !important;
+            margin: 15px !important;
+            width: 100%;
+            display: flex;
+            justify-content: center;
             -webkit-touch-callout: none;
             /* iOS Safari */
             -webkit-user-select: none;
@@ -798,6 +906,10 @@
             /* Internet Explorer/Edge */
             user-select: none;
             /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        select {
+            margin: 5px;
         }
 
         /* Remove default bullets */
@@ -822,8 +934,20 @@
             cursor: pointer;
             user-select: none;
             position: relative;
+            display: flex;
+            align-items: flex-start;
             left: -17px;
             /* Prevent text selection */
+        }
+
+        li.leg_toggle {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        li,
+        ul {
+            margin: 2px;
         }
 
         /* Create the caret/arrow with a unicode, and style it */
@@ -916,47 +1040,63 @@
             height: 100%;
             display: flex;
             align-items: flex-end;
+            justify-content: flex-end;
         }
+
         #liveContainer input {
             margin: auto;
             margin-top: 5px;
         }
-        #liveContainer > div > div:before {            
-            position : absolute;
+
+        #liveContainer>div>div:before {
+            position: absolute;
             background-color: white;
             z-index: 2;
             max-width: 150px;
-            display : none;
+            display: none;
             border: gray solid 1px;
             box-shadow: 1px 1px gray;
             padding: 2px;
             transform: translateX(-100%);
             text-align: left;
         }
-        #liveContainer > div:nth-child(1) > div:before {
-            content : 'Ver data empresarial HASTA el momento. Aproximadamente cada minuto llegara data nueva.';
+
+        #liveContainer>div:nth-child(1)>div:before {
+            content: 'Ver data empresarial HASTA el momento. Aproximadamente cada minuto llegara data nueva.';
         }
-        #liveContainer > div:nth-child(2) > div:before {
-            content : 'Ver data empresarial DESDE el momento. Aproximadamente cada minuto llegara data nueva.';
+
+        #liveContainer>div:nth-child(2)>div:before {
+            content: 'Ver data empresarial DESDE el momento. Aproximadamente cada minuto llegara data nueva.';
         }
-        #liveContainer > div > div:hover:before { 
-            display : block;
+
+        #liveContainer>div>div:hover:before {
+            display: block;
         }
-        #liveContainer > div > div {
+
+        #liveContainer>div>div {
             border-radius: 50%;
             border: black solid 1px;
             width: 15px;
             height: 15px;
             margin: 5px;
         }
-        #liveContainer > div > input {
+
+        #liveContainer>div>input {
             margin: auto;
+        }
+
+        #offsetCont {
+            display: none;
+        }
+        .interrogation{
+            box-sizing: border-box;
+            padding-bottom: 2px;
         }
     </style>
 </head>
 
 <body>
-    <div id="dashboard">
+    <div id="dashboard" class="">
         <!--Configuracion-->
         <div class="cube_container" id="config">
             <div class="tab_container columns">
@@ -992,218 +1132,222 @@
                 </div>
             </div>
             <div id="sub_config">
-                <div class="columns center">
+                <div class="columns center margin_gd">
                     <div class="left_rows rows">
                         <div id="inicio_fin">
                             Rango
                         </div>
                         <input id="datetimes" type="text" name="datetimes" />
                     </div>
-                    <div id="liveContainer"  class="rows padding_pq">
+                    <div id="liveContainer" class="rows padding_pq">
                         <div class="columns noselect center">
-                            <label for="live">Live</label><div>?</div><input id="live" name="live" type="checkbox" />
+                            <label for="live">Live</label>
+                            <div class="interrogation">?</div><input id="live" name="live" type="checkbox" />
                         </div>
-                        <div class="columns noselect center">
-                            <label for="offset">Offset</label><div>?</div><input id="offset" name="offset" type="checkbox" />
+                        <div id="offsetCont" class="columns noselect center">
+                            <label for="offset">Offset</label>
+                            <div>?</div><input id="offset" name="offset" type="checkbox" />
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="selected_form" id="maquinas_config">
-                    <div class="selected_head center">
-                        <h3>Máquina</h3>
-                        <div class="columns">
-                            <div class="button_search">
-                                <div></div>
-                            </div>
-                            <div class="button_arrow_down">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Despliegue de Select-->
-                    <div class="select_section">
-                        <div>
-                            <input type="checkbox">
-                            <label>Sample</label>
-                        </div>
-                    </div>
-                    <!--Search de Select-->
-                    <div class="search_section">
-                        <div>
-                            <input type="checkbox" class="toggle_all">
-                            <input type="text">
-                        </div>
-                        <div class="rows">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="selected_form" id="operarios_config">
-                    <div class="selected_head center">
-                        <h3>Operario</h3>
-                        <div class="columns">
-                            <div class="button_search">
-                                <div></div>
-                            </div>
-                            <div class="button_arrow_down">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Despliegue de Select-->
-                    <div class="select_section">
-                        <div>
-                            <input type="checkbox">
-                            <label>Sample</label>
-                        </div>
-                    </div>
-                    <!--Search de Select-->
-                    <div class="search_section">
-                        <div>
-                            <input type="checkbox" class="toggle_all">
-                            <input type="text">
-                        </div>
-                        <div class="rows">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="selected_form" id="ordenes_config">
-                    <div class="selected_head center">
-                        <h3>Orden</h3>
-                        <div class="columns">
-                            <div class="button_search">
-                                <div></div>
+                <div id="subSubConfig">
+                    <div class="selected_form" id="maquinas_config">
+                        <div class="selected_head center">
+                            <h3>Máquina</h3>
+                            <div class="columns">
+                                <div class="button_search">
+                                    <div></div>
+                                </div>
+                                <div class="button_arrow_down">
+                                    <div></div>
+                                </div>
                             </div>
-                            <div class="button_arrow_down">
-                                <div></div>
-                            </div>
                         </div>
-                    </div>
-                    <!--Despliegue de Select-->
-                    <div class="select_section">
-                        <div>
-                            <input type="checkbox">
-                            <label>Sample</label>
-                        </div>
-                    </div>
-                    <!--Search de Select-->
-                    <div class="search_section">
-                        <div>
-                            <input type="checkbox" class="toggle_all">
-                            <input type="text">
-                        </div>
-                        <div class="rows">
+                        <!--Despliegue de Select-->
+                        <div class="select_section">
                             <div>
                                 <input type="checkbox">
                                 <label>Sample</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="selected_form" id="lotes_config">
-                    <div class="selected_head center">
-                        <h3>Lote</h3>
-                        <div class="columns">
-                            <div class="button_search">
-                                <div></div>
+                        <!--Search de Select-->
+                        <div class="search_section">
+                            <div>
+                                <input type="checkbox" class="toggle_all">
+                                <input type="text">
                             </div>
-                            <div class="button_arrow_down">
-                                <div></div>
+                            <div class="rows">
+                                <div>
+                                    <input type="checkbox">
+                                    <label>Sample</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!--Despliegue de Select-->
-                    <div class="select_section">
-                        <div>
-                            <input type="checkbox">
-                            <label>Sample</label>
+
+                    <div class="selected_form" id="operarios_config">
+                        <div class="selected_head center">
+                            <h3>Operario</h3>
+                            <div class="columns">
+                                <div class="button_search">
+                                    <div></div>
+                                </div>
+                                <div class="button_arrow_down">
+                                    <div></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!--Search de Select-->
-                    <div class="search_section">
-                        <div>
-                            <input type="checkbox" class="toggle_all">
-                            <input type="text">
-                        </div>
-                        <div class="rows">
+                        <!--Despliegue de Select-->
+                        <div class="select_section">
                             <div>
                                 <input type="checkbox">
                                 <label>Sample</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="selected_form" id="colores_config">
-                    <div class="selected_head center">
-                        <h3>Color</h3>
-                        <div class="columns">
-                            <div class="button_search">
-                                <div></div>
+                        <!--Search de Select-->
+                        <div class="search_section">
+                            <div>
+                                <input type="checkbox" class="toggle_all">
+                                <input type="text">
                             </div>
-                            <div class="button_arrow_down">
-                                <div></div>
+                            <div class="rows">
+                                <div>
+                                    <input type="checkbox">
+                                    <label>Sample</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!--Despliegue de Select-->
-                    <div class="select_section">
-                        <div>
-                            <input type="checkbox">
-                            <label>Sample</label>
+                    <div class="selected_form" id="ordenes_config">
+                        <div class="selected_head center">
+                            <h3>Orden</h3>
+                            <div class="columns">
+                                <div class="button_search">
+                                    <div></div>
+                                </div>
+                                <div class="button_arrow_down">
+                                    <div></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!--Search de Select-->
-                    <div class="search_section">
-                        <div>
-                            <input type="checkbox" class="toggle_all">
-                            <input type="text">
-                        </div>
-                        <div class="rows">
+                        <!--Despliegue de Select-->
+                        <div class="select_section">
                             <div>
                                 <input type="checkbox">
                                 <label>Sample</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="selected_form" id="materiales_config">
-                    <div class="selected_head center">
-                        <h3>Material</h3>
-                        <div class="columns">
-                            <div class="button_search">
-                                <div></div>
+                        <!--Search de Select-->
+                        <div class="search_section">
+                            <div>
+                                <input type="checkbox" class="toggle_all">
+                                <input type="text">
                             </div>
-                            <div class="button_arrow_down">
-                                <div></div>
+                            <div class="rows">
+                                <div>
+                                    <input type="checkbox">
+                                    <label>Sample</label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!--Despliegue de Select-->
-                    <div class="select_section">
-                        <div>
-                            <input type="checkbox">
-                            <label>Sample</label>
+                    <div class="selected_form" id="lotes_config">
+                        <div class="selected_head center">
+                            <h3>Lote</h3>
+                            <div class="columns">
+                                <div class="button_search">
+                                    <div></div>
+                                </div>
+                                <div class="button_arrow_down">
+                                    <div></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!--Search de Select-->
-                    <div class="search_section">
-                        <div>
-                            <input type="checkbox">
-                            <input type="text">
-                        </div>
-                        <div class="rows">
+                        <!--Despliegue de Select-->
+                        <div class="select_section">
                             <div>
                                 <input type="checkbox">
                                 <label>Sample</label>
+                            </div>
+                        </div>
+                        <!--Search de Select-->
+                        <div class="search_section">
+                            <div>
+                                <input type="checkbox" class="toggle_all">
+                                <input type="text">
+                            </div>
+                            <div class="rows">
+                                <div>
+                                    <input type="checkbox">
+                                    <label>Sample</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selected_form" id="colores_config">
+                        <div class="selected_head center">
+                            <h3>Color</h3>
+                            <div class="columns">
+                                <div class="button_search">
+                                    <div></div>
+                                </div>
+                                <div class="button_arrow_down">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Despliegue de Select-->
+                        <div class="select_section">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
+                        </div>
+                        <!--Search de Select-->
+                        <div class="search_section">
+                            <div>
+                                <input type="checkbox" class="toggle_all">
+                                <input type="text">
+                            </div>
+                            <div class="rows">
+                                <div>
+                                    <input type="checkbox">
+                                    <label>Sample</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selected_form" id="materiales_config">
+                        <div class="selected_head center">
+                            <h3>Material</h3>
+                            <div class="columns">
+                                <div class="button_search">
+                                    <div></div>
+                                </div>
+                                <div class="button_arrow_down">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Despliegue de Select-->
+                        <div class="select_section">
+                            <div>
+                                <input type="checkbox">
+                                <label>Sample</label>
+                            </div>
+                        </div>
+                        <!--Search de Select-->
+                        <div class="search_section">
+                            <div>
+                                <input type="checkbox">
+                                <input type="text">
+                            </div>
+                            <div class="rows">
+                                <div>
+                                    <input type="checkbox">
+                                    <label>Sample</label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1221,43 +1365,45 @@
                 </div>
             </div>
             <div class="center full_width rows">
-                <div id="master_indicadores">
-                    <div class="columns">
-                        <!--Disponibilidad-->
-                        <div class="campo_ind rows">
-                            <h3>Disponibilidad</h3>
-                            <p class="indicador"><span id="indicadorDisponibilidad">82</span>%</p>
-                            <div id="underlineDisponibilidad" class="underline_ind"></div>
-                            <text>Tiempo activo de servicio</text>
+                <div id="indicadoresSubCont">
+                    <div id="master_indicadores">
+                        <div class="columns">
+                            <!--Disponibilidad-->
+                            <div class="campo_ind rows">
+                                <h3>Disponibilidad</h3>
+                                <p class="indicador"><span id="indicadorDisponibilidad">82</span>%</p>
+                                <div id="underlineDisponibilidad" class="underline_ind"></div>
+                                <text>Tiempo activo de servicio</text>
+                            </div>
+                            <!--Rendimiento-->
+                            <div class="campo_ind rows">
+                                <h3>Rendimiento</h3>
+                                <p class="indicador"><span id="indicadorRendimiento">82</span>%</p>
+                                <div id="underlineRendimiento" class="underline_ind"></div>
+                                <text>Potencial de utilidad</text>
+                            </div>
                         </div>
-                        <!--Rendimiento-->
-                        <div class="campo_ind rows">
-                            <h3>Rendimiento</h3>
-                            <p class="indicador"><span id="indicadorRendimiento">82</span>%</p>
-                            <div id="underlineRendimiento" class="underline_ind"></div>
-                            <text>Potencial de utilidad</text>
+                        <div class="columns">
+                            <!--Calidad-->
+                            <div class="campo_ind rows">
+                                <h3>Calidad</h3>
+                                <p class="indicador"><span id="indicadorCalidad">82</span>%</p>
+                                <div id="underlineCalidad" class="underline_ind"></div>
+                                <text>Und. superiores al estándar.</text>
+                            </div>
+                            <!--Eficiencia-->
+                            <div id="eficiencia_indicador" class="campo_ind rows">
+                                <h3>Eficiencia</h3>
+                                <p class="indicador"><span id="indicadorEficiencia">82</span>%</p>
+                                <div id="underlineEficiencia" class="underline_ind"></div>
+                                <text>Capacidad de disposición.</text>
+                            </div>
                         </div>
                     </div>
-                    <div class="columns">
-                        <!--Calidad-->
-                        <div class="campo_ind rows">
-                            <h3>Calidad</h3>
-                            <p class="indicador"><span id="indicadorCalidad">82</span>%</p>
-                            <div id="underlineCalidad" class="underline_ind"></div>
-                            <text>Und. superiores al estándar.</text>
-                        </div>
-                        <!--Eficiencia-->
-                        <div id="eficiencia_indicador" class="campo_ind rows">
-                            <h3>Eficiencia</h3>
-                            <p class="indicador"><span id="indicadorEficiencia">82</span>%</p>
-                            <div id="underlineEficiencia" class="underline_ind"></div>
-                            <text>Capacidad de disposición.</text>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns center full_width ">
-                    <div id="pieIndicadoresContainer" class="pieContainer">
-                        <div id="pieIndicadores">
+                    <div id="pieContCont" class="columns center  ">
+                        <div id="pieIndicadoresContainer" class="pieContainer">
+                            <div id="pieIndicadores">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1267,174 +1413,186 @@
                 </div>
             </div>
         </div>
-        <!--Campo Calidad-->
-        <div class="cube_container" id="Calidad">
-            <div class="title_container">
-                <h2>Calidad</h2>
-                <div class="columns">
-                    <div class="button_minimize_down button_main center">
-                        <div></div>
+        <div id="subdashboard" class="">
+            <!--Campo Calidad-->
+            <div class="cube_container" id="Calidad">
+                <div class="title_container">
+                    <h2>Calidad</h2>
+                    <div class="columns">
+                        <div class="button_minimize_down button_main center">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center full_width rows">
+                    <div class="columns center full_width ">
+                        <div id="pieCalidadContainer" class="pieContainer">
+                            <div id="pieCalidad">
+                            </div>
+                        </div>
+                        <ul class="legend" id="legendCalidad">
+
+                        </ul>
+                    </div>
+                    <div id="lineCalidadContainer" class="lineContainer">
+                        <div id="lineCalidad">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="center full_width rows">
-                <div class="columns center full_width ">
-                    <div id="pieCalidadContainer" class="pieContainer">
-                        <div id="pieCalidad">
+            <!--Campo Disponibilidad-->
+            <div class="cube_container" id="Disponibilidad">
+                <div class="title_container">
+                    <h2>Disponibilidad</h2>
+                    <div class="columns">
+                        <div class="button_minimize_down button_main center">
+                            <div></div>
                         </div>
                     </div>
-                    <ul class="legend" id="legendCalidad">
+                </div>
+                <div class="center full_width rows">
+                    <div class="columns center full_width ">
+                        <div id="pieDisponibilidadContainer" class="pieContainer">
+                            <div id="pieDisponibilidad">
+                            </div>
+                        </div>
+                        <ul class="legend" id="legendDisponibilidad">
+
+                        </ul>
+                    </div>
+                    <div id="lineDisponibilidadContainer" class="lineContainer">
+                        <div id="lineDisponibilidad">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Campo Rendimiento-->
+            <div class="cube_container" id="Rendimiento">
+                <div class="title_container">
+                    <h2>Rendimiento</h2>
+                    <div class="columns">
+                        <div class="button_minimize_down button_main center">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center full_width rows">
+                    <div class="columns center full_width ">
+                        <div id="pieRendimientoContainer" class="pieContainer">
+                            <div id="pieRendimiento">
+                            </div>
+                        </div>
+                        <ul class="legend" id="legendRendimiento">
+
+                        </ul>
+                    </div>
+                    <div id="lineRendimientoContainer" class="lineContainer">
+                        <div id="lineRendimiento">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Campo Ciclos-->
+            <div class="cube_container" id="Ciclos">
+                <div class="title_container">
+                    <h2>Ciclos</h2>
+                    <div class="columns">
+                        <div class="button_minimize_down button_main center">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center full_width rows">
+                    <div class="columns center full_width ">
+                        <div id="pieCiclosContainer" class="pieContainer">
+                            <div id="pieCiclos">
+                            </div>
+                        </div>
+                        <ul class="legend" id="legendCiclos">
+
+                        </ul>
+                    </div>
+                    <div id="lineCiclosContainer" class="lineContainer">
+                        <div id="lineCiclos">
+                        </div>
+                    </div>
+                    <div id="ciclePlcCont" class="rows center ">
+                        <text>Máquina</text>
+                        <select id="ciclePlc">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--Campo Energia-->
+            <div class="cube_container" id="Energia">
+                <div class="title_container">
+                    <h2>Energia</h2>
+                    <div class="columns">
+                        <div class="button_minimize_down button_main center">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center full_width rows">
+                    <div class="columns center full_width ">
+                        <div id="pieEnergiaContainer" class="pieContainer">
+                            <div id="pieEnergia">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lineEnergiaContainer" class="lineContainer">
+                        <div id="lineEnergia">
+                        </div>
+                    </div>
+                    <ul class="legend" id="legendEnergia">
 
                     </ul>
                 </div>
-                <div id="lineCalidadContainer" class="lineContainer">
-                    <div id="lineCalidad">
-                    </div>
-                </div>
             </div>
-        </div>
-        <!--Campo Disponibilidad-->
-        <div class="cube_container" id="Disponibilidad">
-            <div class="title_container">
-                <h2>Disponibilidad</h2>
-                <div class="columns">
-                    <div class="button_minimize_down button_main center">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="center full_width rows">
-                <div class="columns center full_width ">
-                    <div id="pieDisponibilidadContainer" class="pieContainer">
-                        <div id="pieDisponibilidad">
-                        </div>
-                    </div>
-                    <ul class="legend" id="legendDisponibilidad">
-
-                    </ul>
-                </div>
-                <div id="lineDisponibilidadContainer" class="lineContainer">
-                    <div id="lineDisponibilidad">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Campo Rendimiento-->
-        <div class="cube_container" id="Rendimiento">
-            <div class="title_container">
-                <h2>Rendimiento</h2>
-                <div class="columns">
-                    <div class="button_minimize_down button_main center">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="center full_width rows">
-                <div class="columns center full_width ">
-                    <div id="pieRendimientoContainer" class="pieContainer">
-                        <div id="pieRendimiento">
-                        </div>
-                    </div>
-                    <ul class="legend" id="legendRendimiento">
-
-                    </ul>
-                </div>
-                <div id="lineRendimientoContainer" class="lineContainer">
-                    <div id="lineRendimiento">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Campo Ciclos-->
-        <div class="cube_container" id="Ciclos">
-            <div class="title_container">
-                <h2>Ciclos</h2>
-                <div class="columns">
-                    <div class="button_minimize_down button_main center">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="center full_width rows">
-                <div class="columns center full_width ">
-                    <div id="pieCiclosContainer" class="pieContainer">
-                        <div id="pieCiclos">
-                        </div>
-                    </div>
-                    <ul class="legend" id="legendCiclos">
-
-                    </ul>
-                </div>
-                <div id="lineCiclosContainer" class="lineContainer">
-                    <div id="lineCiclos">
-                    </div>
-                </div>
-                <div id="ciclePlcCont" class="rows center ">
-                    <text>Máquina</text>
-                    <select id="ciclePlc">
-                    </select>
-                </div>
-            </div>
-        </div>
-        <!--Campo Energia-->
-        <div class="cube_container" id="Energia">
-            <div class="title_container">
-                <h2>Energia</h2>
-                <div class="columns">
-                    <div class="button_minimize_down button_main center">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="center full_width rows">
-                <div class="columns center full_width ">
-                    <div id="pieEnergiaContainer" class="pieContainer">
-                        <div id="pieEnergia">
+            <!--Campo Material-->
+            <div class="cube_container" id="Material">
+                <div class="title_container">
+                    <h2>Material</h2>
+                    <div class="columns">
+                        <div class="button_minimize_down button_main center">
+                            <div></div>
                         </div>
                     </div>
                 </div>
-                <div id="lineEnergiaContainer" class="lineContainer">
-                    <div id="lineEnergia">
-                    </div>
-                </div>
-                <ul class="legend" id="legendEnergia">
-
-                </ul>
-            </div>
-        </div>
-        <!--Campo Material-->
-        <div class="cube_container" id="Material">
-            <div class="title_container">
-                <h2>Material</h2>
-                <div class="columns">
-                    <div class="button_minimize_down button_main center">
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="center full_width rows">
-                <div class="columns center full_width ">
-                    <div id="pieMaterialContainer" class="pieContainer">
-                        <div id="pieMaterial">
-                        </div>
-                    </div>
+                <div class="center full_width rows">
                     <ul class="legend" id="legendMaterial">
 
                     </ul>
-                </div>
-                <div id="lineMaterialContainer" class="lineContainer">
-                    <div id="lineMaterial">
+                    <div id="lineMaterialContainer" class="lineContainer">
+                        <div id="lineMaterial">
+                        </div>
                     </div>
-                </div>
-                <div id="MaterialPlcCont" class="rows center ">
-                    <text>Agrupación</text>
-                    <select id="MaterialPlc">
-                    </select>
+                    <div class="rows center full_width ">
+                        <div id="pieMaterialContainer" class="pieContainer margin_gd">
+                            <div id="pieMaterial">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="MaterialPlcCont" class="rows center ">
+                        <text>Agrupación</text>
+                        <select id="MaterialPlc">
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
+        $(document).ready(() => {
+            /*var container = document.querySelector('.grid');
+            var msnry = new Masonry(container, {
+                itemSelector: '.grid-item',
+                fitWidth: true,
+                //horizontalOrder: true
+                percentPosition: true,
+            });*/
+
+        })
         // Download
         $('#button_download_id').click(function () {
             $('.menu_download').toggle();
@@ -1469,24 +1627,32 @@
             var _height = $(this).closest('.cube_container').height()
             $(this).closest('.cube_container').find('>*:not(:first-child)').toggle();
             //if config re toggle title_container
-            var isConfig = $(this).closest('.cube_container').attr('id') == 'config'
-            if (isConfig)
+            var isConfig = $(this).closest('.cube_container').attr('id');
+
+            if (isConfig == 'config')
                 $(this).closest('.cube_container').find('.title_container').toggle()
             if ($(this).closest('.cube_container').find('>.title_container').css('border-bottom') ==
-                '0px none rgb(0, 0, 0)')
+                '0px none rgb(0, 0, 0)') {
                 $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
                     '2px solid var(--color-negro)');
-            else
+
+                if (isConfig == 'Calidad' | isConfig == 'Disponibilidad' | isConfig == 'Rendimiento')
+                    $(this).closest('.cube_container').css('min-height', '450px')
+            } else {
                 $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
                     '0px none rgb(0, 0, 0)');
-            $(this).closest('.cube_container').height('fit-content')
-            var _height2 = $(this).closest('.cube_container').height()
-            $(this).closest('.cube_container').height(_height)
-            $(this).closest('.cube_container').animate({
-                height: _height2
-            }, 500, function () {
-                $(this).closest('.cube_container').height('fit-content')
-            });
+                if (isConfig == 'Calidad' | isConfig == 'Disponibilidad' | isConfig == 'Rendimiento')
+                    $(this).closest('.cube_container').css('min-height', 'auto')
+
+            }
+            /* $(this).closest('.cube_container').height('fit-content')
+             var _height2 = $(this).closest('.cube_container').height()
+             $(this).closest('.cube_container').height(_height)
+             $(this).closest('.cube_container').animate({
+                 height: _height2
+             }, 500, function () {
+                 $(this).closest('.cube_container').height('fit-content')
+             });*/
         });
 
         // formatting functions
@@ -1553,23 +1719,23 @@
                         return
                     }
                     var plc = input.plcs[plcID]
-                    if (filters.operarios.includes(plc.variables[t['Operario']])) {
+                    if (filters.operarios.includes(plc.variables[t['Operario']].value)) {
                         delete input.plcs[plcID]
                         return
                     }
-                    if (filters.ordenes.includes(plc.variables[t['Orden']])) {
+                    if (filters.ordenes.includes(plc.variables[t['Orden']].value)) {
                         delete input.plcs[plcID]
                         return
                     }
-                    if (filters.lotes.includes(plc.variables[t['Lote']])) {
+                    if (filters.lotes.includes(plc.variables[t['Lote']].value)) {
                         delete input.plcs[plcID]
                         return
                     }
-                    if (filters.colores.includes(plc.variables[t['Color']])) {
+                    if (filters.colores.includes(plc.variables[t['Color']].value)) {
                         delete input.plcs[plcID]
                         return
                     }
-                    if (filters.materiales.includes(plc.variables[t['Material']])) {
+                    if (filters.materiales.includes(plc.variables[t['Material']].value)) {
                         delete input.plcs[plcID]
                         return
                     }
@@ -1885,7 +2051,7 @@
         function rename(toRename) {
             var _sdata = JSON.stringify(toRename)
             Object.keys(v).forEach(name => {
-                _sdata =  replaceAll(_sdata, name, v[name])
+                _sdata = replaceAll(_sdata, name, v[name])
             })
             return JSON.parse(_sdata)
         }
@@ -6401,7 +6567,7 @@
         var _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
         var _materialPlc = Object.keys(filteredData['material'])[0]
 
-        function dataChange(filtered = false, pulled= false) {
+        function dataChange(filtered = false, pulled = false) {
             if (filtered) {
                 Object.keys(filteredData['configuracion']).forEach((key) => {
                     var opciones = filteredData['configuracion'][key]
@@ -6430,8 +6596,7 @@
 
                 })
             }
-            if(pulled)
-            {
+            if (pulled) {
                 var oldFilters = getFilters()
                 Object.keys(originalData['configuracion']).forEach((key) => {
                     var opciones = originalData['configuracion'][key]
@@ -6442,20 +6607,21 @@
                     search_container.empty()
                     opciones.forEach(function (opcion) {
                         var _chk = ''
-                        if(!oldFilters[key].includes(opcion))
+                        if (!oldFilters[key].includes(opcion))
                             _chk = 'checked'
                         var new_section = `
                             <div>
                                 <input type="checkbox" name="${opcion}" value="${opcion}" ${_chk}>
                                 <label for="${opcion}">${opcion}</label>
                             </div>`
-                        if(!oldFilters[key].includes(opcion))
+                        if (!oldFilters[key].includes(opcion))
                             select_container.append(new_section)
                         search_container.append(new_section)
                     })
                 })
                 $('.selected_form .select_section input').on('change', function () {
-                    $(this).closest('.selected_form').find(`.search_section input[name='${$(this).prop('name')}']`).prop(
+                    $(this).closest('.selected_form').find(
+                        `.search_section input[name='${$(this).prop('name')}']`).prop(
                         'checked', $(this).prop('checked'));
                     $(this).parent().hide();
                     $(this).closest('.selected_form').height('fit-content')
@@ -6464,9 +6630,11 @@
 
                 })
                 $('.selected_form .search_section .rows input').on('change', function () {
-                    $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`).prop(
+                    $(this).closest('.selected_form').find(
+                        `.select_section input[name='${$(this).prop('name')}']`).prop(
                         'checked', $(this).prop('checked'));
-                    $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`)
+                    $(this).closest('.selected_form').find(
+                            `.select_section input[name='${$(this).prop('name')}']`)
                         .parent().toggle($(this).prop('checked'));
                     $(this).closest('.selected_form').height('fit-content')
                     filteredData = formatData(filterData(_pulledData, getFilters()));
@@ -6475,7 +6643,8 @@
                 })
                 $('.selected_form .search_section .toggle_all').on('change', function () {
                     $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
-                    $(this).closest('.selected_form').find('.select_section > div').toggle($(this).prop('checked'));
+                    $(this).closest('.selected_form').find('.select_section > div').toggle($(this).prop(
+                        'checked'));
                     $(this).closest('.selected_form').height('fit-content')
                     filteredData = formatData(filterData(_pulledData, getFilters()));
                     dataChange(true);
@@ -6615,6 +6784,9 @@
                             width: $(lineContainer).width(),
                             height: $(lineContainer).width() / 1.9
                         };
+                        if (lineID == 'lineIndicadores')
+                            update.height = update.width / 2.5
+
                         Plotly.relayout(lineID, update);
                     });
                     var pieID = "pie" + proper(section);
@@ -6951,8 +7123,12 @@
                 var index = 0;
                 var legend = "<li>"
                 var substring = ''
-                if (section == 'energia')
-                    substring = `: ${currData[currData.length - 1].value} kw`
+
+                function r2(val) {
+                    return Math.round(val * 100) / 100
+                }
+                //if (section == 'energia')
+                substring = `:<br> ${r2(currData[currData.length - 1].value)} ` + units
                 legend += `<span class="caret columns center_vert leg_toggle" index="${index}">
                             <div class="caret_symbol">&#9654;</div>
                             <div class="indicator" style="background-color: ${currData[currData.length - 1].color}"></div>
@@ -6962,8 +7138,8 @@
                 legend += '<ul class="nested">'
                 currData[currData.length - 1].children.forEach(function (child) {
                     substring = ''
-                    if (section == 'energia')
-                        substring = `: ${child.value} kw`
+                    //if (section == 'energia')
+                    substring = `:<br> ${r2(child.value)} ` + units
                     if (child.children == null) {
                         legend += `<li class="columns center_vert leg_toggle" index="${index}">
                                     <div class="indicator" style="background-color: ${child.color}"></div><span>${child.name}${substring}</span>
@@ -6980,8 +7156,8 @@
                         child.children.forEach(function (child2) {
 
                             substring = ''
-                            if (section == 'energia')
-                                substring = `: ${child2.value} kw`
+                            //if (section == 'energia')
+                            substring = `:<br> ${r2(child2.value)} ` + units
                             legend += `<li class="columns center_vert leg_toggle"  index="${index}">
                                         <div class="indicator" style="background-color: ${child2.color}"></div><span>${child2.name}${substring}</span>
                                     </li>`
@@ -7011,10 +7187,11 @@
                         "active_legend");
                     this.parentElement.classList.toggle("caret-down");
                 })
+
+                $(`#${legendID} .leg_toggle > .caret_symbol`).first().click()
                 if (section == 'material' || section == 'energia') {
                     $(`#${legendID} .leg_toggle > .caret_symbol`).first().click()
-                } else
-                    $(`#${legendID} .leg_toggle > .caret_symbol`).click()
+                }
 
             })
         }
@@ -7071,8 +7248,9 @@
             return _filters
         }
         $('.selected_form .select_section input').on('change', function () {
-            $(this).closest('.selected_form').find(`.search_section input[name='${$(this).prop('name')}']`).prop(
-                'checked', $(this).prop('checked'));
+            $(this).closest('.selected_form').find(`.search_section input[name='${$(this).prop('name')}']`)
+                .prop(
+                    'checked', $(this).prop('checked'));
             $(this).parent().hide();
             $(this).closest('.selected_form').height('fit-content')
             filteredData = formatData(filterData(_pulledData, getFilters()));
@@ -7080,8 +7258,9 @@
 
         })
         $('.selected_form .search_section .rows input').on('change', function () {
-            $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`).prop(
-                'checked', $(this).prop('checked'));
+            $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`)
+                .prop(
+                    'checked', $(this).prop('checked'));
             $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`)
                 .parent().toggle($(this).prop('checked'));
             $(this).closest('.selected_form').height('fit-content')
@@ -7101,18 +7280,18 @@
         var liveStart;
         var liveReset = false;
         $('#live').on('change', function () {
-            $('#datetimes').prop( "disabled", $(this).prop('checked') );
+            $('#datetimes').prop("disabled", $(this).prop('checked'));
             var copyData = JSON.parse(JSON.stringify(_pulledData))
             _pulledData = []
             //_pulledData = rename(_pulledData)
             //originalData = formatData(_pulledData);
             //filteredData = formatData(filterData(_pulledData, filters));
             //dataChange(false, true);
-            if($(this).prop('checked'))
+            if ($(this).prop('checked'))
                 client.subscribe('diaxPublisher/plcs/#')
             else
                 client.unsubscribe('diaxPublisher/plcs/#')
-            liveStart  = new Date();
+            liveStart = new Date();
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
                 startDate: liveStart,
@@ -7125,10 +7304,10 @@
         })
         var _offset = false;
         $('#offset').on('change', function () {
-            $('#datetimes').prop( "disabled", false );
+            $('#datetimes').prop("disabled", false);
             client.unsubscribe('diaxPublisher/plcs/#');
             $('#live').prop('checked', false)
-            _offset =  $(this).prop('checked');
+            _offset = $(this).prop('checked');
         })
         var AWSMqttClient = sdk.AWSMqttClient;
         var AWS = sdk.AWS
@@ -7155,18 +7334,18 @@
         })
 
         var offsets = {
-            "MI100":0,//"Energía Motor"
-            "MI99":0,//"Energía Maquina"
-            "MI121":0,//"Contador Máquina" 
-            "MI122":0,//"Contador Molde"
-            "MI124":0,//"Contador Abandono" 
-            "MI127":0,//"Contador Material" 
-            "MI128":0,//"Contador Calidad" 
-            "MI123":0,//"Contador Montaje"
-            "ML0":0,//"Tiempo Motor" 
-            "MI101":0,//"Defecto Arranque"
-            "MI102":0,//"Defecto Lluvia"
-            "ML131":0//"Inyecciones"
+            "MI100": 0, //"Energía Motor"
+            "MI99": 0, //"Energía Maquina"
+            "MI121": 0, //"Contador Máquina" 
+            "MI122": 0, //"Contador Molde"
+            "MI124": 0, //"Contador Abandono" 
+            "MI127": 0, //"Contador Material" 
+            "MI128": 0, //"Contador Calidad" 
+            "MI123": 0, //"Contador Montaje"
+            "ML0": 0, //"Tiempo Motor" 
+            "MI101": 0, //"Defecto Arranque"
+            "MI102": 0, //"Defecto Lluvia"
+            "ML131": 0 //"Inyecciones"
         }
         client.on('message', (topic, message) => {
             var uint8array = new TextEncoder().encode("¢");
@@ -7174,31 +7353,30 @@
             //console.log(JSON.parse(string))
             var objString = JSON.parse(string)
             // offseting
-            if(liveReset)
-            {
+            if (liveReset) {
                 Object.keys(offsets).forEach(offsetId => {
-                    Object.keys(objString[0].plcs).forEach(_plcId=>{
-                        offsets[offsetId] = 0 - objString[0].plcs[_plcId].variables[offsetId].value
+                    Object.keys(objString[0].plcs).forEach(_plcId => {
+                        offsets[offsetId] = 0 - objString[0].plcs[_plcId].variables[offsetId]
+                            .value
                     })
                 });
                 liveReset = false
             }
-            if(_offset)
+            if (_offset)
                 Object.keys(offsets).forEach(offsetId => {
-                    Object.keys(objString[0].plcs).forEach(_plcId=>{
+                    Object.keys(objString[0].plcs).forEach(_plcId => {
                         objString[0].plcs[_plcId].variables[offsetId].value += offsets[offsetId]
                     })
                 });
             _pulledData = _pulledData.concat(objString);
-            if(_pulledData.length > 100)
-            {
+            if (_pulledData.length > 100) {
                 _pulledData.shift()
                 liveStart = new Date(_pulledData[0].timeStamp)
             }
             _pulledData = rename(_pulledData)
             originalData = formatData(_pulledData);
             filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange(false, true);
+            dataChange(true);
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
                 startDate: liveStart,
@@ -7214,7 +7392,7 @@
         client.on('offline', () => {
             console.log('Connection offline')
         })
-        
+
         $(window).resize();
     </script>
 </body>
