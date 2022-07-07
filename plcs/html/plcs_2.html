@@ -267,15 +267,15 @@
             }
 
             #Indicadores {
-                min-width: 725px;
-                width: 725px;
-                max-width: 725px;
+                min-width: 722px;
+                width: 722px;
+                max-width: 722px;
             }
 
             #config {
-                min-width: 725px;
-                width: 725px;
-                max-width: 725px;
+                min-width: 722px;
+                width: 722px;
+                max-width: 722px;
             }
 
             #Indicadores .pieContainer {
@@ -301,15 +301,15 @@
             }
 
             #Indicadores {
-                min-width: 1080px;
-                width: 1080px;
-                max-width: 1080px;
+                min-width: 1087px;
+                width: 1087px;
+                max-width: 1087px;
             }
 
             #config {
-                min-width: 1080px;
-                width: 1080px;
-                max-width: 1080px;
+                min-width: 1087px;
+                width: 1087px;
+                max-width: 1087px;
             }
 
             #Indicadores .pieContainer {
@@ -391,7 +391,7 @@
             display: flex;
             text-align: right;
             margin: 5px;
-            padding: 5px;
+            padding: 10px;
             width: 113px;
         }
 
@@ -753,7 +753,7 @@
 
         #eficiencia_indicador {
             border-radius: 10px;
-            box-shadow: var(--color-gris) 0px 3px 8px;
+            box-shadow: red 0px 0px 8px;
         }
 
         #inicio_fin {
@@ -1088,7 +1088,8 @@
         #offsetCont {
             display: none;
         }
-        .interrogation{
+
+        .interrogation {
             box-sizing: border-box;
             padding-bottom: 2px;
         }
@@ -1373,14 +1374,14 @@
                                 <h3>Disponibilidad</h3>
                                 <p class="indicador"><span id="indicadorDisponibilidad">82</span>%</p>
                                 <div id="underlineDisponibilidad" class="underline_ind"></div>
-                                <text>Tiempo activo de servicio</text>
+                                <text>Tiempo activo</text>
                             </div>
                             <!--Rendimiento-->
                             <div class="campo_ind rows">
                                 <h3>Rendimiento</h3>
                                 <p class="indicador"><span id="indicadorRendimiento">82</span>%</p>
                                 <div id="underlineRendimiento" class="underline_ind"></div>
-                                <text>Potencial de utilidad</text>
+                                <text>Producción realizada</text>
                             </div>
                         </div>
                         <div class="columns">
@@ -1389,14 +1390,14 @@
                                 <h3>Calidad</h3>
                                 <p class="indicador"><span id="indicadorCalidad">82</span>%</p>
                                 <div id="underlineCalidad" class="underline_ind"></div>
-                                <text>Und. superiores al estándar.</text>
+                                <text>Unidades buenas</text>
                             </div>
                             <!--Eficiencia-->
                             <div id="eficiencia_indicador" class="campo_ind rows">
                                 <h3>Eficiencia</h3>
                                 <p class="indicador"><span id="indicadorEficiencia">82</span>%</p>
                                 <div id="underlineEficiencia" class="underline_ind"></div>
-                                <text>Capacidad de disposición.</text>
+                                <text>Utilidad de recursos</text>
                             </div>
                         </div>
                     </div>
@@ -1593,6 +1594,27 @@
             });*/
 
         })
+
+        $('#datetimes').change((e) => {
+            try {
+                JSON.stringify(e)//hack to check event recursion
+            } catch (error) {
+                var start = new Date($('#datetimes').data('daterangepicker').startDate._d);
+                var end = new Date($('#datetimes').data('daterangepicker').endDate._d);
+                _pulledData = pullData(start, end)
+                _pulledData = rename(_pulledData)
+                originalData = formatData(_pulledData);
+                filteredData = formatData(filterData(_pulledData, getFilters())); //filter must check for order changes*************************
+                dataChange(true);
+            }
+        })
+        function pullData(start, end)
+        {
+            var _newPulledData = [];
+
+            return _newPulledData;
+        }
+
         // Download
         $('#button_download_id').click(function () {
             $('.menu_download').toggle();
@@ -1891,34 +1913,35 @@
                         value: Number(plc[t['Peso Inyección']].value),
                         children: []
                     }
+                    var simpPlcID = plcId.split('.')[1]
                     if (Number(plc[t['Peso Cavidad 1']].value) != 0)
                         materialPlc.children.push({
-                            name: plcId + '.Cavidad 1',
+                            name: simpPlcID + '.Cav 1',
                             value: Number(plc[t['Peso Cavidad 1']].value),
                         })
                     if (Number(plc[t['Peso Cavidad 2']].value) != 0)
                         materialPlc.children.push({
-                            name: plcId + '.Cavidad 2',
+                            name: simpPlcID + '.Cav 2',
                             value: Number(plc[t['Peso Cavidad 2']].value),
                         })
                     if (Number(plc[t['Peso Cavidad 3']].value) != 0)
                         materialPlc.children.push({
-                            name: plcId + '.Cavidad 3',
+                            name: simpPlcID + '.Cav 3',
                             value: Number(plc[t['Peso Cavidad 3']].value),
                         })
                     if (Number(plc[t['Peso Cavidad 4']].value) != 0)
                         materialPlc.children.push({
-                            name: plcId + '.Cavidad 4',
+                            name: simpPlcID + '.Cav 4',
                             value: Number(plc[t['Peso Cavidad 4']].value),
                         })
                     if (Number(plc[t['Peso Cavidad 5']].value) != 0)
                         materialPlc.children.push({
-                            name: plcId + '.Cavidad 5',
+                            name: simpPlcID + '.Cav 5',
                             value: Number(plc[t['Peso Cavidad 5']].value),
                         })
                     if (Number(plc[t['Peso Cavidad 6']].value) != 0)
                         materialPlc.children.push({
-                            name: plcId + '.Cavidad 6',
+                            name: simpPlcID + '.Cav 6',
                             value: Number(plc[t['Peso Cavidad 6']].value),
                         })
                     material.children.push(materialPlc)
@@ -6713,6 +6736,8 @@
                     setColors(_section)
                 })
             })
+            
+            $('#eficiencia_indicador').css('box-shadow',_colors[4] + ' 0px 0px 8px')
 
             Object.keys(filteredData).forEach(function (section) {
                 var units = 'ud'
@@ -6785,7 +6810,14 @@
                             height: $(lineContainer).width() / 1.9
                         };
                         if (lineID == 'lineIndicadores')
-                            update.height = update.width / 2.5
+                        {
+                            if($(window).width() > 1100)
+                                update.height = update.width / 3.5
+                            else if($(window).width() < 740)
+                                update.height = update.width /  1.9
+                            else
+                                update.height = update.width / 2.5
+                        }
 
                         Plotly.relayout(lineID, update);
                     });
@@ -6797,8 +6829,50 @@
                         r: maxVals,
                         theta: maxLabels,
                         fill: 'toself',
-                        name: 'Eficiencia'
-                    }];
+                        name: 'Eficiencia',
+                        line:{color:_colors[4]},
+                        marker: {
+                            size: 1
+                        },
+                        //fillcolor: _colors[4],
+                        //opacity: 0.6
+                    },{
+                        type: 'scatterpolar',
+                        r: [0,maxVals[0]],
+                        theta: [maxLabels[0],maxLabels[0]],
+                        name: 'Disponibilidad',
+                        marker: {
+                            color:_colors[1],
+                            size: 8
+                        },
+                        line:{
+                            width: 4
+                        }
+                    },{
+                        type: 'scatterpolar',
+                        r: [0,maxVals[1]],
+                        theta: [maxLabels[1],maxLabels[1]],
+                        name: 'Rendimiento',
+                        marker: {
+                            color:_colors[2],
+                            size: 8
+                        },
+                        line:{
+                            width: 4
+                        }
+                    },{
+                        type: 'scatterpolar',
+                        r: [0,maxVals[2]],
+                        theta: [maxLabels[2],maxLabels[2]],
+                        name: 'Calidad',
+                        marker: {
+                            color:_colors[3],
+                            size: 8
+                        },
+                        line:{
+                            width: 4
+                        }
+                    },];
                     var layout = {
                         "margin": {
                             "l": 30,
@@ -7281,26 +7355,27 @@
         var liveReset = false;
         $('#live').on('change', function () {
             $('#datetimes').prop("disabled", $(this).prop('checked'));
-            var copyData = JSON.parse(JSON.stringify(_pulledData))
-            _pulledData = []
             //_pulledData = rename(_pulledData)
             //originalData = formatData(_pulledData);
             //filteredData = formatData(filterData(_pulledData, filters));
             //dataChange(false, true);
             if ($(this).prop('checked'))
+            {
+             _pulledData = []
                 client.subscribe('diaxPublisher/plcs/#')
+                liveStart = new Date();
+                $('input[name="datetimes"]').daterangepicker({
+                    timePicker: true,
+                    startDate: liveStart,
+                    endDate: liveStart,
+                    locale: {
+                        format: 'M/DD hh:mm A'
+                    }
+                });
+                liveReset = true;
+            }
             else
                 client.unsubscribe('diaxPublisher/plcs/#')
-            liveStart = new Date();
-            $('input[name="datetimes"]').daterangepicker({
-                timePicker: true,
-                startDate: liveStart,
-                endDate: liveStart,
-                locale: {
-                    format: 'M/DD hh:mm A'
-                }
-            });
-            liveReset = true;
         })
         var _offset = false;
         $('#offset').on('change', function () {

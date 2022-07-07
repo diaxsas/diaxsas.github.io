@@ -1,0 +1,176 @@
+{
+    "type": "change",
+    "timeStamp": 1657218059981,
+    "jQuery351013296681987244763": true,
+    "isTrigger": 3,
+    "namespace": "",
+    "rnamespace": null,
+    "target": {
+        "jQuery3510132966819872447631": {
+            "events": {
+                "change": [{
+                    "type": "change",
+                    "origType": "change",
+                    "data": null,
+                    "guid": 1,
+                    "namespace": ""
+                }],
+                "click": [{
+                    "type": "click",
+                    "origType": "click",
+                    "guid": 15,
+                    "namespace": "daterangepicker"
+                }],
+                "focus": [{
+                    "type": "focus",
+                    "origType": "focus",
+                    "guid": 18,
+                    "namespace": false
+                }, {
+                    "type": "focus",
+                    "origType": "focus",
+                    "guid": 15,
+                    "namespace": "daterangepicker"
+                }],
+                "keyup": [{
+                    "type": "keyup",
+                    "origType": "keyup",
+                    "guid": 16,
+                    "namespace": "daterangepicker"
+                }],
+                "keydown": [{
+                    "type": "keydown",
+                    "origType": "keydown",
+                    "guid": 17,
+                    "namespace": "daterangepicker"
+                }]
+            },
+            "hasDataAttrs": true,
+            "focus": false
+        },
+        "jQuery3510132966819872447632": {
+            "timePicker": true,
+            "startDate": "2022-06-24T19:24:08.002Z",
+            "endDate": "2022-06-24T19:27:08.008Z",
+            "locale": {
+                "format": "M/DD hh:mm A"
+            },
+            "template": "<div class=\"daterangepicker\"><div class=\"ranges\"></div><div class=\"drp-calendar left\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-calendar right\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-buttons\"><span class=\"drp-selected\"></span><button class=\"cancelBtn\" type=\"button\"></button><button class=\"applyBtn\" disabled=\"disabled\" type=\"button\"></button> </div></div>"
+        }
+    },
+    "delegateTarget": {
+        "jQuery3510132966819872447631": {
+            "events": {
+                "change": [{
+                    "type": "change",
+                    "origType": "change",
+                    "data": null,
+                    "guid": 1,
+                    "namespace": ""
+                }],
+                "click": [{
+                    "type": "click",
+                    "origType": "click",
+                    "guid": 15,
+                    "namespace": "daterangepicker"
+                }],
+                "focus": [{
+                    "type": "focus",
+                    "origType": "focus",
+                    "guid": 18,
+                    "namespace": false
+                }, {
+                    "type": "focus",
+                    "origType": "focus",
+                    "guid": 15,
+                    "namespace": "daterangepicker"
+                }],
+                "keyup": [{
+                    "type": "keyup",
+                    "origType": "keyup",
+                    "guid": 16,
+                    "namespace": "daterangepicker"
+                }],
+                "keydown": [{
+                    "type": "keydown",
+                    "origType": "keydown",
+                    "guid": 17,
+                    "namespace": "daterangepicker"
+                }]
+            },
+            "hasDataAttrs": true,
+            "focus": false
+        },
+        "jQuery3510132966819872447632": {
+            "timePicker": true,
+            "startDate": "2022-06-24T19:24:08.002Z",
+            "endDate": "2022-06-24T19:27:08.008Z",
+            "locale": {
+                "format": "M/DD hh:mm A"
+            },
+            "template": "<div class=\"daterangepicker\"><div class=\"ranges\"></div><div class=\"drp-calendar left\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-calendar right\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-buttons\"><span class=\"drp-selected\"></span><button class=\"cancelBtn\" type=\"button\"></button><button class=\"applyBtn\" disabled=\"disabled\" type=\"button\"></button> </div></div>"
+        }
+    },
+    "currentTarget": {
+        "jQuery3510132966819872447631": {
+            "events": {
+                "change": [{
+                    "type": "change",
+                    "origType": "change",
+                    "data": null,
+                    "guid": 1,
+                    "namespace": ""
+                }],
+                "click": [{
+                    "type": "click",
+                    "origType": "click",
+                    "guid": 15,
+                    "namespace": "daterangepicker"
+                }],
+                "focus": [{
+                    "type": "focus",
+                    "origType": "focus",
+                    "guid": 18,
+                    "namespace": false
+                }, {
+                    "type": "focus",
+                    "origType": "focus",
+                    "guid": 15,
+                    "namespace": "daterangepicker"
+                }],
+                "keyup": [{
+                    "type": "keyup",
+                    "origType": "keyup",
+                    "guid": 16,
+                    "namespace": "daterangepicker"
+                }],
+                "keydown": [{
+                    "type": "keydown",
+                    "origType": "keydown",
+                    "guid": 17,
+                    "namespace": "daterangepicker"
+                }]
+            },
+            "hasDataAttrs": true,
+            "focus": false
+        },
+        "jQuery3510132966819872447632": {
+            "timePicker": true,
+            "startDate": "2022-06-24T19:24:08.002Z",
+            "endDate": "2022-06-24T19:27:08.008Z",
+            "locale": {
+                "format": "M/DD hh:mm A"
+            },
+            "template": "<div class=\"daterangepicker\"><div class=\"ranges\"></div><div class=\"drp-calendar left\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-calendar right\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-buttons\"><span class=\"drp-selected\"></span><button class=\"cancelBtn\" type=\"button\"></button><button class=\"applyBtn\" disabled=\"disabled\" type=\"button\"></button> </div></div>"
+        }
+    },
+    "handleObj": {
+        "type": "change",
+        "origType": "change",
+        "data": null,
+        "guid": 1,
+        "namespace": ""
+        //handler???
+    },
+    "data": null
+}
