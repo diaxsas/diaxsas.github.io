@@ -1,176 +1,4485 @@
-{
-    "type": "change",
-    "timeStamp": 1657218059981,
-    "jQuery351013296681987244763": true,
-    "isTrigger": 3,
-    "namespace": "",
-    "rnamespace": null,
-    "target": {
-        "jQuery3510132966819872447631": {
-            "events": {
-                "change": [{
-                    "type": "change",
-                    "origType": "change",
-                    "data": null,
-                    "guid": 1,
-                    "namespace": ""
-                }],
-                "click": [{
-                    "type": "click",
-                    "origType": "click",
-                    "guid": 15,
-                    "namespace": "daterangepicker"
-                }],
-                "focus": [{
-                    "type": "focus",
-                    "origType": "focus",
-                    "guid": 18,
-                    "namespace": false
-                }, {
-                    "type": "focus",
-                    "origType": "focus",
-                    "guid": 15,
-                    "namespace": "daterangepicker"
-                }],
-                "keyup": [{
-                    "type": "keyup",
-                    "origType": "keyup",
-                    "guid": 16,
-                    "namespace": "daterangepicker"
-                }],
-                "keydown": [{
-                    "type": "keydown",
-                    "origType": "keydown",
-                    "guid": 17,
-                    "namespace": "daterangepicker"
-                }]
+[{
+        "timeStamp": "2022-06-24T19:24:08.002Z",
+        "plcs": {
+            "PLC1": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
             },
-            "hasDataAttrs": true,
-            "focus": false
-        },
-        "jQuery3510132966819872447632": {
-            "timePicker": true,
-            "startDate": "2022-06-24T19:24:08.002Z",
-            "endDate": "2022-06-24T19:27:08.008Z",
-            "locale": {
-                "format": "M/DD hh:mm A"
+            "PLC2": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15233"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857604"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.5"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.26"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.36"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.35"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.33"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.34"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "309"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    }
+                }
             },
-            "template": "<div class=\"daterangepicker\"><div class=\"ranges\"></div><div class=\"drp-calendar left\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-calendar right\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-buttons\"><span class=\"drp-selected\"></span><button class=\"cancelBtn\" type=\"button\"></button><button class=\"applyBtn\" disabled=\"disabled\" type=\"button\"></button> </div></div>"
+            "PLC3": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15250"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8201002"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3636"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "613"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.43"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8.11"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.08"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.1"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-2.6"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "100"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "318"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "933"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "23"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    }
+                }
+            },
+            "PLC4": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15203"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3663099"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3613"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35.09"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.77"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.87"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.89"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.74"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.1"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.4"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "79"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17"
+                    }
+                }
+            },
+            "PLC5": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15243"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1861102"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3633"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "185"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28.61"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.38"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.51"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.53"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.41"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "245"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4.5"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28.6"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "33.1"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "108"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2596"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4119"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "36"
+                    }
+                }
+            },
+            "PLC6": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15231"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857007"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "46.28"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.66"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.49"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.6"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.48"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1.6"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30.8"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32.4"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "246"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2581"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4051"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "42"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    }
+                }
+            },
+            "PLC7": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
+            },
+            "PLC8": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.3"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.81"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "160.76"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-142.96"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17.8"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "106"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "37"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "33"
+                    }
+                }
+            },
+            "PLC9": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15232"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857103"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "53.48"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.13"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.09"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.92"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "39"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "88"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1349"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "50"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1867"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "45"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "47"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "43"
+                    }
+                }
+            }
         }
     },
-    "delegateTarget": {
-        "jQuery3510132966819872447631": {
-            "events": {
-                "change": [{
-                    "type": "change",
-                    "origType": "change",
-                    "data": null,
-                    "guid": 1,
-                    "namespace": ""
-                }],
-                "click": [{
-                    "type": "click",
-                    "origType": "click",
-                    "guid": 15,
-                    "namespace": "daterangepicker"
-                }],
-                "focus": [{
-                    "type": "focus",
-                    "origType": "focus",
-                    "guid": 18,
-                    "namespace": false
-                }, {
-                    "type": "focus",
-                    "origType": "focus",
-                    "guid": 15,
-                    "namespace": "daterangepicker"
-                }],
-                "keyup": [{
-                    "type": "keyup",
-                    "origType": "keyup",
-                    "guid": 16,
-                    "namespace": "daterangepicker"
-                }],
-                "keydown": [{
-                    "type": "keydown",
-                    "origType": "keydown",
-                    "guid": 17,
-                    "namespace": "daterangepicker"
-                }]
+    {
+        "timeStamp": "2022-06-24T19:25:08.017Z",
+        "plcs": {
+            "PLC1": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
             },
-            "hasDataAttrs": true,
-            "focus": false
-        },
-        "jQuery3510132966819872447632": {
-            "timePicker": true,
-            "startDate": "2022-06-24T19:24:08.002Z",
-            "endDate": "2022-06-24T19:27:08.008Z",
-            "locale": {
-                "format": "M/DD hh:mm A"
+            "PLC2": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15233"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857604"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.5"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.26"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.36"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.35"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.33"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.34"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "309"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    }
+                }
             },
-            "template": "<div class=\"daterangepicker\"><div class=\"ranges\"></div><div class=\"drp-calendar left\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-calendar right\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-buttons\"><span class=\"drp-selected\"></span><button class=\"cancelBtn\" type=\"button\"></button><button class=\"applyBtn\" disabled=\"disabled\" type=\"button\"></button> </div></div>"
+            "PLC3": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15250"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8201002"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3636"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "613"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.43"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8.11"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.08"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.1"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-2.6"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "100"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "319"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "936"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "23"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    }
+                }
+            },
+            "PLC4": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15203"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3663099"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3613"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35.09"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.77"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.87"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.89"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.74"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.1"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.4"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "79"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17"
+                    }
+                }
+            },
+            "PLC5": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15243"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1861102"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3633"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "185"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28.61"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.38"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.51"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.53"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.41"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "246"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4.9"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28.1"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "33"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "108"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2597"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4121"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "36"
+                    }
+                }
+            },
+            "PLC6": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15231"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857007"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "46.28"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.66"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.49"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.6"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.48"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1.6"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30.8"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32.4"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "246"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2581"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4051"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "42"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    }
+                }
+            },
+            "PLC7": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
+            },
+            "PLC8": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.3"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.81"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "160.76"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-142.96"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17.8"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "106"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "37"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "33"
+                    }
+                }
+            },
+            "PLC9": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15232"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857103"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "53.48"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.13"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.09"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.92"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "39"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "88"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1349"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "50"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1867"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "45"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "47"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "43"
+                    }
+                }
+            }
         }
     },
-    "currentTarget": {
-        "jQuery3510132966819872447631": {
-            "events": {
-                "change": [{
-                    "type": "change",
-                    "origType": "change",
-                    "data": null,
-                    "guid": 1,
-                    "namespace": ""
-                }],
-                "click": [{
-                    "type": "click",
-                    "origType": "click",
-                    "guid": 15,
-                    "namespace": "daterangepicker"
-                }],
-                "focus": [{
-                    "type": "focus",
-                    "origType": "focus",
-                    "guid": 18,
-                    "namespace": false
-                }, {
-                    "type": "focus",
-                    "origType": "focus",
-                    "guid": 15,
-                    "namespace": "daterangepicker"
-                }],
-                "keyup": [{
-                    "type": "keyup",
-                    "origType": "keyup",
-                    "guid": 16,
-                    "namespace": "daterangepicker"
-                }],
-                "keydown": [{
-                    "type": "keydown",
-                    "origType": "keydown",
-                    "guid": 17,
-                    "namespace": "daterangepicker"
-                }]
+    {
+        "timeStamp": "2022-06-24T19:26:08.012Z",
+        "plcs": {
+            "PLC1": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
             },
-            "hasDataAttrs": true,
-            "focus": false
-        },
-        "jQuery3510132966819872447632": {
-            "timePicker": true,
-            "startDate": "2022-06-24T19:24:08.002Z",
-            "endDate": "2022-06-24T19:27:08.008Z",
-            "locale": {
-                "format": "M/DD hh:mm A"
+            "PLC2": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15233"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857604"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.5"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.26"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.36"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.35"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.33"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.34"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "309"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    }
+                }
             },
-            "template": "<div class=\"daterangepicker\"><div class=\"ranges\"></div><div class=\"drp-calendar left\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-calendar right\"><div class=\"calendar-table\"></div><div class=\"calendar-time\"></div></div><div class=\"drp-buttons\"><span class=\"drp-selected\"></span><button class=\"cancelBtn\" type=\"button\"></button><button class=\"applyBtn\" disabled=\"disabled\" type=\"button\"></button> </div></div>"
+            "PLC3": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15250"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8201002"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3636"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "613"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.43"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8.11"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.08"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.1"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-2.6"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "100"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "320"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "939"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "23"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    }
+                }
+            },
+            "PLC4": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15203"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3663099"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3613"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35.09"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.77"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.87"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.89"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.74"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-190.64"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "205.14"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "79"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17"
+                    }
+                }
+            },
+            "PLC5": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15243"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1861102"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3633"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "185"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28.61"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.38"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.51"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.53"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.41"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "246"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.2"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28.2"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "33.4"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "108"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2598"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4122"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "36"
+                    }
+                }
+            },
+            "PLC6": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15231"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857007"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "46.28"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.66"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.49"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.6"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.48"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1.6"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30.8"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32.4"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "246"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2581"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4051"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "42"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    }
+                }
+            },
+            "PLC7": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
+            },
+            "PLC8": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.3"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.81"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "160.76"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-142.96"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17.8"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "106"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "37"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "33"
+                    }
+                }
+            },
+            "PLC9": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15232"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857103"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "53.48"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.13"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.09"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.92"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "39"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "88"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1349"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "50"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1867"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "45"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "47"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "43"
+                    }
+                }
+            }
         }
     },
-    "handleObj": {
-        "type": "change",
-        "origType": "change",
-        "data": null,
-        "guid": 1,
-        "namespace": ""
-        //handler???
-    },
-    "data": null
-}
+    {
+        "timeStamp": "2022-06-24T19:27:08.008Z",
+        "plcs": {
+            "PLC1": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
+            },
+            "PLC2": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15233"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857604"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.5"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.26"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.36"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.35"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.33"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2.34"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.9"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "309"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    }
+                }
+            },
+            "PLC3": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15250"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8201002"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3636"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "613"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.43"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8.11"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.08"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21.1"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-2.6"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "18.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "100"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "321"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "943"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "23"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    }
+                }
+            },
+            "PLC4": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15203"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3663099"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3613"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35.09"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.77"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.87"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.89"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.74"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-190.64"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "205.14"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14.5"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "80"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "8"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "19"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "21"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17"
+                    }
+                }
+            },
+            "PLC5": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15243"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1861102"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3633"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "185"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28.61"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.38"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.51"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.53"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "5.41"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "246"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4.1"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "79.3"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "83.4"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "108"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2599"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4123"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "36"
+                    }
+                }
+            },
+            "PLC6": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15231"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857007"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "46.28"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.66"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.49"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.6"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.48"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1.6"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30.8"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "32.4"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "246"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2581"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "4051"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "40"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "42"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    }
+                }
+            },
+            "PLC7": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF12": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF13": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF14": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF1": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI121": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI101": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF5": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF6": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    },
+                    "MF7": {
+                        "quality": "Uncertain+Uncertain+NotLimited",
+                        "value": "0"
+                    }
+                }
+            },
+            "PLC8": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "10"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "9.3"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "6.81"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "160.76"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "-142.96"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "17.8"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "106"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "38"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "123"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "35"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "37"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "33"
+                    }
+                }
+            },
+            "PLC9": {
+                "variables": {
+                    "ML1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "15232"
+                    },
+                    "ML3": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "2857103"
+                    },
+                    "ML5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3625"
+                    },
+                    "MI18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI19": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "30"
+                    },
+                    "MF12": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "53.48"
+                    },
+                    "MF13": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12"
+                    },
+                    "MF14": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.13"
+                    },
+                    "MF15": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "12.09"
+                    },
+                    "MF16": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "11.92"
+                    },
+                    "MF17": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF18": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI100": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "3"
+                    },
+                    "MI99": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF8": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MF9": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MF1": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "219.2"
+                    },
+                    "MI121": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI122": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "39"
+                    },
+                    "MI124": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "88"
+                    },
+                    "MI127": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "MI128": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "14"
+                    },
+                    "MI123": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "0"
+                    },
+                    "ML0": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1349"
+                    },
+                    "MI101": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "50"
+                    },
+                    "MI102": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "28"
+                    },
+                    "ML131": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "1867"
+                    },
+                    "MF5": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "45"
+                    },
+                    "MF6": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "47"
+                    },
+                    "MF7": {
+                        "quality": "Good+Good+NotLimited",
+                        "value": "43"
+                    }
+                }
+            }
+        }
+    }
+]
