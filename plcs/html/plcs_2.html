@@ -722,27 +722,6 @@
             top: 2px
         }
 
-        .select_section {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 5px;
-            border-top: 2px solid var(--color-negro);
-            box-sizing: border-box;
-        }
-
-        .select_section>* {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .select_section>*>*:first-child {
-            margin-right: 8px;
-        }
-
 
         .select_search {
             display: flex;
@@ -788,22 +767,13 @@
         }
 
         .search_section {
-            position: absolute;
             background-color: white;
-            border: 2px solid var(--color-negro);
-            border-radius: 5px;
-            box-shadow: 3px 3px 4px #AAAAAA;
-            right: 0px;
-            top: 22px;
-            width: 200px;
-            max-width: 300px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             padding: 5px;
-            border-top: 2px solid var(--color-negro);
             box-sizing: border-box;
-            z-index: 1;
         }
 
         .search_section>* {
@@ -820,6 +790,8 @@
 
         .search_section>*:first-child {
             margin-bottom: 8px;
+            display: flex;
+            justify-content: flex-start;
         }
 
         .search_section>*:first-child>input:last-child {
@@ -1097,7 +1069,7 @@
 </head>
 
 <body>
-    <div id="dashboard" class="">
+    <div id="dashboard" class="noselect">
         <!--Configuracion-->
         <div class="cube_container" id="config">
             <div class="tab_container columns">
@@ -1157,26 +1129,17 @@
                         <div class="selected_head center">
                             <h3>Máquina</h3>
                             <div class="columns">
-                                <div class="button_search">
-                                    <div></div>
-                                </div>
                                 <div class="button_arrow_down">
                                     <div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Despliegue de Select-->
-                        <div class="select_section">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
                         <!--Search de Select-->
                         <div class="search_section">
                             <div>
-                                <input type="checkbox" class="toggle_all">
-                                <input type="text">
+                                <input type="checkbox" class="toggle_all" checked>
+                                <label>Todos</label>
+                                <!--<input type="text">-->
                             </div>
                             <div class="rows">
                                 <div>
@@ -1191,26 +1154,17 @@
                         <div class="selected_head center">
                             <h3>Operario</h3>
                             <div class="columns">
-                                <div class="button_search">
-                                    <div></div>
-                                </div>
                                 <div class="button_arrow_down">
                                     <div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Despliegue de Select-->
-                        <div class="select_section">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
                         <!--Search de Select-->
                         <div class="search_section">
                             <div>
-                                <input type="checkbox" class="toggle_all">
-                                <input type="text">
+                                <input type="checkbox" class="toggle_all" checked>
+                                <label>Todos</label>
+                                <!--<input type="text">-->
                             </div>
                             <div class="rows">
                                 <div>
@@ -1224,26 +1178,17 @@
                         <div class="selected_head center">
                             <h3>Orden</h3>
                             <div class="columns">
-                                <div class="button_search">
-                                    <div></div>
-                                </div>
                                 <div class="button_arrow_down">
                                     <div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Despliegue de Select-->
-                        <div class="select_section">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
                         <!--Search de Select-->
                         <div class="search_section">
                             <div>
-                                <input type="checkbox" class="toggle_all">
-                                <input type="text">
+                                <input type="checkbox" class="toggle_all" checked>
+                                <label>Todos</label>
+                                <!--<input type="text">-->
                             </div>
                             <div class="rows">
                                 <div>
@@ -1257,26 +1202,17 @@
                         <div class="selected_head center">
                             <h3>Lote</h3>
                             <div class="columns">
-                                <div class="button_search">
-                                    <div></div>
-                                </div>
                                 <div class="button_arrow_down">
                                     <div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Despliegue de Select-->
-                        <div class="select_section">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
                         <!--Search de Select-->
                         <div class="search_section">
                             <div>
-                                <input type="checkbox" class="toggle_all">
-                                <input type="text">
+                                <input type="checkbox" class="toggle_all" checked>
+                                <label>Todos</label>
+                                <!--<input type="text">-->
                             </div>
                             <div class="rows">
                                 <div>
@@ -1288,28 +1224,19 @@
                     </div>
                     <div class="selected_form" id="colores_config">
                         <div class="selected_head center">
-                            <h3>Color</h3>
+                            <h3>Molde</h3>
                             <div class="columns">
-                                <div class="button_search">
-                                    <div></div>
-                                </div>
                                 <div class="button_arrow_down">
                                     <div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Despliegue de Select-->
-                        <div class="select_section">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
                         <!--Search de Select-->
                         <div class="search_section">
                             <div>
-                                <input type="checkbox" class="toggle_all">
-                                <input type="text">
+                                <input type="checkbox" class="toggle_all" checked>
+                                <label>Todos</label>
+                                <!--<input type="text">-->
                             </div>
                             <div class="rows">
                                 <div>
@@ -1323,26 +1250,17 @@
                         <div class="selected_head center">
                             <h3>Material</h3>
                             <div class="columns">
-                                <div class="button_search">
-                                    <div></div>
-                                </div>
                                 <div class="button_arrow_down">
                                     <div></div>
                                 </div>
                             </div>
                         </div>
-                        <!--Despliegue de Select-->
-                        <div class="select_section">
-                            <div>
-                                <input type="checkbox">
-                                <label>Sample</label>
-                            </div>
-                        </div>
                         <!--Search de Select-->
                         <div class="search_section">
                             <div>
-                                <input type="checkbox">
-                                <input type="text">
+                                <input type="checkbox" class="toggle_all" checked>
+                                <label>Todos</label>
+                                <!--<input type="text">-->
                             </div>
                             <div class="rows">
                                 <div>
@@ -1597,19 +1515,20 @@
 
         $('#datetimes').change((e) => {
             try {
-                JSON.stringify(e)//hack to check event recursion
+                JSON.stringify(e) //hack to check event recursion
             } catch (error) {
                 var start = new Date($('#datetimes').data('daterangepicker').startDate._d);
                 var end = new Date($('#datetimes').data('daterangepicker').endDate._d);
                 _pulledData = pullData(start, end)
                 _pulledData = rename(_pulledData)
                 originalData = formatData(_pulledData);
-                filteredData = formatData(filterData(_pulledData, getFilters())); //filter must check for order changes*************************
-                dataChange(true,true);
+                filteredData = formatData(filterData(_pulledData,
+                    getFilters())); //filter must check for order changes*************************
+                dataChange();
             }
         })
-        function pullData(start, end)
-        {
+
+        function pullData(start, end) {
             var _newPulledData = [];
 
             return _newPulledData;
@@ -1622,26 +1541,8 @@
 
         // Search
         $('.search_section').hide()
-        $('.button_search').click(function () {
-            var state = $(this).closest('.selected_form').find('.search_section').css('display');
-            $('.search_section').hide()
-            $(this).closest('.selected_form').find('.search_section').css('display', state);
+        $('.selected_head').click(function () {
             $(this).closest('.selected_form').find('.search_section').toggle()
-
-        });
-
-        // Select
-        $('.select_section').hide()
-        $('.button_arrow_down, .selected_head h3').click(function () {
-            $('.search_section').hide()
-            var _height = $(this).closest('.selected_form').height()
-            $(this).closest('.selected_form').find('.select_section').toggle()
-            $(this).closest('.selected_form').height('fit-content')
-            var _height2 = $(this).closest('.selected_form').height()
-            $(this).closest('.selected_form').height(_height)
-            $(this).closest('.selected_form').animate({
-                height: _height2
-            }, 500);
         });
 
         // Minimize
@@ -1808,7 +1709,8 @@
                 },
                 energia: [],
                 material: {
-                    maquina: []
+                    maquina: [],
+                    molde: [],
                 }
             };
 
@@ -1946,6 +1848,73 @@
                         })
                     material.children.push(materialPlc)
                 })
+
+                var materialMolde = {
+                    name: 'Total',
+                    value: 0,
+                    date: input.timeStamp,
+                    children: [],
+                }
+                Object.keys(input.plcs).forEach(plcId => {
+                    // material
+                    var simpMoldeID = input.plcs[plcId].variables[t['Color']].value
+                    if (materialMolde.children.filter(e => e.name === simpMoldeID).length <= 0) {
+                        var _materialPlcMolde = {
+                            name: simpMoldeID,
+                            value: 0,
+                            children: [
+                                {
+                                    name: simpMoldeID + '.Cav1',
+                                    value: 0,
+                                },
+                                {
+                                    name: simpMoldeID + '.Cav2',
+                                    value: 0,
+                                },
+                                {
+                                    name: simpMoldeID + '.Cav3',
+                                    value: 0,
+                                },
+                                {
+                                    name: simpMoldeID + '.Cav4',
+                                    value: 0,
+                                },
+                                {
+                                    name: simpMoldeID + '.Cav5',
+                                    value: 0,
+                                },
+                                {
+                                    name: simpMoldeID + '.Cav6',
+                                    value: 0,
+                                },
+                            ]
+                        }
+                        materialMolde.children.push(_materialPlcMolde)
+                    }
+                    var materialPlcMolde = materialMolde.children.filter(e => e.name === simpMoldeID)[0]
+
+                    var cav1 = Number(input.plcs[plcId].variables[t['Peso Cavidad 1']].value)
+                    var cav2 = Number(input.plcs[plcId].variables[t['Peso Cavidad 2']].value)
+                    var cav3 = Number(input.plcs[plcId].variables[t['Peso Cavidad 3']].value)
+                    var cav4 = Number(input.plcs[plcId].variables[t['Peso Cavidad 4']].value)
+                    var cav5 = Number(input.plcs[plcId].variables[t['Peso Cavidad 5']].value)
+                    var cav6 = Number(input.plcs[plcId].variables[t['Peso Cavidad 6']].value)
+                    materialPlcMolde.children.filter(e => e.name.includes('.Cav1'))[0].value += cav1
+                    materialPlcMolde.children.filter(e => e.name.includes('.Cav2'))[0].value += cav2
+                    materialPlcMolde.children.filter(e => e.name.includes('.Cav3'))[0].value += cav3
+                    materialPlcMolde.children.filter(e => e.name.includes('.Cav4'))[0].value += cav4
+                    materialPlcMolde.children.filter(e => e.name.includes('.Cav5'))[0].value += cav5
+                    materialPlcMolde.children.filter(e => e.name.includes('.Cav6'))[0].value += cav6
+                    materialPlcMolde.value += Number(input.plcs[plcId].variables[t['Peso Inyección']].value)
+                    materialMolde.value += materialPlcMolde.value
+
+                })
+
+                output.material.molde.push(materialMolde)
+
+
+
+
                 var calidad = {
                     name: 'Producción',
                     value: _buenas + _arranque + _lluvia,
@@ -2076,7 +2045,19 @@
             Object.keys(v).forEach(name => {
                 _sdata = replaceAll(_sdata, name, v[name])
             })
-            return JSON.parse(_sdata)
+            _sdata = JSON.parse(_sdata);
+            _sdata.forEach((data) => {
+                Object.keys(data.plcs).forEach(plcID => {
+                    var plc = data.plcs[plcID]
+                    var _col = plc.variables[t['Color']].value
+                    if (_col.length != 4 && _col != '0') {
+                        _col = _col.substring(2, _col.length - 1)
+                        plc.variables[t['Color']].value = _col
+                    }
+                })
+            })
+
+            return _sdata
         }
 
         var _pulledData = [{
@@ -6590,90 +6571,39 @@
         var _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
         var _materialPlc = Object.keys(filteredData['material'])[0]
 
-        function dataChange(filtered = false, pulled = false) {
-            if (filtered) {
-                Object.keys(filteredData['configuracion']).forEach((key) => {
-                    var opciones = filteredData['configuracion'][key]
-                    var select_container = $('#' + key + '_config .select_section');
-                    select_container.empty()
-                    opciones.forEach(function (opcion) {
-                        var new_section = `
-                            <div>
-                                <input type="checkbox" name="${opcion}" value="${opcion}" checked>
-                                <label for="${opcion}">${opcion}</label>
-                            </div>`
-                        select_container.append(new_section)
-                    })
+        function dataChange() {
 
-                    $('.selected_form').height('fit-content')
-                })
+            var oldFilters = getFilters()
+            Object.keys(originalData['configuracion']).forEach((key) => {
+                var opciones = originalData['configuracion'][key]
+                var search_container = $('#' + key + '_config .search_section .rows');
+                search_container.empty()
+                opciones.forEach(function (opcion) {
+                    var _chk = ''
+                    var _prnt = ''
+                    if (!oldFilters[key].includes(opcion))
+                        _chk = 'checked'
 
-                $('.selected_form .select_section input').on('change', function () {
-                    $(this).closest('.selected_form').find(
-                        `.search_section input[name='${$(this).prop('name')}']`).prop(
-                        'checked', $(this).prop('checked'));
-                    $(this).parent().hide();
-                    $(this).closest('.selected_form').height('fit-content')
-                    filteredData = formatData(filterData(_pulledData, getFilters()));
-                    dataChange(true);
-
+                    if (!oldFilters[key].includes(opcion) && !filteredData['configuracion'][key]
+                        .includes(opcion))
+                        _prnt = 'style="color:red;"'
+                    var new_section = `
+                        <div>
+                            <input type="checkbox" name="${opcion}" value="${opcion}" ${_chk}>
+                            <label for="${opcion}" ${_prnt}>${opcion}</label>
+                        </div>`
+                    search_container.append(new_section)
                 })
-            }
-            if (pulled) {
-                var oldFilters = getFilters()
-                Object.keys(originalData['configuracion']).forEach((key) => {
-                    var opciones = originalData['configuracion'][key]
-                    var select_container = $('#' + key + '_config .select_section');
-                    var search_container = $('#' + key + '_config .search_section .rows');
-                    //modified to keep current config
-                    select_container.empty()
-                    search_container.empty()
-                    opciones.forEach(function (opcion) {
-                        var _chk = ''
-                        if (!oldFilters[key].includes(opcion))
-                            _chk = 'checked'
-                        var new_section = `
-                            <div>
-                                <input type="checkbox" name="${opcion}" value="${opcion}" ${_chk}>
-                                <label for="${opcion}">${opcion}</label>
-                            </div>`
-                        if (!oldFilters[key].includes(opcion))
-                            select_container.append(new_section)
-                        search_container.append(new_section)
-                    })
-                })
-                $('.selected_form .select_section input').on('change', function () {
-                    $(this).closest('.selected_form').find(
-                        `.search_section input[name='${$(this).prop('name')}']`).prop(
-                        'checked', $(this).prop('checked'));
-                    $(this).parent().hide();
-                    $(this).closest('.selected_form').height('fit-content')
-                    filteredData = formatData(filterData(_pulledData, getFilters()));
-                    dataChange(true);
-
-                })
-                $('.selected_form .search_section .rows input').on('change', function () {
-                    $(this).closest('.selected_form').find(
-                        `.select_section input[name='${$(this).prop('name')}']`).prop(
-                        'checked', $(this).prop('checked'));
-                    $(this).closest('.selected_form').find(
-                            `.select_section input[name='${$(this).prop('name')}']`)
-                        .parent().toggle($(this).prop('checked'));
-                    $(this).closest('.selected_form').height('fit-content')
-                    filteredData = formatData(filterData(_pulledData, getFilters()));
-                    dataChange(true);
-
-                })
-                $('.selected_form .search_section .toggle_all').on('change', function () {
-                    $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
-                    $(this).closest('.selected_form').find('.select_section > div').toggle($(this).prop(
-                        'checked'));
-                    $(this).closest('.selected_form').height('fit-content')
-                    filteredData = formatData(filterData(_pulledData, getFilters()));
-                    dataChange(true);
-                })
-
-            }
+            })
+            $('.selected_form .search_section .rows input').on('change', function () {
+                filteredData = formatData(filterData(_pulledData, getFilters()));
+                dataChange();
+            })
+            $('.selected_form .search_section .toggle_all').on('change', function () {
+                $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
+                filteredData = formatData(filterData(_pulledData, getFilters()));
+                dataChange();
+            })
 
 
 
@@ -6736,8 +6666,8 @@
                     setColors(_section)
                 })
             })
-            
-            $('#eficiencia_indicador').css('box-shadow',_colors[4] + ' 0px 0px 8px')
+
+            $('#eficiencia_indicador').css('box-shadow', _colors[4] + ' 0px 0px 8px')
 
             Object.keys(filteredData).forEach(function (section) {
                 var units = 'ud'
@@ -6809,12 +6739,11 @@
                             width: $(lineContainer).width(),
                             height: $(lineContainer).width() / 1.9
                         };
-                        if (lineID == 'lineIndicadores')
-                        {
-                            if($(window).width() > 1100)
+                        if (lineID == 'lineIndicadores') {
+                            if ($(window).width() > 1100)
                                 update.height = update.width / 3.5
-                            else if($(window).width() < 740)
-                                update.height = update.width /  1.9
+                            else if ($(window).width() < 740)
+                                update.height = update.width / 1.9
                             else
                                 update.height = update.width / 2.5
                         }
@@ -6830,49 +6759,51 @@
                         theta: maxLabels,
                         fill: 'toself',
                         name: 'Eficiencia',
-                        line:{color:_colors[4]},
+                        line: {
+                            color: _colors[4]
+                        },
                         marker: {
                             size: 1
                         },
                         //fillcolor: _colors[4],
                         //opacity: 0.6
-                    },{
+                    }, {
                         type: 'scatterpolar',
-                        r: [0,maxVals[0]],
-                        theta: [maxLabels[0],maxLabels[0]],
+                        r: [0, maxVals[0]],
+                        theta: [maxLabels[0], maxLabels[0]],
                         name: 'Disponibilidad',
                         marker: {
-                            color:_colors[1],
+                            color: _colors[1],
                             size: 8
                         },
-                        line:{
+                        line: {
                             width: 4
                         }
-                    },{
+                    }, {
                         type: 'scatterpolar',
-                        r: [0,maxVals[1]],
-                        theta: [maxLabels[1],maxLabels[1]],
+                        r: [0, maxVals[1]],
+                        theta: [maxLabels[1], maxLabels[1]],
                         name: 'Rendimiento',
                         marker: {
-                            color:_colors[2],
+                            color: _colors[2],
                             size: 8
                         },
-                        line:{
+                        line: {
                             width: 4
                         }
-                    },{
+                    }, {
                         type: 'scatterpolar',
-                        r: [0,maxVals[2]],
-                        theta: [maxLabels[2],maxLabels[2]],
+                        r: [0, maxVals[2]],
+                        theta: [maxLabels[2], maxLabels[2]],
                         name: 'Calidad',
                         marker: {
-                            color:_colors[3],
+                            color: _colors[3],
                             size: 8
                         },
-                        line:{
+                        line: {
                             width: 4
                         }
-                    },];
+                    }, ];
                     var layout = {
                         "margin": {
                             "l": 30,
@@ -6911,25 +6842,25 @@
                         _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
                     }
                     currData = filteredData[section][_ciclosPlc]
-                    if ($('#ciclePlc>option').length == 0 || filtered) {
-                        $('#ciclePlc').empty()
-                        var _keys = Object.keys(filteredData[section])
-                        _keys.forEach(function (key) {
-                            $('#ciclePlc').append($(`<option value="${key}">${proper(key)}</option>`))
-                        })
-                    }
-
+                    $('#ciclePlc').empty()
+                    var _keys = Object.keys(filteredData[section])
+                    _keys.forEach(function (key) {
+                        $('#ciclePlc').append($(`<option value="${key}">${proper(key)}</option>`))
+                    })
+                    $("#ciclePlc").val(_ciclosPlc);
                 }
                 if (section == "material") {
-                    currData = filteredData[section][_materialPlc]
-                    if ($('#MaterialPlc>option').length == 0) {
-                        var _keys = Object.keys(filteredData[section])
-                        _keys.forEach(function (key) {
-                            $('#MaterialPlc').append($(
-                                `<option value="${key}">${proper(key)}</option>`))
-                        })
+                    if (!(_materialPlc in filteredData[section])) {
+                        _materialPlc = Object.keys(filteredData['material'])[0]
                     }
-
+                    currData = filteredData[section][_materialPlc]
+                    $('#MaterialPlc').empty()
+                    var _keys = Object.keys(filteredData[section])
+                    _keys.forEach(function (key) {
+                        $('#MaterialPlc').append($(
+                            `<option value="${key}">${proper(key)}</option>`))
+                    })
+                    $('#MaterialPlc').val(_materialPlc)
                 }
                 var pieID = "pie" + proper(section);
                 var pieParent = "#pie" + proper(section) + "Container"
@@ -7269,34 +7200,17 @@
 
             })
         }
-        dataChange(false);
+        dataChange();
         $('#ciclePlc').on('change', function () {
             _ciclosPlc = this.value
-            dataChange(false);
+            dataChange();
         });
         $('#MaterialPlc').on('change', function () {
             _materialPlc = this.value
-            dataChange(false);
+            dataChange();
         });
 
 
-        //configuracion
-        Object.keys(originalData['configuracion']).forEach((key) => {
-            var opciones = originalData['configuracion'][key]
-            var select_container = $('#' + key + '_config .select_section');
-            var search_container = $('#' + key + '_config .search_section .rows');
-            select_container.empty()
-            search_container.empty()
-            opciones.forEach(function (opcion) {
-                var new_section = `
-                    <div>
-                        <input type="checkbox" name="${opcion}" value="${opcion}" checked>
-                        <label for="${opcion}">${opcion}</label>
-                    </div>`
-                select_container.append(new_section)
-                search_container.append(new_section)
-            })
-        })
         // var config_template = $('#sub_config').html();
         // $('#sub_config').html('');
         //$('#sub_config').html(config_template);
@@ -7321,34 +7235,6 @@
             })
             return _filters
         }
-        $('.selected_form .select_section input').on('change', function () {
-            $(this).closest('.selected_form').find(`.search_section input[name='${$(this).prop('name')}']`)
-                .prop(
-                    'checked', $(this).prop('checked'));
-            $(this).parent().hide();
-            $(this).closest('.selected_form').height('fit-content')
-            filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange(true);
-
-        })
-        $('.selected_form .search_section .rows input').on('change', function () {
-            $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`)
-                .prop(
-                    'checked', $(this).prop('checked'));
-            $(this).closest('.selected_form').find(`.select_section input[name='${$(this).prop('name')}']`)
-                .parent().toggle($(this).prop('checked'));
-            $(this).closest('.selected_form').height('fit-content')
-            filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange(true);
-
-        })
-        $('.selected_form .search_section .toggle_all').on('change', function () {
-            $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
-            $(this).closest('.selected_form').find('.select_section > div').toggle($(this).prop('checked'));
-            $(this).closest('.selected_form').height('fit-content')
-            filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange(true);
-        })
 
         //LIVE
         var liveStart;
@@ -7358,9 +7244,8 @@
             //_pulledData = rename(_pulledData)
             //originalData = formatData(_pulledData);
             //filteredData = formatData(filterData(_pulledData, filters));
-            //dataChange(false, true);
-            if ($(this).prop('checked'))
-            {
+            //dataChange();
+            if ($(this).prop('checked')) {
                 client.subscribe('diaxPublisher/plcs/#')
                 liveStart = new Date();
                 $('input[name="datetimes"]').daterangepicker({
@@ -7372,8 +7257,7 @@
                     }
                 });
                 liveReset = true;
-            }
-            else
+            } else
                 client.unsubscribe('diaxPublisher/plcs/#')
         })
         var _offset = false;
@@ -7451,7 +7335,7 @@
             _pulledData = rename(_pulledData)
             originalData = formatData(_pulledData);
             filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange(true, true);
+            dataChange();
             $('input[name="datetimes"]').daterangepicker({
                 timePicker: true,
                 startDate: liveStart,
