@@ -2051,7 +2051,7 @@
                     var plc = data.plcs[plcID]
                     var _col = plc.variables[t['Color']].value
                     if (_col.length != 4 && _col != '0') {
-                        _col = _col.substring(2, _col.length - 1)
+                        _col = _col.substring(2, 6)
                         plc.variables[t['Color']].value = _col
                     }
                 })
