@@ -209,7 +209,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-
+            margin-top: 10px;
         }
 
         #subSubConfig>* {
@@ -1017,6 +1017,11 @@
             font-weight: 600;
             text-align: left;
         }
+        #rangoCont{
+            display: flex;
+            align-items: flex-start;
+            height: 100%;
+        }
 
         #liveContainer {
             height: 100%;
@@ -1070,17 +1075,60 @@
         }
 
         #offsetCont {
-            display: none;
+           /* display: none;*/
         }
 
         .interrogation {
             box-sizing: border-box;
             padding-bottom: 2px;
         }
+
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading {
+            overflow: hidden;
+        }
     </style>
 </head>
 
-<body>
+<body class="loading">
+    <div id="loader">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="margin:auto;background:transparent;display:block;" width="200px" height="200px" viewBox="0 0 100 100"
+            preserveAspectRatio="xMidYMid">
+            <g transform="rotate(180 50 50)">
+                <rect x="15" y="15" width="10" height="40" fill="white">
+                    <animate attributeName="height" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="1s"
+                        repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                        begin="-0.4s"></animate>
+                </rect>
+                <rect x="35" y="15" width="10" height="40" fill="white">
+                    <animate attributeName="height" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="1s"
+                        repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                        begin="-0.2s"></animate>
+                </rect>
+                <rect x="55" y="15" width="10" height="40" fill="white">
+                    <animate attributeName="height" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="1s"
+                        repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                        begin="-0.6s"></animate>
+                </rect>
+                <rect x="75" y="15" width="10" height="40" fill="white">
+                    <animate attributeName="height" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="1s"
+                        repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                        begin="-1s"></animate>
+                </rect>
+            </g>
+        </svg>
+    </div>
     <div id="dashboard" class="noselect">
         <!--Configuracion-->
         <div class="cube_container" id="config">
@@ -1118,13 +1166,12 @@
             </div>
             <div id="sub_config">
                 <div class="columns center margin_gd">
-                    <div class="left_rows rows">
+                    <div class="left_rows rows" id="rangoCont">
                         <div id="inicio_fin">
                             Rango
                         </div>
                         <input id="datetimes" type="text" name="datetimes" />
-                        <div id="configError">Error: No se encontró data, intenta otro rango. Si estas en vivo, espera a
-                            que llegue data. (Aproximadamente cada minuto)</div>
+                        <div id="configError">Error: No se encontró data, intenta otro rango.</div>
                     </div>
                     <div id="liveContainer" class="rows padding_pq">
                         <div class="columns noselect center">
@@ -1133,7 +1180,7 @@
                         </div>
                         <div id="offsetCont" class="columns noselect center">
                             <label for="offset">Offset</label>
-                            <div>?</div><input id="offset" name="offset" type="checkbox" />
+                            <div class="interrogation">?</div><input id="offset" name="offset" type="checkbox" />
                         </div>
 
                     </div>
@@ -1517,14 +1564,8 @@
     </div>
     <script>
         $(document).ready(() => {
-            /*var container = document.querySelector('.grid');
-            var msnry = new Masonry(container, {
-                itemSelector: '.grid-item',
-                fitWidth: true,
-                //horizontalOrder: true
-                percentPosition: true,
-            });*/
-
+            $('body').removeClass('loading');
+            $('#loader').hide();
         })
 
         $('#datetimes').change((e) => {
@@ -1534,8 +1575,8 @@
                 var start = new Date($('#datetimes').data('daterangepicker').startDate._d);
                 var end = new Date($('#datetimes').data('daterangepicker').endDate._d);
                 pullData(start, end, callback)
-                function callback(_pulled)
-                {
+
+                function callback(_pulled) {
                     _pulledData = _pulled
                     _pulledData = rename(_pulledData)
                     originalData = formatData(_pulledData);
@@ -1546,6 +1587,8 @@
         })
 
         async function pullData(_start, _end, _callback) {
+            $('body').addClass('loading');
+            $('#loader').show();
             var _newPulledData = [];
             async function getData(_res) {
                 const response = await fetch("https://api.diax.com.co/diaxiotquery ", {
@@ -1555,8 +1598,14 @@
                 });
 
                 const myJson = await response.json();
-                if (response.status == 200)  {
+                if (response.status == 200) {
                     _callback(myJson)
+                    $('body').removeClass('loading');
+                    $('#loader').hide();
+                } else {
+                    console.log('Failed to query')
+                    $('body').removeClass('loading');
+                    $('#loader').hide();
                 }
             }
             return getData({
@@ -2815,6 +2864,8 @@
             //filteredData = formatData(filterData(_pulledData, filters));
             //dataChange();
             if ($(this).prop('checked')) {
+                $('body').addClass('loading');
+                $('#loader').show();
                 client.subscribe('diaxPublisher/plcs/#')
                 liveStart = new Date();
                 $('input[name="datetimes"]').daterangepicker({
@@ -2868,6 +2919,8 @@
             "ML131": 0 //"Inyecciones"
         }
         client.on('message', (topic, message) => {
+            $('body').removeClass('loading');
+            $('#loader').hide();
             var uint8array = new TextEncoder().encode("¢");
             var string = new TextDecoder().decode(message);
             //console.log(JSON.parse(string))
