@@ -1019,6 +1019,9 @@
             font-weight: 600;
             text-align: left;
         }
+        #configError::before {
+            content: 'Error: '
+        }
 
         #rangoCont {
             display: flex;
@@ -1314,7 +1317,7 @@
                             Rango
                         </div>
                         <input id="datetimes" type="text" name="datetimes" />
-                        <div id="configError">Error: No se encontró data, intenta otro rango.</div>
+                        <div id="configError">No se encontró data, intenta otro rango.</div>
                     </div>
                     <div id="liveContainer" class="rows padding_pq">
                         <div class="columns noselect center">
@@ -1746,9 +1749,9 @@
                     $('body').removeClass('loading');
                     $('#loader').hide();
                 } else {
-                    console.log('Failed to query')
                     $('body').removeClass('loading');
                     $('#loader').hide();
+                    $('#configError').text('Failed to query');
                 }
             }
             return getData({
@@ -2393,6 +2396,7 @@
         function dataChange() {
             if (_pulledData.length < 1) {
                 $('#configError').show()
+                $('#configError').text('No se encontró data, intenta otro rango.');
                 $('#Indicadores').hide()
                 $('#subdashboard').hide()
                 return;
