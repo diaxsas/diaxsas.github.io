@@ -1,3589 +1,2249 @@
-var sampleData = [
-    {
-      "plc": "PLC1",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15244"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2861002"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3633"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "97"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17.9"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.29"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.18"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.37"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.22"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.26"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.29"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "54"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "5.2"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "37.7"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "42.9"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "32"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "90"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1204"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "42"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "23"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2010"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15228"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15857602"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3623"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "12.57"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.29"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.37"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.36"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.34"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "29"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "29"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "14890"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7855602"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3469"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "35"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6.74"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.15"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.16"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.13"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.17"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "13"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "25.7"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "-8.6"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17.1"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1011"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1735"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6212"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "20"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15261"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1271001"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3616"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "110.64"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.34"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.1"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.35"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.19"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "-305.92"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "356.12"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "50.2"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "94"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2061"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "163"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2586"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15230"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2851701"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3624"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "82"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "16"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "18.69"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7.2"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7.2"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "18"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "5.2"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "25.2"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30.4"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "18"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "252"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "380"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "35"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15237"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2857007"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3629"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "615"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "46.35"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.65"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.47"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.61"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.47"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.6"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "39.3"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "40.9"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "153"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1751"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "32"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2767"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "40"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15204"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3459001"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3613"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "10"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.33"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6.84"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "-30.22"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "82.92"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "52.7"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "154"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "453"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "14"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1351"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "35"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15238"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2857103"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3629"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "53.2"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "11.95"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "12.03"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "12.03"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "11.83"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "11.83"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "33.7"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "33.7"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "51"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "621"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "19"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "31"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "816"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:24:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15244"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2861002"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3633"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "97"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17.9"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.29"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.18"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.37"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.22"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.26"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.29"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "54"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "5.2"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "23.7"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "28.9"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "32"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "90"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1205"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "42"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "23"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2012"
-    },
-    {
-      "plc": "PLC1",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15228"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15857602"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3623"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "12.57"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.29"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.37"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.36"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2.34"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "29"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "29"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC2",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "14890"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7855602"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3469"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "35"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6.74"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.15"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.16"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.13"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.17"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "13"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "25.7"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "-8.6"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17.1"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1011"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1735"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6212"
-    },
-    {
-      "plc": "PLC3",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "20"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15261"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1271001"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3616"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "110.64"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.34"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.1"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.35"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "26.19"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "-305.92"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "356.12"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "50.2"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "94"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2061"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "163"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2586"
-    },
-    {
-      "plc": "PLC4",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15230"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2851701"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3624"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "82"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "16"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "18.69"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7.2"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "7.2"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "18"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "4.8"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "24.7"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "29.5"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "18"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "253"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "382"
-    },
-    {
-      "plc": "PLC5",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "35"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15237"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2857007"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3629"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "615"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "46.35"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.65"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.47"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.61"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.47"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1.6"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "39.3"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "40.9"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "153"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1751"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "17"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "32"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2767"
-    },
-    {
-      "plc": "PLC6",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "40"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC7",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Uncertain+Uncertain+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15204"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3459001"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3613"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "10"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "9.33"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "6.84"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "-30.22"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "82.92"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "52.7"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "154"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "453"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "14"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1351"
-    },
-    {
-      "plc": "PLC8",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "35"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "15238"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML3",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "2857103"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "3629"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI19",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "30"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF12",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "53.2"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF13",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "11.95"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF14",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "12.03"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF15",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "12.03"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF16",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "11.83"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF17",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "11.83"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF18",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI100",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "1"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI99",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF8",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF9",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "33.7"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF1",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "33.7"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI121",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI122",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI124",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "51"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI127",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI128",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI123",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "0"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML0",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "621"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI101",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "19"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MI102",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "31"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "ML131",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "816"
-    },
-    {
-      "plc": "PLC9",
-      "variable": "MF5",
-      "timeStamp": "14/06/2022 14:25:57",
-      "quality": "Good+Good+NotLimited",
-      "value": "45"
-    }
-  ]
+var outputs = [
+  {
+      "timeStamp": "2022-07-13T14:05:22.275Z",
+      "plcs": {
+          "PLC8": {
+              "variables": {
+                  "MF9": {
+                      "value": "89.62",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "38",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "24.44",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "24.44",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "10",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "533",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "950",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15052",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "8451004",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3542",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "22.4",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "37",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "35",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "-67.22",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "33",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC7": {
+              "variables": {
+                  "MF9": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  }
+              }
+          },
+          "PLC9": {
+              "variables": {
+                  "MF9": {
+                      "value": "48.23",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "2",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "124",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "7",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "54",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "620",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "1",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "52",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "11.75",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "11.7",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "11.65",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "58.92",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "11.75",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "188",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "2274",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "2581",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15317",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "22857501",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3660",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "48.23",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "43",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC4": {
+              "variables": {
+                  "MF9": {
+                      "value": "44.33",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "1",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "26",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "210",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "17",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "230",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "7",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "35",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "26.16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "26.36",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "26.31",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "110.96",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "26.51",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "176",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "1403",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "1284",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15294",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1271703",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3653",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "50.33",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "36",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "34",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "32",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC3": {
+              "variables": {
+                  "MF9": {
+                      "value": "24.2",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "70",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "3",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "7.99",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "40.68",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "8.02",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "82",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "266",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "410",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15333",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1850501",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3668",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "27.38",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "3.18",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "43",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC6": {
+              "variables": {
+                  "MF9": {
+                      "value": "251.3",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "150",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "893",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "32",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "10",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "41",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "9.33",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "9.45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "9.3",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "45.62",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "9.46",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "615",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "2644",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "3808",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15282",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1857002",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3650",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "252.9",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "1.6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "43",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC5": {
+              "variables": {
+                  "MF9": {
+                      "value": "32.2",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "53",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "74",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "234",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "7.73",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "7.73",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "7.74",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "36.28",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "7.65",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "10",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "184",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "864",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "1138",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15297",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1861501",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3654",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "36.37",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "44",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "42",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "4.17",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "40",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC2": {
+              "variables": {
+                  "MF9": {
+                      "value": "26.22",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "50",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "97",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "18",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "79",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "146",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "9.19",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "21.04",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "9.54",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "101",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "1505",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "2822",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15318",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "22858001",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3660",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "26.22",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "26",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "24",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "22",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC1": {
+              "variables": {
+                  "MF9": {
+                      "value": "26.7",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "4",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "10.92",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "23.08",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "10.99",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "613",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "95",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "150",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15314",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1859101",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3659",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "31.9",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "5.2",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "43",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          }
+      }
+  }, 
+  {
+      "timeStamp": "2022-07-13T14:59:22.732Z",
+      "plcs": {
+          "PLC8": {
+              "variables": {
+                  "MF9": {
+                      "value": "89.62",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "38",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "24.44",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "24.44",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "10",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "533",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "950",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15052",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "8451004",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3542",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "22.4",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "37",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "35",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "-67.22",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "33",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC7": {
+              "variables": {
+                  "MF9": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "0",
+                      "quality": "Uncertain+Uncertain+NotLimited"
+                  }
+              }
+          },
+          "PLC9": {
+              "variables": {
+                  "MF9": {
+                      "value": "46.78",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "2",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "124",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "7",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "54",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "620",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "1",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "52",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "11.75",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "11.7",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "11.65",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "58.92",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "11.75",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "188",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "2328",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "2651",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15317",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "22857501",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3660",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "46.78",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "43",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC4": {
+              "variables": {
+                  "MF9": {
+                      "value": "42.54",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "1",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "26",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "210",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "17",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "230",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "7",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "35",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "26.16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "26.36",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "26.31",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "110.96",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "26.51",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "176",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "1457",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "1349",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15294",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1271703",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3653",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "49.76",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "36",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "34",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "7.22",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "32",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC3": {
+              "variables": {
+                  "MF9": {
+                      "value": "29.18",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "70",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "3",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "7.99",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "8",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "40.68",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "8.02",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "82",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "320",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "503",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15333",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1850501",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3668",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "34.47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "5.29",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "43",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC6": {
+              "variables": {
+                  "MF9": {
+                      "value": "78.02",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "150",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "893",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "32",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "10",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "95",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "9.33",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "9.45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "9.3",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "45.62",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "9.46",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "615",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "2650",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "3808",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15282",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1857002",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3650",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "79.62",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "47",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "45",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "1.6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "43",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC5": {
+              "variables": {
+                  "MF9": {
+                      "value": "33.32",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "53",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "79",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "234",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "7.73",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "7.73",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "7.74",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "36.28",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "7.65",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "10",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "184",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "918",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "1223",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15297",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "1861501",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3654",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "38.3",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "44",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "42",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "4.98",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "40",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC2": {
+              "variables": {
+                  "MF9": {
+                      "value": "28.42",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "50",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "97",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "6",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "18",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "82",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "146",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "9.19",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "21.04",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "9.54",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "16",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "101",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "1559",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "2936",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15318",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "22858001",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3660",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "28.42",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "26",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "24",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "22",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          },
+          "PLC1": {
+              "variables": {
+                  "MF9": {
+                      "value": "-5.2",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI127": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI128": {
+                      "value": "61",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI123": {
+                      "value": "70",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI101": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI124": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI102": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI121": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI100": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI122": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF14": {
+                      "value": "2.48",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI99": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF15": {
+                      "value": "2.44",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF16": {
+                      "value": "2.46",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF17": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF12": {
+                      "value": "13",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF13": {
+                      "value": "2.43",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI19": {
+                      "value": "10",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF18": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MI18": {
+                      "value": "130",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML0": {
+                      "value": "18",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML131": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML1": {
+                      "value": "15334",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML3": {
+                      "value": "2850601",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "ML5": {
+                      "value": "3668",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF1": {
+                      "value": "0",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF6": {
+                      "value": "34",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF5": {
+                      "value": "32",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF8": {
+                      "value": "5.2",
+                      "quality": "Good+Good+NotLimited"
+                  },
+                  "MF7": {
+                      "value": "30",
+                      "quality": "Good+Good+NotLimited"
+                  }
+              }
+          }
+      }
+  }
+]
 
-
-
-var plcsInitialState = []
-sampleData.forEach(function (d) {
-    if (plcsInitialState.filter(e => e.plc === d.plc).length == 0)
-    plcsInitialState.push({
-            plc: d.plc
-        })
-    var index = plcsInitialState.map(function (e) {
-        return e.plc;
-    }).indexOf(d.plc);
-    plcsInitialState[index].timeStamp = d.timeStamp
-    plcsInitialState[index][d.variable] = d.value
+outputs.forEach(output => {
+  var key = (new Date(output.timeStamp)).getTime()
+  console.log(key)
 })
-  
-
-sampleData = sampleData.sort(function (a, b) {
-    return new Date(b.timeStamp) - new Date(a.timeStamp);
-});
-
-var plcsFinalState = []
-sampleData.forEach(function (d) {
-    if (plcsFinalState.filter(e => e.plc === d.plc).length == 0)
-        plcsFinalState.push({
-            plc: d.plc
-        })
-    var index = plcsFinalState.map(function (e) {
-        return e.plc;
-    }).indexOf(d.plc);
-    plcsFinalState[index].timeStamp = d.timeStamp
-    plcsFinalState[index][d.variable] = d.value
-})
-
-
-var substates = [];
-var plcsCurrentState = []
-sampleData.forEach(function (d) {
-    if (plcsCurrentState.filter(e => e.plc === d.plc).length == 0)
-        plcsCurrentState.push({
-                plc: d.plc
-            })
-    var index = plcsCurrentState.map(function (e) {
-        return e.plc;
-    }).indexOf(d.plc);
-    plcsCurrentState[index].timeStamp = d.timeStamp
-    plcsCurrentState[index][d.variable] = d.value
-    
-    var index2 = plcsFinalState.map(function (e) {
-        return e.plc;
-    }).indexOf(d.plc);
-        if (plcsFinalState[index2].timeStamp != d.timeStamp) {
-            console.log(plcsFinalState[index2].timeStamp, d.timeStamp)
-            substates.push(JSON.parse(JSON.stringify(plcsCurrentState[index])))
-        }
-    
-})
-var allStates = plcsInitialState.concat(plcsFinalState)
-console.log(allStates)

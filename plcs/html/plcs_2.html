@@ -1754,10 +1754,21 @@
                     $('#configError').text('Failed to query');
                 }
             }
-            return getData({
+            var _vars = {
                 start: (new Date(_start)).getTime(),
-                end: (new Date(_end)).getTime()
-            });
+                end: (new Date(_end)).getTime(),
+                group: ""
+            }
+            var diff = end - start
+            var callLimit = 80 * 3
+            var minLimit = callLimit*60*1000
+            var hourLimit = callLimit*60*60*1000
+            if(diff >  minLimit)
+                _vars.group = "Hours"
+            if(diff > hourLimit)
+                _vars.group = "Days"
+
+            return getData(_vars);
         }
 
         // Download
