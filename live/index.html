@@ -1019,6 +1019,7 @@
             font-weight: 600;
             text-align: left;
         }
+
         #configError::before {
             content: 'Error: '
         }
@@ -1103,22 +1104,36 @@
         .loading {
             overflow: hidden;
         }
+
         #title {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
         }
+
         #logo {
             width: 100px;
         }
+
         h1 {
             font-size: 30px;
             color: var(--color-negro);
         }
+
+
+        @media (max-width: 740px) {
+
+            h1 {
+                font-size: 15px !important;
+                text-align: center;
+            }
+        }
+
         #title text {
             font-size: 20px;
         }
+
         #title text span {
             font-weight: 600;
         }
@@ -1157,9 +1172,9 @@
     <div id="dashboard" class="noselect">
         <div class="cube_container" id="title">
 
-            <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 242.198 75.5"
-                style="enable-background:new 0 0 242.198 75.5;" xml:space="preserve">
+            <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 242.198 75.5" style="enable-background:new 0 0 242.198 75.5;"
+                xml:space="preserve">
                 <g id="XMLID_20_">
                     <g id="XMLID_53_">
                         <g id="XMLID_54_">
@@ -1709,7 +1724,6 @@
         </div>
     </div>
     <script>
-        
         var __config = {
             pullAPI: "https://api.diax.com.co/diaxiotquery",
             channel: 'diaxPublisher/plcs/#',
@@ -1769,11 +1783,11 @@
             }
             var diff = _vars.end - _vars.start
             var callLimit = 80 * 3
-            var minLimit = callLimit*60*1000
-            var hourLimit = callLimit*60*60*1000
-            if(diff >  minLimit)
+            var minLimit = callLimit * 60 * 1000
+            var hourLimit = callLimit * 60 * 60 * 1000
+            if (diff > minLimit)
                 _vars.group = "Hours"
-            if(diff > hourLimit)
+            if (diff > hourLimit)
                 _vars.group = "Days"
 
             return getData(_vars);
