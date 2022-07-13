@@ -1709,6 +1709,14 @@
         </div>
     </div>
     <script>
+        
+        var __config = {
+            pullAPI: "https://api.diax.com.co/diaxiotquery",
+            channel: 'diaxPublisher/plcs/#',
+            region: 'us-east-1',
+            IDPool: '1e835899-922f-4a23-b61a-f3c5e43d94e7',
+            endpoint: 'a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com'
+        }
         $(document).ready(() => {
             $('body').removeClass('loading');
             $('#loader').hide();
@@ -1737,7 +1745,7 @@
             $('#loader').show();
             var _newPulledData = [];
             async function getData(_res) {
-                const response = await fetch("https://api.diax.com.co/diaxiotquery", {
+                const response = await fetch(__config.pullAPI, {
                     method: "POST",
                     headers: {},
                     body: JSON.stringify(_res)
@@ -3092,6 +3100,7 @@
         //LIVE
         var liveStart;
         var liveReset = false;
+
         $('#live').on('change', function () {
             $('#datetimes').prop("disabled", $(this).prop('checked'));
             //_pulledData = rename(_pulledData)
@@ -3101,7 +3110,7 @@
             if ($(this).prop('checked')) {
                 $('body').addClass('loading');
                 $('#loader').show();
-                client.subscribe('diaxPublisher/plcs/#')
+                client.subscribe(__config.channel)
                 liveStart = new Date();
                 $('input[name="datetimes"]').daterangepicker({
                     timePicker: true,
@@ -3113,18 +3122,18 @@
                 });
                 liveReset = true;
             } else
-                client.unsubscribe('diaxPublisher/plcs/#')
+                client.unsubscribe(__config.channel)
         })
         var AWSMqttClient = sdk.AWSMqttClient;
         var AWS = sdk.AWS
-        AWS.config.region = 'us-east-1';
+        AWS.config.region = __config.region;
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-            IdentityPoolId: 'us-east-1:1e835899-922f-4a23-b61a-f3c5e43d94e7',
+            IdentityPoolId: __config.region + ':' + __config.IDPool,
         });
         var mqttSettings = {
             region: AWS.config.region,
             credentials: AWS.config.credentials,
-            endpoint: 'a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com',
+            endpoint: __config.endpoint,
             expires: 0,
             clientId: 'mqtt-client-' + (Math.floor((Math.random() * 100000) + 1)),
             will: {
