@@ -1020,9 +1020,7 @@
             text-align: left;
         }
 
-        #configError::before {
-            content: 'Error: '
-        }
+        #configError::before {}
 
         #rangoCont {
             display: flex;
@@ -1332,7 +1330,7 @@
                             Rango
                         </div>
                         <input id="datetimes" type="text" name="datetimes" />
-                        <div id="configError">No se encontró data, intenta otro rango.</div>
+                        <div id="configError"></div>
                     </div>
                     <div id="liveContainer" class="rows padding_pq">
                         <div class="columns noselect center">
@@ -1364,10 +1362,6 @@
                                 <!--<input type="text">-->
                             </div>
                             <div class="rows">
-                                <div>
-                                    <input type="checkbox">
-                                    <label>Sample</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1389,10 +1383,6 @@
                                 <!--<input type="text">-->
                             </div>
                             <div class="rows">
-                                <div>
-                                    <input type="checkbox">
-                                    <label>Sample</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1413,10 +1403,6 @@
                                 <!--<input type="text">-->
                             </div>
                             <div class="rows">
-                                <div>
-                                    <input type="checkbox">
-                                    <label>Sample</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1437,10 +1423,6 @@
                                 <!--<input type="text">-->
                             </div>
                             <div class="rows">
-                                <div>
-                                    <input type="checkbox">
-                                    <label>Sample</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1461,10 +1443,6 @@
                                 <!--<input type="text">-->
                             </div>
                             <div class="rows">
-                                <div>
-                                    <input type="checkbox">
-                                    <label>Sample</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1485,10 +1463,6 @@
                                 <!--<input type="text">-->
                             </div>
                             <div class="rows">
-                                <div>
-                                    <input type="checkbox">
-                                    <label>Sample</label>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1806,11 +1780,9 @@
 
         // Minimize
         $('.button_minimize_down').click(function () {
-            var _height = $(this).closest('.cube_container').height()
             $(this).closest('.cube_container').find('>*:not(:first-child)').toggle();
             //if config re toggle title_container
             var isConfig = $(this).closest('.cube_container').attr('id');
-
             if (isConfig == 'config')
                 $(this).closest('.cube_container').find('.title_container').toggle()
             if ($(this).closest('.cube_container').find('>.title_container').css('border-bottom') ==
@@ -1827,14 +1799,6 @@
                     $(this).closest('.cube_container').css('min-height', 'auto')
 
             }
-            /* $(this).closest('.cube_container').height('fit-content')
-             var _height2 = $(this).closest('.cube_container').height()
-             $(this).closest('.cube_container').height(_height)
-             $(this).closest('.cube_container').animate({
-                 height: _height2
-             }, 500, function () {
-                 $(this).closest('.cube_container').height('fit-content')
-             });*/
         });
 
         // formatting functions
@@ -1894,6 +1858,7 @@
 
         function filterData(inputs, filters) {
             var inputsCopy = JSON.parse(JSON.stringify(inputs))
+            var outputs = []
             inputsCopy.forEach(input => {
                 Object.keys(input.plcs).forEach(plcID => {
                     if (filters.maquinas.includes(plcID)) {
@@ -1922,16 +1887,25 @@
                         return
                     }
                 })
-                if (input.plcs == {}) {
-                    input = {} // preferably delete it
+                if (Object.keys(input.plcs).length !== 0) {
+                    outputs.push(input)
                 }
             })
-            return inputsCopy
+            return outputs
         }
         var __flatten = false
         var __offset = false
 
         function formatData(inputs) {
+
+            $('body').addClass('loading');
+            $('#loader').show();
+            if(inputs.length < 1)
+            {
+                $('body').removeClass('loading');
+                $('#loader').hide();
+                return {}
+            }
 
 
             inputs.sort(function (a, b) {
@@ -2357,6 +2331,9 @@
                 var config = output.configuracion[configId]
                 output.configuracion[configId] = [...new Set(config)]
             })
+
+            $('body').removeClass('loading');
+            $('#loader').hide();
             return output;
         }
 
@@ -2423,17 +2400,27 @@
         });
 
 
-        var _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
-        var _materialPlc = Object.keys(filteredData['material'])[0]
-
+        var _ciclosPlc = ''
+        var _materialPlc = ''
+        var keys = Object.keys(filteredData)
+        if(keys.length >0)
+        {
+            _ciclosPlc =  Object.keys(keys['ciclos'])[0]
+            _materialPlc = Object.keys(keys['material'])[0]
+        }
         function dataChange() {
+            $('body').addClass('loading');
+            $('#loader').show();
             if (_pulledData.length < 1) {
                 $('#configError').show()
-                $('#configError').text('No se encontró data, intenta otro rango.');
+                $('#configError').text('No hay data, intenta otro rango.');
                 $('#Indicadores').hide()
                 $('#subdashboard').hide()
+                $('body').removeClass('loading');
+                $('#loader').hide();
                 return;
             }
+
             $('#configError').hide()
             $('#Indicadores').show()
             $('#subdashboard').show()
@@ -2472,6 +2459,14 @@
             })
 
 
+            if (Object.keys(filteredData).length < 1) {
+                $('#configError').text('No queda data, intenta otra configuración.');
+                $('#Indicadores').hide()
+                $('#subdashboard').hide()
+                $('body').removeClass('loading');
+                $('#loader').hide();
+                return;
+            }
 
             // dynamic coloring
             var _colors = ["#D6E4FF",
@@ -2770,6 +2765,9 @@
                     return _labels
                 }
 
+                if(typeof currData === "undefined" | currData === {})
+                    return
+
                 var sunColors = getSunColors(currData[currData.length - 1])
 
                 var labels = getLabels(currData[currData.length - 1])
@@ -2886,11 +2884,16 @@
                 })
                 myPlot = document.getElementById(pieID);
                 $(window).resize(function () {
-                    var update = {
-                        width: $(pieParent).width(),
-                        height: $(pieParent).width()
-                    };
-                    Plotly.relayout(pieID, update);
+                    try {
+                        
+                        var update = {
+                            width: $(pieParent).width(),
+                            height: $(pieParent).width()
+                        };
+                        Plotly.relayout(pieID, update);
+                    } catch (error) {
+                        
+                    }
                 });
                 // Line
                 var lineID = 'line' + proper(section);
@@ -3066,6 +3069,8 @@
 
             })
             $(window).resize();
+            $('body').removeClass('loading');
+            $('#loader').hide();
         }
         dataChange();
         $('#ciclePlc').on('change', function () {
