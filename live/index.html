@@ -1698,123 +1698,21 @@
         </div>
     </div>
     <script>
-        var __config = {
+        //#region Config
+
+        const __config = {
             pullAPI: "https://api.diax.com.co/diaxiotquery",
             channel: 'diaxPublisher/plcs/#',
             region: 'us-east-1',
             IDPool: '1e835899-922f-4a23-b61a-f3c5e43d94e7',
             endpoint: 'a3ke8mnvd8qmyj-ats.iot.us-east-1.amazonaws.com'
         }
-        $(document).ready(() => {
-            $('body').removeClass('loading');
-            $('#loader').hide();
-        })
 
-        $('#datetimes').change((e) => {
-            try {
-                JSON.stringify(e) //hack to check event recursion
-            } catch (error) {
-                var start = new Date($('#datetimes').data('daterangepicker').startDate._d);
-                var end = new Date($('#datetimes').data('daterangepicker').endDate._d);
-                pullData(start, end, callback)
-
-                function callback(_pulled) {
-                    _pulledData = _pulled
-                    _pulledData = rename(_pulledData)
-                    originalData = formatData(_pulledData);
-                    filteredData = formatData(filterData(_pulledData, getFilters()));
-                    dataChange();
-                }
-            }
-        })
-
-        async function pullData(_start, _end, _callback) {
-            $('body').addClass('loading');
-            $('#loader').show();
-            var _newPulledData = [];
-            async function getData(_res) {
-                const response = await fetch(__config.pullAPI, {
-                    method: "POST",
-                    headers: {},
-                    body: JSON.stringify(_res)
-                });
-
-                const myJson = await response.json();
-                if (response.status == 200) {
-                    _callback(myJson)
-                    $('body').removeClass('loading');
-                    $('#loader').hide();
-                } else {
-                    $('body').removeClass('loading');
-                    $('#loader').hide();
-                    $('#configError').text('Failed to query');
-                }
-            }
-            var _vars = {
-                start: (new Date(_start)).getTime(),
-                end: (new Date(_end)).getTime(),
-                group: ""
-            }
-            var diff = _vars.end - _vars.start
-            var callLimit = 80 * 3
-            var minLimit = callLimit * 60 * 1000
-            var hourLimit = callLimit * 60 * 60 * 1000
-            if (diff > minLimit)
-                _vars.group = "Hours"
-            if (diff > hourLimit)
-                _vars.group = "Days"
-
-            return getData(_vars);
-        }
-
-        // Download
-        $('#button_download_id').click(function () {
-            $('.menu_download').toggle();
-        });
-
-        // Search
-        $('.search_section').hide()
-        $('.selected_head').click(function () {
-            $(this).closest('.selected_form').find('.search_section').toggle()
-        });
-
-        // Minimize
-        $('.button_minimize_down').click(function () {
-            $(this).closest('.cube_container').find('>*:not(:first-child)').toggle();
-            //if config re toggle title_container
-            var isConfig = $(this).closest('.cube_container').attr('id');
-            if (isConfig == 'config')
-                $(this).closest('.cube_container').find('.title_container').toggle()
-            if ($(this).closest('.cube_container').find('>.title_container').css('border-bottom') ==
-                '0px none rgb(0, 0, 0)') {
-                $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
-                    '2px solid var(--color-negro)');
-
-                if (isConfig == 'Calidad' | isConfig == 'Disponibilidad' | isConfig == 'Rendimiento')
-                    $(this).closest('.cube_container').css('min-height', '450px')
-            } else {
-                $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
-                    '0px none rgb(0, 0, 0)');
-                if (isConfig == 'Calidad' | isConfig == 'Disponibilidad' | isConfig == 'Rendimiento')
-                    $(this).closest('.cube_container').css('min-height', 'auto')
-
-            }
-        });
-
-        // formatting functions
-        var filters = {
-            maquinas: [],
-            operarios: [],
-            ordenes: [],
-            lotes: [],
-            colores: [],
-            materiales: []
-        }
         const t = {
             "Operario": "MI18",
             "Orden": "ML1",
             "Lote": "ML5",
-            "Color": "ML3", //falta molde
+            "Color": "ML3", // molde es substring de color
             "Material": "MI19",
             "Peso Inyección": "MF12",
             "Peso Cavidad 1": "MF13",
@@ -1855,8 +1753,309 @@
             "PLC9": "Iny.9",
         }
 
+        const _colors = [
+            "#D6E4FF",
+            "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9",
+            "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", "#F9E84B", "#FF44CD",
+            "#71A3F7", "#F0B0F3", "#F9C25C", "#76F1CC", "#7DEF84", "#FC9885", "#FCF08B", "#FC7BDA",
+            "#A0C2FA", "#F4CFF6", "#FBDA9D", "#A8F6DF", "#ACF8B0", "#FCBBAF", "#FCF8D7", "#FFAAE8",
+            "#D0E0FC", "#F9F1F9", "#FCECCE", "#D9F6EE", "#CEFED1", "#FCE0DB", "#FFFCE5", "#FCD7F2",
+            "#3366D6", "#4285F4", "#71A3F7", "#A0C2FA", "#D0E0FC",
+            "#BE53C4", "#E585EB", "#F0B0F3", "#F4CFF6", "#F9F1F9",
+            "#FFA600", "#F9B432", "#F9C25C", "#FBDA9D", "#FCECCE",
+            "#FB4826", "#F9674D", "#FC9885", "#FCBBAF", "#FCE0DB",
+            "#1EC828", "#4BE354", "#7DEF84", "#ACF8B0", "#CEFED1",
+            "#23C897", "#41E6B5", "#76F1CC", "#A8F6DF", "#D9F6EE",
+            "#F9E215", "#F9E84B", "#FCF08B", "#FCF8D7", "#FFFCE5",
+            "#EC2EB9", "#FF44CD", "#FC7BDA", "#FFAAE8", "#FCD7F2"
+        ];
 
-        function filterData(inputs, filters) {
+        //#endregion
+
+        //#region Globals
+
+        // Data
+        var _pulledData = []
+        var originalData = {};
+        var filteredData = {};
+        var lockedData = false;
+
+        // AWS MQTT
+        var AWSMqttClient = sdk.AWSMqttClient;
+        var AWS = sdk.AWS
+        AWS.config.region = __config.region;
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: __config.region + ':' + __config.IDPool,
+        });
+        const mqttSettings = {
+            region: AWS.config.region,
+            credentials: AWS.config.credentials,
+            endpoint: __config.endpoint,
+            expires: 0,
+            clientId: 'mqtt-client-' + (Math.floor((Math.random() * 100000) + 1)),
+            will: {
+                topic: 'WillMsg',
+                payload: 'Connection Closed abnormally..!',
+                qos: 0,
+                retain: false
+            }
+        }
+        const client = new AWSMqttClient(mqttSettings)
+
+        //#endregion
+
+        //#region Load
+
+        // Search
+        $('.search_section').hide()
+
+        // Loader
+        $(document).ready(() => {
+            $('body').removeClass('loading');
+            $('#loader').hide();
+        })
+
+        // Datetime
+        $('input[name="datetimes"]').daterangepicker({
+            timePicker: true,
+            startDate: new Date(),
+            endDate: new Date(),
+            locale: {
+                format: 'M/DD hh:mm A'
+            }
+        });
+
+        $('#configError').show()
+        $('#configError').text('No hay data, intenta halar un rango.');
+        $('#Indicadores').hide()
+        $('#subdashboard').hide()
+
+        //#endregion
+
+        //#region Event Mappings
+
+        // Live
+        $('#live').on('change', function () {
+            if (lockedData)
+                return
+            lockedData = true
+            $('#datetimes').prop("disabled", $(this).prop('checked'));
+            if ($(this).prop('checked')) {
+                $('body').addClass('loading');
+                $('#loader').show();
+                client.subscribe(__config.channel)
+                $('input[name="datetimes"]').daterangepicker({
+                    timePicker: true,
+                    startDate: new Date(),
+                    endDate: new Date(),
+                    locale: {
+                        format: 'M/DD hh:mm A'
+                    }
+                });
+                _pulledData = []
+            } else
+                client.unsubscribe(__config.channel)
+        })
+
+        // MQTT AWS Client
+        client.on('connect', () => {
+            console.log('Connected to AWS IoT')
+        })
+
+        client.on('message', (topic, message) => {
+            lockedData = true
+            $('body').removeClass('loading');
+            $('#loader').hide();
+            var string = new TextDecoder().decode(message);
+            var objString = JSON.parse(string)
+            _pulledData = _pulledData.concat(objString);
+            if (_pulledData.length > 100)
+                _pulledData.shift()
+            _pulledData = rename(_pulledData)
+            originalData = formatData(_pulledData);
+            filteredData = formatData(filterData(_pulledData));
+            $('input[name="datetimes"]').daterangepicker({
+                timePicker: true,
+                startDate: new Date(_pulledData[0].timeStamp),
+                endDate: new Date(),
+                locale: {
+                    format: 'M/DD hh:mm A'
+                }
+            });
+            dataChange();
+        })
+
+        client.on('close', () => {
+            console.log('Connection closed')
+        })
+
+        client.on('offline', () => {
+            console.log('Connection offline')
+        })
+
+        // Offset
+        $('#offset').on('change', function () {
+            if (lockedData)
+                return
+            lockedData = true
+            filteredData = formatData(filterData(_pulledData));
+            dataChange();
+        })
+
+        // Download
+        $('#button_download_id').click(function () {
+            $('.menu_download').toggle();
+        });
+
+        // Minimize
+        $('.button_minimize_down').click(function () {
+            $(this).closest('.cube_container').find('>*:not(:first-child)').toggle();
+            //if config re toggle title_container because of tabs
+            var _contId = $(this).closest('.cube_container').attr('id');
+            if (_contId == 'config')
+                $(this).closest('.cube_container').find('.title_container').toggle()
+            if ($(this).closest('.cube_container').find('>.title_container').css('border-bottom') ==
+                '0px none rgb(0, 0, 0)') {
+                $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
+                    '2px solid var(--color-negro)');
+                if (_contId == 'Calidad' | _contId == 'Disponibilidad' | _contId == 'Rendimiento')
+                    $(this).closest('.cube_container').css('min-height', '450px')
+            } else {
+                $(this).closest('.cube_container').find('>.title_container').css('border-bottom',
+                    '0px none rgb(0, 0, 0)');
+                if (_contId == 'Calidad' | _contId == 'Disponibilidad' | _contId == 'Rendimiento')
+                    $(this).closest('.cube_container').css('min-height', 'auto')
+            }
+        });
+
+        // Search
+        $('.selected_head').click(function () {
+            $(this).closest('.selected_form').find('.search_section').toggle()
+        });
+
+        // Datetime
+        $('#datetimes').change((e) => {
+            try {
+                JSON.stringify(e) // Hack checking e recursion to see if its human
+                lockedData = false
+            } catch (err) {
+                if (lockedData)
+                    return
+                lockedData = true
+                const start = new Date($('#datetimes').data('daterangepicker').startDate._d);
+                const end = new Date($('#datetimes').data('daterangepicker').endDate._d);
+                pullData(start, end)
+            }
+        })
+
+        // Cicles
+        $('#ciclePlc').on('change', function () {
+            if (lockedData)
+                return
+            lockedData = true;
+            dataChange();
+        });
+
+        // Material Change
+        $('#MaterialPlc').on('change', function () {
+            if (lockedData)
+                return
+            lockedData = true
+            dataChange();
+        });
+
+        //#endregion
+
+        //#region Functions
+
+        async function pullData(_start, _end) {
+            $('body').addClass('loading');
+            $('#loader').show();
+            var _vars = {
+                start: (new Date(_start)).getTime(),
+                end: (new Date(_end)).getTime(),
+                group: ""
+            }
+            var diff = _vars.end - _vars.start
+            var callLimit = 70 * 2
+            var minLimit = callLimit * 60 * 1000
+            var hourLimit = callLimit * 60 * 60 * 1000
+            if (diff > minLimit)
+                _vars.group = "Hours"
+            if (diff > hourLimit)
+                _vars.group = "Days"
+            const response = await fetch(__config.pullAPI, {
+                method: "POST",
+                headers: {},
+                body: JSON.stringify(_vars)
+            });
+            const myJson = await response.json();
+            if (response.status == 200) {
+                _pulledData = myJson
+                _pulledData = rename(_pulledData)
+                originalData = formatData(_pulledData);
+                filteredData = formatData(filterData(_pulledData));
+                $('body').removeClass('loading');
+                $('#loader').hide();
+                dataChange();
+            } else {
+                $('body').removeClass('loading');
+                $('#loader').hide();
+                $('#configError').text('Failed to query');
+                lockedData = false;
+            }
+        }
+
+        function rename(toRename) {
+            var _sdata = JSON.stringify(toRename)
+
+            function replaceAll(str, find, replace) {
+                function escapeRegExp(string) {
+                    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                }
+                return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+            }
+            Object.keys(v).forEach(name => {
+                _sdata = replaceAll(_sdata, name, v[name])
+            })
+            _sdata = JSON.parse(_sdata);
+            // Renombrar Moldes
+            _sdata.forEach((data) => {
+                Object.keys(data.plcs).forEach(plcID => {
+                    var plc = data.plcs[plcID]
+                    var _col = plc.variables[t['Color']].value
+                    if (_col.length != 4 && _col != '0') {
+                        _col = _col.substring(2, 6)
+                        plc.variables[t['Color']].value = _col
+                    }
+                })
+            })
+            return _sdata
+        }
+
+        function getFilters() {
+            var _filters = {
+                maquinas: [],
+                operarios: [],
+                ordenes: [],
+                lotes: [],
+                colores: [],
+                materiales: []
+            };
+            Object.keys(_filters).forEach(filterId => {
+                var search_containers = $('#' + filterId + '_config .search_section .rows > div');
+                for (let i = 0; i < search_containers.length; i++) {
+                    var checked = $(search_containers[i]).find('input').prop('checked')
+                    var _value = $(search_containers[i]).find('input').attr('value')
+                    if (!checked)
+                        _filters[filterId].push(_value)
+                }
+            })
+            return _filters
+        }
+
+        function filterData(inputs) {
+            var filters = getFilters();
             var inputsCopy = JSON.parse(JSON.stringify(inputs))
             var outputs = []
             inputsCopy.forEach(input => {
@@ -1887,35 +2086,25 @@
                         return
                     }
                 })
-                if (Object.keys(input.plcs).length !== 0) {
+                if (Object.keys(input.plcs).length !== 0)
                     outputs.push(input)
-                }
             })
             return outputs
         }
-        var __flatten = false
-        var __offset = false
 
         function formatData(inputs) {
-
             $('body').addClass('loading');
             $('#loader').show();
-            if(inputs.length < 1)
-            {
+            if (inputs.length < 1) {
                 $('body').removeClass('loading');
                 $('#loader').hide();
                 return {}
             }
-
-
             inputs.sort(function (a, b) {
                 return new Date(a.timeStamp) - new Date(b.timeStamp);
             });
-
-
-
-            // OFFSET AND FLATTEN
-            if (inputs[0])
+            // Offset and flatten
+            if ($('#offset').prop('checked'))
                 Object.keys(inputs[0].plcs).forEach(plcId => {
                     var offsets = {
                         "MI100": 0, // "Energía Motor"
@@ -1931,48 +2120,25 @@
                         "MI102": 0, // "Defecto Lluvia"
                         "ML131": 0 // "Inyecciones"
                     }
-                    var flattens = {
-                        "MI100": 0, // "Energía Motor"
-                        "MI99": 0, // "Energía Maquina"
-                        "MI121": 0, // "Contador Máquina" 
-                        "MI122": 0, // "Contador Molde"
-                        "MI124": 0, // "Contador Abandono" 
-                        "MI127": 0, // "Contador Material" 
-                        "MI128": 0, // "Contador Calidad" 
-                        "MI123": 0, // "Contador Montaje"
-                        "ML0": 0, // "Tiempo Motor" 
-                        "MI101": 0, // "Defecto Arranque"
-                        "MI102": 0, // "Defecto Lluvia"
-                        "ML131": 0 // "Inyecciones"
-                    }
-                    var firstData = true;
-                    var offsetKeys = Object.keys(offsets)
                     inputs.forEach((input, i) => {
                         var plcVars = input.plcs[plcId].variables
-                        offsetKeys.forEach((offsetKey) => {
-                            if (Number(plcVars[offsetKey].value) == 0)
-                                if (i - 1 >= 0)
-                                    offsets[offsetKey] += Number(inputs[i - 1].plcs[plcId]
-                                        .variables[
-                                            offsetKey].value)
-                            if (__offset)
-                                plcVars[offsetKey].value = Number(plcVars[offsetKey].value) +
-                                offsets[offsetKey]
-                            if (firstData)
-                                flattens[offsetKey] = Number(plcVars[offsetKey].value)
-                            if (__flatten)
-                                plcVars[offsetKey].value = Number(plcVars[offsetKey].value) -
-                                flattens[offsetKey]
-
+                        Object.keys(offsets).forEach((offsetKey) => {
+                            var currVar = Number(plcVars[offsetKey].value)
+                            // flatten
+                            if (i == 0)
+                                offsets[offsetKey] -= currVar
+                            // offset
+                            if (i > 0) {
+                                var lastVar = Number(inputs[i - 1].plcs[plcId].variables[offsetKey]
+                                    .value)
+                                if (currVar < (lastVar - offsets[offsetKey]))
+                                    offsets[offsetKey] += ((lastVar - offsets[offsetKey]) - currVar)
+                            }
+                            plcVars[offsetKey].value = currVar + offsets[offsetKey]
                         })
-                        firstData = false;
                     })
                 })
-
-
-
-
-
+            // Start constructing output
             var output = {
                 calidad: [],
                 disponibilidad: [],
@@ -2015,7 +2181,6 @@
                     molde: [],
                 }
             };
-
             inputs.forEach((input, i) => {
                 // calidad
                 var _buenas = 0;
@@ -2072,20 +2237,26 @@
                     // ciclos
                     if (!(plcId in output.ciclos))
                         output.ciclos[plcId] = []
+                    var puerta = Number(plc[t['Tiempo Puerta']].value)
+                    var maquina = Number(plc[t['Tiempo Puerta']].value)
+                    var totalMP = Number(plc[t['Tiempo Inyección']].value)
+                    /*puerta = 0; // EDWIN
+                    maquina = 0; // EDWIN
+                    totalMP = 0; // EDWIN*/
                     var ciclos = {
                         name: 'Ciclo',
-                        value: Number(plc[t['Tiempo Inyección']].value),
+                        value: totalMP,
                         date: input.timeStamp,
                         min: Number(plc[t['Ciclo Estándar -']].value),
                         max: Number(plc[t['Ciclo Estándar +']].value),
                         mean: Number(plc[t['Ciclo Estándar']].value),
                         children: [{
                                 name: 'Maquina',
-                                value: Number(plc[t['Tiempo Máquina']].value),
+                                value: maquina,
                             },
                             {
                                 name: 'Puerta',
-                                value: Number(plc[t['Tiempo Puerta']].value),
+                                value: puerta,
                             }
                         ]
                     }
@@ -2150,7 +2321,6 @@
                         })
                     material.children.push(materialPlc)
                 })
-
                 var materialMolde = {
                     name: 'Total',
                     value: 0,
@@ -2193,7 +2363,6 @@
                         materialMolde.children.push(_materialPlcMolde)
                     }
                     var materialPlcMolde = materialMolde.children.filter(e => e.name === simpMoldeID)[0]
-
                     var cav1 = Number(input.plcs[plcId].variables[t['Peso Cavidad 1']].value)
                     var cav2 = Number(input.plcs[plcId].variables[t['Peso Cavidad 2']].value)
                     var cav3 = Number(input.plcs[plcId].variables[t['Peso Cavidad 3']].value)
@@ -2209,14 +2378,8 @@
                     materialPlcMolde.value += Number(input.plcs[plcId].variables[t['Peso Inyección']]
                         .value)
                     materialMolde.value += materialPlcMolde.value
-
                 })
-
                 output.material.molde.push(materialMolde)
-
-
-
-
                 var calidad = {
                     name: 'Producción',
                     value: _buenas + _arranque + _lluvia,
@@ -2241,7 +2404,6 @@
                     ]
                 }
                 output.calidad.push(calidad)
-
                 var disponibilidad = {
                     name: 'Disponible',
                     value: _maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo,
@@ -2282,7 +2444,6 @@
                     ]
                 }
                 output.disponibilidad.push(disponibilidad)
-
                 var rendimiento = {
                     name: 'Capacidad',
                     value: (_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo),
@@ -2299,19 +2460,14 @@
                     ]
                 }
                 output.rendimiento.push(rendimiento)
-
                 energia.children.forEach(child => {
                     energia.value += child.value
                 })
                 output.energia.push(energia)
-
-
                 material.children.forEach(child => {
                     material.value += child.value
                 })
                 output.material.maquina.push(material)
-
-
                 var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje +
                     _productivo);
                 disp = Math.round(disp * 100 * 10) / 10;
@@ -2327,88 +2483,18 @@
                 output.indicadores.calidad.values.push(cal)
                 output.indicadores.eficiencia.values.push(ef)
             });
+            // De dupe configs
             Object.keys(output.configuracion).forEach(configId => {
                 var config = output.configuracion[configId]
                 output.configuracion[configId] = [...new Set(config)]
             })
-
             $('body').removeClass('loading');
             $('#loader').hide();
             return output;
         }
 
-        function escapeRegExp(string) {
-            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
-        }
-
-        function replaceAll(str, find, replace) {
-            return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
-        }
-
-        function rename(toRename) {
-            var _sdata = JSON.stringify(toRename)
-            Object.keys(v).forEach(name => {
-                _sdata = replaceAll(_sdata, name, v[name])
-            })
-            _sdata = JSON.parse(_sdata);
-            _sdata.forEach((data) => {
-                Object.keys(data.plcs).forEach(plcID => {
-                    var plc = data.plcs[plcID]
-                    var _col = plc.variables[t['Color']].value
-                    if (_col.length != 4 && _col != '0') {
-                        _col = _col.substring(2, 6)
-                        plc.variables[t['Color']].value = _col
-                    }
-                })
-            })
-
-            return _sdata
-        }
-
-        var _pulledData = []
-
-
-        _pulledData = rename(_pulledData)
-        var originalData = formatData(_pulledData);
-        var filteredData = formatData(filterData(_pulledData, filters));
-
-        var timestamps = []
-        _pulledData.forEach(dataPoint => {
-            timestamps.push(dataPoint.timeStamp)
-        })
-        timestamps = [...new Set(timestamps)]
-        timestamps = timestamps.sort(function (a, b) {
-            return new Date(a) - new Date(b);
-        });
-        // Datetime
-        var date1 = timestamps[0]
-        var date2 = timestamps[timestamps.length - 1]
-        if (typeof date1 === 'undefined' || typeof date2 === 'undefined') {
-            date1 = new Date()
-            date2 = new Date()
-        } else {
-            date1 = new Date(date1)
-            date2 = new Date(date2)
-        }
-        $('input[name="datetimes"]').daterangepicker({
-            timePicker: true,
-            startDate: date1,
-            endDate: date2,
-            locale: {
-                format: 'M/DD hh:mm A'
-            }
-        });
-
-
-        var _ciclosPlc = ''
-        var _materialPlc = ''
-        var keys = Object.keys(filteredData)
-        if(keys.length >0)
-        {
-            _ciclosPlc =  Object.keys(keys['ciclos'])[0]
-            _materialPlc = Object.keys(keys['material'])[0]
-        }
         function dataChange() {
+            lockedData = true
             $('body').addClass('loading');
             $('#loader').show();
             if (_pulledData.length < 1) {
@@ -2418,14 +2504,12 @@
                 $('#subdashboard').hide()
                 $('body').removeClass('loading');
                 $('#loader').hide();
+                lockedData = false
                 return;
             }
-
             $('#configError').hide()
             $('#Indicadores').show()
             $('#subdashboard').show()
-
-
             var oldFilters = getFilters()
             Object.keys(originalData['configuracion']).forEach((key) => {
                 var opciones = originalData['configuracion'][key]
@@ -2437,9 +2521,15 @@
                     if (!oldFilters[key].includes(opcion))
                         _chk = 'checked'
 
-                    if (!oldFilters[key].includes(opcion) && !filteredData['configuracion'][key]
-                        .includes(opcion))
-                        _prnt = 'style="color:red;"'
+                    if (!oldFilters[key].includes(opcion)) {
+                        if (Object.keys(filteredData).length > 0) {
+                            if (!filteredData['configuracion'][key].includes(opcion)) {
+                                _prnt = 'style="color:red;"'
+                            }
+                        } else {
+                            _prnt = 'style="color:red;"'
+                        }
+                    }
                     var new_section = `
                         <div>
                             <input type="checkbox" name="${opcion}" value="${opcion}" ${_chk}>
@@ -2448,43 +2538,36 @@
                     search_container.append(new_section)
                 })
             })
-            $('.selected_form .search_section .rows input').on('change', function () {
-                filteredData = formatData(filterData(_pulledData, getFilters()));
+            $('.selected_form .search_section .rows input').off('change').on('change', function (e) {
+                if (lockedData)
+                    return
+                lockedData = true
+                filteredData = formatData(filterData(_pulledData));
                 dataChange();
             })
-            $('.selected_form .search_section .toggle_all').on('change', function () {
+            $('.selected_form .search_section .toggle_all').off('change').on('change', function (e) {
+                if (lockedData)
+                    return
+                lockedData = true
                 $(this).closest('.selected_form').find('input').prop('checked', $(this).prop('checked'));
-                filteredData = formatData(filterData(_pulledData, getFilters()));
+                filteredData = formatData(filterData(_pulledData));
                 dataChange();
             })
-
-
             if (Object.keys(filteredData).length < 1) {
                 $('#configError').text('No queda data, intenta otra configuración.');
+                $('#configError').show();
                 $('#Indicadores').hide()
                 $('#subdashboard').hide()
                 $('body').removeClass('loading');
                 $('#loader').hide();
+                lockedData = false
                 return;
+            } else {
+                $('#configError').hide();
+                $('#Indicadores').show()
+                $('#subdashboard').show()
             }
-
             // dynamic coloring
-            var _colors = ["#D6E4FF",
-                "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9",
-                "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", "#F9E84B", "#FF44CD",
-                "#71A3F7", "#F0B0F3", "#F9C25C", "#76F1CC", "#7DEF84", "#FC9885", "#FCF08B", "#FC7BDA",
-                "#A0C2FA", "#F4CFF6", "#FBDA9D", "#A8F6DF", "#ACF8B0", "#FCBBAF", "#FCF8D7", "#FFAAE8",
-                "#D0E0FC", "#F9F1F9", "#FCECCE", "#D9F6EE", "#CEFED1", "#FCE0DB", "#FFFCE5", "#FCD7F2",
-                "#3366D6", "#4285F4", "#71A3F7", "#A0C2FA", "#D0E0FC",
-                "#BE53C4", "#E585EB", "#F0B0F3", "#F4CFF6", "#F9F1F9",
-                "#FFA600", "#F9B432", "#F9C25C", "#FBDA9D", "#FCECCE",
-                "#FB4826", "#F9674D", "#FC9885", "#FCBBAF", "#FCE0DB",
-                "#1EC828", "#4BE354", "#7DEF84", "#ACF8B0", "#CEFED1",
-                "#23C897", "#41E6B5", "#76F1CC", "#A8F6DF", "#D9F6EE",
-                "#F9E215", "#F9E84B", "#FCF08B", "#FCF8D7", "#FFFCE5",
-                "#EC2EB9", "#FF44CD", "#FC7BDA", "#FFAAE8", "#FCD7F2"
-            ];
-
             function setColors(data) {
                 var i = 0
                 data.color = _colors[i]
@@ -2501,7 +2584,6 @@
                                 i++
                             })
                     })
-
                 }
             }
             Object.keys(filteredData).forEach(function (section) {
@@ -2527,9 +2609,7 @@
                     setColors(_section)
                 })
             })
-
             $('#eficiencia_indicador').css('box-shadow', _colors[4] + ' 0px 0px 8px')
-
             Object.keys(filteredData).forEach(function (section) {
                 var units = 'ud'
                 switch (section) {
@@ -2549,7 +2629,6 @@
                 if (section == "configuracion")
                     return
                 if (section == "indicadores") {
-
                     var lineID = 'line' + proper(section);
                     var lineContainer = '#line' + proper(section) + 'Container'
                     var traces = []
@@ -2608,12 +2687,10 @@
                             else
                                 update.height = update.width / 2.5
                         }
-
                         Plotly.relayout(lineID, update);
                     });
                     var pieID = "pie" + proper(section);
                     var pieParent = "#pie" + proper(section) + "Container"
-
                     var _data = [{
                         type: 'scatterpolar',
                         r: maxVals,
@@ -2681,7 +2758,6 @@
                             }
                         },
                         showlegend: false
-
                     };
                     Plotly.newPlot(pieID, _data, layout, {
                         showSendToCloud: false,
@@ -2689,16 +2765,19 @@
                     })
                     myPlot = document.getElementById(pieID);
                     $(window).resize(function () {
-                        var update = {
-                            width: $(pieParent).width(),
-                            height: $(pieParent).width()
-                        };
-                        Plotly.relayout(pieID, update);
+                        try {
+                            var update = {
+                                width: $(pieParent).width(),
+                                height: $(pieParent).width()
+                            };
+                            Plotly.relayout(pieID, update);
+                        } catch (error) {}
                     });
                     return
                 }
                 var currData = filteredData[section];
                 if (section == "ciclos") {
+                    var _ciclosPlc = $('#ciclePlc').val()
                     if (!(_ciclosPlc in filteredData[section])) {
                         _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
                     }
@@ -2711,6 +2790,7 @@
                     $("#ciclePlc").val(_ciclosPlc);
                 }
                 if (section == "material") {
+                    var _materialPlc = $('#MaterialPlc').val()
                     if (!(_materialPlc in filteredData[section])) {
                         _materialPlc = Object.keys(filteredData['material'])[0]
                     }
@@ -2764,14 +2844,10 @@
                     })
                     return _labels
                 }
-
-                if(typeof currData === "undefined" | currData === {})
+                if (typeof currData === "undefined" | currData === {})
                     return
-
                 var sunColors = getSunColors(currData[currData.length - 1])
-
                 var labels = getLabels(currData[currData.length - 1])
-
                 var thisColors = getColors(currData[currData.length - 1])
 
                 function getValues(data) {
@@ -2829,13 +2905,7 @@
                     sunburstcolorway: sunColors,
                     width: $(pieParent).width(),
                     height: $(pieParent).width(),
-
                 };
-                if (section == 'ciclos') {
-                    /*_data[0].marker.line.width = 40
-                    _data[0].textinfo = 'none'
-                    _data[0].insidetextorientation = 'radial'*/
-                }
                 if (section == 'energia') {
                     _data = []
                     var energyLables = []
@@ -2870,14 +2940,12 @@
                         "b": 50,
                         "t": 20
                     }
-
                     layout.showlegend = false
                     Plotly.newPlot(pieID, _data, layout, {
                         showSendToCloud: false,
                         displayModeBar: false,
                     })
                 }
-
                 Plotly.newPlot(pieID, _data, layout, {
                     showSendToCloud: false,
                     displayModeBar: false,
@@ -2885,15 +2953,12 @@
                 myPlot = document.getElementById(pieID);
                 $(window).resize(function () {
                     try {
-                        
                         var update = {
                             width: $(pieParent).width(),
                             height: $(pieParent).width()
                         };
                         Plotly.relayout(pieID, update);
-                    } catch (error) {
-                        
-                    }
+                    } catch (error) {}
                 });
                 // Line
                 var lineID = 'line' + proper(section);
@@ -2924,7 +2989,6 @@
                         trace.line.shape = 'vh'
                     traces.push(trace)
                 })
-
 
                 function getVar(data, _var) {
                     var _values = []
@@ -2963,12 +3027,7 @@
                         };
                         traces.push(trace)
                     })
-
-
                 }
-
-
-
                 var layout = {
                     showlegend: false,
                     "margin": {
@@ -3001,7 +3060,6 @@
                 function r2(val) {
                     return Math.round(val * 100) / 100
                 }
-                //if (section == 'energia')
                 substring = `:<br> ${r2(currData[currData.length - 1].value)} ` + units
                 legend += `<span class="caret columns center_vert leg_toggle" index="${index}">
                             <div class="caret_symbol">&#9654;</div>
@@ -3012,7 +3070,6 @@
                 legend += '<ul class="nested">'
                 currData[currData.length - 1].children.forEach(function (child) {
                     substring = ''
-                    //if (section == 'energia')
                     substring = `:<br> ${r2(child.value)} ` + units
                     if (child.children == null) {
                         legend += `<li class="columns center_vert leg_toggle" index="${index}">
@@ -3028,9 +3085,7 @@
                         index++;
                         legend += '<ul class="nested">'
                         child.children.forEach(function (child2) {
-
                             substring = ''
-                            //if (section == 'energia')
                             substring = `:<br> ${r2(child2.value)} ` + units
                             legend += `<li class="columns center_vert leg_toggle"  index="${index}">
                                         <div class="indicator" style="background-color: ${child2.color}"></div><span>${child2.name}${substring}</span>
@@ -3061,149 +3116,18 @@
                         "active_legend");
                     this.parentElement.classList.toggle("caret-down");
                 })
-
                 $(`#${legendID} .leg_toggle > .caret_symbol`).first().click()
                 if (section == 'material' || section == 'energia') {
                     $(`#${legendID} .leg_toggle > .caret_symbol`).first().click()
                 }
-
             })
             $(window).resize();
             $('body').removeClass('loading');
             $('#loader').hide();
-        }
-        dataChange();
-        $('#ciclePlc').on('change', function () {
-            _ciclosPlc = this.value
-            dataChange();
-        });
-        $('#MaterialPlc').on('change', function () {
-            _materialPlc = this.value
-            dataChange();
-        });
-
-
-        // var config_template = $('#sub_config').html();
-        // $('#sub_config').html('');
-        //$('#sub_config').html(config_template);
-        function getFilters() {
-            var _filters = {
-                maquinas: [],
-                operarios: [],
-                ordenes: [],
-                lotes: [],
-                colores: [],
-                materiales: []
-            };
-            Object.keys(_filters).forEach(filterId => {
-                var search_containers = $('#' + filterId + '_config .search_section .rows > div');
-
-                for (let i = 0; i < search_containers.length; i++) {
-                    var checked = $(search_containers[i]).find('input').prop('checked')
-                    var _value = $(search_containers[i]).find('input').attr('value')
-                    if (!checked)
-                        _filters[filterId].push(_value)
-                }
-            })
-            return _filters
+            lockedData = false
         }
 
-        //OFFSET
-        $('#offset').on('change', function () {
-            __flatten = $(this).prop('checked');
-            __offset = $(this).prop('checked');
-            filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange();
-        })
-
-        //LIVE
-        var liveStart;
-        var liveReset = false;
-
-        $('#live').on('change', function () {
-            $('#datetimes').prop("disabled", $(this).prop('checked'));
-            //_pulledData = rename(_pulledData)
-            //originalData = formatData(_pulledData);
-            //filteredData = formatData(filterData(_pulledData, filters));
-            //dataChange();
-            if ($(this).prop('checked')) {
-                $('body').addClass('loading');
-                $('#loader').show();
-                client.subscribe(__config.channel)
-                liveStart = new Date();
-                $('input[name="datetimes"]').daterangepicker({
-                    timePicker: true,
-                    startDate: liveStart,
-                    endDate: liveStart,
-                    locale: {
-                        format: 'M/DD hh:mm A'
-                    }
-                });
-                liveReset = true;
-            } else
-                client.unsubscribe(__config.channel)
-        })
-        var AWSMqttClient = sdk.AWSMqttClient;
-        var AWS = sdk.AWS
-        AWS.config.region = __config.region;
-        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-            IdentityPoolId: __config.region + ':' + __config.IDPool,
-        });
-        var mqttSettings = {
-            region: AWS.config.region,
-            credentials: AWS.config.credentials,
-            endpoint: __config.endpoint,
-            expires: 0,
-            clientId: 'mqtt-client-' + (Math.floor((Math.random() * 100000) + 1)),
-            will: {
-                topic: 'WillMsg',
-                payload: 'Connection Closed abnormally..!',
-                qos: 0,
-                retain: false
-            }
-        }
-        const client = new AWSMqttClient(mqttSettings)
-        client.on('connect', () => {
-            console.log('Connected to AWS IoT')
-        })
-
-        client.on('message', (topic, message) => {
-            $('body').removeClass('loading');
-            $('#loader').hide();
-            var uint8array = new TextEncoder().encode("¢");
-            var string = new TextDecoder().decode(message);
-            //console.log(JSON.parse(string))
-            var objString = JSON.parse(string)
-            if (liveReset) {
-                _pulledData = []
-                liveReset = false
-            }
-            _pulledData = _pulledData.concat(objString);
-            if (_pulledData.length > 100) {
-                _pulledData.shift()
-                liveStart = new Date(_pulledData[0].timeStamp)
-            }
-            _pulledData = rename(_pulledData)
-            originalData = formatData(_pulledData);
-            filteredData = formatData(filterData(_pulledData, getFilters()));
-            dataChange();
-            $('input[name="datetimes"]').daterangepicker({
-                timePicker: true,
-                startDate: liveStart,
-                endDate: new Date(),
-                locale: {
-                    format: 'M/DD hh:mm A'
-                }
-            });
-        })
-        client.on('close', () => {
-            console.log('Connection closed')
-        })
-        client.on('offline', () => {
-            console.log('Connection offline')
-        })
-
-        $(window).resize();
+        //#endregion
     </script>
 </body>
 
