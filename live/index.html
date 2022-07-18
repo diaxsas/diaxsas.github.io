@@ -1020,8 +1020,6 @@
             text-align: left;
         }
 
-        #configError::before {}
-
         #rangoCont {
             display: flex;
             align-items: flex-start;
@@ -1837,9 +1835,8 @@
         // Live
         var gotData = false;
         async function datacheck() {
-            setTimeout(function(){
-                if(!gotData)
-                {
+            setTimeout(function () {
+                if (!gotData) {
                     $('body').removeClass('loading');
                     $('#loader').hide();
                     $('#live').prop('checked', false)
@@ -2107,9 +2104,10 @@
             return outputs
         }
 
-        function formatData(inputs) {
+        function formatData(tempIinputs) {
             $('body').addClass('loading');
             $('#loader').show();
+            var inputs = JSON.parse(JSON.stringify(tempIinputs))
             if (inputs.length < 1) {
                 $('body').removeClass('loading');
                 $('#loader').hide();
