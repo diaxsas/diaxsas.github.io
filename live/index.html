@@ -1847,9 +1847,9 @@
         $('#live').on('change', function () {
             if (lockedData)
                 return
-            lockedData = true
             $('#datetimes').prop("disabled", $(this).prop('checked'));
             if ($(this).prop('checked')) {
+                lockedData = true
                 $('body').addClass('loading');
                 $('#loader').show();
                 client.subscribe(__config.channel)
