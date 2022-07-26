@@ -97,7 +97,10 @@ namespace OPC2
         }
         private void Home_Load(object sender, EventArgs e)
         {
-
+            Subscribe_Items();
+            minTimer.Start();
+            Connect_Button.Enabled = false;
+            Disconnect_Button.Enabled = true;
         }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
