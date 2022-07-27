@@ -2037,7 +2037,7 @@
                     var plc = data.plcs[plcID]
                     var _col = plc.variables[t['Color']].value
                     if (_col.length != 4 && _col != '0') {
-                        _col = _col.substring(2, 6)
+                        _col = _col.substring(_col.length - 6, _col.length - 2)
                         plc.variables[t['Color']].value = _col
                     }
                 })
@@ -2481,11 +2481,9 @@
                     material.value += child.value
                 })
                 output.material.maquina.push(material)
-                var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje +
-                    _productivo);
+                var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo);
                 disp = Math.round(disp * 100 * 10) / 10;
-                var rend = (_arranque + _lluvia + _buenas) / ((_productivo * 60) / (_tiempoCiclo /
-                    _contTiempoCiclo));
+                var rend = (_arranque + _lluvia + _buenas) / ((_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo));
                 rend = Math.round(rend * 100 * 10) / 10;
                 var cal = _buenas / (_buenas + _arranque + _lluvia);
                 cal = Math.round(cal * 100 * 10) / 10;
