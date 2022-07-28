@@ -2289,6 +2289,10 @@
                     date: input.timeStamp,
                     children: [],
                 }
+                
+                var calidadChildGood = []
+                var calidadChildLluvia = []
+                var calidadChildArranque = []
                 Object.keys(input.plcs).forEach(plcId => {
                     var plc = input.plcs[plcId].variables;
                     // calidad
@@ -2296,6 +2300,10 @@
                     _lluvia += Number(plc[t['Defecto Lluvia']].value)
                     _buenas += (Number(plc[t['Inyecciones']].value) - Number(plc[t['Defecto Arranque']]
                         .value) - Number(plc[t['Defecto Lluvia']].value))
+                    calidadChildGood.push({name:'B.' +plcId,value:(Number(plc[t['Inyecciones']].value) - Number(plc[t['Defecto Arranque']]
+                        .value) - Number(plc[t['Defecto Lluvia']].value))})
+                    calidadChildLluvia.push({name:'L.' + plcId,value:Number(plc[t['Defecto Lluvia']].value)})
+                    calidadChildArranque.push({name:'A.' +plcId,value:Number(plc[t['Defecto Arranque']].value)})
                     // disponibilidad
                     _montaje += Number(plc[t['Contador Montaje']].value)
                     _calidad += Number(plc[t['Contador Calidad']].value)
@@ -2460,6 +2468,7 @@
                     children: [{
                             name: 'Buenas',
                             value: _buenas,
+                            children: calidadChildGood
                         },
                         {
                             name: 'Malas',
@@ -2467,10 +2476,12 @@
                             children: [{
                                     name: 'Arranque',
                                     value: _arranque,
+                                    children: calidadChildArranque
                                 },
                                 {
                                     name: 'Lluvia',
                                     value: _lluvia,
+                                    children: calidadChildLluvia
                                 }
                             ]
                         }
