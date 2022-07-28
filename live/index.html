@@ -1007,7 +1007,7 @@
         }
 
         .button_download_parent {
-            display: none;
+            /*display: none;*/
         }
 
         #configError {
@@ -1916,7 +1916,8 @@
 
         // Download
         $('#button_download_id').click(function () {
-            $('.menu_download').toggle();
+            //$('.menu_download').toggle();
+            exportData()
         });
 
         // Minimize
@@ -2103,6 +2104,65 @@
             })
             return outputs
         }
+        
+        var objectToCSVRow = function(dataObject) {
+            var dataArray = new Array;
+            for (var o in dataObject) {
+                var innerValue = dataObject[o]===null?'':dataObject[o].toString();
+                var result = innerValue.replace(/"/g, '""');
+                result = '"' + result + '"';
+                dataArray.push(result);
+            }
+            return dataArray.join(',') + '\r\n';
+        }
+        var exportToCSV = function(arrayOfObjects) {
+
+            if (!arrayOfObjects.length) {
+                return;
+            }
+
+            var csvContent = "data:text/csv;charset=utf-8,";
+
+            // headers
+            csvContent += objectToCSVRow(Object.keys(arrayOfObjects[0]));
+
+            arrayOfObjects.forEach(function(item){
+                csvContent += objectToCSVRow(item);
+            }); 
+
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "LiveDashDiax.csv");
+            document.body.appendChild(link); // Required for FF
+            link.click();
+            document.body.removeChild(link); 
+        }
+        function exportData() {
+            var rows=[]
+            var varList = []
+            var inputs = filterData(_pulledData)
+            inputs.forEach(input => {
+                Object.keys(input.plcs).forEach(plcID => {
+                    Object.keys(input.plcs[plcID].variables).forEach(varID => {
+                        if(!varList.includes(varID))
+                            varList.push(varID)
+                    })
+                })
+            })
+            rows.push(['timeStamp','PLC'].concat(varList))
+            inputs.forEach(input => {
+                Object.keys(input.plcs).forEach(plcID => {
+                    var row = [input.timeStamp,plcID]
+                    varList.forEach(varID => {
+                        row.push(input.plcs[plcID].variables[varID].value)
+                    })
+                    rows.push(row)
+                })
+            })
+            exportToCSV(rows)
+
+        }
 
         function formatData(tempIinputs) {
             $('body').addClass('loading');
@@ -2121,17 +2181,17 @@
                 Object.keys(inputs[0].plcs).forEach(plcId => {
                     var offsets = {
                         "MI100": 0, // "Energía Motor"
-                        "MI99": 0, // "Energía Maquina"
+                        "MI99": 0,  // "Energía Maquina"
                         "MI121": 0, // "Contador Máquina" 
                         "MI122": 0, // "Contador Molde"
                         "MI124": 0, // "Contador Abandono" 
                         "MI127": 0, // "Contador Material" 
                         "MI128": 0, // "Contador Calidad" 
                         "MI123": 0, // "Contador Montaje"
-                        "ML0": 0, // "Tiempo Motor" 
+                        "ML0": 0,   // "Tiempo Motor" 
                         "MI101": 0, // "Defecto Arranque"
                         "MI102": 0, // "Defecto Lluvia"
-                        "ML131": 0 // "Inyecciones"
+                        "ML131": 0  // "Inyecciones"
                     }
                     inputs.forEach((input, i) => {
                         var plcVars = input.plcs[plcId].variables
@@ -2481,9 +2541,11 @@
                     material.value += child.value
                 })
                 output.material.maquina.push(material)
-                var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo);
+                var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje +
+                    _productivo);
                 disp = Math.round(disp * 100 * 10) / 10;
-                var rend = (_arranque + _lluvia + _buenas) / ((_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo));
+                var rend = (_arranque + _lluvia + _buenas) / ((_productivo * 60) / (_tiempoCiclo /
+                    _contTiempoCiclo));
                 rend = Math.round(rend * 100 * 10) / 10;
                 var cal = _buenas / (_buenas + _arranque + _lluvia);
                 cal = Math.round(cal * 100 * 10) / 10;
@@ -2497,7 +2559,13 @@
             // De dupe configs
             Object.keys(output.configuracion).forEach(configId => {
                 var config = output.configuracion[configId]
-                output.configuracion[configId] = [...new Set(config)]
+                config = [...new Set(config)]
+                var collator = new Intl.Collator(undefined, {
+                    numeric: true,
+                    sensitivity: 'base'
+                });
+                config = config.sort(collator.compare);
+                output.configuracion[configId] = config
             })
             $('body').removeClass('loading');
             $('#loader').hide();
@@ -2526,6 +2594,7 @@
                 var opciones = originalData['configuracion'][key]
                 var search_container = $('#' + key + '_config .search_section .rows');
                 search_container.empty()
+                var reds = []
                 opciones.forEach(function (opcion) {
                     var _chk = ''
                     var _prnt = ''
@@ -2546,8 +2615,12 @@
                             <input type="checkbox" name="${opcion}" value="${opcion}" ${_chk}>
                             <label for="${opcion}" ${_prnt}>${opcion}</label>
                         </div>`
-                    search_container.append(new_section)
+                    if (_prnt === "")
+                        search_container.append(new_section)
+                    else
+                        reds.push(new_section)
                 })
+                reds.forEach(red => search_container.append(red))
             })
             $('.selected_form .search_section .rows input').off('change').on('change', function (e) {
                 if (lockedData)
