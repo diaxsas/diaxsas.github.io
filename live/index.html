@@ -1948,12 +1948,10 @@
                     $(this).closest('.cube_container').css('min-height', 'auto')
             }
         });
-
         // Search
         $('.selected_head').click(function () {
             $(this).closest('.selected_form').find('.search_section').toggle()
         });
-
         // Datetime
         $('#datetimes').change((e) => {
             try {
@@ -2028,6 +2026,8 @@
         }
 
         function rename(toRename) {
+            
+            $('.selected_head').closest('.selected_form').find('.search_section').show()
             var _sdata = JSON.stringify(toRename)
 
             function replaceAll(str, find, replace) {
