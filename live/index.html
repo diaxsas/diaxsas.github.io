@@ -3269,10 +3269,30 @@
                         child.children.forEach(function (child2) {
                             substring = ''
                             substring = `:<br> ${r2(child2.value)} ` + units
-                            legend += `<li class="columns center_vert leg_toggle"  index="${index}">
-                                        <div class="indicator" style="background-color: ${child2.color}"></div><span>${child2.name}${substring}</span>
-                                    </li>`
-                            index++;
+                            if (child2.children == null) {
+                                legend += `<li class="columns center_vert leg_toggle"  index="${index}">
+                                            <div class="indicator" style="background-color: ${child2.color}"></div><span>${child2.name}${substring}</span>
+                                        </li>`
+                                index++;
+                            } else {
+                                legend += "<li>"
+                                legend += `<span class="caret columns center_vert leg_toggle" index="${index}">
+                                            <div class="caret_symbol">&#9654;</div>
+                                            <div class="indicator" style="background-color: ${child2.color}"></div><span>${child2.name}${substring}</span>
+                                        </span>`
+                                index++;
+                                legend += '<ul class="nested">'
+                                    child2.children.forEach(function (child3) {
+                                    substring = ''
+                                    substring = `:<br> ${r2(child3.value)} ` + units
+                                    legend += `<li class="columns center_vert leg_toggle"  index="${index}">
+                                                <div class="indicator" style="background-color: ${child3.color}"></div><span>${child3.name}${substring}</span>
+                                            </li>`
+                                    index++;
+                                })
+                                legend += '</ul>'
+                                legend += "</li>"
+                            }
                         })
                         legend += '</ul>'
                         legend += "</li>"
