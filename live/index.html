@@ -255,6 +255,14 @@
         #Rendimiento {
             min-height: 450px;
         }
+        
+        #Disponibilidad>div:nth-child(2),
+        #Calidad>div:nth-child(2),
+        #Rendimiento>div:nth-child(2) {
+            flex-direction: column-reverse !important;
+        }
+
+
 
         @media (min-width: 740px) and (max-width: 1100px) {
 
@@ -1538,17 +1546,17 @@
                     </div>
                 </div>
                 <div class="center full_width rows">
-                    <div class="columns center full_width ">
-                        <div id="pieCalidadContainer" class="pieContainer">
-                            <div id="pieCalidad">
-                            </div>
-                        </div>
-                        <ul class="legend" id="legendCalidad">
+                    <ul class="legend" id="legendCalidad">
 
-                        </ul>
-                    </div>
+                    </ul>
                     <div id="lineCalidadContainer" class="lineContainer">
                         <div id="lineCalidad">
+                        </div>
+                    </div>
+                    <div class="rows center full_width ">
+                        <div id="pieCalidadContainer" class="pieContainer margin_gd">
+                            <div id="pieCalidad">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1564,17 +1572,17 @@
                     </div>
                 </div>
                 <div class="center full_width rows">
-                    <div class="columns center full_width ">
-                        <div id="pieDisponibilidadContainer" class="pieContainer">
-                            <div id="pieDisponibilidad">
-                            </div>
-                        </div>
-                        <ul class="legend" id="legendDisponibilidad">
+                    <ul class="legend" id="legendDisponibilidad">
 
-                        </ul>
-                    </div>
+                    </ul>
                     <div id="lineDisponibilidadContainer" class="lineContainer">
                         <div id="lineDisponibilidad">
+                        </div>
+                    </div>
+                    <div class="rows center full_width ">
+                        <div id="pieDisponibilidadContainer" class="pieContainer margin_gd">
+                            <div id="pieDisponibilidad">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1590,17 +1598,17 @@
                     </div>
                 </div>
                 <div class="center full_width rows">
-                    <div class="columns center full_width ">
-                        <div id="pieRendimientoContainer" class="pieContainer">
-                            <div id="pieRendimiento">
-                            </div>
-                        </div>
-                        <ul class="legend" id="legendRendimiento">
+                    <ul class="legend" id="legendRendimiento">
 
-                        </ul>
-                    </div>
+                    </ul>
                     <div id="lineRendimientoContainer" class="lineContainer">
                         <div id="lineRendimiento">
+                        </div>
+                    </div>
+                    <div class="rows center full_width ">
+                        <div id="pieRendimientoContainer" class="pieContainer margin_gd">
+                            <div id="pieRendimiento">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2941,13 +2949,23 @@
                 }
                 var currData = filteredData[section];
                 if (section == "ciclos") {
+
+                    var _keys = Object.keys(filteredData[section])
+                    var collator = new Intl.Collator(undefined, {
+                        numeric: true,
+                        sensitivity: 'base'
+                    });
+                    _keys = _keys.sort(collator.compare);
+
                     var _ciclosPlc = $('#ciclePlc').val()
-                    if (!(_ciclosPlc in filteredData[section])) {
-                        _ciclosPlc = Object.keys(filteredData['ciclos'])[0]
+                    if (!(_ciclosPlc in _keys)) {
+                        _ciclosPlc = _keys[0]
                     }
                     currData = filteredData[section][_ciclosPlc]
                     $('#ciclePlc').empty()
-                    var _keys = Object.keys(filteredData[section])
+
+
+
                     _keys.forEach(function (key) {
                         $('#ciclePlc').append($(`<option value="${key}">${proper(key)}</option>`))
                     })
@@ -3057,7 +3075,7 @@
                     },
                     "branchvalues": 'total',
                     textinfo: 'label+percent entry',
-                    hovertemplate: "<extra></extra><br>%{value} " + units + ".</br>(%{customdata}%)"
+                    hovertemplate: "<extra></extra><br>%{label}<br>%{value} " + units + ".</br>(%{customdata}%)"
                 }];
                 var layout = {
                     "margin": {
