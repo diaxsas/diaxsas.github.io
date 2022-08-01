@@ -1893,7 +1893,8 @@
         $(document).ready(()=>{
             const start = new Date($('#datetimes').data('daterangepicker').startDate._d);
             const end = new Date($('#datetimes').data('daterangepicker').endDate._d);
-            pullData(start, end) 
+            pullData(start, end)
+            $('#config .button_minimize_down').click()
         })
 
         //#endregion
