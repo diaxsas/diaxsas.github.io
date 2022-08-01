@@ -1006,12 +1006,14 @@
             margin: 5px;
             margin-top: 10px;
         }
+
         #MontajePlc,
         #ciclePlc {
             width: 120px;
             padding: 3px;
 
         }
+
         #MontajePlcCont,
         #ciclePlcCont {
             margin: 5px;
@@ -1025,10 +1027,10 @@
             flex-direction: column;
             font-weight: bold !important;
             margin: 5px;
-            width: 80%;
+            width: 50%;
         }
 
-        #montajeLabels > * {
+        #montajeLabels>* {
             width: 100%;
             display: flex;
             text-align: left;
@@ -1037,9 +1039,7 @@
             flex-direction: row;
         }
 
-        #montajeLabels > * > * {
-
-        }
+        #montajeLabels>*>* {}
 
         .button_download_parent {
             /*display: none;*/
@@ -1657,7 +1657,7 @@
                             <select id="MontajePlc">
                             </select>
                         </div>
-                        <img src="../plcs/media/img_machine.png" >
+                        <img src="../plcs/media/img_machine.png">
                         <div id="montajeLabels">
                             <div id="montajeOrden">Orden: <span>0</span></div>
                             <div id="montajeOperario">Operario: <span>0</span></div>
@@ -1684,7 +1684,7 @@
                                 </div>
                             </div>
                             <ul class="legend" id="legendCiclos">
-    
+
                             </ul>
                         </div>
                         <div id="lineCiclosContainer" class="lineContainer">
@@ -1879,17 +1879,22 @@
         // Datetime
         $('input[name="datetimes"]').daterangepicker({
             timePicker: true,
-            startDate: new Date(),
+            startDate: new Date(new Date().setDate(new Date().getDate()-1)),
             endDate: new Date(),
             locale: {
                 format: 'M/DD hh:mm A'
             }
         });
 
-        $('#configError').show()
-        $('#configError').text('No hay data, intenta halar un rango.');
         $('#Indicadores').hide()
         $('#subdashboard').hide()
+
+        // Auto Pull
+        $(document).ready(()=>{
+            const start = new Date($('#datetimes').data('daterangepicker').startDate._d);
+            const end = new Date($('#datetimes').data('daterangepicker').endDate._d);
+            pullData(start, end) 
+        })
 
         //#endregion
 
@@ -2325,7 +2330,7 @@
                     maquina: [],
                     molde: [],
                 },
-                montaje:{}
+                montaje: {}
             };
             inputs.forEach((input, i) => {
                 // calidad
@@ -2453,7 +2458,7 @@
                     var puerta = Number(plc[t['Tiempo Puerta']].value)
                     var maquina = Number(plc[t['Tiempo Puerta']].value)
                     var totalMP = Number(plc[t['Tiempo Inyección']].value)
-                    
+
                     var ciclos = {
                         name: 'Ciclo',
                         value: totalMP,
@@ -2475,12 +2480,12 @@
 
                     // montaje
                     if (!(plcId in output.montaje))
-                        output.montaje[plcId] = []    
-                        
+                        output.montaje[plcId] = []
+
                     var _col = plc[t['Color']].value
                     if (_col.length != 4 && _col != '0') {
                         _col = _col.substring(_col.length - 6, _col.length - 2)
-                    }                
+                    }
                     var montaje = {
                         name: 'Montaje',
                         orden: plc[t['Orden']].value,
@@ -2490,7 +2495,7 @@
                         material: plc[t['Material']].value,
                     }
                     output.montaje[plcId].push(montaje)
-                    
+
                     // energia
                     var energiaPlc = {
                         name: plcId,
