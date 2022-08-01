@@ -255,7 +255,7 @@
         #Rendimiento {
             min-height: 450px;
         }
-        
+
         #Disponibilidad>div:nth-child(2),
         #Calidad>div:nth-child(2),
         #Rendimiento>div:nth-child(2) {
@@ -278,6 +278,10 @@
                 min-width: 722px;
                 width: 722px;
                 max-width: 722px;
+            }
+
+            #Rendimiento {
+                min-height: 825px !important;
             }
 
             #config,
@@ -1002,16 +1006,39 @@
             margin: 5px;
             margin-top: 10px;
         }
-
+        #MontajePlc,
         #ciclePlc {
             width: 120px;
             padding: 3px;
 
         }
-
+        #MontajePlcCont,
         #ciclePlcCont {
             margin: 5px;
             margin-top: 10px;
+        }
+
+        #montajeLabels {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-weight: bold !important;
+            margin: 5px;
+            width: 80%;
+        }
+
+        #montajeLabels > * {
+            width: 100%;
+            display: flex;
+            text-align: left;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        #montajeLabels > * > * {
+
         }
 
         .button_download_parent {
@@ -1613,36 +1640,65 @@
                     </div>
                 </div>
             </div>
-            <!--Campo Ciclos-->
-            <div class="cube_container" id="Ciclos">
-                <div class="title_container">
-                    <h2>Ciclos</h2>
-                    <div class="columns">
-                        <div class="button_minimize_down button_main center">
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="center full_width rows">
-                    <div class="columns center full_width ">
-                        <div id="pieCiclosContainer" class="pieContainer">
-                            <div id="pieCiclos">
+            <div>
+                <!--Campo Ciclos-->
+                <div class="cube_container" id="Ciclos">
+                    <div class="title_container">
+                        <h2>Ciclos</h2>
+                        <div class="columns">
+                            <div class="button_minimize_down button_main center">
+                                <div></div>
                             </div>
                         </div>
-                        <ul class="legend" id="legendCiclos">
-
-                        </ul>
                     </div>
-                    <div id="lineCiclosContainer" class="lineContainer">
-                        <div id="lineCiclos">
+                    <div class="center full_width rows">
+                        <div class="columns center full_width ">
+                            <div id="pieCiclosContainer" class="pieContainer">
+                                <div id="pieCiclos">
+                                </div>
+                            </div>
+                            <ul class="legend" id="legendCiclos">
+    
+                            </ul>
+                        </div>
+                        <div id="lineCiclosContainer" class="lineContainer">
+                            <div id="lineCiclos">
+                            </div>
+                        </div>
+                        <div id="ciclePlcCont" class="rows center ">
+                            <text>Máquina</text>
+                            <select id="ciclePlc">
+                            </select>
                         </div>
                     </div>
-                    <div id="ciclePlcCont" class="rows center ">
-                        <text>Máquina</text>
-                        <select id="ciclePlc">
-                        </select>
+                </div>
+                <!--Campo Montaje-->
+                <div class="cube_container" id="Montaje">
+                    <div class="title_container">
+                        <h2>Montaje</h2>
+                        <div class="columns">
+                            <div class="button_minimize_down button_main center">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center full_width rows">
+                        <div id="MontajePlcCont" class="rows center ">
+                            <text>Máquina</text>
+                            <select id="MontajePlc">
+                            </select>
+                        </div>
+                        <img src="../plcs/media/img_machine.png" >
+                        <div id="montajeLabels">
+                            <div id="montajeOrden">Orden: <span>0</span></div>
+                            <div id="montajeOperario">Operario: <span>0</span></div>
+                            <div id="montajeLote">Lote: <span>0</span></div>
+                            <div id="montajeMolde">Molde: <span>0</span></div>
+                            <div id="montajeMaterial">Material: <span>0</span></div>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <!--Campo Energia-->
             <div class="cube_container" id="Energia">
@@ -1975,6 +2031,14 @@
             dataChange();
         });
 
+        // Montaje
+        $('#MontajePlc').on('change', function () {
+            if (lockedData)
+                return
+            lockedData = true;
+            dataChange();
+        });
+
         // Material Change
         $('#MaterialPlc').on('change', function () {
             if (lockedData)
@@ -2026,7 +2090,7 @@
         }
 
         function rename(toRename) {
-            
+
             $('.selected_head').closest('.selected_form').find('.search_section').show()
             var _sdata = JSON.stringify(toRename)
 
@@ -2133,7 +2197,7 @@
 
             // headers
             csvContent += objectToCSVRow(Object.keys(arrayOfObjects[0]));
-            
+
             arrayOfObjects.forEach(function (item) {
                 csvContent += objectToCSVRow(item);
             });
@@ -2261,7 +2325,8 @@
                 material: {
                     maquina: [],
                     molde: [],
-                }
+                },
+                montaje:{}
             };
             inputs.forEach((input, i) => {
                 // calidad
@@ -2389,9 +2454,7 @@
                     var puerta = Number(plc[t['Tiempo Puerta']].value)
                     var maquina = Number(plc[t['Tiempo Puerta']].value)
                     var totalMP = Number(plc[t['Tiempo Inyección']].value)
-                    /*puerta = 0; // EDWIN
-                    maquina = 0; // EDWIN
-                    totalMP = 0; // EDWIN*/
+                    
                     var ciclos = {
                         name: 'Ciclo',
                         value: totalMP,
@@ -2410,6 +2473,25 @@
                         ]
                     }
                     output.ciclos[plcId].push(ciclos)
+
+                    // montaje
+                    if (!(plcId in output.montaje))
+                        output.montaje[plcId] = []    
+                        
+                    var _col = plc[t['Color']].value
+                    if (_col.length != 4 && _col != '0') {
+                        _col = _col.substring(_col.length - 6, _col.length - 2)
+                    }                
+                    var montaje = {
+                        name: 'Montaje',
+                        orden: plc[t['Orden']].value,
+                        operario: plc[t['Operario']].value,
+                        lote: plc[t['Lote']].value,
+                        molde: _col,
+                        material: plc[t['Material']].value,
+                    }
+                    output.montaje[plcId].push(montaje)
+                    
                     // energia
                     var energiaPlc = {
                         name: plcId,
@@ -2759,7 +2841,7 @@
                 }
             }
             Object.keys(filteredData).forEach(function (section) {
-                if (section == 'configuracion')
+                if (section == 'configuracion' | section == 'montaje')
                     return
                 if (section == 'ciclos' || section == 'material') {
                     Object.keys(filteredData[section]).forEach(function (_section) {
@@ -2958,7 +3040,7 @@
                     _keys = _keys.sort(collator.compare);
 
                     var _ciclosPlc = $('#ciclePlc').val()
-                    if (!(_ciclosPlc in _keys)) {
+                    if (!(_keys.includes(_ciclosPlc))) {
                         _ciclosPlc = _keys[0]
                     }
                     currData = filteredData[section][_ciclosPlc]
@@ -2970,6 +3052,33 @@
                         $('#ciclePlc').append($(`<option value="${key}">${proper(key)}</option>`))
                     })
                     $("#ciclePlc").val(_ciclosPlc);
+                }
+                if (section == "montaje") {
+
+                    var _keys = Object.keys(filteredData[section])
+                    var collator = new Intl.Collator(undefined, {
+                        numeric: true,
+                        sensitivity: 'base'
+                    });
+                    _keys = _keys.sort(collator.compare);
+
+                    var _ciclosPlc = $('#MontajePlc').val()
+                    if (!(_keys.includes(_ciclosPlc))) {
+                        _ciclosPlc = _keys[0]
+                    }
+                    currData = filteredData[section][_ciclosPlc]
+                    $('#MontajePlc').empty()
+                    _keys.forEach(function (key) {
+                        $('#MontajePlc').append($(`<option value="${key}">${proper(key)}</option>`))
+                    })
+                    $("#MontajePlc").val(_ciclosPlc);
+                    var _sect = filteredData[section][_ciclosPlc][filteredData[section][_ciclosPlc].length - 1]
+                    $("#montajeOrden > span").text(_sect.orden);
+                    $("#montajeOperario > span").text(_sect.operario);
+                    $("#montajeLote > span").text(_sect.lote);
+                    $("#montajeMolde > span").text(_sect.molde);
+                    $("#montajeMaterial > span").text(_sect.material);
+                    return
                 }
                 if (section == "material") {
                     var _materialPlc = $('#MaterialPlc').val()
@@ -3075,7 +3184,8 @@
                     },
                     "branchvalues": 'total',
                     textinfo: 'label+percent entry',
-                    hovertemplate: "<extra></extra><br>%{label}<br>%{value} " + units + ".</br>(%{customdata}%)"
+                    hovertemplate: "<extra></extra><br>%{label}<br>%{value} " + units +
+                        ".</br>(%{customdata}%)"
                 }];
                 var layout = {
                     "margin": {
@@ -3282,7 +3392,7 @@
                                         </span>`
                                 index++;
                                 legend += '<ul class="nested">'
-                                    child2.children.forEach(function (child3) {
+                                child2.children.forEach(function (child3) {
                                     substring = ''
                                     substring = `:<br> ${r2(child3.value)} ` + units
                                     legend += `<li class="columns center_vert leg_toggle"  index="${index}">
