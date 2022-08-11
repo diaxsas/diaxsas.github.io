@@ -65,7 +65,7 @@ namespace OPC2
             "MI123", // Contador por montaje
             "MI124", // Contador por sin operario
             "MI125", // Contador por no programada
-            "MI125", // Contador por fin producción
+            "MI126", // Contador por fin producción
             "MI127", // Contador por material
             "MI128", // Contador por calidad
             "MI129", // Contador por fin turno
