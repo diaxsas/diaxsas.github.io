@@ -45,36 +45,44 @@ namespace OPC2
         };
 
         string[] variables = {
-            "ML1", // orden
-            "ML3", // color
-            "ML5", // lote
-            "MI18", // operario
-            "MI19", // tipoMaterial
+            "ML0", // Tiempo motor
+            "ML1", // Orden
+            "ML3", // Molde
+            "ML5", // Lote
+            "ML131", // Contador inyecciones
+            "ML135", // Contador unidades
+            
+            "MI17", // Atemperador
+            "MI18", // Operario
+            "MI19", // Material
+            "MI27", // Tolva
+            "MI99", // Consumo total máquina kw
+            "MI100", // Consumo energía motor kw
+            "MI101", // Defecto inicio turno
+            "MI102", // Defecto general
+            "MI121", // Contador por matto máquina
+            "MI122", // Contador por matto molde
+            "MI123", // Contador por montaje
+            "MI124", // Contador por sin operario
+            "MI125", // Contador por no programada
+            "MI125", // Contador por fin producción
+            "MI127", // Contador por material
+            "MI128", // Contador por calidad
+            "MI129", // Contador por fin turno
+
+            "MF1", // Tiempo Inyección
+            "MF5", // Ciclo estándar
+            "MF6", // Ciclo estándar +
+            "MF7", // Ciclo estándar -
+            "MF8", // Tiempo puerta
+            "MF9", // Tiempo máquina
             "MF12", // Peso Inyección
             "MF13", // Peso Cavidad 1
             "MF14", // Peso Cavidad 2
             "MF15", // Peso Cavidad 3
             "MF16", // Peso Cavidad 4
             "MF17", // Peso cavidad 5
-            "MF18", // Peso cavidad 6
-            "MI100", // Consumo energía motor kw
-            "MI99", // consumo total máquina kw
-            "MF8", // Tiempo puerta
-            "MF9", // Tiempo máquina
-            "MF1", // Tiempo Inyección
-            "MI121", // Contador por matto máquina
-            "MI122", // Contador por matto molde
-            "MI124", // Contador por sin operario
-            "MI127", // Contador por material
-            "MI128", // Contador por calidad
-            "MI123", // Contador por montaje
-            "ML0", // Tiempo motor
-            "MI101", // Defecto inicio turno
-            "MI102", // Defecto lluvia
-            "ML131", // Contador inyecciones
-            "MF5", // Ciclo estándar
-            "MF6", // Ciclo estándar +
-            "MF7" // Ciclo estándar -
+            "MF18" // Peso cavidad 6
         };
         
         string[] states = {
