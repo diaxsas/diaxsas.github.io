@@ -1,0 +1,2783 @@
+[{
+    "M": {
+        "timeStamp": {
+            "S": "2022-07-11T20:54:08.591Z"
+        },
+        "plcs": {
+            "M": {
+                "PLC8": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "89.62"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "8"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "38"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "24.44"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "24.44"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "10"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "533"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "950"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "15052"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "8451004"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3542"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "22.4"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "37"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "35"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "-67.22"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "33"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC7": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC9": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "42"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "2"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "124"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "28"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "508"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "5"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "52"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "11.75"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "11.72"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "11.65"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "58.92"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "11.75"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "16"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1075"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1388"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "15317"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "22857501"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3660"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "42"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "47"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "45"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "43"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC4": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "82.9"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "4"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "143"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "5"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "2"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "35"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26.26"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26.5"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26.31"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "111.16"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26.48"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "30"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "504"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "490"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "15294"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1271703"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3653"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "89.1"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "36"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "34"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "6.2"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "32"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC3": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "-152.6"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "19"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "2"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "47"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.94"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.9"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.95"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "40.39"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.93"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "616"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "654"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1371"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "14912"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1272102"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3478"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "24.6"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "27"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "25"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "177.2"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "23"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC6": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "43.9"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "124"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "795"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "5"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "9.34"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "9.44"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "9.33"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "45.65"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "9.48"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "30"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "186"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1742"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "2588"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "15282"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1857002"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3650"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "45.5"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "47"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "45"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1.6"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "43"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC5": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "32.3"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "16"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "35"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "57"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.72"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.74"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.73"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "36.53"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "7.66"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "10"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "53"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "650"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "836"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "15290"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1861501"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3649"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "43.7"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "44"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "42"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "11.4"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "40"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC2": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "24.7"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "50"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "6"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "18"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "43"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "146"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "9.17"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "20.98"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "9.51"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "16"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "857"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "1479"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "15318"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "22858001"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "3660"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "24.7"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "26"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "24"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "22"
+                                        },
+                                        "quality": {
+                                            "S": "Good+Good+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "PLC1": {
+                    "M": {
+                        "variables": {
+                            "M": {
+                                "MF9": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI127": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI128": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI123": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI101": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI124": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI102": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI121": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI100": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI122": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF14": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI99": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF15": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF16": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF17": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF12": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF13": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI19": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MI18": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML0": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML131": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML3": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "ML5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF1": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF6": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF5": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF8": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                },
+                                "MF7": {
+                                    "M": {
+                                        "value": {
+                                            "S": "0"
+                                        },
+                                        "quality": {
+                                            "S": "Uncertain+Uncertain+NotLimited"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}]
