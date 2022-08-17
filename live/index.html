@@ -1804,6 +1804,7 @@
             "Gramos Cavidad 5": "MF17",
             "Gramos Cavidad 6": "MF18",
             "Lote": "ML5",
+            "Estado Motor": "MI3",
             "Segundos Ciclo Estandar +": "MF6",
             "Segundos Ciclo Estandar -": "MF7"
         };
@@ -2235,13 +2236,16 @@
                     varNames.push(_var)
                 }
             })
-            rows.push(['timeStamp', 'PLC'].concat(varNames))
-            rows.push(['timeStamp', 'PLC'].concat(varList))
+            rows.push(['Fecha', 'Inyectora'].concat(varNames))
+            rows.push(['timeStamp', 'inyector'].concat(varList))
             inputs.forEach(input => {
                 Object.keys(input.plcs).forEach(plcID => {
                     var row = [input.timeStamp, plcID]
                     varList.forEach(varID => {
-                        row.push(input.plcs[plcID].variables[varID].value)
+                        var _num = "Null"
+                        if(input.plcs[plcID].variables[varID])
+                            _num = input.plcs[plcID].variables[varID].value
+                        row.push(_num)
                     })
                     rows.push(row)
                 })
