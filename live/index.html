@@ -1319,7 +1319,7 @@
                     </g>
                 </g>
             </svg>
-            <h1>Equipos de Inyección</h1>
+            <h1>Equipos de Inyeccion</h1>
             <text>Live<span>Dash</span></text>
         </div>
         <!--Configuracion-->
@@ -1528,7 +1528,7 @@
                                 <h3>Rendimiento</h3>
                                 <p class="indicador"><span id="indicadorRendimiento">82</span>%</p>
                                 <div id="underlineRendimiento" class="underline_ind"></div>
-                                <text>Producción realizada</text>
+                                <text>Produccion realizada</text>
                             </div>
                         </div>
                         <div class="columns">
@@ -1653,7 +1653,7 @@
                     </div>
                     <div class="center full_width rows">
                         <div id="MontajePlcCont" class="rows center ">
-                            <text>Máquina</text>
+                            <text>Maquina</text>
                             <select id="MontajePlc">
                             </select>
                         </div>
@@ -1692,7 +1692,7 @@
                             </div>
                         </div>
                         <div id="ciclePlcCont" class="rows center ">
-                            <text>Máquina</text>
+                            <text>Maquina</text>
                             <select id="ciclePlc">
                             </select>
                         </div>
@@ -1759,7 +1759,7 @@
         </div>
     </div>
     <script>
-        //#region Config
+        //#region Configs
 
         const __config = {
             pullAPI: "https://api.diax.com.co/diaxiotquery",
@@ -1770,36 +1770,42 @@
         }
 
         const t = {
-            "Operario": "MI18",
+            "Minutos Motor Encendido": "ML0",
+            "Molde": "ML3",
             "Orden": "ML1",
-            "Lote": "ML5",
-            "Color": "ML3", // molde es substring de color
+            "Contador Inyecciones": "ML131",
+            "Contador Unidades": "ML135",
+            "Segundos Ultimo Ciclo Total": "MF1",
+            "Segundos Ciclo Estandar": "MF5",
+            "Segundos Ultimo Ciclo Puerta": "MF8",
+            "Segundos Ultimo Ciclo Maquina": "MF9",
             "Material": "MI19",
-            "Peso Inyección": "MF12",
-            "Peso Cavidad 1": "MF13",
-            "Peso Cavidad 2": "MF14",
-            "Peso Cavidad 3": "MF15",
-            "Peso Cavidad 4": "MF16",
-            "Peso Cavidad 5": "MF17",
-            "Peso Cavidad 6": "MF18",
-            "Energía Motor": "MI100",
-            "Energía Maquina": "MI99",
-            "Tiempo Puerta": "MF8",
-            "Tiempo Máquina": "MF9",
-            "Tiempo Inyección": "MF1",
-            "Contador Máquina": "MI121",
-            "Contador Molde": "MI122",
-            "Contador Abandono": "MI124",
-            "Contador Material": "MI127",
-            "Contador Calidad": "MI128",
-            "Contador Montaje": "MI123",
-            "Tiempo Motor": "ML0",
-            "Defecto Arranque": "MI101",
-            "Defecto Lluvia": "MI102",
-            "Inyecciones": "ML131",
-            "Ciclo Estándar": "MF5",
-            "Ciclo Estándar +": "MF6",
-            "Ciclo Estándar -": "MF7"
+            "Operario": "MI18",
+            "Grados Celsius Atemperador": "MI17",
+            "Grados Celsius Tolva": "MI27",
+            "KW Motor": "MI100",
+            "KW Total Maquina": "MI99",
+            "Minutos Mantto Maquina": "MI121",
+            "Minutos Mantto Molde": "MI122",
+            "Minutos Montaje": "MI123",
+            "Minutos Sin Operario": "MI124",
+            "Minutos No Programada": "MI125",
+            "Minutos Fin Produccion": "MI126",
+            "Minutos Por Material": "MI127",
+            "Minutos Calidad": "MI128",
+            "Minutos Fin Turno": "MI129",
+            "Unidades Defecto Inicio Turno": "MI101",
+            "Unidades No Conformes": "MI102",
+            "Gramos Inyeccion": "MF12",
+            "Gramos Cavidad 1": "MF13",
+            "Gramos Cavidad 2": "MF14",
+            "Gramos Cavidad 3": "MF15",
+            "Gramos Cavidad 4": "MF16",
+            "Gramos Cavidad 5": "MF17",
+            "Gramos Cavidad 6": "MF18",
+            "Lote": "ML5",
+            "Segundos Ciclo Estandar +": "MF6",
+            "Segundos Ciclo Estandar -": "MF7"
         };
 
         const v = {
@@ -2113,10 +2119,10 @@
             _sdata.forEach((data) => {
                 Object.keys(data.plcs).forEach(plcID => {
                     var plc = data.plcs[plcID]
-                    var _col = plc.variables[t['Color']].value
+                    var _col = plc.variables[t['Molde']].value
                     if (_col.length != 4 && _col != '0') {
                         _col = _col.substring(_col.length - 6, _col.length - 2)
-                        plc.variables[t['Color']].value = _col
+                        plc.variables[t['Molde']].value = _col
                     }
                 })
             })
@@ -2167,7 +2173,7 @@
                         delete input.plcs[plcID]
                         return
                     }
-                    if (filters.colores.includes(plc.variables[t['Color']].value)) {
+                    if (filters.colores.includes(plc.variables[t['Molde']].value)) {
                         delete input.plcs[plcID]
                         return
                     }
@@ -2219,15 +2225,17 @@
         function exportData() {
             var rows = []
             var varList = []
+            var varNames= []
             var inputs = filterData(_pulledData)
-            inputs.forEach(input => {
-                Object.keys(input.plcs).forEach(plcID => {
-                    Object.keys(input.plcs[plcID].variables).forEach(varID => {
-                        if (!varList.includes(varID))
-                            varList.push(varID)
-                    })
-                })
+            Object.keys(t).forEach(_var => {
+                var varID = t[_var]
+                if (!varList.includes(varID))
+                {
+                    varList.push(varID)
+                    varNames.push(_var)
+                }
             })
+            rows.push(['timeStamp', 'PLC'].concat(varNames))
             rows.push(['timeStamp', 'PLC'].concat(varList))
             inputs.forEach(input => {
                 Object.keys(input.plcs).forEach(plcID => {
@@ -2258,18 +2266,22 @@
             if ($('#offset').prop('checked'))
                 Object.keys(inputs[0].plcs).forEach(plcId => {
                     var offsets = {
-                        "MI100": 0, // "Energía Motor"
-                        "MI99": 0, // "Energía Maquina"
-                        "MI121": 0, // "Contador Máquina" 
-                        "MI122": 0, // "Contador Molde"
-                        "MI124": 0, // "Contador Abandono" 
-                        "MI127": 0, // "Contador Material" 
-                        "MI128": 0, // "Contador Calidad" 
-                        "MI123": 0, // "Contador Montaje"
-                        "ML0": 0, // "Tiempo Motor" 
-                        "MI101": 0, // "Defecto Arranque"
-                        "MI102": 0, // "Defecto Lluvia"
-                        "ML131": 0 // "Inyecciones"
+                        "ML0": 0, // "Minutos Motor Encendido" 
+                        "ML131": 0, // "Contador Inyecciones"
+                        "ML135": 0, // "Contador Unidades"
+                        "MI100": 0, // "KW Motor"
+                        "MI99": 0, // "KW Total Maquina"
+                        "MI121": 0, // "Minutos Mantto Maquina"
+                        "MI122": 0, // "Minutos Mantto Molde"
+                        "MI123": 0, // "Minutos Montaje"
+                        "MI124": 0, // "Minutos Sin Operario"
+                        "MI125": 0, // "Minutos No Programada"
+                        "MI126": 0, // "Minutos Fin Produccion"
+                        "MI127": 0, // "Minutos Por Material"
+                        "MI128": 0, // "Minutos Calidad"
+                        "MI129": 0, // "Minutos Fin Turno"
+                        "MI101": 0, // "Unidades Defecto Inicio Turno"
+                        "MI102": 0, // "Unidades No Conformes"
                     }
                     inputs.forEach((input, i) => {
                         var plcVars = input.plcs[plcId].variables
@@ -2346,6 +2358,10 @@
                 var _molde = 0;
                 var _maquina = 0;
                 var _productivo = 0;
+                var _noProg = 0
+                var _finProd = 0
+                var _finTurno = 0
+                var _inyecciones = 0
                 // rendimiento
                 var _tiempoCiclo = 0;
                 var _contTiempoCiclo = 0;
@@ -2381,92 +2397,111 @@
                 var dispChildAbandono = []
                 var dispChildMolde = []
                 var dispChildMaquina = []
+                var dispChildNoProg = []
+                var dispChildFinProd = []
+                var dispChildFinTurno = []
                 Object.keys(input.plcs).forEach(plcId => {
                     var plc = input.plcs[plcId].variables;
                     // calidad
-                    _arranque += Number(plc[t['Defecto Arranque']].value)
-                    _lluvia += Number(plc[t['Defecto Lluvia']].value)
-                    _buenas += (Number(plc[t['Inyecciones']].value) - Number(plc[t['Defecto Arranque']]
-                        .value) - Number(plc[t['Defecto Lluvia']].value))
+                    _arranque += Number(plc[t['Unidades Defecto Inicio Turno']].value)
+                    _lluvia += Number(plc[t['Unidades No Conformes']].value)
+                    _buenas += (Number(plc[t['Contador Unidades']].value) - Number(plc[t['Unidades Defecto Inicio Turno']]
+                        .value) - Number(plc[t['Unidades No Conformes']].value))
                     calidadChildGood.push({
                         name: 'B.' + plcId,
-                        value: (Number(plc[t['Inyecciones']].value) - Number(plc[t[
-                                'Defecto Arranque']]
-                            .value) - Number(plc[t['Defecto Lluvia']].value))
+                        value: (Number(plc[t['Contador Unidades']].value) - Number(plc[t[
+                                'Unidades Defecto Inicio Turno']]
+                            .value) - Number(plc[t['Unidades No Conformes']].value))
                     })
                     calidadChildLluvia.push({
                         name: 'L.' + plcId,
-                        value: Number(plc[t['Defecto Lluvia']].value)
+                        value: Number(plc[t['Unidades No Conformes']].value)
                     })
                     calidadChildArranque.push({
                         name: 'A.' + plcId,
-                        value: Number(plc[t['Defecto Arranque']].value)
+                        value: Number(plc[t['Unidades Defecto Inicio Turno']].value)
                     })
                     // disponibilidad
-                    _montaje += Number(plc[t['Contador Montaje']].value)
-                    _calidad += Number(plc[t['Contador Calidad']].value)
-                    _material += Number(plc[t['Contador Material']].value)
-                    _abandono += Number(plc[t['Contador Abandono']].value)
-                    _molde += Number(plc[t['Contador Molde']].value)
-                    _maquina += Number(plc[t['Contador Máquina']].value)
-                    _productivo += Number(plc[t['Tiempo Motor']].value)
+                    _montaje += Number(plc[t['Minutos Montaje']].value)
+                    _calidad += Number(plc[t['Minutos Calidad']].value)
+                    _material += Number(plc[t['Minutos Por Material']].value)
+                    _abandono += Number(plc[t['Minutos Sin Operario']].value)
+                    _molde += Number(plc[t['Minutos Mantto Molde']].value)
+                    _maquina += Number(plc[t['Minutos Mantto Maquina']].value)
+                    _productivo += Number(plc[t['Minutos Motor Encendido']].value)
+                    _noProg += Number(plc[t['Minutos No Programada']].value)
+                    _finProd += Number(plc[t['Minutos Fin Produccion']].value)
+                    _finTurno += Number(plc[t['Minutos Fin Turno']].value)
+                    _inyecciones += Number(plc[t['Contador Inyecciones']].value)
+
                     dispChildProd.push({
                         name: 'P.' + plcId,
-                        value: Number(plc[t['Tiempo Motor']].value)
+                        value: Number(plc[t['Minutos Motor Encendido']].value)
                     })
                     dispChildMontaje.push({
-                        name: '1.' + plcId,
-                        value: Number(plc[t['Contador Montaje']].value)
+                        name: 'MJ.' + plcId,
+                        value: Number(plc[t['Minutos Montaje']].value)
                     })
                     dispChildCalidad.push({
-                        name: '2.' + plcId,
-                        value: Number(plc[t['Contador Calidad']].value)
+                        name: 'CA.' + plcId,
+                        value: Number(plc[t['Minutos Calidad']].value)
                     })
                     dispChildMaterial.push({
-                        name: '3.' + plcId,
-                        value: Number(plc[t['Contador Material']].value)
+                        name: 'MA.' + plcId,
+                        value: Number(plc[t['Minutos Por Material']].value)
                     })
                     dispChildAbandono.push({
-                        name: '4.' + plcId,
-                        value: Number(plc[t['Contador Abandono']].value)
+                        name: 'SO.' + plcId,
+                        value: Number(plc[t['Minutos Sin Operario']].value)
                     })
                     dispChildMolde.push({
-                        name: '5.' + plcId,
-                        value: Number(plc[t['Contador Molde']].value)
+                        name: 'MD.' + plcId,
+                        value: Number(plc[t['Minutos Mantto Molde']].value)
                     })
                     dispChildMaquina.push({
-                        name: '6.' + plcId,
-                        value: Number(plc[t['Contador Máquina']].value)
+                        name: 'MQ.' + plcId,
+                        value: Number(plc[t['Minutos Mantto Maquina']].value)
                     })
-
-
+                    dispChildNoProg.push({
+                        name: 'NP.' + plcId,
+                        value: Number(plc[t['Minutos No Programada']].value)
+                    })
+                    dispChildFinProd.push({
+                        name: 'FP.' + plcId,
+                        value: Number(plc[t['Minutos Fin Produccion']].value)
+                    })
+                    dispChildFinTurno.push({
+                        name: 'FT.' + plcId,
+                        value: Number(plc[t['Minutos Fin Turno']].value)
+                    })
                     // rendimiento
-                    _tiempoCiclo += Number(plc[t['Ciclo Estándar']].value)
+                    _tiempoCiclo += Number(plc[t['Segundos Ciclo Estandar']].value)
                     _contTiempoCiclo++;
                     rendChildProd.push({
                         name: 'P.' + plcId,
-                        value: Number(plc[t['Inyecciones']].value)
+                        value: Number(plc[t['Contador Inyecciones']].value)
                     })
+                    // Ineficiencias
                     rendChildInef.push({
                         name: 'I.' + plcId,
-                        value: ((Number(plc[t['Tiempo Motor']].value) * 60) / (Number(plc[t[
-                            'Ciclo Estándar']].value))) - Number(plc[t['Inyecciones']]
+                        value: ((Number(plc[t['Minutos Motor Encendido']].value) * 60) / (Number(plc[t[
+                            'Segundos Ciclo Estandar']].value))) - Number(plc[t['Contador Inyecciones']]
                             .value)
                     })
                     // ciclos
                     if (!(plcId in output.ciclos))
                         output.ciclos[plcId] = []
-                    var puerta = Number(plc[t['Tiempo Puerta']].value)
-                    var maquina = Number(plc[t['Tiempo Puerta']].value)
-                    var totalMP = Number(plc[t['Tiempo Inyección']].value)
+                    var puerta = Number(plc[t['Segundos Ultimo Ciclo Puerta']].value)
+                    var maquina = Number(plc[t['Segundos Ultimo Ciclo Maquina']].value)
+                    var totalMP = Number(plc[t['Segundos Ultimo Ciclo Total']].value)
 
                     var ciclos = {
                         name: 'Ciclo',
                         value: totalMP,
                         date: input.timeStamp,
-                        min: Number(plc[t['Ciclo Estándar -']].value),
-                        max: Number(plc[t['Ciclo Estándar +']].value),
-                        mean: Number(plc[t['Ciclo Estándar']].value),
+                        min: Number(plc[t['Segundos Ciclo Estandar -']].value),
+                        max: Number(plc[t['Segundos Ciclo Estandar +']].value),
+                        mean: Number(plc[t['Segundos Ciclo Estandar']].value),
                         children: [{
                                 name: 'Maquina',
                                 value: maquina,
@@ -2483,7 +2518,7 @@
                     if (!(plcId in output.montaje))
                         output.montaje[plcId] = []
 
-                    var _col = plc[t['Color']].value
+                    var _col = plc[t['Molde']].value
                     if (_col.length != 4 && _col != '0') {
                         _col = _col.substring(_col.length - 6, _col.length - 2)
                     }
@@ -2500,14 +2535,14 @@
                     // energia
                     var energiaPlc = {
                         name: plcId,
-                        value: Number(plc[t['Energía Maquina']].value) + Number(plc[t[
-                            'Energía Motor']].value),
+                        value: Number(plc[t['KW Total Maquina']].value) + Number(plc[t[
+                            'KW Motor']].value),
                         children: [{
                             name: 'Motor',
-                            value: Number(plc[t['Energía Motor']].value),
+                            value: Number(plc[t['KW Motor']].value),
                         }, {
                             name: 'Maquina',
-                            value: Number(plc[t['Energía Maquina']].value),
+                            value: Number(plc[t['KW Total Maquina']].value),
                         }, ]
                     }
                     energia.children.push(energiaPlc)
@@ -2516,44 +2551,44 @@
                     output.configuracion.operarios.push(plc[t['Operario']].value)
                     output.configuracion.ordenes.push(plc[t['Orden']].value)
                     output.configuracion.lotes.push(plc[t['Lote']].value)
-                    output.configuracion.colores.push(plc[t['Color']].value)
+                    output.configuracion.colores.push(plc[t['Molde']].value)
                     output.configuracion.materiales.push(plc[t['Material']].value)
                     // material
                     var materialPlc = {
                         name: plcId,
-                        value: Number(plc[t['Peso Inyección']].value),
+                        value: Number(plc[t['Gramos Inyeccion']].value),
                         children: []
                     }
                     var simpPlcID = plcId.split('.')[1]
-                    if (Number(plc[t['Peso Cavidad 1']].value) != 0)
+                    if (Number(plc[t['Gramos Cavidad 1']].value) != 0)
                         materialPlc.children.push({
                             name: simpPlcID + '.Cav 1',
-                            value: Number(plc[t['Peso Cavidad 1']].value),
+                            value: Number(plc[t['Gramos Cavidad 1']].value),
                         })
-                    if (Number(plc[t['Peso Cavidad 2']].value) != 0)
+                    if (Number(plc[t['Gramos Cavidad 2']].value) != 0)
                         materialPlc.children.push({
                             name: simpPlcID + '.Cav 2',
-                            value: Number(plc[t['Peso Cavidad 2']].value),
+                            value: Number(plc[t['Gramos Cavidad 2']].value),
                         })
-                    if (Number(plc[t['Peso Cavidad 3']].value) != 0)
+                    if (Number(plc[t['Gramos Cavidad 3']].value) != 0)
                         materialPlc.children.push({
                             name: simpPlcID + '.Cav 3',
-                            value: Number(plc[t['Peso Cavidad 3']].value),
+                            value: Number(plc[t['Gramos Cavidad 3']].value),
                         })
-                    if (Number(plc[t['Peso Cavidad 4']].value) != 0)
+                    if (Number(plc[t['Gramos Cavidad 4']].value) != 0)
                         materialPlc.children.push({
                             name: simpPlcID + '.Cav 4',
-                            value: Number(plc[t['Peso Cavidad 4']].value),
+                            value: Number(plc[t['Gramos Cavidad 4']].value),
                         })
-                    if (Number(plc[t['Peso Cavidad 5']].value) != 0)
+                    if (Number(plc[t['Gramos Cavidad 5']].value) != 0)
                         materialPlc.children.push({
                             name: simpPlcID + '.Cav 5',
-                            value: Number(plc[t['Peso Cavidad 5']].value),
+                            value: Number(plc[t['Gramos Cavidad 5']].value),
                         })
-                    if (Number(plc[t['Peso Cavidad 6']].value) != 0)
+                    if (Number(plc[t['Gramos Cavidad 6']].value) != 0)
                         materialPlc.children.push({
                             name: simpPlcID + '.Cav 6',
-                            value: Number(plc[t['Peso Cavidad 6']].value),
+                            value: Number(plc[t['Gramos Cavidad 6']].value),
                         })
                     material.children.push(materialPlc)
                 })
@@ -2565,7 +2600,7 @@
                 }
                 Object.keys(input.plcs).forEach(plcId => {
                     // material
-                    var simpMoldeID = input.plcs[plcId].variables[t['Color']].value
+                    var simpMoldeID = input.plcs[plcId].variables[t['Molde']].value
                     if (materialMolde.children.filter(e => e.name === simpMoldeID).length <= 0) {
                         var _materialPlcMolde = {
                             name: simpMoldeID,
@@ -2599,25 +2634,25 @@
                         materialMolde.children.push(_materialPlcMolde)
                     }
                     var materialPlcMolde = materialMolde.children.filter(e => e.name === simpMoldeID)[0]
-                    var cav1 = Number(input.plcs[plcId].variables[t['Peso Cavidad 1']].value)
-                    var cav2 = Number(input.plcs[plcId].variables[t['Peso Cavidad 2']].value)
-                    var cav3 = Number(input.plcs[plcId].variables[t['Peso Cavidad 3']].value)
-                    var cav4 = Number(input.plcs[plcId].variables[t['Peso Cavidad 4']].value)
-                    var cav5 = Number(input.plcs[plcId].variables[t['Peso Cavidad 5']].value)
-                    var cav6 = Number(input.plcs[plcId].variables[t['Peso Cavidad 6']].value)
+                    var cav1 = Number(input.plcs[plcId].variables[t['Gramos Cavidad 1']].value)
+                    var cav2 = Number(input.plcs[plcId].variables[t['Gramos Cavidad 2']].value)
+                    var cav3 = Number(input.plcs[plcId].variables[t['Gramos Cavidad 3']].value)
+                    var cav4 = Number(input.plcs[plcId].variables[t['Gramos Cavidad 4']].value)
+                    var cav5 = Number(input.plcs[plcId].variables[t['Gramos Cavidad 5']].value)
+                    var cav6 = Number(input.plcs[plcId].variables[t['Gramos Cavidad 6']].value)
                     materialPlcMolde.children.filter(e => e.name.includes('.Cav1'))[0].value += cav1
                     materialPlcMolde.children.filter(e => e.name.includes('.Cav2'))[0].value += cav2
                     materialPlcMolde.children.filter(e => e.name.includes('.Cav3'))[0].value += cav3
                     materialPlcMolde.children.filter(e => e.name.includes('.Cav4'))[0].value += cav4
                     materialPlcMolde.children.filter(e => e.name.includes('.Cav5'))[0].value += cav5
                     materialPlcMolde.children.filter(e => e.name.includes('.Cav6'))[0].value += cav6
-                    materialPlcMolde.value += Number(input.plcs[plcId].variables[t['Peso Inyección']]
+                    materialPlcMolde.value += Number(input.plcs[plcId].variables[t['Gramos Inyeccion']]
                         .value)
                     materialMolde.value += materialPlcMolde.value
                 })
                 output.material.molde.push(materialMolde)
                 var calidad = {
-                    name: 'Producción',
+                    name: 'Produccion',
                     value: _buenas + _arranque + _lluvia,
                     date: input.timeStamp,
                     children: [{
@@ -2645,7 +2680,7 @@
                 output.calidad.push(calidad)
                 var disponibilidad = {
                     name: 'Disponible',
-                    value: _maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo,
+                    value: _maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo + _noProg + _finProd + _finTurno,
                     date: input.timeStamp,
                     children: [{
                             name: 'Productivo',
@@ -2654,7 +2689,7 @@
                         },
                         {
                             name: 'Paradas',
-                            value: _maquina + _molde + _abandono + _material + _calidad + _montaje,
+                            value: _maquina + _molde + _abandono + _material + _calidad + _montaje + _noProg + _finProd + _finTurno,
                             children: [{
                                     name: 'Maquina',
                                     value: _maquina,
@@ -2684,11 +2719,27 @@
                                     name: 'Montaje',
                                     value: _montaje,
                                     children: dispChildMontaje
+                                },
+                                {
+                                    name: 'No Programada',
+                                    value: _noProg,
+                                    children: dispChildNoProg
+                                },
+                                {
+                                    name: 'Fin Produccion',
+                                    value: _finProd,
+                                    children: dispChildFinProd
+                                },
+                                {
+                                    name: 'Fin Turno',
+                                    value: _finTurno,
+                                    children: dispChildFinTurno
                                 }
                             ]
                         }
                     ]
                 }
+                // Ineficiencias
                 output.disponibilidad.push(disponibilidad)
                 var rendimiento = {
                     name: 'Capacidad',
@@ -2696,13 +2747,12 @@
                     date: input.timeStamp,
                     children: [{
                             name: 'Producido',
-                            value: _arranque + _lluvia + _buenas,
+                            value: _inyecciones,
                             children: rendChildProd
                         },
                         {
                             name: 'Ineficiencias',
-                            value: ((_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo)) - (
-                                _arranque + _lluvia + _buenas),
+                            value: ((_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo)) - _inyecciones,
                             children: rendChildInef
                         }
                     ]
@@ -2716,10 +2766,11 @@
                     material.value += child.value
                 })
                 output.material.maquina.push(material)
-                var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje +
+                var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje + _noProg + _finProd + _finTurno +
                     _productivo);
                 disp = Math.round(disp * 100 * 10) / 10;
-                var rend = (_arranque + _lluvia + _buenas) / ((_productivo * 60) / (_tiempoCiclo /
+                // Ineficiencias
+                var rend = (_inyecciones) / ((_productivo * 60) / (_tiempoCiclo /
                     _contTiempoCiclo));
                 rend = Math.round(rend * 100 * 10) / 10;
                 var cal = _buenas / (_buenas + _arranque + _lluvia);
@@ -2875,6 +2926,9 @@
                     case 'disponibilidad':
                         units = 'min'
                         break
+                    case 'rendimiento':
+                        units = 'inys'
+                        break
                     case 'ciclos':
                         units = 'seg'
                         break
@@ -3013,7 +3067,7 @@
                         polar: {
                             radialaxis: {
                                 visible: true,
-                                range: [50, 100]
+                                range: [30, 100]
                             }
                         },
                         showlegend: false
