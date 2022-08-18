@@ -1804,21 +1804,21 @@
             "Gramos Cavidad 5": "MF17",
             "Gramos Cavidad 6": "MF18",
             "Lote": "ML5",
-            "Estado Motor": "MI3",
+            "Estado Motor": "I3",
             "Segundos Ciclo Estandar +": "MF6",
-            "Segundos Ciclo Estandar -": "MF7"
+            "Segundos Ciclo Estandar -": "MF7",
         };
 
         const v = {
-            "PLC1": "Iny.8",
-            "PLC2": "Iny.4",
-            "PLC3": "Iny.3",
-            "PLC4": "Iny.7",
-            "PLC5": "Iny.6",
-            "PLC6": "Iny.10",
-            "PLC7": "Iny.1",
-            "PLC8": "Iny.2",
-            "PLC9": "Iny.11",
+            "PLC1": "Iny8",
+            "PLC2": "Iny4",
+            "PLC3": "Iny3",
+            "PLC4": "Iny7",
+            "PLC5": "Iny6",
+            "PLC6": "Iny10",
+            "PLC7": "Iny1",
+            "PLC8": "Iny2",
+            "PLC9": "Iny11",
         }
 
         const _colors = [
@@ -2311,6 +2311,7 @@
                 disponibilidad: [],
                 rendimiento: [],
                 ciclos: {},
+                plcStatus: {},
                 configuracion: {
                     maquinas: [],
                     operarios: [],
@@ -2349,7 +2350,7 @@
                 },
                 montaje: {}
             };
-            inputs.forEach((input, i) => {
+            inputs.forEach((input, inputI) => {
                 // calidad
                 var _buenas = 0;
                 var _arranque = 0;
@@ -2551,6 +2552,14 @@
                     }
                     energia.children.push(energiaPlc)
                     // configuracion
+                    if(inputI == inputs.length - 1)
+                    {
+                        output.plcStatus[plcId] = "Off"
+                        if(plc[t['Estado Motor']])
+                            if(typeof plc[t['Estado Motor']].value !== 'undefined')
+                                if (plc[t['Estado Motor']].value.toLowerCase() == "true")
+                                    output.plcStatus[plcId] = "On"
+                    }
                     output.configuracion.maquinas.push(plcId)
                     output.configuracion.operarios.push(plc[t['Operario']].value)
                     output.configuracion.ordenes.push(plc[t['Orden']].value)
@@ -2563,7 +2572,9 @@
                         value: Number(plc[t['Gramos Inyeccion']].value),
                         children: []
                     }
-                    var simpPlcID = plcId.split('.')[1]
+
+                    var simpPlcID = plcId.split(' ')[0].split('Iny')[1]
+                    
                     if (Number(plc[t['Gramos Cavidad 1']].value) != 0)
                         materialPlc.children.push({
                             name: simpPlcID + '.Cav 1',
@@ -2840,10 +2851,14 @@
                             _prnt = 'style="color:red;"'
                         }
                     }
+                    var inyStatus = ''
+                    if (key == 'maquinas') {
+                        inyStatus = ' (' + originalData.plcStatus[opcion] + ')'
+                    }
                     var new_section = `
                         <div>
                             <input type="checkbox" name="${opcion}" value="${opcion}" ${_chk}>
-                            <label for="${opcion}" ${_prnt}>${opcion}</label>
+                            <label for="${opcion}" ${_prnt}>${opcion + inyStatus}</label>
                         </div>`
                     if (_prnt === "")
                         search_container.append(new_section)
@@ -2919,6 +2934,8 @@
                     })
                     return
                 }
+                if(section == "plcStatus")
+                    return
                 filteredData[section].forEach(function (_section) {
                     setColors(_section)
                 })
@@ -2944,6 +2961,8 @@
                         break
                 }
                 if (section == "configuracion")
+                    return
+                if(section == "plcStatus")
                     return
                 if (section == "indicadores") {
                     var lineID = 'line' + proper(section);
