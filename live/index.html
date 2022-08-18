@@ -1380,7 +1380,7 @@
                 <div id="subSubConfig">
                     <div class="selected_form" id="maquinas_config">
                         <div class="selected_head center">
-                            <h3>Equipo</h3>
+                            <h3>Equipo (Estado)</h3>
                             <div class="columns">
                                 <div class="button_arrow_down">
                                     <div></div>
@@ -2311,7 +2311,14 @@
                 disponibilidad: [],
                 rendimiento: [],
                 ciclos: {},
-                plcStatus: {},
+                extra: {
+                    plcStatus: {},
+                    operarios: {},
+                    ordenes: {},
+                    lotes: {},
+                    colores: {},
+                    materiales: {}
+                },
                 configuracion: {
                     maquinas: [],
                     operarios: [],
@@ -2554,18 +2561,33 @@
                     // configuracion
                     if(inputI == inputs.length - 1)
                     {
-                        output.plcStatus[plcId] = "Off"
+                        output.extra.plcStatus[plcId] = "Off"
                         if(plc[t['Estado Motor']])
                             if(typeof plc[t['Estado Motor']].value !== 'undefined')
                                 if (plc[t['Estado Motor']].value.toLowerCase() == "true")
-                                    output.plcStatus[plcId] = "On"
+                                    output.extra.plcStatus[plcId] = "On"
                     }
                     output.configuracion.maquinas.push(plcId)
-                    output.configuracion.operarios.push(plc[t['Operario']].value)
-                    output.configuracion.ordenes.push(plc[t['Orden']].value)
+                    output.configuracion.operarios.push(plc[t['Operario']].value )
+                    output.configuracion.ordenes.push(plc[t['Orden']].value )
                     output.configuracion.lotes.push(plc[t['Lote']].value)
                     output.configuracion.colores.push(plc[t['Molde']].value)
                     output.configuracion.materiales.push(plc[t['Material']].value)
+                    if(!Object.keys(output.extra.operarios).includes(plc[t['Operario']].value))
+                        output.extra.operarios[plc[t['Operario']].value] = []
+                    output.extra.operarios[plc[t['Operario']].value].push(plcId)
+                    if(!Object.keys(output.extra.ordenes).includes(plc[t['Orden']].value))
+                        output.extra.ordenes[plc[t['Orden']].value] = []
+                    output.extra.ordenes[plc[t['Orden']].value].push(plcId)
+                    if(!Object.keys(output.extra.lotes).includes(plc[t['Lote']].value))
+                        output.extra.lotes[plc[t['Lote']].value] = []
+                    output.extra.lotes[plc[t['Lote']].value].push(plcId)
+                    if(!Object.keys(output.extra.colores).includes(plc[t['Molde']].value))
+                        output.extra.colores[plc[t['Molde']].value] = []
+                    output.extra.colores[plc[t['Molde']].value].push(plcId)
+                    if(!Object.keys(output.extra.materiales).includes(plc[t['Material']].value))
+                        output.extra.materiales[plc[t['Material']].value] = []
+                    output.extra.materiales[plc[t['Material']].value].push(plcId)
                     // material
                     var materialPlc = {
                         name: plcId,
@@ -2577,32 +2599,32 @@
                     
                     if (Number(plc[t['Gramos Cavidad 1']].value) != 0)
                         materialPlc.children.push({
-                            name: simpPlcID + '.Cav 1',
+                            name: simpPlcID + '.Cav1',
                             value: Number(plc[t['Gramos Cavidad 1']].value),
                         })
                     if (Number(plc[t['Gramos Cavidad 2']].value) != 0)
                         materialPlc.children.push({
-                            name: simpPlcID + '.Cav 2',
+                            name: simpPlcID + '.Cav2',
                             value: Number(plc[t['Gramos Cavidad 2']].value),
                         })
                     if (Number(plc[t['Gramos Cavidad 3']].value) != 0)
                         materialPlc.children.push({
-                            name: simpPlcID + '.Cav 3',
+                            name: simpPlcID + '.Cav3',
                             value: Number(plc[t['Gramos Cavidad 3']].value),
                         })
                     if (Number(plc[t['Gramos Cavidad 4']].value) != 0)
                         materialPlc.children.push({
-                            name: simpPlcID + '.Cav 4',
+                            name: simpPlcID + '.Cav4',
                             value: Number(plc[t['Gramos Cavidad 4']].value),
                         })
                     if (Number(plc[t['Gramos Cavidad 5']].value) != 0)
                         materialPlc.children.push({
-                            name: simpPlcID + '.Cav 5',
+                            name: simpPlcID + '.Cav5',
                             value: Number(plc[t['Gramos Cavidad 5']].value),
                         })
                     if (Number(plc[t['Gramos Cavidad 6']].value) != 0)
                         materialPlc.children.push({
-                            name: simpPlcID + '.Cav 6',
+                            name: simpPlcID + '.Cav6',
                             value: Number(plc[t['Gramos Cavidad 6']].value),
                         })
                     material.children.push(materialPlc)
@@ -2808,6 +2830,26 @@
                 config = config.sort(collator.compare);
                 output.configuracion[configId] = config
             })
+
+
+            Object.keys(output.extra).forEach(exrtraId => {
+                if(exrtraId == "plcStatus")
+                    return;
+                var extraObj = output.extra[exrtraId]
+                Object.keys(extraObj).forEach(subExrtraId => {
+                    var subExtraObj = extraObj[subExrtraId]                    
+                    subExtraObj = [...new Set(subExtraObj)]
+                    var collator = new Intl.Collator(undefined, {
+                        numeric: true,
+                        sensitivity: 'base'
+                    });
+                    subExtraObj = subExtraObj.sort(collator.compare);
+                    extraObj[subExrtraId] = subExtraObj
+                })
+
+            })
+
+
             $('body').removeClass('loading');
             $('#loader').hide();
             return output;
@@ -2845,15 +2887,22 @@
                     if (!oldFilters[key].includes(opcion)) {
                         if (Object.keys(filteredData).length > 0) {
                             if (!filteredData['configuracion'][key].includes(opcion)) {
-                                _prnt = 'style="color:red;"'
+                                _prnt = 'style="text-decoration: line-through;"'
                             }
                         } else {
-                            _prnt = 'style="color:red;"'
+                            _prnt = 'style="text-decoration: line-through;"'
                         }
                     }
                     var inyStatus = ''
                     if (key == 'maquinas') {
-                        inyStatus = ' (' + originalData.plcStatus[opcion] + ')'
+                        var _tcolor = "red"
+                        if(originalData.extra.plcStatus[opcion].toLowerCase() == 'on')
+                             _tcolor = "green"
+                        inyStatus = ' (<span style="color:'+_tcolor+';">' + originalData.extra.plcStatus[opcion] + '</span>)'
+                    }
+                    else
+                    {
+                        inyStatus = ' (Iny: ' + originalData.extra[key][opcion].join(', ').split('Iny').join('') + ')'
                     }
                     var new_section = `
                         <div>
@@ -2934,7 +2983,7 @@
                     })
                     return
                 }
-                if(section == "plcStatus")
+                if(section == "extra")
                     return
                 filteredData[section].forEach(function (_section) {
                     setColors(_section)
@@ -2962,7 +3011,7 @@
                 }
                 if (section == "configuracion")
                     return
-                if(section == "plcStatus")
+                if(section == "extra")
                     return
                 if (section == "indicadores") {
                     var lineID = 'line' + proper(section);
