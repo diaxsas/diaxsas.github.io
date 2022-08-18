@@ -52,7 +52,7 @@ namespace OPC2
             "ML131", // Contador inyecciones
             "ML135", // Contador unidades
             
-            "MI3", // Motor On
+            "I3", // Motor On
             "MI17", // Atemperador
             "MI18", // Operario
             "MI19", // Material
