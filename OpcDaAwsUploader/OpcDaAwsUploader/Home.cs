@@ -71,6 +71,7 @@ namespace OPC2
             "MI128", // Contador por calidad
             "MI129", // Contador por fin turno
 
+            "MF0", // Numero de Maquina
             "MF1", // Tiempo Inyección
             "MF5", // Ciclo estándar
             "MF6", // Ciclo estándar +
