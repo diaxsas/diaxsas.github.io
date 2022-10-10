@@ -1770,6 +1770,7 @@
         }
 
         const t = {
+            "Numero Inyectora": "MF0",
             "Minutos Motor Encendido": "ML0",
             "Molde": "ML3",
             "Orden": "ML1",
@@ -1808,18 +1809,6 @@
             "Segundos Ciclo Estandar +": "MF6",
             "Segundos Ciclo Estandar -": "MF7",
         };
-
-        const v = {
-            "PLC1": "Iny8",
-            "PLC2": "Iny4",
-            "PLC3": "Iny3",
-            "PLC4": "Iny7",
-            "PLC5": "Iny6",
-            "PLC6": "Iny10",
-            "PLC7": "Iny1",
-            "PLC8": "Iny2",
-            "PLC9": "Iny11",
-        }
 
         const _colors = [
             "#D6E4FF",
@@ -2112,12 +2101,9 @@
                 }
                 return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
             }
-            Object.keys(v).forEach(name => {
-                _sdata = replaceAll(_sdata, name, v[name])
-            })
             _sdata = JSON.parse(_sdata);
-            // Renombrar Moldes
             _sdata.forEach((data) => {
+                // Renombrar Moldes
                 Object.keys(data.plcs).forEach(plcID => {
                     var plc = data.plcs[plcID]
                     var _col = plc.variables[t['Molde']].value
@@ -2126,15 +2112,28 @@
                         plc.variables[t['Molde']].value = _col
                     }
                 })
-            })
-            // +5 hrs
-            _sdata.forEach((data) => {
+                // +5 hrs
                 let stamp = data.timeStamp
                 let dateNum = Date.parse(data.timeStamp)
                 let date = new Date(dateNum)
                 date = new Date(date.setTime(date.getTime() - (5*60*60*1000)))
                 let dateString = date.toISOString()
                 data.timeStamp =  dateString
+                //rename plcs
+                var newPLCs = {}
+                Object.keys(data.plcs).forEach(plcID => {
+                    var newID = data.plcs[plcID].variables[t['Numero Inyectora']]
+                    if (typeof newID === 'undefined')
+                    {
+                        newPLCs["Iny" + plcID.split('PLC')[1]] = data.plcs[plcID];
+                    }
+                    else
+                    {
+                        newPLCs["Iny" + newID.value] = data.plcs[plcID];
+                    }
+                })
+                data.plcs = newPLCs;
+
             })
             return _sdata
         }
