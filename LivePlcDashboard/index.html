@@ -2363,6 +2363,10 @@
                 },
                 montaje: {}
             };
+            var _startD = new Date($('#datetimes').data('daterangepicker').startDate._d);
+            var _endD = new Date($('#datetimes').data('daterangepicker').endDate._d);
+            var diffMs = (_endD - _startD);
+            var _ttotal = Math.round(diffMs/1000/60) * Object.keys(tempIinputs[0].plcs).length; // minutes
             inputs.forEach((input, inputI) => {
                 // calidad
                 var _buenas = 0;
@@ -2379,7 +2383,7 @@
                 var _noProg = 0
                 var _inyecciones = 0
                 // rendimiento
-                var _tiempoCiclo = 0;
+                var _sumaTiempoCiclo = 0;
                 var _contTiempoCiclo = 0;
                 // indicadores
                 output.indicadores.disponibilidad.dates.push(input.timeStamp)
@@ -2447,9 +2451,10 @@
                     _noProg += Number(plc[t['Minutos No Programada']].value)
                     _inyecciones += Number(plc[t['Contador Inyecciones']].value)
 
+                    var prod = Math.floor(Math.round(diffMs/1000/60) - Number(plc[t['Minutos No Programada']].value) - (Number(plc[t['Minutos Mantto Maquina']].value) + Number(plc[t['Minutos Mantto Molde']].value) + Number(plc[t['Minutos Sin Operario']].value) + Number(plc[t['Minutos Por Material']].value) + Number(plc[t['Minutos Calidad']].value) + Number(plc[t['Minutos Montaje']].value)))
                     dispChildProd.push({
                         name: 'P.' + plcId,
-                        value: Number(plc[t['Minutos Motor Encendido']].value)
+                        value: prod
                     })
                     dispChildMontaje.push({
                         name: 'MJ.' + plcId,
@@ -2480,7 +2485,7 @@
                         value: Number(plc[t['Minutos No Programada']].value)
                     })
                     // rendimiento
-                    _tiempoCiclo += Number(plc[t['Segundos Ciclo Estandar']].value)
+                    _sumaTiempoCiclo += Number(plc[t['Segundos Ultimo Ciclo Total']].value)
                     _contTiempoCiclo++;
                     rendChildProd.push({
                         name: 'P.' + plcId,
@@ -2709,10 +2714,6 @@
                     ]
                 }
                 output.calidad.push(calidad)
-                var _startD = new Date($('#datetimes').data('daterangepicker').startDate._d);
-                var _endD = new Date($('#datetimes').data('daterangepicker').endDate._d);
-                var diffMs = (_endD - _startD);
-                var _ttotal = Math.round(diffMs/1000/60) * Object.keys(tempIinputs[0].plcs).length; // minutes
                 var disponibilidad = {
                     name: 'Disponible',
                     value: _ttotal - _noProg,
@@ -2760,10 +2761,13 @@
                     ]
                 }
                 // Ineficiencias
+                var _capacidadProd = (_ttotal - _noProg)/((_sumaTiempoCiclo / _contTiempoCiclo)/60)
+                var _ineficiencias = _capacidadProd - _inyecciones;
+                //_ineficiencias = _ineficiencias<0?0:_ineficiencias;
                 output.disponibilidad.push(disponibilidad)
                 var rendimiento = {
                     name: 'Capacidad',
-                    value: (_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo),
+                    value: _capacidadProd,
                     date: input.timeStamp,
                     children: [{
                             name: 'Producido',
@@ -2772,8 +2776,7 @@
                         },
                         {
                             name: 'Ineficiencias',
-                            value: ((_productivo * 60) / (_tiempoCiclo / _contTiempoCiclo)) -
-                                _inyecciones,
+                            value: _ineficiencias,
                             children: rendChildInef
                         }
                     ]
@@ -2787,13 +2790,10 @@
                     material.value += child.value
                 })
                 output.material.maquina.push(material)
-                var disp = _productivo / (_maquina + _molde + _abandono + _material + _calidad + _montaje +
-                    _noProg +
-                    _productivo);
+                var disp =  (_ttotal - _noProg - (_maquina + _molde + _abandono + _material + _calidad + _montaje))/(_ttotal - _noProg);
                 disp = Math.round(disp * 100 * 10) / 10;
                 // Ineficiencias
-                var rend = (_inyecciones) / ((_productivo * 60) / (_tiempoCiclo /
-                    _contTiempoCiclo));
+                var rend = _inyecciones/((_ttotal - _noProg)/((_sumaTiempoCiclo / _contTiempoCiclo)/60));
                 rend = Math.round(rend * 100 * 10) / 10;
                 var cal = _buenas / (_buenas + _arranque + _lluvia);
                 cal = Math.round(cal * 100 * 10) / 10;
