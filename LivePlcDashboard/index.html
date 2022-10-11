@@ -2709,20 +2709,22 @@
                     ]
                 }
                 output.calidad.push(calidad)
+                var _startD = new Date($('#datetimes').data('daterangepicker').startDate._d);
+                var _endD = new Date($('#datetimes').data('daterangepicker').endDate._d);
+                var diffMs = (_endD - _startD);
+                var _ttotal = Math.round(diffMs/1000/60) * Object.keys(tempIinputs[0].plcs).length; // minutes
                 var disponibilidad = {
                     name: 'Disponible',
-                    value: _maquina + _molde + _abandono + _material + _calidad + _montaje + _productivo +
-                        _noProg,
+                    value: _ttotal - _noProg,
                     date: input.timeStamp,
                     children: [{
                             name: 'Productivo',
-                            value: _productivo,
+                            value: _ttotal - _noProg - (_maquina + _molde + _abandono + _material + _calidad + _montaje),
                             children: dispChildProd
                         },
                         {
                             name: 'Paradas',
-                            value: _maquina + _molde + _abandono + _material + _calidad + _montaje +
-                                _noProg,
+                            value: _maquina + _molde + _abandono + _material + _calidad + _montaje,
                             children: [{
                                     name: 'Maquina',
                                     value: _maquina,
@@ -2752,11 +2754,6 @@
                                     name: 'Montaje',
                                     value: _montaje,
                                     children: dispChildMontaje
-                                },
-                                {
-                                    name: 'No Programada',
-                                    value: _noProg,
-                                    children: dispChildNoProg
                                 }
                             ]
                         }
@@ -2884,7 +2881,7 @@
                     var inyStatus = ''
                     if (key == 'maquinas') {
                         var _tcolor = "red"
-                        if (originalData.extra.plcStatus[opcion].toLowerCase() == 'on')
+                        if (originalData.extra.plcStatus[opcion]?.toLowerCase() == 'on')
                             _tcolor = "green"
                         inyStatus = ' (<span style="color:' + _tcolor + ';">' + originalData.extra
                             .plcStatus[opcion] + '</span>)'

@@ -116,6 +116,10 @@ namespace OPC2
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
         {
             Unsubscribe_Items();
+            minTimer.Stop();
+            minTimer.Dispose();
+            _opc.Dispose();
+            mqtt = null;
         }
 
         private void Connect_Button_Click(object sender, EventArgs e)
@@ -340,23 +344,46 @@ namespace OPC2
             minuteData.Add(dataSlice);
         }
 
+        private int retrys = 0;
         private void minTimer_Tick(object sender, EventArgs e)
         {
-            if (clear.Checked)
+            try
             {
-                dgv.Rows.Clear();
-                dgv.Refresh();
+                if (clear.Checked)
+                {
+                    dgv.Rows.Clear();
+                    dgv.Refresh();
+                }
+                getDataSlice();
+                if (publish.Checked)
+                {
+                    if (!mqtt.IsConnected)
+                        mqtt.Connect(clientId);
+                    mqtt.Publish(topic, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(minuteData)));
+                }
+                minuteData.Clear();
+                dgv.Invoke(new Action(() => { dgv.Rows.Insert(0); }));
+                //getDataSlice();
             }
-            getDataSlice();
-            if (publish.Checked)
+            catch (Exception ex)
             {
-                if (!mqtt.IsConnected)
-                    mqtt.Connect(clientId);
-                mqtt.Publish(topic, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(minuteData)));
+                if(retrys == 5)
+                {
+                    Unsubscribe_Items();
+                    minTimer.Stop();
+                    Connect_Button.Enabled = true;
+                    Disconnect_Button.Enabled = false;
+                    retrys = 0;
+                    MessageBox.Show("Error: " + ex.Message.ToString(), "Error");
+                }
+                else
+                {
+                    Unsubscribe_Items();
+                    Subscribe_Items();
+                    retrys++;
+                    System.Threading.Thread.Sleep(60000);
+                }
             }
-            minuteData.Clear();
-            dgv.Invoke(new Action(() => { dgv.Rows.Insert(0); }));
-            //getDataSlice();
         }
     }
 }
