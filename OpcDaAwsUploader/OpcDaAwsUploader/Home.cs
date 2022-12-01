@@ -33,15 +33,16 @@ namespace OPC2
         };*/
 
         string[] plcs = {
-            "PLC1",
             "PLC2",
             "PLC3",
             "PLC4",
-            "PLC5",
             "PLC6",
             "PLC7",
             "PLC8",
-            "PLC9"
+            "PLC10",
+            "PLC11",
+            "PLC12",
+            "PLC13"
         };
 
         string[] variables = {
