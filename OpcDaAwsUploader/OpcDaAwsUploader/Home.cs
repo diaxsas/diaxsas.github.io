@@ -33,15 +33,16 @@ namespace OPC2
         };*/
 
         string[] plcs = {
-            "PLC1",
             "PLC2",
             "PLC3",
             "PLC4",
-            "PLC5",
             "PLC6",
             "PLC7",
             "PLC8",
-            "PLC9"
+            "PLC10",
+            "PLC11",
+            "PLC12",
+            "PLC13"
         };
 
         string[] variables = {
@@ -57,6 +58,7 @@ namespace OPC2
             "MI18", // Operario
             "MI19", // Material
             "MI27", // Tolva
+            "MI31", // Numero de Maquina
             "MI99", // Consumo total máquina kw
             "MI100", // Consumo energía motor kw
             "MI101", // Defecto inicio turno
@@ -71,7 +73,6 @@ namespace OPC2
             "MI128", // Contador por calidad
             "MI129", // Contador por fin turno
 
-            "MF0", // Numero de Maquina
             "MF1", // Tiempo Inyección
             "MF5", // Ciclo estándar
             "MF6", // Ciclo estándar +
