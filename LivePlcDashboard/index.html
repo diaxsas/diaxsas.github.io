@@ -2064,10 +2064,10 @@
             var callLimit = 70 * 2
             var minLimit = callLimit * 60 * 1000
             var hourLimit = callLimit * 60 * 60 * 1000
-            if (diff > minLimit)
+            /*if (diff > minLimit)
                 _vars.group = "Hours"
             if (diff > hourLimit)
-                _vars.group = "Days"
+                _vars.group = "Days"*/
             const response = await fetch(__config.pullAPI, {
                 method: "POST",
                 headers: {},
