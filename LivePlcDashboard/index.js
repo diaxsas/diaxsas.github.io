@@ -49,6 +49,25 @@ const t = {
     "Segundos Ciclo Estandar -": "MF7",
 };
 
+var offsets = {
+    "ML0": 0, // "Minutos Motor Encendido" 
+    "ML131": 0, // "Contador Inyecciones"
+    "ML135": 0, // "Contador Unidades"
+    "MI100": 0, // "KW Motor"
+    "MI99": 0, // "KW Total Maquina"
+    "MI121": 0, // "Minutos Mantto Maquina"
+    "MI122": 0, // "Minutos Mantto Molde"
+    "MI123": 0, // "Minutos Montaje"
+    "MI124": 0, // "Minutos Sin Operario"
+    "MI125": 0, // "Minutos No Programada"
+    "MI126": 0, // "Minutos Fin Produccion"
+    "MI127": 0, // "Minutos Por Material"
+    "MI128": 0, // "Minutos Calidad"
+    "MI129": 0, // "Minutos Fin Turno"
+    "MI101": 0, // "Unidades Defecto Inicio Turno"
+    "MI102": 0, // "Unidades No Conformes"
+}
+
 const _colors = [
     "#D6E4FF",
     "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9",
@@ -293,6 +312,7 @@ $('#MaterialPlc').on('change', function () {
 //#region Functions
 
 async function pullData(_start, _end) {
+    var startTime = performance.now()
     $('body').addClass('loading');
     $('#loader').show();
     var _vars = {
@@ -350,22 +370,18 @@ async function pullData(_start, _end) {
     originalData = formatData(_pulledData);
     filteredData = formatData(filterData(_pulledData));
     $('body').removeClass('loading');
-    $('#loader').hide();
+    $('#loader').hide();   
+    var endTime = performance.now()
+    console.log(`pullData ${endTime - startTime} milliseconds`)
     paintData();
 }
 
 function rename(toRename) {
+    var startTime = performance.now()
 
     //$('.selected_head').closest('.selected_form').find('.search_section').show()
-    /*var _sdata = JSON.stringify(toRename)
-
-    function replaceAll(str, find, replace) {
-        function escapeRegExp(string) {
-            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        }
-        return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
-    }
-    _sdata = JSON.parse(_sdata);*/
+    var _sdata = JSON.stringify(toRename)
+    _sdata = JSON.parse(_sdata);
     _sdata.forEach((data) => {
         // Renombrar Moldes
         Object.keys(data.plcs).forEach(plcID => {
@@ -387,7 +403,7 @@ function rename(toRename) {
         Object.keys(data.plcs).forEach(plcID => {
             var newID = data.plcs[plcID].variables[t['Numero Inyectora']]
             if (typeof newID === 'undefined') {
-                newPLCs["Iny" + plcID.split('PLC')[1]] = data.plcs[plcID];
+                newPLCs["Iny" + plcID.split('PLC')[1] + "?"] = data.plcs[plcID];
             } else {
                 newPLCs["Iny" + newID.value] = data.plcs[plcID];
             }
@@ -395,10 +411,13 @@ function rename(toRename) {
         data.plcs = newPLCs;
 
     })
+    var endTime = performance.now()
+    console.log(`rename ${endTime - startTime} milliseconds`)
     return _sdata
 }
 
 function getFilters() {
+    var startTime = performance.now()
     var _filters = {
         maquinas: [],
         operarios: [],
@@ -416,6 +435,8 @@ function getFilters() {
                 _filters[filterId].push(_value)
         }
     })
+    var endTime = performance.now()
+    console.log(`getFilters ${endTime - startTime} milliseconds`)
     return _filters
 }
 
@@ -485,6 +506,7 @@ function exportData() {
 }
 
 function filterData(inputs) {
+    var startTime = performance.now()
     var filters = getFilters();
     var inputsCopy = JSON.parse(JSON.stringify(inputs))
     var outputs = []
@@ -519,10 +541,13 @@ function filterData(inputs) {
         if (Object.keys(input.plcs).length !== 0)
             outputs.push(input)
     })
+    var endTime = performance.now()
+    console.log(`filterData ${endTime - startTime} milliseconds`)
     return outputs
 }
 
 function formatData(tempIinputs) {
+    var startTime = performance.now()
     $('body').addClass('loading');
     $('#loader').show();
     var inputs = JSON.parse(JSON.stringify(tempIinputs))
@@ -537,24 +562,9 @@ function formatData(tempIinputs) {
     // Offset and flatten
     if ($('#offset').prop('checked'))
         Object.keys(inputs[0].plcs).forEach(plcId => {
-            var offsets = {
-                "ML0": 0, // "Minutos Motor Encendido" 
-                "ML131": 0, // "Contador Inyecciones"
-                "ML135": 0, // "Contador Unidades"
-                "MI100": 0, // "KW Motor"
-                "MI99": 0, // "KW Total Maquina"
-                "MI121": 0, // "Minutos Mantto Maquina"
-                "MI122": 0, // "Minutos Mantto Molde"
-                "MI123": 0, // "Minutos Montaje"
-                "MI124": 0, // "Minutos Sin Operario"
-                "MI125": 0, // "Minutos No Programada"
-                "MI126": 0, // "Minutos Fin Produccion"
-                "MI127": 0, // "Minutos Por Material"
-                "MI128": 0, // "Minutos Calidad"
-                "MI129": 0, // "Minutos Fin Turno"
-                "MI101": 0, // "Unidades Defecto Inicio Turno"
-                "MI102": 0, // "Unidades No Conformes"
-            }
+            Object.keys(offsets).forEach(offset => {
+                offsets[offset] = 0;
+            })
             inputs.forEach((input, i) => {
                 var plcVars = input.plcs[plcId].variables
                 Object.keys(offsets).forEach((offsetKey) => {
@@ -625,8 +635,8 @@ function formatData(tempIinputs) {
         },
         montaje: {}
     };
-    var _startD = new Date($('#datetimes').data('daterangepicker').startDate._d);
-    var _endD = new Date($('#datetimes').data('daterangepicker').endDate._d);
+    var _startD = new Date(tempIinputs[0].timeStamp);
+    var _endD = new Date(tempIinputs[tempIinputs.length - 1].timeStamp);
     var diffMs = (_endD - _startD);
     var _ttotal = Math.round(diffMs / 1000 / 60) * Object.keys(tempIinputs[0].plcs).length; // minutes
     inputs.forEach((input, inputI) => {
@@ -1099,13 +1109,17 @@ function formatData(tempIinputs) {
 
     $('body').removeClass('loading');
     $('#loader').hide();
+    var endTime = performance.now()
+    console.log(`formatData ${endTime - startTime} milliseconds`)
     return output;
 }
 
 function paintData() {
+    var startTime = performance.now()
     lockedData = true
     $('body').addClass('loading');
     $('#loader').show();
+    // chequear tamaño
     if (_pulledData.length < 1) {
         $('#configError').show()
         $('#configError').text('No hay data, intenta otro rango.');
@@ -1120,6 +1134,7 @@ function paintData() {
     $('#Indicadores').show()
     $('#subdashboard').show()
     var oldFilters = getFilters()
+    // Pintar Configuraciones
     Object.keys(originalData['configuracion']).forEach((key) => {
         var opciones = originalData['configuracion'][key]
         var search_container = $('#' + key + '_config .search_section .rows');
@@ -1163,6 +1178,7 @@ function paintData() {
         })
         reds.forEach(red => search_container.append(red))
     })
+    // agregar eventos
     $('.selected_form .search_section .rows input').off('change').on('change', function (e) {
         if (lockedData)
             return
@@ -1178,6 +1194,7 @@ function paintData() {
         filteredData = formatData(filterData(_pulledData));
         paintData();
     })
+    // chequear tamaño post filtros
     if (Object.keys(filteredData).length < 1) {
         $('#configError').text('No queda data, intenta otra configuración.');
         $('#configError').show();
@@ -1192,7 +1209,7 @@ function paintData() {
         $('#Indicadores').show()
         $('#subdashboard').show()
     }
-    // dynamic coloring
+    // colores dinamicos
     function setColors(data) {
         var i = 0
         data.color = _colors[i]
@@ -1237,7 +1254,9 @@ function paintData() {
         })
     })
     $('#eficiencia_indicador').css('box-shadow', _colors[4] + ' 0px 0px 8px')
+    
     Object.keys(filteredData).forEach(function (section) {
+        // unidades
         var units = 'ud'
         switch (section) {
             case 'disponibilidad':
@@ -1814,6 +1833,8 @@ function paintData() {
     $(window).resize();
     $('body').removeClass('loading');
     $('#loader').hide();
+    var endTime = performance.now()
+    console.log(`paintData ${endTime - startTime} milliseconds`)
     lockedData = false
 }
 
