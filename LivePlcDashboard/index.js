@@ -69,9 +69,9 @@ var offsets = {
 }
 
 const _colors = [
-    "#D6E4FF",
+    "#808080",
     "#3366D6", "#BE53C4", "#FFA600", "#23C897", "#1EC828", "#FB4826", "#F9E215", "#EC2EB9",
-    "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", "#F9E84B", "#FF44CD",
+    "#4285F4", "#E585EB", "#F9B432", "#41E6B5", "#4BE354", "#F9674D", //"#F9E84B", "#FF44CD",
     "#71A3F7", "#F0B0F3", "#F9C25C", "#76F1CC", "#7DEF84", "#FC9885", "#FCF08B", "#FC7BDA",
     "#A0C2FA", "#F4CFF6", "#FBDA9D", "#A8F6DF", "#ACF8B0", "#FCBBAF", "#FCF8D7", "#FFAAE8",
     "#D0E0FC", "#F9F1F9", "#FCECCE", "#D9F6EE", "#CEFED1", "#FCE0DB", "#FFFCE5", "#FCD7F2",
@@ -146,9 +146,11 @@ $('#subdashboard').hide()
 
 // Auto Pull
 $(document).ready(() => {
-    const start = new Date($('#datetimes').data('daterangepicker').startDate._d);
+    /*const start = new Date($('#datetimes').data('daterangepicker').startDate._d);
     const end = new Date($('#datetimes').data('daterangepicker').endDate._d);
     pullData(start, end)
+    */
+    $('#live').click();
     $('#config .button_minimize_down').click()
 })
 
@@ -176,6 +178,14 @@ $('#live').on('change', function () {
         lockedData = true
         $('body').addClass('loading');
         $('#loader').show();
+
+        const start = new Date(new Date().getTime() - 60 * 60000);
+        const end = new Date();
+        _pulledData = []
+        pullData(start, end)
+
+
+
         client.subscribe(__config.channel)
         $('input[name="datetimes"]').daterangepicker({
             timePicker: true,
@@ -185,7 +195,6 @@ $('#live').on('change', function () {
                 format: 'M/DD hh:mm A'
             }
         });
-        _pulledData = []
         gotData = false;
         datacheck()
     } else
@@ -203,11 +212,11 @@ client.on('message', (topic, message) => {
     $('body').removeClass('loading');
     $('#loader').hide();
     var string = new TextDecoder().decode(message);
-    var objString = JSON.parse(string)
+    var objString = rename(JSON.parse(string))
     _pulledData = _pulledData.concat(objString);
     if (_pulledData.length > 100)
         _pulledData.shift()
-    _pulledData = rename(_pulledData)
+    //_pulledData = rename(_pulledData)
     originalData = formatData(_pulledData);
     filteredData = formatData(filterData(_pulledData));
     $('input[name="datetimes"]').daterangepicker({
@@ -654,6 +663,8 @@ function formatData(tempIinputs) {
         var _productivo = 0;
         var _noProg = 0
         var _inyecciones = 0
+        var _ineficiencias = 0
+        var _productividad = 0
         // rendimiento
         var _sumaTiempoCiclo = 0;
         var _contTiempoCiclo = 0;
@@ -724,6 +735,8 @@ function formatData(tempIinputs) {
             _inyecciones += Number(plc[t['Contador Inyecciones']].value)
 
             var prod = Math.floor(Math.round(diffMs / 1000 / 60) - Number(plc[t['Minutos No Programada']].value) - (Number(plc[t['Minutos Mantto Maquina']].value) + Number(plc[t['Minutos Mantto Molde']].value) + Number(plc[t['Minutos Sin Operario']].value) + Number(plc[t['Minutos Por Material']].value) + Number(plc[t['Minutos Calidad']].value) + Number(plc[t['Minutos Montaje']].value)))
+            _productividad += prod;
+            
             dispChildProd.push({
                 name: 'P.' + plcId,
                 value: prod
@@ -764,20 +777,22 @@ function formatData(tempIinputs) {
                 value: Number(plc[t['Contador Inyecciones']].value)
             })
             // Ineficiencias
+            var _inefs = ((Number(plc[t['Minutos Motor Encendido']].value) * 60) / Number(plc[t['Segundos Ciclo Estandar']].value)) - Number(plc[t['Contador Inyecciones']].value)
+            if (_inefs < 0)
+                _inefs = 0;
+            if(Number(plc[t['Segundos Ciclo Estandar']].value) == 0)
+                _inefs = 0;
+            _ineficiencias += _inefs
             rendChildInef.push({
                 name: 'I.' + plcId,
-                value: ((Number(plc[t['Minutos Motor Encendido']].value) * 60) / (
-                    Number(plc[t[
-                        'Segundos Ciclo Estandar']].value))) - Number(plc[t[
-                        'Contador Inyecciones']]
-                    .value)
+                value: _inefs
             })
             // ciclos
             if (!(plcId in output.ciclos))
                 output.ciclos[plcId] = []
             var puerta = Number(plc[t['Segundos Ultimo Ciclo Puerta']].value)
-            var maquina = Number(plc[t['Segundos Ultimo Ciclo Maquina']].value)
             var totalMP = Number(plc[t['Segundos Ultimo Ciclo Total']].value)
+            var maquina = totalMP - puerta//Number(plc[t['Segundos Ultimo Ciclo Maquina']].value)
 
             var ciclos = {
                 name: 'Ciclo',
@@ -992,7 +1007,7 @@ function formatData(tempIinputs) {
             date: input.timeStamp,
             children: [{
                     name: 'Productivo',
-                    value: _ttotal - _noProg - (_maquina + _molde + _abandono + _material + _calidad + _montaje),
+                    value: _productividad,
                     children: dispChildProd
                 },
                 {
@@ -1033,9 +1048,7 @@ function formatData(tempIinputs) {
             ]
         }
         // Ineficiencias
-        var _capacidadProd = (_ttotal - _noProg) / ((_sumaTiempoCiclo / _contTiempoCiclo) / 60)
-        var _ineficiencias = _capacidadProd - _inyecciones;
-        //_ineficiencias = _ineficiencias<0?0:_ineficiencias;
+        var _capacidadProd = _ineficiencias + _inyecciones;
         output.disponibilidad.push(disponibilidad)
         var rendimiento = {
             name: 'Capacidad',
@@ -1065,7 +1078,7 @@ function formatData(tempIinputs) {
         var disp = (_ttotal - _noProg - (_maquina + _molde + _abandono + _material + _calidad + _montaje)) / (_ttotal - _noProg);
         disp = Math.round(disp * 100 * 10) / 10;
         // Ineficiencias
-        var rend = _inyecciones / ((_ttotal - _noProg) / ((_sumaTiempoCiclo / _contTiempoCiclo) / 60));
+        var rend = _inyecciones / _capacidadProd;
         rend = Math.round(rend * 100 * 10) / 10;
         var cal = _buenas / (_buenas + _arranque + _lluvia);
         cal = Math.round(cal * 100 * 10) / 10;
@@ -1342,6 +1355,7 @@ function paintData() {
             });
             var pieID = "pie" + proper(section);
             var pieParent = "#pie" + proper(section) + "Container"
+
             var _data = [{
                 type: 'scatterpolar',
                 r: maxVals,
@@ -1566,6 +1580,27 @@ function paintData() {
             return _parents
         }
         var parents = getParent(currData[currData.length - 1], "")
+        if(section == "rendimiento")
+        {
+           /* var absVals = values//.map(Math.abs);
+            var _p = 0;
+            var _i = 0;
+            var _index = 0;
+            for (let i = 0; i < absVals.length; i++) {
+                if(absVals[i] < 0)
+                    absVals[i] = 0
+                if(labels[i].split('.')[0] == "P")
+                    _p += absVals[i]
+                if(labels[i].split('.')[0] == "I")
+                    _i += absVals[i]
+                if(labels[i].toLowerCase() == "ineficiencias")
+                    _index = i
+            }
+            absVals[0] = _i + _p;
+            absVals[1] = _p;
+            absVals[_index] = _i;
+            values = absVals*/
+        }
         var _data = [{
             "type": "sunburst",
             "labels": labels,
@@ -1670,7 +1705,7 @@ function paintData() {
                 line: {
                     color: thisColors[i],
                 },
-                fill: 'tozeroy',
+                //fill: 'tozeroy',
             };
             if (i == 0)
                 trace.line.dash = 'dash'

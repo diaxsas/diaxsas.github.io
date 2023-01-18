@@ -1071,11 +1071,11 @@ ul {
 }
 
 #liveContainer>div:nth-child(1)>div:before {
-    content: 'Ver data empresarial HASTA el momento. Aproximadamente cada minuto llegara data nueva.';
+    content: 'Conectarse directamente a las maquinas.';
 }
 
 #liveContainer>div:nth-child(2)>div:before {
-    content: 'Ver data empresarial DESDE el momento. Aproximadamente cada minuto llegara data nueva.';
+    content: 'Aplana y compensa los datos de entrada, operación avanzada.';
 }
 
 #liveContainer>div>div:hover:before {
@@ -1148,4 +1148,7 @@ h1 {
 
 #title text span {
     font-weight: 600;
+}
+#offset, #live {
+    cursor:pointer;
 }
