@@ -47,6 +47,11 @@ const t = {
     "Estado Motor": "I3",
     "Segundos Ciclo Estandar +": "MF6",
     "Segundos Ciclo Estandar -": "MF7",
+    
+    "Debug.Disponibilidad": "MF2",
+    "Debug.Calidad": "MF3",
+    "Debug.Rendimiento": "MF10",
+    "Debug.Eficiencia": "MF11"
 };
 
 var offsets = {
@@ -149,6 +154,7 @@ $(document).ready(() => {
     /*const start = new Date($('#datetimes').data('daterangepicker').startDate._d);
     const end = new Date($('#datetimes').data('daterangepicker').endDate._d);
     pullData(start, end)
+    //fix report title
     */
     $('#live').click();
     $('#config .button_minimize_down').click()
@@ -174,6 +180,18 @@ $('#live').on('change', function () {
     if (lockedData)
         return
     $('#datetimes').prop("disabled", $(this).prop('checked'));
+    if($(this).prop('checked'))
+    {
+        $('#datetimes').css("background-color", "gray");
+        $('#datetimes').css("color", "white");
+        $('#reportTitle').text("Live")
+    }
+    else
+    {
+        $('#datetimes').css("background-color", "white");
+        $('#datetimes').css("color", "gray");
+        $('#reportTitle').text($('input[name="datetimes"]').val())
+    }
     if ($(this).prop('checked')) {
         lockedData = true
         $('body').addClass('loading');
@@ -187,10 +205,11 @@ $('#live').on('change', function () {
 
 
         client.subscribe(__config.channel)
+        
         $('input[name="datetimes"]').daterangepicker({
             timePicker: true,
-            startDate: new Date(),
-            endDate: new Date(),
+            startDate: start,
+            endDate: end,
             locale: {
                 format: 'M/DD hh:mm A'
             }
@@ -221,7 +240,7 @@ client.on('message', (topic, message) => {
     filteredData = formatData(filterData(_pulledData));
     $('input[name="datetimes"]').daterangepicker({
         timePicker: true,
-        startDate: new Date(_pulledData[0].timeStamp),
+        startDate: new Date($('#datetimes').data('daterangepicker').startDate._d),
         endDate: new Date(),
         locale: {
             format: 'M/DD hh:mm A'
@@ -286,6 +305,7 @@ $('#datetimes').change((e) => {
         if (lockedData)
             return
         lockedData = true
+        $('#reportTitle').text($('input[name="datetimes"]').val())
         const start = new Date($('#datetimes').data('daterangepicker').startDate._d);
         const end = new Date($('#datetimes').data('daterangepicker').endDate._d);
         pullData(start, end)
@@ -411,7 +431,7 @@ function rename(toRename) {
         var newPLCs = {}
         Object.keys(data.plcs).forEach(plcID => {
             var newID = data.plcs[plcID].variables[t['Numero Inyectora']]
-            if (typeof newID === 'undefined') {
+            if (typeof newID === 'undefined' | newID.value == "0") {
                 newPLCs["Iny" + plcID.split('PLC')[1] + "?"] = data.plcs[plcID];
             } else {
                 newPLCs["Iny" + newID.value] = data.plcs[plcID];

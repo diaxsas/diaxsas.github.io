@@ -85,7 +85,13 @@ namespace OPC2
             "MF15", // Peso Cavidad 3
             "MF16", // Peso Cavidad 4
             "MF17", // Peso cavidad 5
-            "MF18" // Peso cavidad 6
+            "MF18", // Peso cavidad 6
+
+            
+            "MF2", // Disponibilidad
+            "MF3", // Calidad
+            "MF10", // Rendimiento
+            "MF11" // Eficiencia
         };
         
         string[] states = {

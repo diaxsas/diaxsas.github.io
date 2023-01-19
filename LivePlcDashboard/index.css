@@ -1152,3 +1152,15 @@ h1 {
 #offset, #live {
     cursor:pointer;
 }
+#titleContainer {
+    display: flex;
+    width: 100%;
+    text-align: left;
+}
+
+#reportTitle {
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-20px);
+    font-weight: 500
+}
