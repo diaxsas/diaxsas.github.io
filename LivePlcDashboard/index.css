@@ -1048,13 +1048,17 @@ ul {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    top: 20px;
+    flex-direction: row;
+    top: 10px;
     position: relative;
 }
-
+#liveContainer>div {
+    margin-right: 10px;
+}
 #liveContainer input {
     margin: auto;
     margin-top: 5px;
+    margin-left: 5px !important;
 }
 
 #liveContainer>div>div:before {
@@ -1076,6 +1080,10 @@ ul {
 
 #liveContainer>div:nth-child(2)>div:before {
     content: 'Aplana y compensa los datos de entrada, operación avanzada.';
+}
+#liveContainer>div:nth-child(3)>div:before {
+    content: 'Fuerza la llamada de data por minutos (Tardara mucho mas).';
+    min-width: 100px;
 }
 
 #liveContainer>div>div:hover:before {

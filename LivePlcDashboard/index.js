@@ -47,7 +47,7 @@ const t = {
     "Estado Motor": "I3",
     "Segundos Ciclo Estandar +": "MF6",
     "Segundos Ciclo Estandar -": "MF7",
-    
+
     "Debug.Disponibilidad": "MF2",
     "Debug.Calidad": "MF3",
     "Debug.Rendimiento": "MF10",
@@ -351,11 +351,14 @@ async function pullData(_start, _end) {
     }
     var diff = (_vars.end - _vars.start) / 1000 / 60;
     var callLimit = 200; // fixed value at 200 suggested
-    var maxCalls = 1;
-    if (diff > callLimit * maxCalls)
-        _vars.group = "Hours"
-    if (diff / 60 > callLimit * maxCalls)
-        _vars.group = "Days"
+    var maxCalls = 8;
+    if(!$('#minForce').prop('checked'))
+    {
+        if (diff > callLimit * maxCalls)
+            _vars.group = "Hours"
+        if (diff / 60 > callLimit * maxCalls)
+            _vars.group = "Days"
+    }
     var callsTotal = Math.ceil(diff/callLimit);
     var calls = 0;
     var endOrig = _vars.end;
@@ -432,7 +435,7 @@ function rename(toRename) {
         Object.keys(data.plcs).forEach(plcID => {
             var newID = data.plcs[plcID].variables[t['Numero Inyectora']]
             if (typeof newID === 'undefined' | newID.value == "0") {
-                newPLCs["Iny" + plcID.split('PLC')[1] + "?"] = data.plcs[plcID];
+                //newPLCs["Iny" + plcID.split('PLC')[1] + "?"] = data.plcs[plcID];
             } else {
                 newPLCs["Iny" + newID.value] = data.plcs[plcID];
             }
